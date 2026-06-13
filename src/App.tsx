@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { BrowsePage } from "./features/browse/BrowsePage";
 import { RecipePage } from "./features/recipe/RecipePage";
+import { CookingMode } from "./features/recipe/CookingMode";
 
 function Nav() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<BrowsePage />} />
         <Route path="/r/:id" element={<RecipePage />} />
+        <Route path="/r/:id/cook" element={<CookingMode />} />
         <Route path="*" element={<BrowsePage />} />
       </Routes>
     </HashRouter>

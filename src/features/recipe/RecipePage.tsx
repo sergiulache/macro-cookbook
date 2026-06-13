@@ -3,6 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { recipeById, imageUrl } from "../../lib/recipes/loadRecipes";
 import { AnimatedNumber } from "../../components/AnimatedNumber";
+import { renderStep, groupAnchor } from "../../lib/recipes/references";
+import { relatedTo } from "../../lib/recipes/related";
+import { RecipeCard } from "../../components/RecipeCard";
 
 const fmt = (n: number) => (n >= 10 ? Math.round(n) : Math.round(n * 10) / 10);
 
@@ -47,11 +50,16 @@ export function RecipePage() {
             <span>{recipe.servings} {recipe.servings === 1 ? "serving" : "servings"}</span>
           </div>
         </div>
-        {recipe.videoUrl && (
-          <a href={recipe.videoUrl} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[13px] font-500 text-canvas hover:bg-ink-deep">
-            ▶ Watch video
-          </a>
-        )}
+        <div className="flex gap-2">
+          <Link to={`/r/${recipe.id}/cook`} className="inline-flex h-9 items-center gap-2 rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink">
+            Cook mode
+          </Link>
+          {recipe.videoUrl && (
+            <a href={recipe.videoUrl} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[13px] font-500 text-canvas hover:bg-ink-deep">
+              ▶ Watch video
+            </a>
+          )}
+        </div>
       </div>
 
       {/* macros + scaler */}
@@ -93,7 +101,7 @@ export function RecipePage() {
         <h2 className="font-display text-[20px] font-600">Ingredients</h2>
         <div className="mt-3 space-y-5">
           {recipe.ingredientGroups.map((g) => (
-            <div key={g.name}>
+            <div key={g.name} id={groupAnchor(g.name)} className="scroll-mt-20">
               {g.name !== "Ingredients" && <h3 className="text-[13px] font-600 uppercase tracking-wide text-mute">{g.name}</h3>}
               <ul className="mt-1.5 divide-y divide-hairline">
                 {g.ingredients.map((ing, i) => (
@@ -117,7 +125,7 @@ export function RecipePage() {
           {recipe.steps.map((s) => (
             <li key={s.n} className="flex gap-3">
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink text-[12px] font-600 text-canvas">{s.n}</span>
-              <p className="text-[15px] leading-relaxed text-charcoal">{s.text}</p>
+              <p className="text-[15px] leading-relaxed text-charcoal">{renderStep(s.text, recipe)}</p>
             </li>
           ))}
         </ol>
@@ -131,6 +139,13 @@ export function RecipePage() {
           </ul>
         </section>
       )}
+
+      <section className="mt-12">
+        <h2 className="font-display text-[20px] font-600">You might also like</h2>
+        <div className="mt-4 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4">
+          {relatedTo(recipe).map((r) => <RecipeCard key={r.id} recipe={r} />)}
+        </div>
+      </section>
     </motion.div>
   );
 }
