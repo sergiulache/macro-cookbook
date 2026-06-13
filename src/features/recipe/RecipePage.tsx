@@ -8,6 +8,7 @@ import { relatedTo } from "../../lib/recipes/related";
 import { RecipeCard } from "../../components/RecipeCard";
 import { FavoriteButton } from "../../components/FavoriteButton";
 import { AddToPlan } from "../plan/AddToPlan";
+import { NotesSection } from "./NotesSection";
 
 const fmt = (n: number) => (n >= 10 ? Math.round(n) : Math.round(n * 10) / 10);
 
@@ -143,6 +144,8 @@ export function RecipePage() {
           </ul>
         </section>
       )}
+
+      <NotesSection recipeId={recipe.id} />
 
       <section className="mt-12">
         <h2 className="font-display text-[20px] font-600">You might also like</h2>
