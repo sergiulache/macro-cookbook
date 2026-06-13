@@ -5,7 +5,7 @@
     "category": "Breakfast Bliss",
     "servings": 1,
     "macros": {
-      "calories": 351,
+      "calories": 361,
       "fat": 2,
       "carbs": 72,
       "netCarbs": 47,
@@ -13,7 +13,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "Wet",
+        "name": "WET",
         "ingredients": [
           {
             "amount": 120,
@@ -38,7 +38,7 @@
         ]
       },
       {
-        "name": "Dry",
+        "name": "DRY",
         "ingredients": [
           {
             "amount": 20,
@@ -100,7 +100,7 @@
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACWStH+JvXMf+wAA/sBtDS++V/ksOlIhtF6nlDCyloDGh0nUhh3+8GSBz1eIuXuftTpUbCCQNp7JATK6tMBjEfxxsGD6XfZERbuGPrCWnMMrxueLxQZcteK08mcSzlfyjCegAAA="
     },
-    "videoUrl": null,
+    "videoUrl": "https://youtu.be/AyEma2QPOmU",
     "prepTimeMin": 5,
     "cookTimeMin": 10,
     "tips": [
@@ -108,15 +108,15 @@
     ],
     "references": [
       {
-        "raw": "Wet Ingredients",
+        "raw": "WET Ingredients",
         "kind": "group",
-        "target": "Wet",
+        "target": "WET",
         "seconds": null
       },
       {
-        "raw": "Dry Ingredients",
+        "raw": "DRY Ingredients",
         "kind": "group",
-        "target": "Dry",
+        "target": "DRY",
         "seconds": null
       }
     ],
@@ -131,11 +131,11 @@
     "category": "Breakfast Bliss",
     "servings": 1,
     "macros": {
-      "calories": 330,
+      "calories": 350,
       "fat": 11,
       "carbs": 45,
       "netCarbs": 20,
-      "protein": 38
+      "protein": 39
     },
     "ingredientGroups": [
       {
@@ -143,13 +143,13 @@
         "ingredients": [
           {
             "amount": 2,
-            "unit": "egg",
+            "unit": null,
             "item": "eggs"
           },
           {
             "amount": 40,
             "unit": "g",
-            "item": "fat free milk"
+            "item": "fat-free milk"
           },
           {
             "amount": 2.1,
@@ -163,7 +163,7 @@
             "note": "pinch"
           },
           {
-            "amount": 18,
+            "amount": 19,
             "unit": "g",
             "item": "all-purpose flour"
           },
@@ -178,7 +178,7 @@
             "item": "baking powder"
           },
           {
-            "amount": 2,
+            "amount": 25,
             "unit": "g",
             "item": "granulated erythritol"
           },
@@ -202,15 +202,15 @@
       },
       {
         "n": 3,
-        "text": "Into the egg yolk mixture, sift flour, protein powder, and baking powder, then mix to combine until smooth."
+        "text": "Into the egg yolk mixture, sift flour, protein powder, and baking powder. You can do this by using a strainer and gently shaking the flour-laden strainer until it is empty. Whisk to combine."
       },
       {
         "n": 4,
-        "text": "Start blending the egg whites using a hand mixer on low speed. When it begins to foam, add half of the erythritol at a time, adding more once the sweetener is completely mixed in."
+        "text": "Start blending the egg whites using a hand mixer on low speed. When it begins to foam, add 1/4 of the erythritol at a time, and add more once the sweetener is completely mixed in."
       },
       {
         "n": 5,
-        "text": "Once the erythritol has been completely mixed in, the egg whites should be very close to forming stiff peaks; add the cream of tartar and mix for an additional 30 seconds or until stiff peaks have formed."
+        "text": "Once the erythritol has been completely mixed in, the egg whites should be very close to forming stiff peaks and it is time to add the cream of tartar and mix for an additional 30 seconds or until stiff peaks have formed."
       },
       {
         "n": 6,
@@ -218,15 +218,15 @@
       },
       {
         "n": 7,
-        "text": "Take the remaining meringue, pour it on top, and gently fold it in until the mixture has just barely come together. The goal here is to not overwork the batter because that will cause the pancake to be noticeably less fluffy."
+        "text": "Take the remaining meringue, pour it on top, and gently fold it in until the mixture has JUST BARELY come together. • The goal here is to not overwork the batter because that will cause the pancake to be noticeably less fluffy."
       },
       {
         "n": 8,
-        "text": "Transfer finished batter to a plastic gallon bag and, when ready to cook, cut the corner of the bag off."
+        "text": "Transfer finished batter to a plastic gallon bag and when ready to cook, cut the corner of the bag off."
       },
       {
         "n": 9,
-        "text": "Lightly spray a preheated pan on low with oil and pipe batter into the pan where the middle of the pancake will be. Let gravity do the work while slowly raising the bag up as the pancake gets taller and spreads out."
+        "text": "Lightly spray a preheated pan on low with oil and pipe batter into the pan where the middle of the pancake will be. Let gravity do the work while slowing raising the bag up as the pancake gets taller and spreads out."
       },
       {
         "n": 10,
@@ -234,7 +234,11 @@
       },
       {
         "n": 11,
-        "text": "Let pancakes cook for an additional 2-3 minutes, plate it, pour some sugar-free syrup on top, and enjoy!"
+        "text": "Let pancakes cook for 3-5 minutes, lightly spray the top of each pancake, flip, and cover."
+      },
+      {
+        "n": 12,
+        "text": "Let the pancakes cook for an additional 2-3 minutes, plate it, pour some sugar- free syrup on top, and enjoy! Breakfast Bliss 49"
       }
     ],
     "image": {
@@ -244,7 +248,7 @@
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHZiDjFSBzZzkgA/uxasK7h7h1wpAP7rtMRdCIuQe7vus5ioYLMpmNzFD+9Dke5LqZ8W58mm163kFZXSC4t8oo6dG708XEcoSYDPAHRFz8EFJWMyfzRJcyYaAA="
     },
-    "videoUrl": null,
+    "videoUrl": "https://youtu.be/cgdHsh0HGcE",
     "prepTimeMin": 10,
     "cookTimeMin": 10,
     "tips": [],
