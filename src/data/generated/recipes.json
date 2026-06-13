@@ -98,7 +98,7 @@
       "srcset": "recipes/banana-pancakes-400.webp 400w, recipes/banana-pancakes-800.webp 800w, recipes/banana-pancakes-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACWStH+JvXMf+wAA/sBtDS++V/ksOlIhtF6nlDCyloDGh0nUhh3+8GSBz1eIuXuftTpUbCCQNp7JATK6tMBjEfxxsGD6XfZERbuGPrCWnMMrxueLxQZcteK08mcSzlfyjCegAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIr+ZoAZaWAfq0LhVkecgAP68hRz5YKJ5cd9Qo2hIatfgR4JsIXEhZqeyRGCRcBImKEu5OmkG5YvkIo/dH1Bd2dwZXMoL0U7e/xH9xpINkijPEZQQuiNfmp4ovMYc5X8kZ1FHMAAAAA=="
     },
     "videoUrl": "https://youtu.be/AyEma2QPOmU",
     "prepTimeMin": 5,
@@ -238,7 +238,7 @@
       },
       {
         "n": 12,
-        "text": "Let the pancakes cook for an additional 2-3 minutes, plate it, pour some sugar- free syrup on top, and enjoy! Breakfast Bliss 49"
+        "text": "Let the pancakes cook for an additional 2-3 minutes, plate it, pour some sugar- free syrup on top, and enjoy!"
       }
     ],
     "image": {
@@ -246,7 +246,7 @@
       "srcset": "recipes/japanese-pancakes-400.webp 400w, recipes/japanese-pancakes-800.webp 800w, recipes/japanese-pancakes-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHZiDjFSBzZzkgA/uxasK7h7h1wpAP7rtMRdCIuQe7vus5ioYLMpmNzFD+9Dke5LqZ8W58mm163kFZXSC4t8oo6dG708XEcoSYDPAHRFz8EFJWMyfzRJcyYaAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHZiCzqKUZjpMAA/uxasJ0qEYmLDDS+ybQQCdw3JcbWL/f5PlzRo5UivYQsxFKdZv/oFBGaURqMqGM60i6ZWibro2zyOrBIdabDGdCvA8OGYRwFiuSc8magmYAAAA=="
     },
     "videoUrl": "https://youtu.be/cgdHsh0HGcE",
     "prepTimeMin": 10,
@@ -411,7 +411,7 @@
       },
       {
         "n": 10,
-        "text": "Top french toast with brown sugar and icing and IT’S TIME TO EAT! Breakfast Bliss 51"
+        "text": "Top french toast with brown sugar and icing and IT’S TIME TO EAT!"
       }
     ],
     "image": {
@@ -419,7 +419,7 @@
       "srcset": "recipes/stuffed-french-toast-400.webp 400w, recipes/stuffed-french-toast-800.webp 800w, recipes/stuffed-french-toast-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABwBQCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIsx9gLtgOwAfPCRJvGyp0UW8H0qwAP7qAPdqzgpWgj43G5hDYOEuh+MEkshedLxmqwL289uyFKlOKvDqJ/5FC4dX22OVAYy4BGPnE3ogmL5Tg2I2n58kUswNmN0R0lbt11viDAPVwfJYceyztH3PMMLxkYG0B8KiEb4JTXMHy+cn2YZCX8htCqSEQWOL58IS3wlgAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABQBQCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIs09gBT6DL5genV/oDXuP1h83QAA/uRoClgmgA2kwkqdYrTB8NZqEQIZxN3YAHFZ+/imr41QiHeA/Hl2wZD9E4NCSqObAhryJi29UZMRhMXyu/LW4sdiw3wiFJ5F8hLB7hfa8BF4cjII0vSkl1StjsGSM8RVFWBIhqMLMOMpdOIk8AwlrUDzw5yjl5u4seAAAA=="
     },
     "videoUrl": null,
     "prepTimeMin": 20,
@@ -591,7 +591,7 @@
       },
       {
         "n": 11,
-        "text": "Let’s eat. Breakfast Bliss 53"
+        "text": "Let’s eat."
       }
     ],
     "image": {
@@ -599,7 +599,7 @@
       "srcset": "recipes/birthday-cake-french-toast-400.webp 400w, recipes/birthday-cake-french-toast-800.webp 800w, recipes/birthday-cake-french-toast-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3BhAKj1ZzK8FaaaIng90SKAD+2iyqVqXxgEZJ5HXeYNUTbaDV9ErXR87zOCyA27FOy1d49j8+tGzBC45QGycdy6YoRm0OP8PwTvLKEED9HHuvbUOhlEHeFAfJuJJG8NyVLEwahUcbOkFl0QERTxNlz8n9WbX4xWjVt+RplXuIZtRO1nhHSwAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3AdC5CE4KpQrQ9YhyqIoAAP7aLKpVtHsZSJeR0nKezGrX2ypxXtnrHXBWRgRKH1O9OrvLIAa9St+6rY3CkxJCwkRN934FaGoBEtgrAAhMJTCBFbImhiU0hZiGj9qD0xI/IMw7U9R9Lvg/Jtjk1kQ3uFmgz/DpNnzaOZrflazUL0gA"
     },
     "videoUrl": "https://youtu.be/b3ak6_aF5HQ",
     "prepTimeMin": 20,
@@ -716,7 +716,7 @@
       "srcset": "recipes/breakfast-sausage-400.webp 400w, recipes/breakfast-sausage-800.webp 800w, recipes/breakfast-sausage-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoGv/gNsS09xwl4dVNtXlBAA/TFmHjxDtl1fXU39+uyw0sDy16FzwkrGlWR1+ZbyEOYDdbf/9ae2trAncJU5rnTlg1PbYNephm6mrNxftmLV3bYX+5mrEW0pgTdULDcOh60V79rKYztRiP6zHDvNVATvWX5mIAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoGv/gND+4DUD7uNLlP4EY6AAP0w12NBH+hw3lzKQPOGil1SD/IphrGxrZJ4WnqkpuLE9p7a2sCdwlTmudOWDU9tg16mGbqaLdsL2pqIvD3jWNmhVtVYlVheEL6JTcK6cV9FIQi3HCgYazHDvNVATvWX5mIAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=FDVUJTcB1N0",
     "prepTimeMin": 10,
@@ -850,7 +850,7 @@
       },
       {
         "n": 13,
-        "text": "Let sit for 1-2 minutes, grab some salsa, and it’s time to EAT. Breakfast Bliss 57"
+        "text": "Let sit for 1-2 minutes, grab some salsa, and it’s time to EAT."
       }
     ],
     "image": {
@@ -858,7 +858,7 @@
       "srcset": "recipes/mcdonalds-breakfast-burrito-400.webp 400w, recipes/mcdonalds-breakfast-burrito-800.webp 800w, recipes/mcdonalds-breakfast-burrito-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACj1ciJV4WYkDwReQAD+fH2Is0/qYqM90GNMfaWFEgi3Jjns+/YAYuYx6NrOGq8xwfP4prdeLdKsYGSyGXrtGtLbnrOyRwmgS8LNviBKTxFCzssw1nu5uWMx8MFjrH5kAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdLwAVfq2wRSb39vlYfagBmpR4AP5y2pDUK7AlE02+zPXIEbSXVZNttktI1YIjZlFZ+0002KXioKtQC6Re8nToUuEOf68yr3vbn7JEPb420czal2JqwUGK3udjX2DNMd9cmeUAAA=="
     },
     "videoUrl": "https://youtu.be/8eRK8JOP-LA",
     "prepTimeMin": 10,
@@ -966,7 +966,7 @@
       "srcset": "recipes/200-calorie-400.webp 400w, recipes/200-calorie-800.webp 800w, recipes/200-calorie-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR4G8AB38CxcggFuYxb5n5WQAD+2qqKUPt7Hxr3YZmwmrHIJ14JScNHaX2XGTkEdn4VeLeI1Fg/Pk8XzaUtElqpPKlbgu25O9gqoim3aZKMT1nioMcmkAU2CWr6Ky4HWYAwixYyqAp+AAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACWW1K2NfBGtdlOV+gAA/tqspThpdM9nWPdnwv8+cBy4oBUX10ILcIFWy1afzTOEDFrPCrJuFTkX2kE3gFJHW+9uPCltxwOGqbujU4HtkCpeQQ8d/DM5t9zO9FkA+cXo1A6v4AA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=iSkK4eyPJ28",
     "prepTimeMin": 10,
@@ -1129,7 +1129,7 @@
       "srcset": "recipes/honey-butter-400.webp 400w, recipes/honey-butter-800.webp 800w, recipes/honey-butter-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3Ff/gPJN/8ni/pIfeBmAA/tzqui6WCdQWQhPlgm02bOCnMbhhdWVUqom3Q/sAHrj95NXr/urz3geiDPZgSeTUP5Xe5SWYQyZnXRhORZZcXVwlK3/cuxVQR3/ovHmLIqeEUkJtI8MMFK2ntqx2iu2OnlgAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3Ff/gPJ9BQI9etE1wAP7c6roulgTm2IQeEAi+dRjlUr6IkG6aCqoCf42BylxW9Y58mBq0lodTdtUsms8zaJIqBQtTmZnXRhMAmCwsYIKEguns7UgjGCUTn4r2VpovEyayrSoyGcRaU8w+1wAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=h60hQb0om_g",
     "prepTimeMin": 90,
@@ -1291,7 +1291,7 @@
       "srcset": "recipes/lemon-glaze-muffins-400.webp 400w, recipes/lemon-glaze-muffins-800.webp 800w, recipes/lemon-glaze-muffins-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3AdBZB+V2XgnK0oScfe31AAD+idxEFRuC5Vxv0VjXz7w8XzdeSVve8UxYmmeQo8oicVYUT2NnVV9d9BQvSO3Tysl5YJYfdWD7+U6TmacKCVmCATUMQ/o2mV5j57+l5+aaOpGAtpqQf7F9ngMdIa3myapoLJwYv5OSHVaVjbsF2gPV8PdskjIOAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACnq4DhhiNLiaUEjQiAA/oncRH/mA7zPfqvqYocQcG1Z5MmJgbripSpsxlT1Szkk0HwySqe89lvlRlGO8scQDPjfEtK/Mcdb+CZJ5SVfK5smBk1avGF6lPB5v/hEfzPHZnXXMEty89LzVPU9FB68fajyzLdkZhL/P6wXUFjDvfgn5nKgAA=="
     },
     "videoUrl": "https://youtu.be/bnybsOhRJMQ",
     "prepTimeMin": 20,
@@ -1439,7 +1439,7 @@
       "srcset": "recipes/banana-bread-400.webp 400w, recipes/banana-bread-800.webp 800w, recipes/banana-bread-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTg2w0EhIReGwAP7pW5rA2jYQZwDvsxRGdqUGHQk0lNXMNhd6X/tAdNjrd4YB69L8rhsyTIw5ABS3jon/rzFTaGYwS8/JTzwt8gBAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTesMHDYSf5ecAP7pW5rA2jYQZwDvsq32vay7YTlnTUmqo0jxQaXCx6Hl3476N29umlo3wkCZyV4ehG7PN6atnyI96YUZy6IqAICVdIsAAA=="
     },
     "videoUrl": "https://youtu.be/bnybsOhRJMQ",
     "prepTimeMin": 15,
@@ -1591,7 +1591,7 @@
       "srcset": "recipes/pumpkin-pie-muffins-400.webp 400w, recipes/pumpkin-pie-muffins-800.webp 800w, recipes/pumpkin-pie-muffins-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHYEl7/AucqnB4AAP7wvuxLleTkPaK0qsLSlQI/GfEfW0fw141qmzGgsLRjDOe5tXcmxGqIcjun2RTuUycmc9CemgjUsUSAPyVzS7/b0A+F7EmtKAA="
+      "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHZnNcTN28UDAAA/vC+4ac44Uk68nZxebgXIngUmLMTUBspKU5biHcbcl/oLwFxr10XcT1agq0TdoSa2DNpl1B0COTbJZDWAmJzDrpccd0tpYAA"
     },
     "videoUrl": "https://youtu.be/bnybsOhRJMQ",
     "prepTimeMin": 15,
@@ -1771,7 +1771,7 @@
       },
       {
         "n": 10,
-        "text": "Let muffins cool on a wire rack for 1 hour and store in a paper towel lined air-tight container or simply throw them in a plastic bag and enjoy for the next 3-4 days. Breakfast Bliss Breakfast Bliss 69 69"
+        "text": "Let muffins cool on a wire rack for 1 hour and store in a paper towel lined air-tight container or simply throw them in a plastic bag and enjoy for the next 3-4 days."
       }
     ],
     "image": {
@@ -1779,7 +1779,7 @@
       "srcset": "recipes/jumbo-blueberry-muffins-400.webp 400w, recipes/jumbo-blueberry-muffins-800.webp 800w, recipes/jumbo-blueberry-muffins-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdL1AVhs3zgQCOt/6QR0oAAP7cmnHdjUG5kb94k94GCEciKGX5/gDLy+e4IeF3Ii4xR40h8/w1fyEJYgHNAYpLiyeTH7IHLTeYGFk0La+Xh9+seXp0k3EwBPcPsSDB9nFD00SbzaSQzasVQZ5MPJns2h8OVaknN7hy70QUAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR8eCm+FpSZd4ZfnFeWBqAA/tyaceK5/3OLkf0jc9qrrhJnDTWpoebwXBrDCxwqEZBEda3lCXLBUHszCRSSgg+IBci5pKdPk7l5gHgX75Ef7ammXnszA+B1dU4VIkLKZsczMJE/uqDZUjp5diqGD0Ilk/PKOYYZtCpUAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=R06n7gV2qW4#t=5m52s",
     "prepTimeMin": 15,
@@ -1937,7 +1937,7 @@
       "srcset": "recipes/jumbo-chocolate-chip-muffins-400.webp 400w, recipes/jumbo-chocolate-chip-muffins-800.webp 800w, recipes/jumbo-chocolate-chip-muffins-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACw7CHTP60eQYzKIcznhAAA/uzfoECQV52BghLcT2ICuQ8aySpf4isP+Nter6fbxbbKfRoDagk6z2fR3wGTrdhblAx0IxUbi9l7xyJJsK2R3cmYZu8V8TUChGFj5ECu/5SzIHzCDvaOU4CDsAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACw7CIfjoXlMCTBg2HrMNuAAP7sWKA4PORAslPckfRZx5fZX25YP5mXeun+wOUSocU1fQN1FaYhoYyeS2NodltwMHsg+G4vZe8ciSbCtkd3JmGbvFfEwd0MLHyINSw8jZQNLVypGC4A"
     },
     "videoUrl": "https://www.youtube.com/watch?v=R06n7gV2qW4#t=0m18s",
     "prepTimeMin": 12,
@@ -2130,7 +2130,7 @@
       "srcset": "recipes/jumbo-pumpkin-cheesecake-muffins-400.webp 400w, recipes/jumbo-pumpkin-cheesecake-muffins-800.webp 800w, recipes/jumbo-pumpkin-cheesecake-muffins-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACxG1AB0Q40nsVdE3FgOEAA/s3v4FDSo1wlxdXu7JkDETlk4v8nCToWPhrz8+3aneBBIleovX5QyTWnrvC3YoLJhn8SpgC1H2TKdL5sHSvxBzFmpg5WGIWSEgVaAGux5YZ/T8i1pYBPOwAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACxG1EMAAcabdOAai263p7NU/4A/s3mADLWO0AuuZKYtLvjA/C7KqLxQAKKLuapPXgUvjTB/98rsmYH3rYgXbo62HtYHP+w8e3C3UghzEyk0NrOZBdUwHgbM2NfkVKbx8ObbgdGrI6gAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=X2m-9SvGAxQ#t=0m25s",
     "prepTimeMin": 25,
@@ -2260,7 +2260,7 @@
       "srcset": "recipes/chicken-strips-400.webp 400w, recipes/chicken-strips-800.webp 800w, recipes/chicken-strips-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIsB9gEm8EftljBNBw4JfH2u6wADiVyNikyUu0Rn72EoJaeqhhrVWyQN21U9wQIeSc58JoKxLzgFT4h31sQzMuvULZmbT8vTsPp8TOJiL4LlDttwAaArHmePaq36Zkf1Vcmzyfy+Rqlz4ZKfygpCBhbISVvSrU7QAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIsB9gAHGrltdL4bS1X867QAA4nEe4ZO98/SZDGw5khSga3qI1EGvB5IIf/1ZqeyNTDpa6yGDtWuFT/MtUqmiRXBwEoOTJrjT1/Bweyckup9DFdoGL3rS0eQiOLwPjkxxc/Nx8C45dNMZNINEd6Sy31beB3wGFLAAAA=="
     },
     "videoUrl": "https://youtu.be/WaHDT5gbNdg",
     "prepTimeMin": 20,
@@ -2383,7 +2383,7 @@
       "srcset": "recipes/jalapeno-popper-400.webp 400w, recipes/jalapeno-popper-800.webp 800w, recipes/jalapeno-popper-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7LwAB27Ue32YJWSNt++vAAP7p/yoG7c6HtKEQ6PTIQLO6BklZoNsK3nvIt40q877v8mNlBrdVuP2hCWgd9OEaTTB0KifbGYTL1aodGklAuprGCVJ93cvdiPRF2f49Jq6yCsqNQt/tebTIzKAA"
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7LwBKgBXra80x6mhq3m8uAAD+6f6MnuEFkbCKcBzIzrwZ9fxm67i2xzH8qWPiISZN6v97t4vMRJ+c1FJg8FN9vtWWvETRwOAzEv+8wX1UGUjuBbFXRfgLFQDnYEjTI8yw5W0PQAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=mtdLbbLr76I",
     "prepTimeMin": 15,
@@ -2543,7 +2543,7 @@
       },
       {
         "n": 13,
-        "text": "Put the top bun on and ENJOY. Midday Munchies 81"
+        "text": "Put the top bun on and ENJOY."
       }
     ],
     "image": {
@@ -2551,7 +2551,7 @@
       "srcset": "recipes/chicken-parmesan-400.webp 400w, recipes/chicken-parmesan-800.webp 800w, recipes/chicken-parmesan-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYNcmAxRhe2ELhHhkrLlAA/trWA4U/IEC2ZfCXSZzJVnAUl0zwTLS4wAZyUDKJZJAH2FARWwVf8tIZnN/Ik0Gj8wvkVcIxnykmnkL6/oJf0s0yy0JZH4UFcpW39TxSj2dD1SGK+X2Hbh6nZaTMQW8s3R2pi9Uzhmk2M8lhreZBs4bIC/xQyfTvsYAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYNcAAxN/yzlr+IATFNyHoAP7a1X1IaaFUqNPlgmWZqCwhvNCJqEG0qDOBLPKkWCCYqQUkPaFj8yo7W8J4Pa8ytEYVfL9NIF/QS3N5pllN/yFHNiZHVmr0OQtjysKvwFsD9mibK5/LYx+d9yscTofYotATzIWPYHZ2Iz1dTrK8gAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=8nQaglkT5ko",
     "prepTimeMin": 90,
@@ -2686,7 +2686,7 @@
       },
       {
         "n": 7,
-        "text": "Cut in half or enjoy it whole. Midday Munchies 83"
+        "text": "Cut in half or enjoy it whole."
       }
     ],
     "image": {
@@ -2694,7 +2694,7 @@
       "srcset": "recipes/meatball-sandwich-400.webp 400w, recipes/meatball-sandwich-800.webp 800w, recipes/meatball-sandwich-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACnduv883dWwzIfa4AD+5FTr2Wk54f7U/JNUJAPS7pg+Rv1gH7FX6fmenUrWmToU/ilHw/6IGSy8sjwR18GKukgiU4koENQDZ+UDobnEuYhOhUNe4NodO5AkFIAA"
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwAz5w/wZu6iMZK9ARqk4AAP7j6f78A+uJuGE1QsIzTKiNxrtY/ygm3LwSHWpaGZONDbx/D4n0rIEDJZeWR4I6+DFXSQRKcSQSeFvmR4hG9twW+2H3it85jyPqUmgAAAA="
     },
     "videoUrl": "https://youtu.be/LQr68F3HPpU",
     "prepTimeMin": 15,
@@ -2789,7 +2789,7 @@
       },
       {
         "n": 7,
-        "text": "Add sauerkraut to the sandwich, cut in half, and it’s time to eat. Midday Munchies 85"
+        "text": "Add sauerkraut to the sandwich, cut in half, and it’s time to eat."
       }
     ],
     "image": {
@@ -2797,7 +2797,7 @@
       "srcset": "recipes/reuben-400.webp 400w, recipes/reuben-800.webp 800w, recipes/reuben-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdLwABng4Q1uV1eqQGQAD+6/9GgWMXRuX7RGXs56Csu1C8pMxj7M1SkY4Tve8T8tb3FWhz1u+GqrsN8SUdpzB+xn+bm5OsrlN/nkgnYnmdLfYY4/VrWAXX+EMgYfqf0UZopr4Sfk9lSA8ek0J7ARI//nLNukd+3eS8NdScabC5SAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoO4AHSrOnWRLfDcJ0YMAAD+6/9GgWLl+h0sb/ltdrQM9S0oTUpaSxeb6e+LMywOuo4K1mnrPiYseXZKJdHQ49iXtUgMhntcOGyHL9kQfT8JOU+pX+rX5kxgKVA10UZQbOdnI0eprbgWcpP7isMIPLoUFFMxNxeOr8UQAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=zGQNmS5uqYE",
     "prepTimeMin": 5,
@@ -2867,7 +2867,7 @@
       "srcset": "recipes/ham-and-cheese-pita-400.webp 400w, recipes/ham-and-cheese-pita-800.webp 800w, recipes/ham-and-cheese-pita-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACw7CIfm0u+QYPY+wF2xAD+7FeBn08Mr+Bvb+KV2El7cVFdEegSVRm9LkURJjvbmX+W3De8zV1luSNzb0YOuCmhlcXz4uRYKDu5QMgJLjVapn8h6erjbnGE1ypaLNvxWbJb8B446gAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACw7CBvbB60PHefiR2nAAD+7FejSQmiF2zLnbwStV2vtVI0LgYn0SQFQki4TEQijwgqgfYWtbYamw0RGhaDYL36Jvl83VisJJ9FR8b9dgXEfWLJWM+1fKVgHLc0PbKqIHSAVX6h/Uifsgd2uAAA"
     },
     "videoUrl": "https://youtu.be/RYLwFYAYCGc",
     "prepTimeMin": 5,
@@ -2991,7 +2991,7 @@
       },
       {
         "n": 8,
-        "text": "Cut it in half, plate it, and it’s time to eat. Midday Munchies 89"
+        "text": "Cut it in half, plate it, and it’s time to eat."
       }
     ],
     "image": {
@@ -2999,7 +2999,7 @@
       "srcset": "recipes/beefy-poblano-quesadilla-400.webp 400w, recipes/beefy-poblano-quesadilla-800.webp 800w, recipes/beefy-poblano-quesadilla-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACnTK0HDrmN9YL4TEAD+zGhpVf8PUIjMl0NWCwM9zmaK2KyYUSe1yN3VwUlbPlqGjIY1cwSzXZ+tIWEHyDiXxKZuutTs+qMWup13wlkl46Y5qoz7kYuGcFs7rJT6oAAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdL1AB0is3Cq3uKhx8zrgvoAD+zcqk4tBODWJzwUw4S97OF0CnTr2qBB5R5j2O/78KKbS6Hpvtr7i3mZss0WdTEc8SohvHkmL+MeTkYQySAhiFf/MlrWDKuZwqm17s5LL3vrgAAA=="
     },
     "videoUrl": null,
     "prepTimeMin": 30,
@@ -3162,7 +3162,7 @@
       "srcset": "recipes/steak-tacos-400.webp 400w, recipes/steak-tacos-800.webp 800w, recipes/steak-tacos-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdL1yBY3en4UA6RI7S5gAA+geQfNPRiZEAusTysoOj145PJSmTElnRI5+7Q5Xo4wk7xIMaA4CfaXGLJbGoJwrph+ydJ4hyODrv/N8thJy7lRdlywQxM7C28heVbmv/UCgA"
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdL1yBYWHKwFp+B3jzHgD6COLJLsb4vC6GS6iG0xW5uUOHTPBfutyQGxSXT7OrpfYZqcCXdYP45Ob7t7xlXyImV59cT/lu3ek11hNvVEC+8syOJ8ic7+QcnkOsDAsAAA=="
     },
     "videoUrl": "https://youtu.be/jj_wrw5krSQ",
     "prepTimeMin": 270,
@@ -3311,7 +3311,7 @@
       "srcset": "recipes/sloppy-joes-400.webp 400w, recipes/sloppy-joes-800.webp 800w, recipes/sloppy-joes-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMpAEmlYnttjFbQQJQ4XAD+7n8oilibRS/WrnlBB4QNRAM5j6YjYOnnImItjwWbrYV4xMbYonWvBiXpw1N9gEH8mS0SkFvwXs38J86uYbMhIi759I4qU9Zgbd+ELsS6AAA="
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMpAEmQ5+80mrm7UCZAAP7ufyiKWJzLGefOuZlOVB78e/qxBOyYs164iApKiIfWNnDS7tElEom+GS3yB8S9OGpvsAg/kyWiUgt+DulEq0YNlhQ7KnifuFCM4yrddHNcdWEkwAAA"
     },
     "videoUrl": "https://youtu.be/Gp95MiRbclk",
     "prepTimeMin": 20,
@@ -3415,7 +3415,7 @@
       },
       {
         "n": 8,
-        "text": "Give pasta a stir, pour into a bowl, and it is time to eat. Dinner is Served 97"
+        "text": "Give pasta a stir, pour into a bowl, and it is time to eat."
       }
     ],
     "image": {
@@ -3423,7 +3423,7 @@
       "srcset": "recipes/og-mac-and-cheese-400.webp 400w, recipes/og-mac-and-cheese-800.webp 800w, recipes/og-mac-and-cheese-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHpdLD8S4hrgkh1oAD+8RK3TlWk5lYsryggZU4nvLLg6HSnKqH7JELv8ZoRUhJiePjxpPYD6yfLh9iHCSXw2FP1yHnq3DKShcaoyFt1SNBfbdjcAB9Iy5wctuKQCJ11PgAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHhhH+RczSqr3s7LKAA/vESt1VohJRMIr8oP8sSfGWleSMN5yxffmVhnTCpfTOulkosNAzlqONWzjkzVM7KKhY5p6gYvSEFKpdYWTdFvJtg86TEBDYZBc499HJhQhS27OgAAA=="
     },
     "videoUrl": "https://youtu.be/wBTX9Oob-6o",
     "prepTimeMin": 5,
@@ -3521,7 +3521,7 @@
       },
       {
         "n": 7,
-        "text": "Give pasta a stir, pour into a bowl, top with chicken and blue cheese, and it is time to eat. Dinner is Served 99"
+        "text": "Give pasta a stir, pour into a bowl, top with chicken and blue cheese, and it is time to eat."
       }
     ],
     "image": {
@@ -3529,7 +3529,7 @@
       "srcset": "recipes/buffalo-400.webp 400w, recipes/buffalo-800.webp 800w, recipes/buffalo-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYCaABh8Qxbbzp+V95CpFNAAD+7CJKogl4TT7bOUuc8NZVllXG0S4QVSWHiJI2YHdn4a5nvOKovWH85fxNUIr6KUfUpMbIdPHnKNFObttTCfk9ECJSX/uhtFrPLkVE8LuyqbitOwk76IZ2DbIKizDoGymwAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMllaABiD1f2LRzZlWrMoAA/uwiSqIJdevxD//FdrP2rNj9tRqAf7eSz2ikpXvHQeP9JlKFo7TqMmBUbLRqgjVWOsp8YRLBdq4q/pwLFvPVZ+ZkeaaHD/93Wa5hUuhCAh1Za8N4J6yLZC3T9caUQAAA"
     },
     "videoUrl": "https://youtu.be/wBTX9Oob-6o",
     "prepTimeMin": 5,
@@ -3635,7 +3635,7 @@
       },
       {
         "n": 5,
-        "text": "Repeat step 4 and store any extra in the fridge. Dinner is Served 101"
+        "text": "Repeat step 4 and store any extra in the fridge."
       }
     ],
     "image": {
@@ -3643,7 +3643,7 @@
       "srcset": "recipes/italian-sausage-400.webp 400w, recipes/italian-sausage-800.webp 800w, recipes/italian-sausage-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYPYDF/wHjdX/GG0mZ+R6XyogA/uwSpfc3lRwDYRKZ1Zb2yr/baoeqaLM9KBmga/tuOIxXBXt0SArUjyKf0h9rtDHtsFVVC0IP7zVGwV6rLJknuIN+jDp6pqWGUguvl1dafLNTwugLcAOfD+bD/ePW1dyUtd7c8zgSPPmH6BCM29K2e489656wAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAQBQCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoLUC7jc/+A8bqymWTvspvr/nWwAAP7sEUCZ1gas2vKfEQfbU+76ok9o8RWh07tsUeuT6qE7ZEhyM+5nc9uDdw2Sr5suqRiYNWcBeqmnLgn5ab+aMnUjqp0A+yZKHvDmOhG8SR4UWUZ4laZBDwt1NQwTQ7dJOJS+xwAu48n6dkN/mxtxYDEw2XQA"
     },
     "videoUrl": "https://youtu.be/Hk8TIcq2yUk",
     "prepTimeMin": 5,
@@ -3837,7 +3837,7 @@
       },
       {
         "n": 16,
-        "text": "Grab some Taco Bell® sauce and enjoy! Dinner is Served 103"
+        "text": "Grab some Taco Bell® sauce and enjoy!"
       }
     ],
     "image": {
@@ -3845,7 +3845,7 @@
       "srcset": "recipes/crunchwrap-supreme-400.webp 400w, recipes/crunchwrap-supreme-800.webp 800w, recipes/crunchwrap-supreme-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwJoAD5n2EbbRi76S2oSFAAP6jayA0+pSMIcL2bcnFUiJYjASFFP1tuAn1ErQgh0pmQ6gY39jWx2OgmjJjqg5ITdvuBnVM/p+yEYIzFG3J3Qsz17jEN7f7rmKzFvH3kLAsfJruH2LiW+PJukJ5IyuE2wbF04l2yClDiQsYwAAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwJoAD5obra+zu7fDR2OOwAP6jayyLkt/7HLdmuNqRZ1/7T8CFewAg9hqia2vLD0SjRRuzMqmcLmOMRrh3iPrP23pEMQRQKcYbtorg5WPNJmzFEV3tOaMPNrEjBAWXTeer+ivimURM1wMQkQZid5GZl/VpbF04lyND3SXJgAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=s7AtJKQxmkA",
     "prepTimeMin": 20,
@@ -4007,7 +4007,7 @@
       },
       {
         "n": 10,
-        "text": "Grab some hot sauce and enjoy! Dinner is Served 105"
+        "text": "Grab some hot sauce and enjoy!"
       }
     ],
     "image": {
@@ -4015,7 +4015,7 @@
       "srcset": "recipes/jalapeno-cheeseburger-crunchwrap-400.webp 400w, recipes/jalapeno-cheeseburger-crunchwrap-800.webp 800w, recipes/jalapeno-cheeseburger-crunchwrap-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3N6Tbh2gAMUc1WZsZ3G/hrQAA/uxYoEGPWilnU6vUsBnaBzDQwxoPipe4MuLUe3URDj/W8ltt8BFnVH9OfC5r8XyOoLlDUPTsGEG7VG8mduD8bXf6iIGYl0JT7w3Lt7LpbciRWTjSBSoxwG4I9erAVCao2oVhrVySgAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3N6TbgAinuBDTDG9aV0nCecAA/uxYoEGPWilnU8CbPBw9717wCWqGIQ/j0vFDEMfdI68zC459bMriZKjDEAMOIDaTWEZMAeEGEHEHSuWlbhfSz7/fCZVrqJb/O0syOHOjNyoSHl/xiZ+nj6ijwODogziNBN9ohlUbUNJ4OQwAAA=="
     },
     "videoUrl": "https://youtu.be/0ueGwwAjP6E",
     "prepTimeMin": 10,
@@ -4203,7 +4203,7 @@
       "srcset": "recipes/beefy-5-layer-400.webp 400w, recipes/beefy-5-layer-800.webp 800w, recipes/beefy-5-layer-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAlvhKPnHAf+5lthIqsAP7c+62hxjJElM5ZX+fcx70fd+obueX2icIqcP7YEVxJ8CPoP6V7n/Ks4vyorXlqSPb4dMo563q/S3yG485rrSWLsPA+FaRc1Q3C6EAh9K6J3aH7ZN1W8VQ51XUzTmlv/i/+h9OLbvXnWXvKhC2//Lc2hGF8o3AAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwL8AHSoLfZrvkNINaWtUuUsAA/tz7qzDJQzEXp75y5EEzjRk4Lh/K2L7Mz+xTE60ZwtdZaLG88zVCzG3FgiFQzDxeyXeuj42Y5Kz4gbGwowPmXfsBdX7W5naYysc3/riLlAaK40DxhGjU/T+Ua3iqxuBQKICjq6lHYLIOM0ivYDQA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=R3ZhWQIgm8w",
     "prepTimeMin": 20,
@@ -4397,7 +4397,7 @@
       },
       {
         "n": 13,
-        "text": "Add filling to the taco shell followed by spicy ranch and lettuce and it’s time to eat. Dinner is Served 109"
+        "text": "Add filling to the taco shell followed by spicy ranch and lettuce and it’s time to eat."
       }
     ],
     "image": {
@@ -4405,7 +4405,7 @@
       "srcset": "recipes/cheesy-gordita-crunch-400.webp 400w, recipes/cheesy-gordita-crunch-800.webp 800w, recipes/cheesy-gordita-crunch-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAluhfd1e8B3vHyRuAQkAD+wHzGzOndYeoL3xiFJ6o8pKFfwUfxk1kpY7pHCxEKiQuZJYRYU2sb06xdYK89q6Zrwr0q6WHnPy9z7d2+sLE1ckFJJt2vsvcOccOW08trJKelf1Z1dp3zBMZZviyOfb0N2YxVPPAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoCGAZ5O3k4OZdisOUKosAD+wHzG3w8nf+GO/+03ye7db0Lh0A7LeFFl8NkZ2cWEkyWL1mawt4/tYreYJtlKpn1Mpv+oIdT5pye3dvtqU6mDBgqTtfZe4c44cj1vv8xVXnthhrF+xCL3aJ/ZpLo5pIMpWkMKeOmE0AA="
     },
     "videoUrl": "https://youtu.be/7zPd-XlmMbM",
     "prepTimeMin": 30,
@@ -4589,7 +4589,7 @@
       },
       {
         "n": 11,
-        "text": "Garnish with tomatoes, cut into 4 pieces, and enjoy. Dinner is Served 111"
+        "text": "Garnish with tomatoes, cut into 4 pieces, and enjoy."
       }
     ],
     "image": {
@@ -4597,7 +4597,7 @@
       "srcset": "recipes/taco-bell-mexican-pizza-400.webp 400w, recipes/taco-bell-mexican-pizza-800.webp 800w, recipes/taco-bell-mexican-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADgskUzxqzYq9AmgAA/uRmzjls7T4f0UoNWyKP4xGyOHfWfUFfX8lxJGwBKH5cD4vB7j/Bgs+2iOs4iEZ5Ni0mvrrbHJzJBOT34/kohOPfA8cnwuYpt2Yq/4W9kDN1PL3O+t3cfhaHRRuuHm4Mb5WVqKI94AAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADgqH0a8cvg/JGoAD+5GbOOWtKD1cEgMCySN91gumtEXdtuY04qx7HQVlSFvkP75XiCuqZTrMlXtnJXo0x2KeTklIjCcO8npURHJ9HDHoHzKdNg+n86rH1nX7S60s7M9jR1aK7nY6IGlkO1bTqIpBfjA6Gqgcm4GsAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=5h-ne2_ZX0o",
     "prepTimeMin": 15,
@@ -4785,7 +4785,7 @@
       "srcset": "recipes/nickchicken-400.webp 400w, recipes/nickchicken-800.webp 800w, recipes/nickchicken-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdABuyu6ao/nrEDieJAAD+7CSim3Q0TWPHYdqcTNQ9LKZ8eTPMVvVdzhe+gizsQrtk5YlQLClbCCLsrzZKy13wb911FdAJC2AAPO8l+hTl0p/wZ8pPJ7gku87yw5A3cZXFdxlE/iCNuhgAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdABwyvVY6ZZl+ap/n/3gA/uwkopkFWVQj91eZsWkvsR8iCIdJE9oKAvpPD5xkOSjLe7H8zSvC6JPW3qVPnllJlro0A+WirexZ1y0HfNLbV3sfoJGqKsW/MmQZNe9gAT43a3oIwSQAAAA="
     },
     "videoUrl": "https://youtu.be/E-_cbqGiCbg",
     "prepTimeMin": 60,
@@ -5010,7 +5010,7 @@
       },
       {
         "n": 12,
-        "text": "Add Toppings and it’s time to eat. Dinner is Served 119"
+        "text": "Add Toppings and it’s time to eat."
       }
     ],
     "image": {
@@ -5018,7 +5018,7 @@
       "srcset": "recipes/dominos-cheesy-bread-400.webp 400w, recipes/dominos-cheesy-bread-800.webp 800w, recipes/dominos-cheesy-bread-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACw7CHiEt0EPSFG5oMgAP7ynY3KAH9wVOgCV+CyUnUpMGrQi1zpeFppvcEgDkpKu90XogtjeEG8OSiVM/quoov9Iy2dK/2Ct6MtjeoVrqBrvkFksaVl8ILP5tLRjX447WAA"
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACw7CHiEob+AozOitQgAP7ynY3THrTUo4GBru02c3BQL4MbDEByR8Bbra/MZjbctnM7yvlmHFRSDGsFLHGCtu0uR8poHvb4eKNc+V4p07CCjdLZKr63Zj+5mKohq2xgqfQAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=C_EpZYv09Nw",
     "prepTimeMin": 75,
@@ -5134,7 +5134,7 @@
       "srcset": "recipes/smashburger-400.webp 400w, recipes/smashburger-800.webp 800w, recipes/smashburger-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTpLW0ts+eRxIwoAA/vC+7GhYUFf+IqEfb5iNi7LjX6cObSXEG7jD+72yqenL6AFoWspC2dYl+G3i3YGz3YEe3X6Imv8ZrM9o70PfzN/3gK6/zemMRo+T/sgWJYIiHHAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTpLWu52N2AAA/vC+7EuVShJqmg2mavntO7ueIN6pPbH55IX9X63rLJtIqtWTlA+jFgu7cr+StrawVVicm6iesfjjyvr/tr+LLqdu4o1wq5cusBTh9HQMDA7Qd8AA"
     },
     "videoUrl": "https://youtu.be/z5mi2_535Y4",
     "prepTimeMin": 5,
@@ -5289,7 +5289,7 @@
       },
       {
         "n": 7,
-        "text": "Repeat step 6 for any additional servings and it’s time to eat. Dinner is Served 123"
+        "text": "Repeat step 6 for any additional servings and it’s time to eat."
       }
     ],
     "image": {
@@ -5297,7 +5297,7 @@
       "srcset": "recipes/chicken-gyro-400.webp 400w, recipes/chicken-gyro-800.webp 800w, recipes/chicken-gyro-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADdf2Xm+VW/B6mb1yIAAD+72Rso/f9pcycF/jyqazP82HH1vmNI/Rc8SMkN/0+g2STrGcsnNf8UvSuc5kNprRDGsynm3j+JGjj+VEhDNAHphIhK/XbFDH//lRlmBiUI0Ic8t4egKBUpPqMKtS/dqWDIqvAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADdehldAuFonELoaw5QAD+72Rso/e48x9l5jnpvkY5LYRv9wyHVGp/O1ZoSWNZACevVD+P3MijglmbWQ2mtEMazKebeP3VDX5lV+fG+SH05lpsux3AETHeHTqDLyMXOSWEsjGjZAqwqUn1GFWpffrLhIAAAA=="
     },
     "videoUrl": "https://youtu.be/Pc6o4QquI_M",
     "prepTimeMin": 90,
@@ -5519,7 +5519,7 @@
       "srcset": "recipes/meatball-sub-400.webp 400w, recipes/meatball-sub-800.webp 800w, recipes/meatball-sub-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACn0gOYyeLYOf2AA/vDHqmw7lJqpdWoYayEoELGHwrlyYtVbwljmOC8HtVl2c0Jk+B+73pYdLV7f6CPFqVrcZSmYRtE4Rzl3ogwbi/Cw8OC2szI+qqdPMsS07f/41e5jBA6lYOp2Uyjir54fOfsNSHyMKhTR4Tk2TWWAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3Ff/gPICfnjaCSkdvfgAA/vDHpf7/AYzeCPirHjcyHhHKIU93O7X1f8F/3hjENRIqOUqwd6JgNcQ+Zt0PpZ9kH/Ykv1qJgoMoPzHe2qj47vC97kiG8Osd0sBL0pILiV4fowOEGyJjog20yXNb4TqQSGu8E3cjCoU0eE5NOuAAAA=="
     },
     "videoUrl": "https://youtu.be/425hR90n8iM",
     "prepTimeMin": 45,
@@ -5625,7 +5625,7 @@
       },
       {
         "n": 8,
-        "text": "Add chopped burgers over the top of the vegetables, top with ketchup and mustard, and it is time to dig in. Dinner is Served 127"
+        "text": "Add chopped burgers over the top of the vegetables, top with ketchup and mustard, and it is time to dig in."
       }
     ],
     "image": {
@@ -5633,7 +5633,7 @@
       "srcset": "recipes/smashburger-salad-400.webp 400w, recipes/smashburger-salad-800.webp 800w, recipes/smashburger-salad-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdAywBkJytzz913VnnawAA/vGAixtgv0FYFglL7TNiBPFfHF5bn3fWX/Q++R5vbYKo+92jJXVVYrxQJenW1BwmYMBm/iJIAwI34AJxpldI/h2ySR55SxcNKtCMpevQsZHnb5O6N04wUnCKpgIOYdfJiIqIqmZ+mXSAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdAywBg49888eXaumcBAAA/vGAixUF+gqqj0pYJ3MsDCc0HLzRCmeakEmwig//9QIYJzytafMThEpxB/+9ZEkPyEbo+nbRyX8CMLzCNymaHwGenK/Bx+ghsm9xKUQtJtDVCt9FMptVym5nxYOs5389X/D8AAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=1XZoURSk8KY#t=8m07s",
     "prepTimeMin": 10,
@@ -5791,7 +5791,7 @@
       },
       {
         "n": 8,
-        "text": "To a large bowl, add lettuce, chicken, Corn Dressing, cotija, and green onion. It’s time to eat. Dinner is Served 129"
+        "text": "To a large bowl, add lettuce, chicken, Corn Dressing, cotija, and green onion. It’s time to eat."
       }
     ],
     "image": {
@@ -5799,7 +5799,7 @@
       "srcset": "recipes/elote-salad-400.webp 400w, recipes/elote-salad-800.webp 800w, recipes/elote-salad-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7ABwufdsfWk8ZXi+jf1AA/vDssf8hR0h+0Go0SZO58HEdi9IfGdV5HMCkBFRIPT9BblKlULEpjVmyc+kQWNup6CUUXgDbRcZZ6gksKTbd14Ee1/eMHB1RjI9kzgMGxMGVralChhoT269eHZja+V3PEL/zk2n5KAMuqzQAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7ACHIUeGwDkytOhRWAAD+8Oy2ci0mYIfeJroHoyqfcYFv4ZR6VcjZQ6hckGFDu0GuMrAP1nAUNE+zbLNF2vkiVdl5aLnqpKuTOTSdapRbpMRfjOecit1reAN1NT00fECwRnD8LkTFXyJvteEgojnePLAiHBDkCfoUlKDd6l0tl4AAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=1XZoURSk8KY#t=5m13s",
     "prepTimeMin": 90,
@@ -5980,7 +5980,7 @@
       "srcset": "recipes/chicken-gyro-salad-400.webp 400w, recipes/chicken-gyro-salad-800.webp 800w, recipes/chicken-gyro-salad-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACsAdwLfNdsPE7L9CMc4uAtsmAA/u9ofQPuAh3NJ0fYrNuCcyT9bRd9pIJZ0neo/Lu+vfXwlwXfYtOI5x17HPcSNFRwF6DuZ5Mn4CUVpIBVZH8NlWo+lj6X/1y/IbQV4cAs3SC5FkZqUYnuYWCu8VdQcS3cHaTS0er1Nh8HhCvEYy+aep6T8EqlM8ZkosVgu4rRyEGYxFIfPPW+rrOHc/6/6Ghsok/5+/gA"
+      "blurDataURL": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAloRlzVTxKQOVH7mGAN/fJwAD+72h9CC5zYPaTGzwr2MhepO620ELYt1FN5eOchFWsfm3er6z4YfTMYaMD2rs0R8Pf+8FPa6lmI3e8smvgSnwWMvIoCUH1SBYL1e/5Oa68UxA3nAK71W30uNecNhfe9l8j+hRLkYKGo/Mlu3tqPvcHbz1BPwYDitSH95KkL3FyxSTRSsUF4exmcXyg2LCfz+fv4AAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=1XZoURSk8KY#t=m13s",
     "prepTimeMin": 90,
@@ -6169,7 +6169,7 @@
       },
       {
         "n": 17,
-        "text": "Cut in half, dip into some SPICY RANCH and let’s eat! Dinner is Served 133"
+        "text": "Cut in half, dip into some SPICY RANCH and let’s eat!"
       }
     ],
     "image": {
@@ -6177,7 +6177,7 @@
       "srcset": "recipes/1-hour-calzone-400.webp 400w, recipes/1-hour-calzone-800.webp 800w, recipes/1-hour-calzone-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACnzRVRHJFGn50ywAAD+7BJc9rPASL10g0nWBhp7BGr+Hp4S9be9VKZI4w1HNb7M90fbNpwSSCnb9RTmsZluoHQ0psSo0x0dovRrBYt2G+qP6nCDhi3D164KrzBb3Gil4AAA"
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACn42+NWWMykoFIAAP7sEnW/gDwt7VskZ2ANEbHt73mQjrN2ew1PxS3otjo1zhPzhu5eVNNG83SS19DundqXwyWXqsySTtldfBTIwvJX7wKW4n/qGaBT1aWliQ95AAA="
     },
     "videoUrl": "https://youtu.be/WnMQv6X9Mus",
     "prepTimeMin": 60,
@@ -6362,7 +6362,7 @@
       "srcset": "recipes/1-hour-pizza-400.webp 400w, recipes/1-hour-pizza-800.webp 800w, recipes/1-hour-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACT/jSPgJ/0rye3iSAD+6dtmgaMGD6qJk1x1DunGkMhmN9X3nRflJUd8lj4nATjM5CCUR8w5qrxOyy6NRSndbryNhTd2JWSlUlcAGj/fYFlJHaRJpxS0g4h+a2K+Z3gCq8FqNlUPiaAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACnGcNu9FtSt1HZd4AD+7MJIapR1YDEIabFN8A1Y01LYaRqdFHGT+CMKN/Vh7PSohOFKcs8Ys2Kc940eBzxNl/yAxPJgDTggrmG4jrsb39VY2o3slXY9pkNV/yT0lPVvgz0ofqDEluYAAAA="
     },
     "videoUrl": "https://youtu.be/TUwomcAaFE4",
     "prepTimeMin": 50,
@@ -6395,11 +6395,11 @@
     "category": "Dinner is Served",
     "servings": 2,
     "macros": {
-      "calories": 0,
-      "fat": 0,
-      "carbs": 0,
+      "calories": 619,
+      "fat": 18,
+      "carbs": 71,
       "netCarbs": null,
-      "protein": 0
+      "protein": 47
     },
     "ingredientGroups": [
       {
@@ -6549,7 +6549,23 @@
       },
       {
         "n": 13,
-        "text": "Using your fingers, push out from the middle of the dough, rotating it and working it into a circle, until it is big enough to cover the entire bowl. (RECIPE CONTINUES) Dinner is Served 137"
+        "text": "Using your fingers, push out from the middle of the dough, rotating it and working it into a circle, until it is big enough to cover the entire bowl. (RECIPE CONTINUES)"
+      },
+      {
+        "n": 14,
+        "text": "Lay dough over top of bowl and pat the edges so it sticks to the bowl."
+      },
+      {
+        "n": 15,
+        "text": "Place bowl on a tray and bake in a 400°F oven for 16 minutes."
+      },
+      {
+        "n": 16,
+        "text": "Once finished pull it out, heat 3g of butter in the microwave until melted, and brush on top."
+      },
+      {
+        "n": 17,
+        "text": "With high quality oven mitts, quickly flip bowl on tray lined with aluminum foil, slowly go around the rim with a spoon, pull bowl away from pot pie, and EAT."
       }
     ],
     "image": {
@@ -6557,7 +6573,7 @@
       "srcset": "recipes/pizza-pot-pie-400.webp 400w, recipes/pizza-pot-pie-800.webp 800w, recipes/pizza-pot-pie-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACXCE3ol/zR/y4NVSwAA/tmbLSQppDsG/VF/pQFRoqFT34WGUUYQPiz49O2L/KcweAR56fJbrwJcq2N+WSdE0xvYex/XMp6wj8T9TZN5LL+BbqjR7lIKIdv6hql2KO/ssX5Jp/KAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACXCEDN/ywDzj+fxuICQAP7Zmy0hhf18cz3mNFmUYxyMu8N27jfe7slCg/3CAMlveHnS0t1uDRASSjeR+mLn2Hsf1zKesI/pfcEDmIf24tLxtdF07GrBJW/5/Ezj5kZMwS4AAAA="
     },
     "videoUrl": "https://youtu.be/4vDuDgLA6MA",
     "prepTimeMin": 90,
@@ -6566,7 +6582,8 @@
     "references": [],
     "sourcePages": [
       137,
-      138
+      138,
+      139
     ]
   },
   {
@@ -6700,7 +6717,7 @@
       "srcset": "recipes/bbq-chicken-400.webp 400w, recipes/bbq-chicken-800.webp 800w, recipes/bbq-chicken-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdLwABz06sLak9ZbkEwEgAziMQ6DeWhoAn4xsW7Bp6XbOHaawuqFXwkjnbhJ59Ev03Uy44gkYgaU7/3+hVZdWf27rswdjbL5O96THcrJJJ3WEKhk3huK8xb3/MMaicUVN91udXSqgsfqxtggAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdL1yBluA95Baz8EQnQADOIw+0agNV74nO4jI/kC9g0VhM1oXg7qTZAmOGhoXJynFdifmz9KWmO/7EbmS+dIfxXoHqz+3deymOM0IlFCUx1O5+sKu+RqfiKXVjshGm/EnYlD85Dqz2xi41Z0wA"
     },
     "videoUrl": "https://youtu.be/DMkMTrU32x4",
     "prepTimeMin": 120,
@@ -6863,7 +6880,7 @@
       "srcset": "recipes/cheese-and-pepperoni-400.webp 400w, recipes/cheese-and-pepperoni-800.webp 800w, recipes/cheese-and-pepperoni-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACWdxZSyjpOj7+qYMAD+RrXl3YaeuMvU7xDE7wKI+1yBeDq4V+vZ4Rdn8XAIi9y7QYjnYlMQ26lhcewsLAjBHQPKm/CS4Zw7FwldC9t6AAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR2WCmkch+zf1/SBygnSWAA/jx4+AB3jMd5xbAKqYYxD0AlN0H0ZviGCdl3I3MSUP/EJPw02+WwhrWi4d6FgXCNoVIFDDwGRP0iky2ggTsntBdE8vv9j8n4W9/AAA=="
     },
     "videoUrl": "https://youtu.be/5P9r7jsZ4-k",
     "prepTimeMin": 120,
@@ -7010,7 +7027,7 @@
       },
       {
         "n": 9,
-        "text": "Cut into four slices and enjoy. Dinner is Served 145"
+        "text": "Cut into four slices and enjoy."
       }
     ],
     "image": {
@@ -7018,7 +7035,7 @@
       "srcset": "recipes/pan-pizza-400.webp 400w, recipes/pan-pizza-800.webp 800w, recipes/pan-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3HaaAZkzgrH6dsg+lWWqr6oAA/uxIcWZ0hEvXI7wR2JWnrIhFNlVNp/P/9I8OlJxZjyg+Az59bMSWT6HeoUl8Sw1ONaNKcm+Ncx+NHKgT26O06XGvIK/fFxviaLm/BKOaebsqW62iJqb9VDcAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3HaYAZnceyUBKCEKx9mASAAD+7EhxZplbmoW7qcB7jMzZzsk4LoniO1da9xGtBTNza7KrVLJR1DN5QxD7YtAQNGcT38PD4bL6IAyH8az2UINrN/AP87B9homIhTW8l1tYX261VxdJW/ujwAA="
     },
     "videoUrl": "https://youtu.be/nWvcbQ-r3fU",
     "prepTimeMin": 120,
@@ -7239,7 +7256,7 @@
       "srcset": "recipes/deep-dish-pizza-400.webp 400w, recipes/deep-dish-pizza-800.webp 800w, recipes/deep-dish-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoLUAA+dQFvGrilFXYAA/uyeKJr/KZjmLRcBNavbFjojZ1eyrQfdHWVWRijciqcUYYAOOXac4gaKPfa7ZEBbUg/ai8UP/hOMwvF3OawubSN9e3hFZ0O4EtZ3bFnrLNh3OV9oMrFjPf0VoznxNVuYt2AxNRojf5nR20yleSran5uYsn5nCirfqqAA"
+      "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoLUABME9pkR6/TFi/iVsQAA/uyeKOdSX+Tk4D9xQijq4Zm+a5/meGMgcDeSlXhyudxbfYu2RBIqm1I163uAb1GbThHDP3HIdifPu+L7ZFIjkRnqPwaFFeSzIUPlNrCPEFCGsc3He2+CNEPIg0m1MKbpT7z/CezcTGJ3Y3Xg+amOZg2VMX5b/JnKgAA="
     },
     "videoUrl": "https://youtu.be/T8mUgt3uZEU",
     "prepTimeMin": 120,
@@ -7470,7 +7487,7 @@
       },
       {
         "n": 15,
-        "text": "Remove from the oven and immediately place the pizza on a wire rack. Let cool for 5 minutes before slicing into 6 pieces and eating the shit out of it. Dinner is Served 149"
+        "text": "Remove from the oven and immediately place the pizza on a wire rack. Let cool for 5 minutes before slicing into 6 pieces and eating the shit out of it."
       }
     ],
     "image": {
@@ -7478,7 +7495,7 @@
       "srcset": "recipes/lous-sausage-400.webp 400w, recipes/lous-sausage-800.webp 800w, recipes/lous-sausage-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdH8AgwRf59vulSu2ysLR+lMAA/vEgqWOk3XcnqVl+iCHtJZ0h7ijpOLkejtejEekk1ySr6hABCJOKmNMzh4YdYBHz15DBccZZaZ5nhLdnSGmmJmMAOj16FqH3DO3OjB/nBvFedNfuEMaRA5WGudMwiKigHNhuG/nAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdIIjguxfuLpcsXbzbVAD+8SCmb3hmM+XYlgx1ooXfh+97gVz+ub1p1Q13LGKumQVKBgB2prsR+bdWlOt9/km/ALkJUNmCc+rSw54dT0WMVBE3z7Jjl8C6GbETZOcElHfxMWQyOkNJ4w6LnxhD2soqKqz3JDqn0MAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=sTNnn948WxU&t=36s",
     "prepTimeMin": 1440,
@@ -7661,7 +7678,7 @@
       "srcset": "recipes/chicken-400.webp 400w, recipes/chicken-800.webp 800w, recipes/chicken-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTfKH7ZyLEOMHrmpwAP7y8XLDGebvd/BctlmVHPaJVTme7nu86ey/pyWD0oaWsd838jeXcyhxkZsD9MfkGYvb3kGcj5SY5i6w0P8L45G7aAMOAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoADTfOZT7ij4vJKhKAA/vLxcsMZ5bsa56u9z48IejPjDHc/xGO6HMqOXOWxEfIeN+vGqC2fv2a1bpw8gO6XyBDF3DFMUjHS/YXG/U8D1jK0tisBUAAtIAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=loPu1m9pLpo#t=0m26s",
     "prepTimeMin": 90,
@@ -7688,11 +7705,11 @@
     "category": "Dinner is Served",
     "servings": 4,
     "macros": {
-      "calories": 0,
-      "fat": 0,
-      "carbs": 0,
+      "calories": 479,
+      "fat": 20,
+      "carbs": 32,
       "netCarbs": null,
-      "protein": 0
+      "protein": 43
     },
     "ingredientGroups": [
       {
@@ -7911,7 +7928,39 @@
       },
       {
         "n": 15,
-        "text": "Using your hands, squeeze as much juice out of the beef as possible and add to a medium bowl. (RECIPE CONTINUES) Dinner is Served 155"
+        "text": "Using your hands, squeeze as much juice out of the beef as possible and add to a medium bowl. (RECIPE CONTINUES)"
+      },
+      {
+        "n": 16,
+        "text": "Lightly sprinkle corn meal onto the work surface, flip dough onto the corn meal and add additional corn meal to the bottom of the dough."
+      },
+      {
+        "n": 17,
+        "text": "Flip the dough back over and using a rolling pin, roll back and forth two times. Turn the dough 90° or a quarter turn, and roll back and forth two more times. Repeat this process until the dough is 10-11” ."
+      },
+      {
+        "n": 18,
+        "text": "Pick up the dough, make two fists underneath it and move the dough in a circular motion. Make sure you go around the entire dough. The dough should be about 12” now."
+      },
+      {
+        "n": 19,
+        "text": "Take the dough and grab the crust by your finger tips. Similar to spinning the dough with your fists, do the same thing to the crust and go all the way around the pizza. The dough should now have reached final form at 14” ."
+      },
+      {
+        "n": 20,
+        "text": "Roll out the edges of the dough to remove any air pockets and flatten."
+      },
+      {
+        "n": 21,
+        "text": "Place dough on top of a sheet of parchment paper and add pizza sauce, leaving about a quarter inch for a crust."
+      },
+      {
+        "n": 22,
+        "text": "Add remaining toppings in the order listed and add to a preheated 550°F oven for 8-10 minutes."
+      },
+      {
+        "n": 23,
+        "text": "Enjoy an authentic Chicago style pizza."
       }
     ],
     "image": {
@@ -7919,7 +7968,7 @@
       "srcset": "recipes/italian-beef-pizza-400.webp 400w, recipes/italian-beef-pizza-800.webp 800w, recipes/italian-beef-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACxDBgCsC5j2P11RHWXGBMuAAD+8RsHYI9q/8TeZiCEbFc8tAiXJzYf5QPpAOWBY99AQPJ+b2NAOQjfSmW1xb6+Oezx6FZTt7q5zbi1T403YBH8/L5ucqcdv898n6DkqucTZZzW5IjlEviBVMEGHjK8bG0sy529gg19re83jo8zVXlhUVbXAAAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACxDBgCvf8juglsycoCLSxXgAD+8RMQWqcEPXLKXCYSJSNhmdXZOHz/RJIYM9rvdFg76i16SCFtf0hSn5oOWX9c0Y2Em4ow9lsUNxUJt7z5w8Un52+Pqxym+lMUhDNbkiOUS+ID+bG+QnV+3OKhChvo4t6Ox9una8zNhKDra4AAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=WNOIca6-Q2I#t=0m52s",
     "prepTimeMin": 120,
@@ -7931,11 +7980,18 @@
         "kind": "group",
         "target": "DOUGH",
         "seconds": null
+      },
+      {
+        "raw": "PIZZA SAUCE",
+        "kind": "group",
+        "target": "PIZZA SAUCE",
+        "seconds": null
       }
     ],
     "sourcePages": [
       155,
-      156
+      156,
+      157
     ]
   },
   {
@@ -8119,7 +8175,7 @@
       },
       {
         "n": 17,
-        "text": "Divide into 4 slices and eat. Dinner is Served 159"
+        "text": "Divide into 4 slices and eat."
       }
     ],
     "image": {
@@ -8127,7 +8183,7 @@
       "srcset": "recipes/detroit-pizza-400.webp 400w, recipes/detroit-pizza-800.webp 800w, recipes/detroit-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdLwAVgmqQNYMvlz8C2z3NWAD+5tJHa08rvGLTu0Unx9vrPQG37f3FQPpN7LMdRdYoEqvnXFFhr9ExCiPOGXIEg7O8bChpjF+fAVfxq197IbbungE+S1QWMDOYLKUvk/pVTpRqisuySZzVkp30oB23zY1rrkTq5dw57CvWqi/034AAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdLwAVf+1OZV3nOEpzYHH7+FAA/ubSR2tOVGxRi7PHXkdYeJidA+YoSpbddqRPlsiNMuKLDXxOpaZuS/2Rbm7FDsujRJtWzN/i5KFXx3tTHsC6J3Mq+DNoj+/TcUPoD3QPh55qDzfvKqk3FwmwqPNKpeAZCMol8bUfo5THE7aAAAA="
     },
     "videoUrl": null,
     "prepTimeMin": 1440,
@@ -8254,7 +8310,7 @@
       "srcset": "recipes/candied-pecans-400.webp 400w, recipes/candied-pecans-800.webp 800w, recipes/candied-pecans-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYA0fUyROdN0Jyp5OAAMlbT99guRXDNyANaAbLzM82O3dEKuI0DNljcHhCEjq0L5KZgMVdKuIXJAss6bzN8En5jNqrtnF6TCEcPvBLF3mI+1uG+CTxuOReHekcP+w/LXUGKJrhWb26q7EW48PvEenUUfPFvDDxJAiuf6mzKllReVKVTG/8ftZNMfNeT/QDyRQsYuEO3/pxAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYA0dxjZOklstDjIAAyVsp9YIJVYU5wX7QdQ2XNlpgMOtjZnp16vbneymNIKpRBXAtBhp9EfXtOq6FKiNIupWaIKCzGRDX4v811aVAPcjwIpA2jVdWZdRpTd0TmLwf2v+QvOYsKpf+BeHY9KQ6n95m65a0CsDMf/AQMbNvHKlKpjf+P2raGOteVJ7Mxj2oE9VkUaAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=SvfnplwHvys",
     "prepTimeMin": 5,
@@ -8374,7 +8430,7 @@
       "srcset": "recipes/crispy-rice-squares-400.webp 400w, recipes/crispy-rice-squares-800.webp 800w, recipes/crispy-rice-squares-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCxG1ABlwnpde9z512gAP7u7m1T3sFtFRu9mE+7wZcp1VTQTnfuXLKJ5QDFA3IecP4PKPdwuTXdOt7sJTRqMjkL/Ckuak97ELeMXT6isHhr6QriCad21znKA6QAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCxG1ABlwnpddfxd5SigAD+7u5tU97BbdSjgQsMvtAlGV9C7Mk/R/bPfGlRyeopeFigGGWC1r4Sd1/A5HTGzsnCmXhJi07Taf7yj8mnzvxrm7Fxh766nbAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=02rCekyEXiU&t=23s",
     "prepTimeMin": 5,
@@ -8499,7 +8555,7 @@
       },
       {
         "n": 7,
-        "text": "Top with remaining Mix-ins and it’s time to eat. Blender Ice Cream 169"
+        "text": "Top with remaining Mix-ins and it’s time to eat."
       }
     ],
     "image": {
@@ -8507,7 +8563,7 @@
       "srcset": "recipes/oreo-mcflurry-400.webp 400w, recipes/oreo-mcflurry-800.webp 800w, recipes/oreo-mcflurry-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBdmUFHbH0ANzcXkRclrCpwA/s3QV51Kj9oYAiUvyBeXV+ShJXMFmjm02Ppk/ZS0QCeaL2zmJKpvlsejptdAyyy3NeGwFUA/v2YGHgknUJZKdtQjcmJttALsNWXruSuORLJHa0BKYI/X8AAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBdmUABflMqghvqk1EPtoAD+zdBXoQAGpCVIHpwJ1uhjcx2Dz4qebxqIZ3HC5iVOgpKQYbeWKZNAC8NBdvaQtdGWNMrdCvDMiYawsYcX12s7FYTxoJ+Ddicsbhe2YX+nlMrHiJwAAA=="
     },
     "videoUrl": null,
     "prepTimeMin": 8,
@@ -8621,7 +8677,7 @@
       },
       {
         "n": 6,
-        "text": "Transfer to desired drinking container and enjoy! Blender Ice Cream 171"
+        "text": "Transfer to desired drinking container and enjoy!"
       }
     ],
     "image": {
@@ -8629,7 +8685,7 @@
       "srcset": "recipes/crunchy-cinnamon-squares-400.webp 400w, recipes/crunchy-cinnamon-squares-800.webp 800w, recipes/crunchy-cinnamon-squares-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7MoAC8PPxcMI6clxmAAD+6R3W2/TmsarVWQqBGrEcMAMW+lFr5SYXfkrIStOHgVPOw8xQdGfb1qi/aX92tksh0NXMVYbgldQUMaXvkLaC8c4the6yyH6iSUZzvI2as+V19Z3qyiy6WUAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JYgC7MoADCp+xOhvoupahTkAA/uPAPGQ03+Fl/JXmNYJbJ42Mbkd7j8gffaSTti2h2OJ8mQoNWCOWgwQJ6p0jArqgHokxHbECEweASiMGvoN6+2H/eKjhvNtkhOu+zVn6wO8T96NlnuxmLQAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=Hu6kBlijQ1A",
     "prepTimeMin": 6,
@@ -8757,7 +8813,7 @@
       },
       {
         "n": 7,
-        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy! Blender Ice Cream 173"
+        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy!"
       }
     ],
     "image": {
@@ -8765,7 +8821,7 @@
       "srcset": "recipes/crunchy-cinnamon-square-400.webp 400w, recipes/crunchy-cinnamon-square-800.webp 800w, recipes/crunchy-cinnamon-square-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC7H8GJ/gPqxt2+nFNe6bNAAP7yr9ny8pLXHpYoSMv+7kteZPr83vqjn5RKolbmAU5moQOEBYBu0O6e8kWwpME2qjoieOzMhhVKo0iR/ZombtEGw92KXTQ0nhFQu5TpNp3D8UOd9WbRSNZ8vn11k7i61kogA5VfAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZAC7MoMYJn/AfVjbt9xN/x96PwAA/vKv2fLyktaHaXgzsimzyQHzPg4dpj53ZbtkSht2jVmDBApDr9OlG+ui/znanbHY03SKkik5t8HZbXeY0YVus8Z1Srw8v28QEwZW90ynB2PgEI09Db2s9jb0AAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=DlNjWnpMH1A",
     "prepTimeMin": 8,
@@ -8897,7 +8953,7 @@
       },
       {
         "n": 8,
-        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy! Blender Ice Cream 175"
+        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy!"
       }
     ],
     "image": {
@@ -8905,7 +8961,7 @@
       "srcset": "recipes/mint-chocolate-cookie-400.webp 400w, recipes/mint-chocolate-cookie-800.webp 800w, recipes/mint-chocolate-cookie-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC7MoACYZd6Rkz2uK5XQJAA/toM9jUbD4tqlVxq0k1UCr9qttKNo4pGC46kMkyfd9721fZ3I2zi56zwmGKo+VWoQ5QKUCX1I+5ShWIOjmjtejxWTT5BnMwercvWmjjLb7UmFk+0ND5NDc3L5tGTKMLUAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZAC7MoACYZbWpQeJu5LbvAD+2gz2Y9Ur4F9XeqBEHzAlOvcNiPi+19XHBV/qn4vcYhn1klFhXEfZBiiSO5R+8VahKTja+0D1Ey486Lnxf1trEBbM7hXmsEHS48W0VREarBdivRiv4scBffK0QuBQAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=SQu_gERWjFQ",
     "prepTimeMin": 6,
@@ -9051,7 +9107,7 @@
       "srcset": "recipes/salted-caramel-fudge-400.webp 400w, recipes/salted-caramel-fudge-800.webp 800w, recipes/salted-caramel-fudge-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoAC+jp46ERBMiPcUQAA/vK0IDOTnkyCWdpL2AZrbHjTCY5GcRpCjum35VIbxWz5t/A0iZg89LxUpSlfyIeHcUuJBLaFj9AcuZTM9Zi5mXXsK8SeACPSijH6LcKhazpxwGqcfscRkjh3giom027MbshYAlzTWJeAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoAC/LQu57efDqoimoAA/vK0IDOTnkOMSFceeihcNolp4LUoguQKvRaO5Hf9eeETmelboho1lEq414ogb8qfU/3ipSKCj9Guy0VGIc09JwUEvYwL7Xh2gkTucHlhtgZ79FoKGLsZxUrZUDkAxtNEogRuNllhAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=yjKSgtXgbqQ",
     "prepTimeMin": 8,
@@ -9179,7 +9235,7 @@
       },
       {
         "n": 9,
-        "text": "Transfer to desired drinking container, top with remaining graham crackers and EAT! Blender Ice Cream 179"
+        "text": "Transfer to desired drinking container, top with remaining graham crackers and EAT!"
       }
     ],
     "image": {
@@ -9187,7 +9243,7 @@
       "srcset": "recipes/smoresg-protein-ice-cream-400.webp 400w, recipes/smoresg-protein-ice-cream-800.webp 800w, recipes/smoresg-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoAlsxJxJMb7HwmaEemAAP70MupVmUgVVacX0MgLw6tHLsGdQT2o708+LUinCV3LQlzhYEm0e8I0gO3KqrkAU2eegPv4HqMCXd9H/ADrDphi3PZyuFN5o9koWE0JimJSQ8/+604ploDSBv9SGFb66Lo37QAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdACN5+HKIBE5rU7CxYAD+8qa2pXXh3MHjctsas92ceVCSgK7vmtkJeYTQl7tDUWMjxvKhLOHgPls0cNfRpT4gMQ4J3/L/HSfVdgN7pqB8G2qNrWLn4leJmYdc900/d0cUy0BpCEKwmMbhHsq3AsgAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=1PZfmhCLlFI",
     "prepTimeMin": 10,
@@ -9305,7 +9361,7 @@
       },
       {
         "n": 7,
-        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy! Blender Ice Cream 181"
+        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy!"
       }
     ],
     "image": {
@@ -9313,7 +9369,7 @@
       "srcset": "recipes/cotton-candyg-protein-ice-cream-400.webp 400w, recipes/cotton-candyg-protein-ice-cream-800.webp 800w, recipes/cotton-candyg-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBQCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYPYDF4N0zAbtV4to3zJRA3VQAAP7Lpc+bWFRFHCydnJo1lOKts2/EHqRApbrTTrgGNl04j78vKNF08enhudSkU5j4prhn7vypbaI9jqZ68383z1mR6twcQSkpDcToFoKhetDKC/BJrMXpj2gqoeeoWpykqQDRkCdLAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYPYDF/90vAbjuTsOSzfSsAAD+y6XPPYRbxqFvq4dD3DWK3jTqat1gmAHVZEyiaPjO3e/C5qWN6eG51KRTmWHehr3Vq28khMZ2ArayCIj3rIy4S2G+QTOanMVLq84YDLI3HIm8A05qFD7ezREkDUinD3r9ugAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=w0a2u0tH84E",
     "prepTimeMin": 8,
@@ -9445,7 +9501,7 @@
       },
       {
         "n": 8,
-        "text": "Transfer to desired drinking container, top with remaining Mix-ins, and EAT! Blender Ice Cream 183"
+        "text": "Transfer to desired drinking container, top with remaining Mix-ins, and EAT!"
       }
     ],
     "image": {
@@ -9453,7 +9509,7 @@
       "srcset": "recipes/oatmeal-creme-pieg-protein-ice-cream-400.webp 400w, recipes/oatmeal-creme-pieg-protein-ice-cream-800.webp 800w, recipes/oatmeal-creme-pieg-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBdmUGVsiHKfh+TEmCBYoOiAAP7jwFaDQ/EUfMfarYWCRkp/Rj1EbEwOD2XOxb5BEapEueqTJ9Zoh1cNr9rrcAXG6Rh7o3Ps1XHspKSpJ8AehcGs6RCHNNTkev+/6k5xdA/r6uPusAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JQBdmUGVsiHKffV+enkm/0O4AAP7jwFaDQTHZO00QJE15juutEwmhBpTrpbWPkERqkAG0Es/gPm9XQxOFIxg/CA/RivI9ZfQ7z4OUeCeN/2nSEz16hWbfTX7fobheJqLKo6eOfIfSk2gA"
     },
     "videoUrl": "https://youtu.be/S61cOUmlxqM",
     "prepTimeMin": 8,
@@ -9584,7 +9640,7 @@
       },
       {
         "n": 9,
-        "text": "Take blade out, pour ice cream into the Nutella®-lined cup, add remaining toppings, and enjoy. Blender Ice Cream 185"
+        "text": "Take blade out, pour ice cream into the Nutella®-lined cup, add remaining toppings, and enjoy."
       }
     ],
     "image": {
@@ -9592,7 +9648,7 @@
       "srcset": "recipes/nutella-ice-cream-400.webp 400w, recipes/nutella-ice-cream-800.webp 800w, recipes/nutella-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoMh8YADlUGFBNJUN8XgLqoAAP7macCh27SdSyLWrFpqNqo9lyQVdqGKojXuvqnpRRgqDGHMzFiAl03sXDjEUU84v0ajddcOuyp+OkfZ6eyXJGXlkL5blG+IEzSjLzaBSvtupX9ooMn+yJPpvYUtyN6ySjz5hPXhZZsdv8oNwEEUAZN0DFpMp3F5ZoAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdMoMjb0fBmpdrnv+5pU9NosAA/uZpwKW1xf+pZFMAlWgJKfmPYSy8q7uTuITe4JqIyWRLLRhrddNIxmGfKUvT7XNABlBv09eSVNRd6pextDjWMqzOQ78bhckBhRz/ZlHZqjC63lA5+6o13wKURxC5MuhZB0MEkaQtSVpHQ7gJdgRpozt+UnhsoAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=GOECDkhjpA0",
     "prepTimeMin": 8,
@@ -9715,7 +9771,7 @@
       },
       {
         "n": 7,
-        "text": "Transfer to desired drinking container, top with whipped cream and remaining caramel, and enjoy! Blender Ice Cream 187"
+        "text": "Transfer to desired drinking container, top with whipped cream and remaining caramel, and enjoy!"
       }
     ],
     "image": {
@@ -9723,7 +9779,7 @@
       "srcset": "recipes/caramel-pumpkin-spiceg-protein-ice-cream-400.webp 400w, recipes/caramel-pumpkin-spiceg-protein-ice-cream-800.webp 800w, recipes/caramel-pumpkin-spiceg-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagC7MoADEFlq/XjV07VEAP7r8F+pOb2/aHiL1AN/bK5+9zMF4mNxSGL9VAzIlMyB32TL2cpdmTXghUSuiSjpDBk48sWkGKdbZ7hRNS2QMmNiDCS+FhIMbi5xRsCoPL1jdEJqCnwAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagC7MoADEFhkJ3zGZmeAAP7r8F+pOb2xOiRem3uPvxbP7EuapDgY2pjlH/KidOLemdyW9UG1WsKHQUqoeL5xmUbZSXEozejPh9PBbJ/PnoTZJl7DZm49zTWU/cgVB8SFEpsgU8h99BWUUTAAAA=="
     },
     "videoUrl": "https://youtu.be/8OqpV9aYfbk",
     "prepTimeMin": 8,
@@ -9869,7 +9925,7 @@
       "srcset": "recipes/cookie-doughg-protein-ice-cream-dough-400.webp 400w, recipes/cookie-doughg-protein-ice-cream-dough-800.webp 800w, recipes/cookie-doughg-protein-ice-cream-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7MoADgiNiHJvB4WosAP7s2tb5Lvz1J30bErsVV/JSUgwQ2dtJyB8koq3NayYkOOA48pJg9OZGORsEhXvibMOI45IbonkhMqnGGUDYQl0vn3aPbrSA7zMnU4fj33xf7QoJBzkkLskVWEjwjeY2IutVAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7MoAC8Rp9ooc28f3VOAD+7NrW+S7DrsDzyaiYGIhjUPaFbAUzVNAVXWp24IQAXnG+PQjfAd4Y3yh3i9BJJtAV4F5pBfuNtqAZQMEymHxIfL9pBJsJ+nUk+bfctvwjyIsM263xegKYnRkQum33FoCTY4AA"
     },
     "videoUrl": "https://youtu.be/-DOLudsiqi0",
     "prepTimeMin": 8,
@@ -9998,7 +10054,7 @@
       },
       {
         "n": 8,
-        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy! Blender Ice Cream 191"
+        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy!"
       }
     ],
     "image": {
@@ -10006,7 +10062,7 @@
       "srcset": "recipes/lemon-ice-cream-400.webp 400w, recipes/lemon-ice-cream-800.webp 800w, recipes/lemon-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBfuKBN/+fgANbpuxgyWC+F0jpIA/tyFYDJMf6DLqzim2KlO9LGL/easEQCwg0FJmRE+oZlBHgdcLsvCFRY2U3AfkzVYHcMu59wfaEHMCaeSpPPshENWMfzqAvd8kYhUkZ+2j6ufndBgrghrMAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JQBfuKA6tsBrdMKzKDpolvTMqgAD+3IVgMkx/WG8nKfgGkPEUDzJaWxyRzAvOSVdVe91RFZ5hbir7I8QToKUzAWRXW1RhNh3Je4wh0tP3C8sfp045edqIodAdULHnYUaDqKcSnhywAAAA"
     },
     "videoUrl": "https://youtu.be/Cntl0xSiZLM",
     "prepTimeMin": 12,
@@ -10137,7 +10193,7 @@
       "srcset": "recipes/peanut-butter-cup-400.webp 400w, recipes/peanut-butter-cup-800.webp 800w, recipes/peanut-butter-cup-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoKP+AsbxLVyCotSbDL4AP7m5/DV+S9HjMJR2eq5ooA5oxRn+4ZlS8VyB223bTrpZ5viAkZ7cp73ppOHejEwmbVJWOQkfBl25wErxlb5Yneokjb5SSvRK8Ju/6XAgnE/f6eFAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACxC8I/+AsbkJdppFXdNpxAAP7m5/DVYA8QbYrfSWN3gqGynexj6Pe2bfepJG+un80CwcQA4i4HiH+R6ivUZALdryA5EZoZiIweMVIEGhiEs07jVRgEz5KIGLvuEjutAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=2lYmPwqbmzA&feature=youtu.be",
     "prepTimeMin": 6,
@@ -10275,7 +10331,7 @@
       "srcset": "recipes/strawberry-donut-milkshake-400.webp 400w, recipes/strawberry-donut-milkshake-800.webp 800w, recipes/strawberry-donut-milkshake-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JQBdmUGQUzwAN/zLoi4K+nOkC6AD+6icJls7fc44a2oqXTbYj1EcIOIAjuh+2Hm8Y5no8v9CW6g7nwCsGfxuyJcvreu8zl5fnYy8yaiPN6+hoCMm2j2KK7lp3G9Ke/IsxaqXc6WGuttiveNHzAwAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JQBdmUGSXwBi/4DZiG0Aivv9BFRygAP7qJy7B/y3UbPBpCkmouMT969/47jcOc1eHZuBNYy5PxnwZynkZldU9f1WAeSP0uMZZyEfFMmoFbs3xrv6dCaU6AHowTcF22TUMOFqjOFtrGmBuAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=apGE84leYtc",
     "prepTimeMin": 8,
@@ -10399,7 +10455,7 @@
       },
       {
         "n": 8,
-        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy! Blender Ice Cream 197"
+        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy!"
       }
     ],
     "image": {
@@ -10407,7 +10463,7 @@
       "srcset": "recipes/birthday-cake-400.webp 400w, recipes/birthday-cake-800.webp 800w, recipes/birthday-cake-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAlthVfDQvbYqo1GX4PwAD+9Ct7ROVrwmh5peoSCclSqB+pWF1xV5VHbQSfJEuZh1u8hvOm37aay8JJWgl9MC94KQnPUvHB7Hfy1SoTmzZaeYpO5Hv0jz7waTSo8mBbZqeN2LrQ4vl0IMa//1+Evqy736+DCryUg4dbH1zUDvjqlAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoADZg0wSMm1cmc6NuRgAP70Lyf8x/J2yTN5uS02hlkBFrs67m92adKtND3SDAzLBZqX4Guge0HGcsOvpO8ZiqshUenVWHlOZ33XBX8GS9aVeTIWajdeNvIGpexXjQkQcc1I6tzpD7sBAWV4S+rLvfr4M2qWyry2pP1zxeWM/VwAAA=="
     },
     "videoUrl": "https://youtu.be/iYIOQdIQoeo",
     "prepTimeMin": 8,
@@ -10540,7 +10596,7 @@
       },
       {
         "n": 7,
-        "text": "Top with whipped cream and cherry and enjoy! Blender Ice Cream 199"
+        "text": "Top with whipped cream and cherry and enjoy!"
       }
     ],
     "image": {
@@ -10548,7 +10604,7 @@
       "srcset": "recipes/chicfila-peppermint-milkshake-400.webp 400w, recipes/chicfila-peppermint-milkshake-800.webp 800w, recipes/chicfila-peppermint-milkshake-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JQAAIZd5DNAdnUjeT3gAA/uv/RmdVCy4eqdP99Uo1U5DlBLtspi8+ZKIyXuAaM3lDtd968+XD/18gAAC2VRpDyVvxx9wgwi3z2nhc6KD/5wJ+IA8P8m/xtOIFBX8mz4+LYhQ+YLSugAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JQA7gAHFRo+6McY1NTAAA/uv/UF4a9YyJu4elskPfQ7hm+AoltC9lPu4lYokaPIBGyDMA9bngNVSXlnYpR5YQZpIZaH1WTkHxg3/zgTiAPD/JvjacQKCv5NGKMJhp5HCFnAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=Tdy_mX3lirk",
     "prepTimeMin": 8,
@@ -10691,7 +10747,7 @@
       "srcset": "recipes/chocolate-chip-400.webp 400w, recipes/chocolate-chip-800.webp 800w, recipes/chocolate-chip-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAluAtUwh2lWpRgAAD+8rm33FnUNkZeQWEU4XaICsTP/BcGOvZIrQcgnV6Z7sPeXIxhlPbJRC89ry4rXJ5QdsmuQBAAIDohiuRdGw0wNPh52MvzNe+uDXXkLQw4kuRPDWzGbgpGp5DsCQVOS0IAZtHI5TKFlAGE9TAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoBnAVOG50adYcCOaZ8lvtgAAP7zFyAeCDX/XZ9uLgio2VvfwXBjfKvwJUGxxV1UnSpn6W6QcSaAx/P5edA4+qkVBLsVC8dRLvapN+3GAqaqbpQriWrwMJFXycDwKGo3drLzAtSn3vFPnOOw0LXYBcepsjJyB0DGQe9AAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=n9RG3LlzpJY",
     "prepTimeMin": 8,
@@ -10865,7 +10921,7 @@
       "srcset": "recipes/animal-cracker-blizzard-400.webp 400w, recipes/animal-cracker-blizzard-800.webp 800w, recipes/animal-cracker-blizzard-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYwCdACPwCOEVYNS5aiiAAP7vkYAiTkh7F9xpgMk24uln5aQO9Zux+OLesA5cu34vaHXUvstZG8zV5cwcF49FDF4Sft6JZCuNoFRO2Kfuz0XNsWRgVHDPf7FC/Og/4PBt+lIDHkmP/yFx4NjwLeul6v/BDao4AAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYwCdACPsr/VZl67fueEAAP7tDRmVDkcNK6bEECnFTb2bYPEKvZ+E02ggVSzqJ5Xq+Xk+o0Loru6cspioPhpnTMB4Nq+6WEPkF0KzL2CAfaRJVVjvfoHIMg+e5DaEh4pc35xJEqBA+QaUGRZya8MTW8wTgAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=hTxQGvJzNL8",
     "prepTimeMin": 15,
@@ -10994,7 +11050,7 @@
       },
       {
         "n": 8,
-        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy! Blender Ice Cream 205"
+        "text": "Transfer to desired drinking container, top with the rest of the Mix-ins, and enjoy!"
       }
     ],
     "image": {
@@ -11002,7 +11058,7 @@
       "srcset": "recipes/mint-cookie-freeze-400.webp 400w, recipes/mint-cookie-freeze-800.webp 800w, recipes/mint-cookie-freeze-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC7MoAC7foaoBwfvOeOAAD+8zW3ImvppF6u+q1JLDifLHuWDcM1kZTcGicQxmhgkKIh8y+HpstweJ+jL/Ro928Ncr3rDlvzfY+8X1ZMZs7q5X6JqtplRGLGv93HLWBF+17LJ+qBh3znc96McH8AAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC7MoACYCa2Z3A5oTYAAP7zNbcia+mkd1bmBJeA0puu/uM+jhu5rYKTRzn8Tpxtqjn3fdz8kvRimI30ZAugNCwpoo/le6HA84RccoW19UsGtkj8uEjLVKeF9KWmDqNCAozRjXvNcRz3eYa7wRZk2AAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=-dGr2aKb_U0",
     "prepTimeMin": 8,
@@ -11145,7 +11201,7 @@
       "srcset": "recipes/pecan-pie-blizzard-400.webp 400w, recipes/pecan-pie-blizzard-800.webp 800w, recipes/pecan-pie-blizzard-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACw+iABypTpKlyEQ1KRpw88AAD+8qVX2K0PAA6V0uYpj52a9+f3zx81YchMUnbMeRaYNQmJJyvnqd1kASMEFH5KQ0mIm3DA0sD5MfRghVKrWee/R95buNLhK79YWNlNbNhFt8iEEMk49Tr9/acZUWoeoBxwF4cQAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdL1ABln7T5WROoo13oAD+8qVXwWTZGfnMUx87Nj+OLagB7PXqpxb3/HEwcVqgVo5OVDYrUxL3D5z0ppJP4uLdhYHyY+g2uHuVATF5vafZg99j093x+v4yRqJpqlVrAHruXapSyPHQBE5vOuVTSyQHEAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=E4SWcFZcuOQ",
     "prepTimeMin": 8,
@@ -11251,7 +11307,7 @@
       },
       {
         "n": 6,
-        "text": "Take blade out, pour into a glass, and enjoy. Blender Ice Cream 209"
+        "text": "Take blade out, pour into a glass, and enjoy."
       }
     ],
     "image": {
@@ -11259,7 +11315,7 @@
       "srcset": "recipes/strawberry-frosty-400.webp 400w, recipes/strawberry-frosty-800.webp 800w, recipes/strawberry-frosty-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAwCdASoQABQAPu1kqk4ppaQiMAgBMB2JQBjehDrkSXBi1JPgAP5rWK03ds5U3a2jb9bubBNx7xrUYsyJ3e1d2hUAfNol8TnlyZ229PoriVlU6HBkEmVqr9IWJMYf4IAoC1wfRGFAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoQABQAPu1iqk2ppaQiMAgBMB2JQAALfh9bb8V/v7UjWgAA/psY2hDsYGkPpMvJfm9fUXfrLe7SWkrW/ndWmoDyee3xCSW5P95pDKDuJNo81OlOl1IK3WfBvp5w4YTtROyvEi1gAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=bT71tbdx9wQ",
     "prepTimeMin": 8,
@@ -11360,7 +11416,7 @@
       },
       {
         "n": 9,
-        "text": "Grab a spoon and enjoy. Ice Cream Pints 213"
+        "text": "Grab a spoon and enjoy."
       }
     ],
     "image": {
@@ -11368,7 +11424,7 @@
       "srcset": "recipes/vanilla-base-400.webp 400w, recipes/vanilla-base-800.webp 800w, recipes/vanilla-base-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYwAAW9YfqA7vnJcVcfQA/vDsZKIICjePR8i6JnmwqNQlJHYdeqHQ1+FH9tEqCLw8m4VRWTdpoOAFd98Km5Ln92t0aMUONvjmiPZSdEghvZHIyO+i8Ps3AAA="
+      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZQAAW9vmeZvBULDQMDGfAAD+8OxkoggKN49FnmpS6GiuFMPibbpABUKoZgB67DVhV/kphZWS5+775xFzyBPTuMZ7nGgjvpFXgINBYgeNn2RyMjvovD7NwAA="
     },
     "videoUrl": "https://youtu.be/PXYceRAaIdI?t=00m20s",
     "prepTimeMin": 5,
@@ -11477,7 +11533,7 @@
       },
       {
         "n": 9,
-        "text": "Grab a spoon and enjoy. Ice Cream Pints 215"
+        "text": "Grab a spoon and enjoy."
       }
     ],
     "image": {
@@ -11485,7 +11541,7 @@
       "srcset": "recipes/vanilla-base-2-400.webp 400w, recipes/vanilla-base-2-800.webp 800w, recipes/vanilla-base-2-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBOmUABlJ/JKbU8idU2wvuV4AAD+u2c6Ve/ABiGl/LnKbe12tQsTDC8e0o5lih0w/MgZMm9mwKdexyVHvKiMOkRSBmdrPKNX3hvoHfWILdv+uvWE5X/WUfH1YAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBOmUABlJSC/65/8l3ePBMCAAP66gPpV77+lIl/kiDNOEmi95B17+rElL6VDZWtwF2Ru8BfCOlgPQvaW4NOANCaHAgVG9o8FntxjefI0tgo4BYiiTq8VHceAAA=="
     },
     "videoUrl": "https://youtu.be/PXYceRAaIdI?t=2m29s",
     "prepTimeMin": 5,
@@ -11603,7 +11659,7 @@
       },
       {
         "n": 10,
-        "text": "Grab a spoon and enjoy. Ice Cream Pints 217"
+        "text": "Grab a spoon and enjoy."
       }
     ],
     "image": {
@@ -11611,7 +11667,7 @@
       "srcset": "recipes/vanilla-base-3-400.webp 400w, recipes/vanilla-base-3-800.webp 800w, recipes/vanilla-base-3-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgC/OYxixs39BGBAELOV0eUAAP7sLSRyRnpgZl2pougGrvhsTCHTPjxjOL7kpYaAzFMrfoGt+CRHXTzIPc1VJtIry0AATRAf/Yq7H9Z4S2URRk+w9PlRO+VHF2BQWMwISYAA"
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC/OBoeeU+Otuf+4HQwAP7sLZHgAIific4L0MZu8DAQsUJwx8JORHS7FjGokGiPWJ5aOEST+ak9SQ4othIXLqxGi4x/YFV1xBF2WZEWVQK84BTyEmzdQUIjuu+UCyfgAA=="
     },
     "videoUrl": "https://youtu.be/PXYceRAaIdI?t=3m46s",
     "prepTimeMin": 5,
@@ -11730,7 +11786,7 @@
       },
       {
         "n": 9,
-        "text": "Grab a spoon and enjoy. Ice Cream Pints Ice Cream Pints 219 219"
+        "text": "Grab a spoon and enjoy."
       }
     ],
     "image": {
@@ -11738,7 +11794,7 @@
       "srcset": "recipes/chocolate-base-good-400.webp 400w, recipes/chocolate-base-good-800.webp 800w, recipes/chocolate-base-good-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACdMoMYJn/AeOWFskiTjTtfCAD9U2soPY/rtXvu/VODAWXJzVUiV+LqTJGOU6W1qOJ3nq703Qr4sf8UnmShO5pqf6IAOOzChF8zOh+TsQ3jY0L4KzXcXaijgqq02SGTUnGaRzeMqhcl/oAkD677KxXZEQ4LoO93gAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACdMoMYAEiWLPlkiSAzpyIgAP1Tc5Ssh7tFN5DV5PyDR5hlTmlI+Jcx+EUP6OG6yvLsrO88Yb4GZ+m+oWKstc7mmp/N/5g+enXkJK2NEgEzLbKJwIQMaSY66sWQNvU0bpn3DSU1ySCGDUsmcb8fB6+xGoEAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=YyNNWmWGtI4#t=0m22s",
     "prepTimeMin": 5,
@@ -11852,7 +11908,7 @@
       },
       {
         "n": 9,
-        "text": "Grab a spoon and enjoy. Ice Cream Pints Ice Cream Pints 221 221"
+        "text": "Grab a spoon and enjoy."
       }
     ],
     "image": {
@@ -11860,7 +11916,7 @@
       "srcset": "recipes/chocolate-base-better-400.webp 400w, recipes/chocolate-base-better-800.webp 800w, recipes/chocolate-base-better-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoR4PoADQ/f1/tCUGbzfBgAA/TsIhH/OMtjGPnM6Z0sN5kdKi/1rn0QzWoLVzTnU9eALnaHd3h/liuLUi9ENuzlGutptVa8DJwLVK11sIBcB5YNDadghxVnBHgId/lyIWovnO00YAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoR4PoCYACa0jRmxz1d+j5AA/TsIhH/OMEisH6ZykZVpUGlC19ikMPqwfuDQan3xiexi7K24VUHRvH9szMcN4OT7uaU+CaJxgO5tCVpAvMfV6vtTriwheidadHUts3Z3pFAvnO00YAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=YyNNWmWGtI4#t=3m17s",
     "prepTimeMin": 5,
@@ -11996,7 +12052,7 @@
       },
       {
         "n": 12,
-        "text": "Grab a spoon and enjoy. Ice Cream Pints Ice Cream Pints 223 223"
+        "text": "Grab a spoon and enjoy."
       }
     ],
     "image": {
@@ -12004,7 +12060,7 @@
       "srcset": "recipes/chocolate-base-best-400.webp 400w, recipes/chocolate-base-best-800.webp 800w, recipes/chocolate-base-best-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIsAKLwYwom7qvpOOhvyFfQAA/vKzORLkuj7yHIZGvnXZCWA1joLxqDO7UMAV1HJH4R8OC36CXH/7/7Ig7uCQ5rGt83uKGEcWLJnCQVMhm2sd5A4+/N2PFZL6d4Td0O3vWuVJ3Hww79g8c2R1sln0i4PAJPyRld1s7CntvjmhgPWMH5gAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwIsAA5vOSPs7SouElbUAA/vKzORLGY2RIaUQ2nRBrDFY/BoRQqlBL/0qmRiMs5LkNyzhr9OsCVVeAhNpNyugM3wyT1NauJFjNQhYtXM7wu/Wxv9pZQavU5u9a9xAYQweoQXKwff+2xIzdglIKTpTcQJf5c2T6M/ZgmPemgGf+pAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=YyNNWmWGtI4#t=5m00s",
     "prepTimeMin": 10,
@@ -12140,7 +12196,7 @@
       },
       {
         "n": 12,
-        "text": "Eat. Ice Cream Pints Ice Cream Pints 225 225"
+        "text": "Eat."
       }
     ],
     "image": {
@@ -12148,7 +12204,7 @@
       "srcset": "recipes/cookies-cream-400.webp 400w, recipes/cookies-cream-800.webp 800w, recipes/cookies-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZgCdACHIx2pwam3oxklrwAD+7AV/ZhztwNRDOGd+5eLP6XHDKCzDP5Kt4qnD43xFmMlYxI0q8/tKb/NFDfqq5PPIntQbkKledVEmEzlgeZKVL1tEfo/JwBEL6MSPTWA84fTu221VvxmYgAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdACKdPT0kSR8HL90AAP7sBYcLSu4ywuk1wBnFPTdRTj9CvAba8Gm7rKluAOzBhyqg5GjjDbuzputpgzsYNdzj/0cS6AD2+eBAHNqKONnGqdxMewEWymRcf0ueOaPqpXEwRk7PV97ZYupyKw2u8ormIAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=HbvidbBT-iA#t=0m36s",
     "prepTimeMin": 5,
@@ -12272,7 +12328,7 @@
       },
       {
         "n": 9,
-        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat. Ice Cream Pints 227"
+        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat."
       }
     ],
     "image": {
@@ -12280,7 +12336,7 @@
       "srcset": "recipes/fruity-crisps-400.webp 400w, recipes/fruity-crisps-800.webp 800w, recipes/fruity-crisps-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoADAMjkpmZJhoAA/unq4+Lg7GIi4mPDQ+bZjDcidM6ZB0V0CCS5gnADKmR8NFjZpfanftsOPE/r6oW8ze785+IKMMBQXAOrp8ycyr6uz59vy7/tSezuDG6CWrymLfT8XGGDOcqXpAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoAC7uvrRyIeYAD+6eqLrkXblVF/wzUo238sitEdp6i262EVGns1xfSj/R7GUDEKy8TtX3Ju9LKYdFbharbJCeD5u8QIzha5H+VX8ulP0ffg68JPe+5ElLRiLSAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=MKDT82hsx78",
     "prepTimeMin": 5,
@@ -12404,7 +12460,7 @@
       },
       {
         "n": 9,
-        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat. Ice Cream Pints 229"
+        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat."
       }
     ],
     "image": {
@@ -12412,7 +12468,7 @@
       "srcset": "recipes/crunchy-cinnamon-squares-2-400.webp 400w, recipes/crunchy-cinnamon-squares-2-800.webp 800w, recipes/crunchy-cinnamon-squares-2-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoCGAB/sUwhq3be2WQ3AAP7uwktRkygJ3iJyUGBB6nRU5i8LtXMJxmCTvG2CL3WMzasNdkK6B9EH4KVSkDD43AbDxxhwMygs/ioNsRUNOgH12Z358BseXhKPhdeDjpsr50jfsjgRbLXfgIc0JIp8JE4EAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZACdMoAC8QZDGBzg2JYpN8AA/u7CS1GTInTk+XI3U4+l0vKulxVjO1DLe5jWcuggh48CkwnjHurdwaMyyF8PJvFJgb58UFn8VBtiKhyFDWM/tGIzZ4zsmRpHuhpD+bm3siK4pxYFGZHFfd2N2+GzDlQAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=MKDT82hsx78",
     "prepTimeMin": 5,
@@ -12531,7 +12587,7 @@
       },
       {
         "n": 9,
-        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat. Ice Cream Pints 231"
+        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat."
       }
     ],
     "image": {
@@ -12539,7 +12595,7 @@
       "srcset": "recipes/marshmallows-400.webp 400w, recipes/marshmallows-800.webp 800w, recipes/marshmallows-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JaAC7L175WngACSZ4vnrH4AxoAP7pGC+cmaFVs9wHPpdSy/Qq6cXKkuBdwvbaRvQW3VjQcyUrD9jldWWq/NX6BXBHy67jNzl70ONjRRQ8828+jvKbiNwPOHT7VrmOJbYHF2oY/d+FxymaZttYUmiLFWOqtsIkaXB2Z1xMGAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JaAC7L175WngACp1JVwv5VRaOS+0ewAD+6RTZ+1t2BN+iL/j3FyoIcnQN8PyAApPmJnUmBLm4bdz0jUTgwa5jb7r4B6n7nfFbM3MJx298OOZ2nzx414ILgg7bDSIVxhMgEefHeJOri/8oZ3oF7L3JpLzDz4SRLkF6dXEXa80rrdRlAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=MKDT82hsx78",
     "prepTimeMin": 5,
@@ -12663,7 +12719,7 @@
       },
       {
         "n": 9,
-        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat. Ice Cream Pints 233"
+        "text": "Load the pint back up, press the mix-in setting, and you now have a cream that is ready to eat."
       }
     ],
     "image": {
@@ -12671,7 +12727,7 @@
       "srcset": "recipes/peanut-butter-puffs-400.webp 400w, recipes/peanut-butter-puffs-800.webp 800w, recipes/peanut-butter-puffs-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADgjldkwol2B65jYsoeAD9JmfyRztoeW2WntntGqZf5i6PbT95/OL/9Pz2wXtQIr51XkR9SQcDfergqTbKRdl+RIvPpLhZLXQarDuLr2FDCfbcmtzGSCD4BETDwptiNvDoiyuer91gAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACZzTUyeqmphLMbg0MAA+frm6AZFxguuQzdFj3U1RA47tobI1XG1OVI3OrWXcXcF8jfRxiVtQZXy2yFW9QiJzq5mkmjMBa1EYJgHejTFgT2gkSKqJL3EQnFj7yAJdJzy3GKAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=QTtkus690oo",
     "prepTimeMin": 5,
@@ -12803,7 +12859,7 @@
       "srcset": "recipes/cookies-n-crunch-400.webp 400w, recipes/cookies-n-crunch-800.webp 800w, recipes/cookies-n-crunch-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7ABSRkdQBIZykPd1AAP6e1sC96TE3wyBVOWE3jmaCoDOkenvilpuR1z04idexDh0z+VXenaw6TJa1O/OQzIXQ9jeHTEykqlwQp0nQYK6vejRg8yfLxp3GFMwo3jdvZYBEL15VgGPNJJAlErT514O7/bWIAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7ABAYYilxvoNvQAD+ntbAvekxN58+StIrOOX8RuFvN1e1P/L4FAKlQEzVpvsMWhhEXiNwimzDqaxXa1Mn8c1+VEhRXdlZ+7Vh7gsjmEj6nn/Qu3ddObXkNdeWUVDd/gz7z+E5MJdL6Vx4dI1LiUpwpgAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=QTtkus690oo",
     "prepTimeMin": 5,
@@ -12932,7 +12988,7 @@
       "srcset": "recipes/cocoa-crisps-400.webp 400w, recipes/cocoa-crisps-800.webp 800w, recipes/cocoa-crisps-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBACdASoQABQAPu1iqk2ppaQiMAgBMB2JaACdMoMYAEZB1jmH6h0ne4S+AAD+8N+C/TJi0TyrY1XwP+p9GUeJaY/h6xESl14W8l94Po0s1UjwvAyRzT8eejLMUo4mb/SRMsc146ECKtqoRdFUS+fJmCJxq01l/rOabw0Ta+9WNrF6Qfe0881H8E5tFH1tKjDNme8FHz0scqWp7c8NdAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZgCdMoMYA0h1kwISmj04/QdqLAD+8N+C/THygkDTAWTKZJ/0kDJkKDGz2igk2WImUu61WwgnBanSGsDxk1CENLyyjJaY6lVb5YKhnnI+BJwcg0YjNFjJS1q4n6ZGZVd1derXfjPCgCEn4jXeuo0Ip+5LLOvtXGI1nG42AAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=QTtkus690oo",
     "prepTimeMin": 5,
@@ -13088,7 +13144,7 @@
       },
       {
         "n": 11,
-        "text": "Load the pint back up, press the mix-in setting, and enjoy some apple pie. Ice Cream Pints 239"
+        "text": "Load the pint back up, press the mix-in setting, and enjoy some apple pie."
       }
     ],
     "image": {
@@ -13096,7 +13152,7 @@
       "srcset": "recipes/apple-pie-ice-cream-400.webp 400w, recipes/apple-pie-ice-cream-800.webp 800w, recipes/apple-pie-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdMoMqmEldDj/JHXYAAP27WEGoGYznXq9bA6ig+tzcicfjG9xr+EBjyixnFT9S9fnmeknpBJLmAOzW+L++Eb3lX8si2xt4NZSFLMfAmjCkdtq/EvgSUL74Yr8zKnH15qJR9Ng6HpGNvve/AAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdMoMxgEl+N4iQY7S8docbgAD9u1fxvnjktRlgceHQQINAvJBjQW237f5loXZsun6WEC6PDjHG6sTqPpilCqRbAEapm3eB4E9DVSrEuCz8kGfrABmjiccjD7gA0wvmiWiXVq8vyAJohxH0NsFAAAA="
     },
     "videoUrl": "https://youtu.be/IwVD9_SOxI8",
     "prepTimeMin": 10,
@@ -13227,7 +13283,7 @@
       },
       {
         "n": 8,
-        "text": "Load the pint back up, press the mix-in setting, and you now have eggnog ice cream for a fraction of the calories. Ice Cream Pints 241"
+        "text": "Load the pint back up, press the mix-in setting, and you now have eggnog ice cream for a fraction of the calories."
       }
     ],
     "image": {
@@ -13235,7 +13291,7 @@
       "srcset": "recipes/eggnog-ice-cream-400.webp 400w, recipes/eggnog-ice-cream-800.webp 800w, recipes/eggnog-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoADKT/UYCwZLiCl/YyYAAD+8N+C/TLx/ZcfBjl8R7emZgy0gSW7sIzi0s2liwssI8KQPWWshJlJSFO2+SHrfTDkYlk5Z4/Xj+eVY9I3BPmXtQoviRtJT+O6lummOzcEIvO4BSJfXZoiJjWTnmIUNAhBJPEEFDtXtfeAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACdMoACtcQTakTkraM03yLAAP7w3w0tQZ1VOVVS3s6KUFSdm8p7bkqqOdLlJ+HEnxByTep38iUMx8vmyNWeqEThuNRjYo8FJHk6iAhFNZOJNnE8omEj6wroGsbXXY6NbYT3NMVMzfB1YcZmeOwt/yCOQzeoBmviwAAA"
     },
     "videoUrl": "https://youtu.be/IwVD9_SOxI8",
     "prepTimeMin": 5,
@@ -13371,7 +13427,7 @@
       "srcset": "recipes/cherry-chocolate-chunk-400.webp 400w, recipes/cherry-chocolate-chunk-800.webp 800w, recipes/cherry-chocolate-chunk-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYwAAXvWFDxIu97osOwLMAAD+8rM5MQwZ7y9HIPUtWCdjrLqyFlUFow1CRdAMIgaCgfD0yw1vBq6KYkGEl1ZG1WKHbTVYV1T3dhMOMekg6DB98Dvz7TOhUUVO+cchLS/dfrNrTKcsFX/1MgYtM8u12sbZnT1AAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYwAL4A/+DF6wdZu66v4ShNPQQAD+8rM5JeRw1JWhyxu8IarKdvJd2wFbonbkKZJuiEDceacTKk7MaFEWkxMsWsYTGvRHFexQsKcHtN+UEgH3wO/OVW2RAgSM5BZIOpOKjWk0aNH11G99hNC726r69Y8hvwAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=ILEOkNrHdek#t=0m39s",
     "prepTimeMin": 10,
@@ -13510,7 +13566,7 @@
       "srcset": "recipes/watermelon-sorbet-400.webp 400w, recipes/watermelon-sorbet-800.webp 800w, recipes/watermelon-sorbet-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3JoACfNAZDoDKqxii5z+gAP4ZUqJCebPjx0ln5p2wLloge72jaSq0/twJ6lVUE1k03i2kSX1l9u2byJpmoCszW5DawAEYV7nAA8che/lK6UOohnTh631kyG5JR636hjZD6ChzVDx4nTvdYNjtpgAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3JoAB1Zb2J3vVmHGIAAD+GTsyR1O11brIGMyfwbyuvvJlior8snJo4Lsu6fRoFuXubaobL2UVOLfQDCDkIGo0uJmk5gc4wggGdgcMuLh0PFXpyyktGRE3yWSPLEXnPw2cM2JWJNO91g2O2mAAAA=="
     },
     "videoUrl": "https://youtu.be/MUU71EH9URw",
     "prepTimeMin": 15,
@@ -13604,7 +13660,7 @@
       "srcset": "recipes/strawberry-sorbet-400.webp 400w, recipes/strawberry-sorbet-800.webp 800w, recipes/strawberry-sorbet-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMljEtr+FzK5dBIvyK+AAD9T/wzvUJ2LXiNxEN3kL1vgh/6I8GGdV5f2O/sU4rsG+KmZZvtK3/nX69t033gp0RfxB39+8FEXdNGeRnZjbRG3vK8OOVn0dL7V8AAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTtRB8yIln+kVHhwAAP1P/DQcNQbKcGyq+zDcmERzGwgo70AWH8sSDhdXtZEmnBZvtK3/nX69t033gp0RbELCZUZou6aHFe8HzP0cZk8Pi8ga0RN0JmAA"
     },
     "videoUrl": "https://youtu.be/MUU71EH9URw",
     "prepTimeMin": 10,
@@ -13714,7 +13770,7 @@
       },
       {
         "n": 12,
-        "text": "A perfect sorbet consistency has now been achieved and it is time to eat. Fruit Sorbets 251"
+        "text": "A perfect sorbet consistency has now been achieved and it is time to eat."
       }
     ],
     "image": {
@@ -13722,7 +13778,7 @@
       "srcset": "recipes/cantaloupe-sorbet-400.webp 400w, recipes/cantaloupe-sorbet-800.webp 800w, recipes/cantaloupe-sorbet-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYAEmV0Mw32nw9em3YbexRAAD+ovvnd3VBTRxgpoKs4FSSSjbIYbGh+EI8aLO0VtA1miZUpddwZJjl+L26+bC+8WNDBbxHixhlEJgzmGgaCkwM8NcSFZjBI7PXuyAgsz+KNMA3fllrtsz7hoFTWAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdLwBKgBXeukRPuq/bZ/s0iAAA/qNaEhSLXJei/AL9AoqCLw6wV7LjVSlkXSj7JsK6nFLYuk6Kx5Go3QCjmTu8h2CqmMc/niGjuXPW44dFsx/Sxyo9VjTG60jcP0KWhkFHrF54iAUVmXuOZ3wA"
     },
     "videoUrl": "https://youtu.be/MUU71EH9URw",
     "prepTimeMin": 15,
@@ -13795,7 +13851,7 @@
       },
       {
         "n": 7,
-        "text": "Eat. Fruit Sorbets Fruit Sorbets 253 253"
+        "text": "Eat."
       }
     ],
     "image": {
@@ -13803,7 +13859,7 @@
       "srcset": "recipes/raspberry-sorbet-400.webp 400w, recipes/raspberry-sorbet-800.webp 800w, recipes/raspberry-sorbet-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7MoAlsBf6YzwseGII4AD+5GFHfzbGzhHZhh0cJUO/5pyE92wBHxNjW0/uVgJTViQr1poitomRopXIKecieyOCDRRI1tzymWuG739ZR+GDi2TIPwAEp2H4mPv9LYuHynXPgwnLpV4e+e2UVATcZxPuQiauzhqAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7MoADTrrn2fyzT9dhgAD+5GF2dcW7vIMsrYXILTARdH3Ja6BpPxP4GxOUN7RmmIQ9SawtL/3mmR6XEtFFVy1e3GWuG739ZR6SE+nBgc5+Gxv8D1tH4pIDgkDlwHHnYA7BQh+ey8PlM20QLXxeAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=e25PNWmd3yQ#t=0m25s",
     "prepTimeMin": 10,
@@ -13888,7 +13944,7 @@
       },
       {
         "n": 10,
-        "text": "Eat. Fruit Sorbets Fruit Sorbets 255 255"
+        "text": "Eat."
       }
     ],
     "image": {
@@ -13896,7 +13952,7 @@
       "srcset": "recipes/grapefruit-sorbet-400.webp 400w, recipes/grapefruit-sorbet-800.webp 800w, recipes/grapefruit-sorbet-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoADTlPALWLupTMxV9wAAP7usqvHLQ9oB+hQUW3zwgRtm/jziHwJBbfcq3k4YuGitmQ4lLHK/qTf59v7v7u1zhB1UYFAe5aD4+uH7BArhiV7zxHSNosqx+9D5xkKnv1UAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoADTEXlqaGP6so2IhQA/uwSoTTsvLGXisEHP/QF72fPic/E4ZNt15habJ0spOnmjnLyyUDMFrSAAHVsPE8wUI3d/7FsFRZv/yGo0ZR0RawkUdI0xGSx9/+6UnoIAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=e25PNWmd3yQ#t=2m8s",
     "prepTimeMin": 10,
@@ -13969,7 +14025,7 @@
       },
       {
         "n": 7,
-        "text": "Eat. Fruit Sorbets Fruit Sorbets 257 257"
+        "text": "Eat."
       }
     ],
     "image": {
@@ -13977,7 +14033,7 @@
       "srcset": "recipes/peach-sorbet-400.webp 400w, recipes/peach-sorbet-800.webp 800w, recipes/peach-sorbet-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTSJbKQT7EngPj02oAAD+5Gi5Z3x7pbaw3cm6ZUb2amSYtRppA5j9itUDqOKICzgsEoYeB2sGv8nX5oKFkqfnjJxgGKFd37ACMbvtVex8qbXd1Xwk3I3iRe+KfslI3j0QAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTSJa7eNccJ+V6T6/UAD+5Gi9RPrdNIBfU5GCMy3JaR+c61M1fohqbhXb827XksOc5h7M1BKZD3rLbPtVU/PGTjAMUK7v2AXKvxFIfqdhDg7D80B1d69PLjWLYK4AAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=e25PNWmd3yQ#t=4m36s",
     "prepTimeMin": 5,
@@ -14099,7 +14155,7 @@
       },
       {
         "n": 8,
-        "text": "Enjoy right away or for peak flavor, refrigerate for 24 hours. Cookie Dough 261"
+        "text": "Enjoy right away or for peak flavor, refrigerate for 24 hours."
       }
     ],
     "image": {
@@ -14107,7 +14163,7 @@
       "srcset": "recipes/chocolate-chip-cookie-dough-400.webp 400w, recipes/chocolate-chip-cookie-dough-800.webp 800w, recipes/chocolate-chip-cookie-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAACQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JbACdL1Ds/wHwUodciVZvUJ/eZwAA/uwtaW0p7mVPCep4Bv6vaAIHluvnYOvvAn1/6wqmVQN7ywRC3XhHOL2V9IlW0xfGV/jgr3T0RJIwa0UDakFGClAskeiKliATrj/3APEOK7AjzAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdL1Ds/wHvH0EW9AAz1/tc0AD+7C04dKe5lTxEKx50x8ZnR3VWgiXstcLvbBE+wPeQe2HGm8Qd+iHzoRhKS9P8x96fn88MCGPRPO0hwUdT+lzyPouiUYPc76qgXATm1HPJ/7wAAA=="
     },
     "videoUrl": "https://youtu.be/cUqYwgFY-x4",
     "prepTimeMin": 10,
@@ -14247,7 +14303,7 @@
       },
       {
         "n": 8,
-        "text": "For additional flavor, heat up 4g of peanut butter and drizzle over the top of the cookie dough before eating. Cookie Dough 263"
+        "text": "For additional flavor, heat up 4g of peanut butter and drizzle over the top of the cookie dough before eating."
       }
     ],
     "image": {
@@ -14255,7 +14311,7 @@
       "srcset": "recipes/peanut-butter-400.webp 400w, recipes/peanut-butter-800.webp 800w, recipes/peanut-butter-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdEf/gJJhz6Nn4gCkW+RAA/U3ABPyQIOsxQmQYJvoBzBIvYQISoSFjPm/e9P9D84d2ei1yDAmfsOR2gUP2CbO9ggda5dLljreDl8CQAUjoW1rnxbmKNb5/CHjnP52AAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdEf/gRynKjd2Cxl1mzOVYAP4khsTvJgkmMz7Ihwg2jRNg3rZq64WlKxSVaUrHbA+vvKHarRVqzdqmtP07AwRaFQjRk1nPPa0pCD/czU6Tw8yQcbllo6F2BdiIP3QAAA=="
     },
     "videoUrl": "https://youtu.be/cUqYwgFY-x4",
     "prepTimeMin": 10,
@@ -14395,7 +14451,7 @@
       },
       {
         "n": 8,
-        "text": "For additional flavor, whisk sugar and ground cinnamon and top dough with mixture right before eating. Cookie Dough 265"
+        "text": "For additional flavor, whisk sugar and ground cinnamon and top dough with mixture right before eating."
       }
     ],
     "image": {
@@ -14403,7 +14459,7 @@
       "srcset": "recipes/snickerdoodle-cookie-dough-400.webp 400w, recipes/snickerdoodle-cookie-dough-800.webp 800w, recipes/snickerdoodle-cookie-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACxpUqBrJoJ/gDazsAAA/tz8JaPaHNIYfuTtJD7HKTFZGkgZeJXnLsZpv6qSZqTeJ3nAIF9h2nncNTLuPuykZ0XALp/+b+9yc9+smT9NVVBX5Va4e+akyAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACKiCr643p1VdAAA/tz6im3Lj62YM3bTk7SRBK/GlkNCLqazLvtAjxukcZTJJM1Jt/IQd+J0taq70aze1k2g4kDdQUzfqUX4wjxRJ99mUr6J364W41gA"
     },
     "videoUrl": "https://youtu.be/cUqYwgFY-x4",
     "prepTimeMin": 10,
@@ -14543,7 +14599,7 @@
       },
       {
         "n": 8,
-        "text": "Enjoy right away or for peak flavor refrigerate for 24 hours. Cookie Dough 267"
+        "text": "Enjoy right away or for peak flavor refrigerate for 24 hours."
       }
     ],
     "image": {
@@ -14551,7 +14607,7 @@
       "srcset": "recipes/oreo-cookie-dough-400.webp 400w, recipes/oreo-cookie-dough-800.webp 800w, recipes/oreo-cookie-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoLUABCevNJq4sVe2WUAAP7um6jaqdrbvNXxyLmEyeulDSf3L2a889fdthTPX5kjpeKPs2rCT0gMJaS+fzThaZ3pdbKKLD70r05CBMz2eiryP4GXs17AbAlutLb86oGlEm9OIWAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAC28RdUgg8lgJiAAD+7q8Nb949GMSpnQIAqcmCj3Vxo0eVcJUZw9C8yfJWwtoEv2HAs1CFE9LjmH4dc7W+Dle6fi50NGzSPFO9OJ/KV2M7M25olMF8pKaPsEpo4u6VowGXxSYE1AAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=bLxpYFJuiq8",
     "prepTimeMin": 10,
@@ -14681,7 +14737,7 @@
       },
       {
         "n": 8,
-        "text": "Enjoy right away or for peak flavor, refrigerate for 24 hours. Cookie Dough 269"
+        "text": "Enjoy right away or for peak flavor, refrigerate for 24 hours."
       }
     ],
     "image": {
@@ -14689,7 +14745,7 @@
       "srcset": "recipes/birthday-cake-cookie-dough-400.webp 400w, recipes/birthday-cake-cookie-dough-800.webp 800w, recipes/birthday-cake-cookie-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7MoADTlYo9iUMB4iQAP7wxVkA6ZTve9iPJBXyrTUD1TRlyzkWPVathSRmY9BvEis2L18CxTDu2zkr0LbY/WrpFt9AU3RuadXU0hipTegw+yJtEW+iMvIpCgAA"
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7MoADTlYsUp/VshQQAP7uhpLplBqe972I8kFfD7zP0YrRZ6AeiC7gHWf3lEspPkN99bF99Phui8rjLOSvQttj8dr2NqGatgRBqmGD9ogMvf+a1gxY/ztq0LAAAAA="
     },
     "videoUrl": "https://youtu.be/7gDKjeSisss",
     "prepTimeMin": 10,
@@ -14796,7 +14852,7 @@
       "srcset": "recipes/nickdonalds-french-fries-400.webp 400w, recipes/nickdonalds-french-fries-800.webp 800w, recipes/nickdonalds-french-fries-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAluhl0lZwO8cTzpegAAP7Q/W0EWmSSsxzxmQR+w93s81XWKWvJjDXSQhr8hX3s9ghJTxAZUG5G2sAI9+WmqVVeZuV+z23s8vddvBs8iymp7p3Y45h1bDBYA8d4DqQrAf8aumRZ8nVaPydikhAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAltxl85LXiW/Hi3U+6QAD+0P1shbO4BqKawTq8NQAWG5knZM5gGvTdjqwQm03NuLWHJA/AFEAXNMMdiLC2LYlArx/s9t7PL3XbwbPIsprIBvMTaslcs9qSVxfb9LzV+dKsdZ/AAzWBXwoRR2up9M+wAAA="
     },
     "videoUrl": "https://youtu.be/qPjRwdaXsvQ",
     "prepTimeMin": 40,
@@ -14927,7 +14983,7 @@
       "srcset": "recipes/mozzarella-sticks-400.webp 400w, recipes/mozzarella-sticks-800.webp 800w, recipes/mozzarella-sticks-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdH8ADAw+Y36MhWUJIBOIAAP7jiOoCAGGTO+2O3ykfEuQsZH9hWK14/iJHghSEQD4i/R++rvgjD0NgQ3uHbnFh7OasQ+0kIyp8pRIvChV0wVV3H0hq4g7uno/XZ9/GH5l2P6yFDLpLb+chEAzqhMpq6+dFnp9hmllKmgAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHwpxpi0hcIv1igaQAA/uOI6gIBf6maotyEombyxuFVw7IrUS8gTGs34wR0gHoWA9mfb4Y5tZRpTpRYfpYyjmq3712kB/Ywy/rYx8tVe8G93Ig7uno/XZ9+3rY3oFDyc2H6Y86ASVSWg2V8a6RNDQHShVMR8FwkwAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=bntOTsQfV0U",
     "prepTimeMin": 25,
@@ -15118,7 +15174,7 @@
       "srcset": "recipes/taco-egg-rolls-400.webp 400w, recipes/taco-egg-rolls-800.webp 800w, recipes/taco-egg-rolls-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACsAywBs/IlkYU8Dw565dQAAP7u4uQItr1mgTl9vbRUw07EVySZzQOtvyw2MYQNVqoJeojMkCy/PK6qiJwO8KK5Lf31Sb4Jh/IsYp2KNki7uCShPLoxEqJA+PSucNjhHLNGALK3fAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCsACICUWjbovdNmvORAAD+7udLAk58WKiWmR8VcyLoKj4dliLyxSV1qqJ6Q/Nv9NY6s88a/vjfZki7/Mwivf5T5FiIJzTHa2l08mi/Ce7NMpZYk9JK6d5JYa2lxfAAAA=="
     },
     "videoUrl": "https://youtu.be/0VQ0tQEvwKo",
     "prepTimeMin": 40,
@@ -15277,7 +15333,7 @@
       "srcset": "recipes/mac-and-cheese-400.webp 400w, recipes/mac-and-cheese-800.webp 800w, recipes/mac-and-cheese-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYAEPxPZpbVEAA/oODLLGFnn4Tpxv5iq0rKWaga3XhJbNFzjIoSAxGLDg4sSAhn8TD2cEFyTb3n3E3LDixcy+R/3hKLqJRDak7QgnP67SoSFPqavGpJYdjyFYnPbgAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYAEPxT3cYkRcAAP6DgyxwLPPwnTjfzFVpSN7ZwFv5wcyfTj9b1rpP66aDJ1XyH8zEySbe8+4jeD8nmuuIuEN58u1xsykrehJNn8nu/+NuwdydjyFYnPbgAAA="
     },
     "videoUrl": "https://youtu.be/zGdBKn0abWI",
     "prepTimeMin": 90,
@@ -15387,7 +15443,7 @@
       },
       {
         "n": 8,
-        "text": "Let all flavors come together for 1-2 minutes while constantly stirring. Serve and eat. Shareables 281"
+        "text": "Let all flavors come together for 1-2 minutes while constantly stirring. Serve and eat."
       }
     ],
     "image": {
@@ -15395,7 +15451,7 @@
       "srcset": "recipes/dumpling-fried-rice-400.webp 400w, recipes/dumpling-fried-rice-800.webp 800w, recipes/dumpling-fried-rice-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdAB6w5yHkjm4Re4AA/nk142Z35P2Irftx87ZNgtlRRoX7epcUsQtLrQMZU0Xx61P/iMaPYhnId+1qBFjgKwk2UPzF4vBwYBCFUDNHrf4yeHq00K3XfbXiJ+Uhjksr5vliv3AAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdAB7HwxG5EjAOIF/Cl/AAAP55M4nDu5P2JVqREd+6ZLqql3DGsvEv69Tw7huU+E8R5MYU9UBe0X6NTOGcqQB1enfQjGTAIQqgZo9pPzXjRsU89hjlnBiUiflIY5LK+b5Yr9wAAA=="
     },
     "videoUrl": "https://youtu.be/-O6gQY-l_xc",
     "prepTimeMin": 10,
@@ -15512,7 +15568,7 @@
       },
       {
         "n": 9,
-        "text": "Add shrimp, mix for an additional 30 seconds, plate it, and eat it. Shareables 283"
+        "text": "Add shrimp, mix for an additional 30 seconds, plate it, and eat it."
       }
     ],
     "image": {
@@ -15520,7 +15576,7 @@
       "srcset": "recipes/shrimp-fried-rice-400.webp 400w, recipes/shrimp-fried-rice-800.webp 800w, recipes/shrimp-fried-rice-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYAEl4qphIvm3qR7/JAAD+2tNMyoUJLGEYennoVoL9WEo5dwxKCFFpowoM4Hovry2doZqarQNE7zz4HJZX+nvzuOcD7KoAm8YvufDEEXWjol4m0tR/l8OpATngPbwiw9SWMDINhvyuUmrv4AA="
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYAEiLrJX5Gkay2tXVWAAA/trTTMopuwQThsgBtlkjvKwb5AoBH8kHkNDfMcZTFHd+GW0rtmO1mCyIvORZcLrGN7TtvQA4EpaFwqA4aRd6A4uOEsgvD2pVXfIMSO+XtxfOAZnRSm+c5aToAAA="
     },
     "videoUrl": "https://youtu.be/-O6gQY-l_xc",
     "prepTimeMin": 10,
@@ -15642,7 +15698,7 @@
       },
       {
         "n": 9,
-        "text": "Plate it and eat it. Shareables 285"
+        "text": "Plate it and eat it."
       }
     ],
     "image": {
@@ -15650,7 +15706,7 @@
       "srcset": "recipes/kimchi-fried-rice-400.webp 400w, recipes/kimchi-fried-rice-800.webp 800w, recipes/kimchi-fried-rice-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABQBQCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRiu3AZYMMAbdCsl0oeWT3qOb0q2wAA/uRj8x5mTG0OoTiwh6Y+s520EAt25s6JVCc81sjF8JRyFSMdeQrrrdJq8P6tsbogEF7eRBpCkHDWmxDotxUbDoWERfb5fy/6F6Ik9eSrBZ+Lz3K3QtS0sASfPRZWtKTwgLcTqab/VsAnKVIyAgAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRiu3ABDuFtlUsl6kB/32YRSAD+2s76ETrKmFX3uBOaaJbyd8YyTJz1H7zrKm7rVqXhEPvPW56LvKPBnGkOG4T3sFPduMwuNLhBw1psQ6LcQBKkGu+l54Yjkx8b00c7bFLud5fsC7uKYEXXeNr0vn67VkdXqykGd90NPSxtkiAAAA=="
     },
     "videoUrl": "https://youtu.be/-O6gQY-l_xc",
     "prepTimeMin": 10,
@@ -15742,7 +15798,7 @@
       },
       {
         "n": 8,
-        "text": "Remove from heat and divide into five portions. • Each portion should be around 170 grams. Shareables 287"
+        "text": "Remove from heat and divide into five portions. • Each portion should be around 170 grams."
       }
     ],
     "image": {
@@ -15750,7 +15806,7 @@
       "srcset": "recipes/refried-beans-400.webp 400w, recipes/refried-beans-800.webp 800w, recipes/refried-beans-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoADT4b134uAGZIH3UAA/uxYSts65bew9cwak4qMan2nUTjWYUOe79rMq2J2x3pmMRnFsTGDBsDyXhkMnFPYIxT49RCXPAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoADT4pSk3X0eO4YAAD+7FhK2zrlt7D1sh0S2wFLi3rl0KkORh9FheFSbVJqy7YbmHcxiQLJ8X1+vgKuskFaDbQYc9BAAA=="
     },
     "videoUrl": null,
     "prepTimeMin": 15,
@@ -15855,7 +15911,7 @@
       "srcset": "recipes/foolproof-homemade-marinara-400.webp 400w, recipes/foolproof-homemade-marinara-800.webp 800w, recipes/foolproof-homemade-marinara-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACXFegwACVR06PYAAP7s3Q33AwF2M92zlhDK2GLWMoFQOmWGjtaJfq5Q+dzUTv3EZ+4P1ML4GeMSmHxyuJiNyAKIM4KmjFJrQuTfQhA3nRt4I58qvt4yZ2ZAIKu1P+zSExzhkAAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACZjDQhIDtERvfbdAAD+6e4bmFZ9gBfx1yJcRH7JobQK4uRt1TRvUo4QJWu8BvjdyOzXUWwHHT/l6YTASMcgWpl31ZZt58l74WxOwnTfycnAfq2akBt2dMtGq2z8WiCR1aEngAA="
     },
     "videoUrl": null,
     "prepTimeMin": 5,
@@ -15970,7 +16026,7 @@
       },
       {
         "n": 8,
-        "text": "Serve right away or add to an airtight container and store in the fridge. Let’s Get Saucy 293"
+        "text": "Serve right away or add to an airtight container and store in the fridge."
       }
     ],
     "image": {
@@ -15978,7 +16034,7 @@
       "srcset": "recipes/homemade-marinara-400.webp 400w, recipes/homemade-marinara-800.webp 800w, recipes/homemade-marinara-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACR0B2EgQuyVAAD+8OrkI6PeJfGO4ZzfDYTkfHcrT1hi03ILgfv0pPPGQjwond7F8CkeRCZTB6wc4NyrjizBkvfB4dvy+I7J+YrW9DZb2gVzEzBiG+6Ig2lPQAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACTbcPsQZrFFqmRrgAD+7q8vQf/oYKdfyF4x3DObxlvCrgVCGjB38y3q7Gqp4eG9RaTLHUu7ujnBuVYwQGi8Y6cjdY1bTbBhQQlpbC7uyskOWPV7QZTSsAA="
     },
     "videoUrl": null,
     "prepTimeMin": 10,
@@ -16097,7 +16153,7 @@
       "srcset": "recipes/spicy-ranch-400.webp 400w, recipes/spicy-ranch-800.webp 800w, recipes/spicy-ranch-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACnGcYapYymnXmSzwAD+nWujbMiTiLrTX4DmwXe6DcxDVFYBhYXrnyg1dT6zJVWPq0kwYTDUeywN4acx18rilMOta9XtGHqZ+fq+qISF6luP1DDw6sQ/GNwAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACnJielzQw2VF0PyQAD+nWujbN5d/VImFvwRA8J8LyZPpOBYvwQZ58oOQXGq/meL4jpwH5Q4bCA18GkvNYxFRbfkvHwcqhJESTJhRqGxIF4lS12qkHZGViFQWdgAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=MNI44zHwDpQ",
     "prepTimeMin": 5,
@@ -16220,7 +16276,7 @@
       "srcset": "recipes/chipotle-aioli-400.webp 400w, recipes/chipotle-aioli-800.webp 800w, recipes/chipotle-aioli-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoQABQAPu1kqU4ppaOiMAgBMB2JbACdEf/gMVJxYj7rGZfg5nAA/u7COn5nec77wSEIpdzeVGSZOJYxaF8RaSzavzoZkgunyPABi/0kY7JsGOPFxs00dsdOg7DQy54H+YdPXq+gkH8qfvtcTtDcOahBUZu4fOHW1c+uJ2KrV1HTMRyljTagAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABQAPu1iqk2ppaQiMAgBMB2JbACdL1Ds/wGKmFl59PRsacrOeAD+7sI6fmd5zyRyFaie55Lot4jjMbwY8M18+p01mIK1WVP+EUlgNB/s+jvByREdKymKx+zPTePx/dls0WzOU0jbY9TZmx63XGMbMjRC2GFcNp49EQ4Dx03luyFuo8NaAAAA"
     },
     "videoUrl": "https://youtu.be/3rcQV-o0GSw",
     "prepTimeMin": 5,
@@ -16389,7 +16445,7 @@
       "srcset": "recipes/garlic-400.webp 400w, recipes/garlic-800.webp 800w, recipes/garlic-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACL727xuIyRuq2y9mAAA/qnyB3hZiGnA0ePDvvCuZkp3FsrsMzbpurthNv7qnxj+o7N7FlUdfVl4lAuFcz8oDIHcSuQtT9C5HsSlEopxKw9GtUTt+1bM/QO70NrmEV/Y4af01+PomMbbucNuS+/qFAAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ABcMyYxee6HsAAD+qhAxAtRR+myRbiy9xwSl+TeRYBUFhkLFP/G8/L+zB0kMtF47JzU9TvIGp8KUxMs18nSYVKhr6Rwh0bIlKJQBcEgNaryNbD3EfrDmMUJUabTokxFQOv0mGGgyVTzDddRmi0P0AAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=jsJF7E4nqPk",
     "prepTimeMin": 15,
@@ -16479,7 +16535,7 @@
       },
       {
         "n": 3,
-        "text": "Serve right away or, for best flavor, cover and refrigerate for at least 2-3 hours. Let’s Get Saucy 301"
+        "text": "Serve right away or, for best flavor, cover and refrigerate for at least 2-3 hours."
       }
     ],
     "image": {
@@ -16487,7 +16543,7 @@
       "srcset": "recipes/tzatziki-sauce-400.webp 400w, recipes/tzatziki-sauce-800.webp 800w, recipes/tzatziki-sauce-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoHCAev+A8jdhXgPCsvx8Sn0AP7wxCqvVEBJT4JM3UcAA0XlLynvB/7qnS/rHdQSHbZC+T+YckgG6vGkq4IjiG3ZWN7TIN2s3Sczq4+2gtiUlYog7kivP4BrikcRa/9VYN6Mrl3Ud57AAKFZRcYAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoGv/gPI3Ya75srs+NzKOUAA/vDEKLS73xT1ZaRzzibg+EKAnPsdEi2ysd1JJL6+rf35b13BRNdfxvYRHEHWC+rQktHp7ZwXdA9+U/V6pE99LBtaqYrqp3CQrorDQs0Zuac02Nb1fcuyHlSYgCgAAA=="
     },
     "videoUrl": "https://youtu.be/Pc6o4QquI_M",
     "prepTimeMin": 15,
@@ -16572,7 +16628,7 @@
       "srcset": "recipes/salsa-crema-400.webp 400w, recipes/salsa-crema-800.webp 800w, recipes/salsa-crema-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwAClD43XWBMCQb/EyEhunAAD9URUwYhEQgl3LggAPhJhh+7BO8IwgLj6GNKrwLjOEToiWZEyn+uslpSfcVn2L+65leJrzSioR0yqVQkVrOzKAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoRwACn+e/In0tUCgvKkLHWAAPqX7q+Zi9BOrM0kNjfHFwAbY8R/lQJL6IluVrzY1d+tg/f0DKf9cepk6kttus8vJezPzHFpxzJEawaiGdMCmMwAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=ewfWPjbuYzs",
     "prepTimeMin": 5,
@@ -16654,7 +16710,7 @@
       "srcset": "recipes/cilantro-lime-salsa-400.webp 400w, recipes/cilantro-lime-salsa-800.webp 800w, recipes/cilantro-lime-salsa-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACAA557YBqKyek5gAP7av1oCwqDBU8JIiGv2J9FTdAqUkNR1HsfMxASaBr1MK6noFDcn+VJ5NQfQlroUeLLeZ0Tj+JrAclsYdbWFdMF4L6uLrggAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoRwACxj4i1otWxup2vWkgAA/tq/V4HZGN4Ql+y9HzGkOkrevm5Exs1lI1xYaIFVYdGvgAJjWtZVoP67k/ypPJqD6Eympx5JCFBY6Kp2TwRt6y9WSV7hYxjjJIAAAA=="
     },
     "videoUrl": "https://youtu.be/s7AtJKQxmkA",
     "prepTimeMin": 5,
@@ -16749,7 +16805,7 @@
       },
       {
         "n": 3,
-        "text": "Serve right away or let it sit in the fridge for a couple of hours to let the flavors compound. Let’s Get Saucy 307"
+        "text": "Serve right away or let it sit in the fridge for a couple of hours to let the flavors compound."
       }
     ],
     "image": {
@@ -16757,7 +16813,7 @@
       "srcset": "recipes/russian-dressing-400.webp 400w, recipes/russian-dressing-800.webp 800w, recipes/russian-dressing-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JaAC7ABdPlSJwbwZdMsLAAP50x/LUdc+FKa+3kZmOxRAAohUsE2UeD7A2R2DRGIDn8643Nr2X4Ez83BU92zrcvLvxNqwXgL//wAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JaAC7ACLEhYw9Y8aU1LAA/nTH+v2YVWZrsw39mniL3vSSKJfB0oTsLBoa/iDYVufBuRr8budtohrEbMMXijCJ7z9/v8ioxYGQAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=zGQNmS5uqYE",
     "prepTimeMin": 5,
@@ -16855,7 +16911,7 @@
       },
       {
         "n": 7,
-        "text": "Add syrup to a container and drizzle on all your breakfast favorites. Let’s Get Saucy Let’s Get Saucy 309 309"
+        "text": "Add syrup to a container and drizzle on all your breakfast favorites."
       }
     ],
     "image": {
@@ -16863,7 +16919,7 @@
       "srcset": "recipes/maple-syrup-400.webp 400w, recipes/maple-syrup-800.webp 800w, recipes/maple-syrup-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgAAV5FtUqm5rwQhcNagAP7w34IUZla5zk5OVQgBBxvwRd2Jnk/6mYb4S+YCQlwBysQCqi7H+QlrMzf/JdvtHk+v8Mltw+nGrWnOA4X5/WIFwXzpKPUQQhbeSaldTrRG+yYUHtAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZAAAV5FEJmZSCg76a2AA/vDfghRnizMoG9NVOn8S7odDKQigfLyV9KmR63FvPAGzB0/Qtv7Llf9v+S7faPJ9f4ZLbh8h5HWujqkKDe20Uxh6OsaoO1qYo4AzAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=kQ4OUhaTXwA#t=0m24s",
     "prepTimeMin": 10,
@@ -16960,7 +17016,7 @@
       },
       {
         "n": 6,
-        "text": "Add to a container and refrigerate. Let’s Get Saucy 311"
+        "text": "Add to a container and refrigerate."
       }
     ],
     "image": {
@@ -16968,7 +17024,7 @@
       "srcset": "recipes/buffalo-sauce-400.webp 400w, recipes/buffalo-sauce-800.webp 800w, recipes/buffalo-sauce-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwA8AB0KI9cFzUctcqAAD+byOfuU2cXLVGWIzPVIG7FaUBcrCyXngL4T0vTJZpdfwK9IJgJ7if5oWFOxa+LusSRC8GzU+NBMciljBW1WFs7fZYm6f0RwXYfd/HWPT3AAA="
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAC4hl57C/KlAAA/nFeHl+THG3mvnfM8dA18c8WS5b2t1Fiiy+ymSV8mFn0NIu/1pFv9WtY/8OyMhsVY8ZuRyAAVcywf/3GZeonXl53RXMCTeDvkl4THPGHAFzS7l+n0FmyIAAA"
     },
     "videoUrl": null,
     "prepTimeMin": 5,
@@ -16986,11 +17042,11 @@
     "category": "Doughlicious",
     "servings": 23,
     "macros": {
-      "calories": 0,
-      "fat": 0,
-      "carbs": 0,
+      "calories": 59,
+      "fat": 1,
+      "carbs": 9,
       "netCarbs": null,
-      "protein": 0
+      "protein": 6
     },
     "ingredientGroups": [
       {
@@ -17094,7 +17150,31 @@
       },
       {
         "n": 14,
-        "text": "Take the top of the dough and fold about a quarter of it onto itself. Using the tips of your fingers, press the edge of the dough into the crease. (RECIPE CONTINUES) Doughlicious 315"
+        "text": "Take the top of the dough and fold about a quarter of it onto itself. Using the tips of your fingers, press the edge of the dough into the crease. (RECIPE CONTINUES)"
+      },
+      {
+        "n": 15,
+        "text": "Slowly roll the dough down by continually pressing the seams together with each roll and popping any large air bubbles while doing so."
+      },
+      {
+        "n": 16,
+        "text": "Seal the roll by pinching along the edge of the dough as well as each side of the roll."
+      },
+      {
+        "n": 17,
+        "text": "Lightly spray an 8.5x4.5” steel loaf pan with oil, place the dough inside of the pan sealed side down, and let the dough rise in a warm place for 60-90 minutes."
+      },
+      {
+        "n": 18,
+        "text": "Bake in a preheated 350°F oven for 25-30 minutes."
+      },
+      {
+        "n": 19,
+        "text": "Take bread out of the pan, add to a wire rack, and let the bread completely cool. This will take 2-3 hours."
+      },
+      {
+        "n": 20,
+        "text": "Using a serrated knife, slice a couple pieces, and enjoy."
       }
     ],
     "image": {
@@ -17102,7 +17182,7 @@
       "srcset": "recipes/protein-bread-400.webp 400w, recipes/protein-bread-800.webp 800w, recipes/protein-bread-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACm+RtI9qvnpfgKAAP7ui9hMwVkogGD/OVuvFA03M7GO4aBNhESm7wSzuxhXmf0sYLuNQCAZWUIkrghq6Kc7SvLmMc5Il4ugERj3qd8ujIlOAyWABnxVmelFdBd4Vi2SzDtxWpFNrIAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACm96du8obvxzbgA/u6E1PdNikBFUAztzq+8R/S/9dLefudVS13RDHq21Fioq2fV9kKwuNPya2kL4N/SFcENXRZFtK8uYxzkiXiTL7m7hBPzjQwzZrnpTTC5dKVNihLFrXAAnB+aKSUONwIjAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=D5AFlTF7Imk#t=0m22s",
     "prepTimeMin": 180,
@@ -17111,7 +17191,8 @@
     "references": [],
     "sourcePages": [
       315,
-      316
+      316,
+      317
     ]
   },
   {
@@ -17265,7 +17346,7 @@
       "srcset": "recipes/protein-buns-400.webp 400w, recipes/protein-buns-800.webp 800w, recipes/protein-buns-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JbACsEf/gPK7UsPdAmUReM6dQAAD+8qH4DAB0zXeeWAqzCmmf2hwY7CF60+sMVLMedUKpmWCOoZH317LJzDCumHyQPwOk/cCMU6VrBiV+yrxIDfNd4EIgVcNtYYCTl0zteRsLzO989y4GvgAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JbACsACHYfdKgMPOj0L8i3IAA/vKd7gtENTjkDMQse/ksR4irU9E2WNO7cBg6gXOFZ/3OzvDwEeVYFfiern1Hb98gJkAsj5zekjPevwSTA9KbrsQOKEjugCX1kGlQwTxa1wwA"
     },
     "videoUrl": "https://youtu.be/amTZwo3QLDo",
     "prepTimeMin": 120,
@@ -17465,7 +17546,7 @@
       "srcset": "recipes/potato-buns-400.webp 400w, recipes/potato-buns-800.webp 800w, recipes/potato-buns-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3GQAAcbIbSIGGx0o2CMCAAP7yneE+bGY2RMTQuo7T55jMzxVstuzKigdzj/zqaVQdqJ+3v1iVX9ond/5JbojqytHVTdwZdTXYufhkYU117kGI8vmj205MPvw3/RJMirSRLzaTkAsSu1QPRqoQwAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3GQAAcbIbZTeNsSD2vymQ3AAA/vKd4T5sZjZExNC6jtPaxZQpi0uuhgLNERt605bxB57chNu+VaNkivpxzF4Rk0Y0+XcDX5CGoGxnyvcuiyIIWQ3cC4ny4Y5b+VjPBaMv1k9xXeipwOFyvgYAgkAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=6a29SjtBp9Q#t=0m21s",
     "prepTimeMin": 180,
@@ -17498,11 +17579,11 @@
     "category": "Doughlicious",
     "servings": 8,
     "macros": {
-      "calories": 0,
-      "fat": 0,
-      "carbs": 0,
+      "calories": 321,
+      "fat": 1,
+      "carbs": 59,
       "netCarbs": null,
-      "protein": 0
+      "protein": 20
     },
     "ingredientGroups": [
       {
@@ -17596,7 +17677,63 @@
       },
       {
         "n": 14,
-        "text": "To prevent sticking, spray hands with oil and push the dough outward to get any big air bubbles out. (RECIPE CONTINUES) Doughlicious 329"
+        "text": "To prevent sticking, spray hands with oil and push the dough outward to get any big air bubbles out. (RECIPE CONTINUES)"
+      },
+      {
+        "n": 15,
+        "text": "Fold the sides of the dough, followed by the top and bottom of the dough, flip the dough over, and round it into a ball making sure the bottom of the dough is sticking together."
+      },
+      {
+        "n": 16,
+        "text": "Put the dough ball off to the side, cover with a damp tea towel, and repeat with the other 3 pieces of dough."
+      },
+      {
+        "n": 17,
+        "text": "Let the dough rest for 20 minutes, grab a sheet pan, line it will parchment paper, lightly spray with oil, and put it off to the side."
+      },
+      {
+        "n": 18,
+        "text": "Lightly dust surface with flour, put one of the dough balls in front of you bottom side up, put a little bit of oil on your hands, and press the dough out into a roughly 8x6” rectangular shape while getting any massive air bubbles out."
+      },
+      {
+        "n": 19,
+        "text": "Take the top of the dough and fold about a quarter of it onto itself. Using the tips of your fingers, press the edge of the dough into the crease."
+      },
+      {
+        "n": 20,
+        "text": "Slowly roll the dough down by continually pressing the seams together with each roll and popping any large air bubbles while doing so."
+      },
+      {
+        "n": 21,
+        "text": "Seal the roll by pinching along the edge, lightly dust with flour, and put the sealed side on the work surface."
+      },
+      {
+        "n": 22,
+        "text": "Using both hands, start in the middle of the dough and slowly apply pressure both down and out while trying to keep the seam side down the entire time."
+      },
+      {
+        "n": 23,
+        "text": "Each time the dough is rolled out, apply more pressure, especially at the ends of the dough to give it an authentic baguette taper. • This usually takes about 3-5 rolls and should be about 12-14” in length."
+      },
+      {
+        "n": 24,
+        "text": "Put the rolled dough on the parchment paper, cover with a sheet pan, and repeat for the remaining dough balls, making sure the pieces of dough are evenly spaced out on the sheet pan."
+      },
+      {
+        "n": 25,
+        "text": "Let the dough rise in a warm place for 60-90 minutes. • Try and make sure the rolled pieces of dough are as straight as possible before rising or else they will most likely be crooked."
+      },
+      {
+        "n": 26,
+        "text": "Spray the baguettes with water, score the baguettes with a bread lame or a sharp knife every 2 inches or down the middle. Bake in a preheated 450°F oven with a small cast iron pan preheating on the rack below. Add 5-6 pieces of ice to the hot cast iron pan when you add the baguettes to the oven and close the oven door — this creates steam to give your baguettes a better rise while baking."
+      },
+      {
+        "n": 27,
+        "text": "Bake for 25-30 minutes, flipping the sheet pan around halfway through and moving the bread on the inside of the pan to the outside and vice versa."
+      },
+      {
+        "n": 28,
+        "text": "Baguettes are done when you can knock on them and they sound hollow. Let them cool and store any you will not use that day in the freezer."
       }
     ],
     "image": {
@@ -17604,7 +17741,7 @@
       "srcset": "recipes/protein-baguette-400.webp 400w, recipes/protein-baguette-800.webp 800w, recipes/protein-baguette-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7ACG830GUJfz2gVr2aRoAAP7s0nqfjeAd1BhRbVUYTYQ1ymwhgzy3Ai/e7qBJkq0cK2jRDVzWMt04z3UL+e+uAUwW/7hHlQy7ZQ8ZSyjAnpcJRPnwRvsa20Vu7F3hFvxmkHUxig9TIAB7xz7zELioWaBebyfohNFnkLefr2nswAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7ACG830GGrIxHw69p0QAA/uzSepfEJmHU34Qz1+yGN+mwhpYO/ejkvVJKCmNSUNqVhi76YWb3twiu/tl03k4oITeOLPnmtI2IyDbQs4WnvxqMZ8GvXlgPJRPpqntYQozfn/NVdW5IJcCB1GqimjZZZDXjs03iWyB9PfAAAA=="
     },
     "videoUrl": "https://youtu.be/nVMYskk0jRA",
     "prepTimeMin": 180,
@@ -17613,7 +17750,8 @@
     "references": [],
     "sourcePages": [
       329,
-      330
+      330,
+      331
     ]
   },
   {
@@ -17622,11 +17760,11 @@
     "category": "Doughlicious",
     "servings": 4,
     "macros": {
-      "calories": 0,
-      "fat": 0,
-      "carbs": 0,
+      "calories": 306,
+      "fat": 3,
+      "carbs": 50,
       "netCarbs": null,
-      "protein": 0
+      "protein": 20
     },
     "ingredientGroups": [
       {
@@ -17748,7 +17886,15 @@
       },
       {
         "n": 16,
-        "text": "Heat up 56g water in a microwave for 30-40 seconds or until boiling. (RECIPE CONTINUES) Doughlicious 335"
+        "text": "Heat up 56g water in a microwave for 30-40 seconds or until boiling. (RECIPE CONTINUES)"
+      },
+      {
+        "n": 17,
+        "text": "Using oven mitts, add the hoagies to a baking steel, pour the water into the brownie pan, and quickly shut the oven door."
+      },
+      {
+        "n": 18,
+        "text": "Bake for 12-14 minutes and immediately transfer to a wire rack to cool."
       }
     ],
     "image": {
@@ -17756,7 +17902,7 @@
       "srcset": "recipes/hoagie-rolls-400.webp 400w, recipes/hoagie-rolls-800.webp 800w, recipes/hoagie-rolls-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdHYCNAW/+N4AfhJODSglncSyajhgA/uwEfnffvdYtF2t5HlhYql3PukpRfL0Ppff5+5MXHfQ0cfngB9V91tbSiSRirRZqS1NfHtTJAzl35bkm7Rfb3qvUj1NA8+3vxuIuQY1O+fFcpT2iWv+AAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdHYBi/4D6J7XNjaIJ7RDyoUVgAP7sAK9P0oIEZDIpTq5YWL1+4DzMgRSgT58KByLGNhpekicHBmiaUErcj5qjwAugyh3/dHp3IEoRXsSdpyNds4enn3dtK9WVe+mbqr/KFN1xeJURp6SNZ29hmOmgAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=orP2p5zS4jk#t=0m36s",
     "prepTimeMin": 210,
@@ -17772,7 +17918,8 @@
     ],
     "sourcePages": [
       335,
-      336
+      336,
+      337
     ]
   },
   {
@@ -17910,7 +18057,7 @@
       },
       {
         "n": 11,
-        "text": "Eat one or all 6. Both are great options. Doughlicious 341"
+        "text": "Eat one or all 6. Both are great options."
       }
     ],
     "image": {
@@ -17918,7 +18065,7 @@
       "srcset": "recipes/protein-breadsticks-400.webp 400w, recipes/protein-breadsticks-800.webp 800w, recipes/protein-breadsticks-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR2WCqwpRbMu4RIz5ZEshQA/trTThcQBTkEvY0e6eon3ghb2FTb4xy5XSm45H96vhqdZtUukESw181JkUWH/yikNbwC8RMEcS+ojmzsZui5BtJoukj0T23sR/h3iZT65aW5LYG00A5toFtQLSKj+dTvK2zI/ohAAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACWW9kLvLTvh9eyogAD+2tPRB58hApxNjLMIL0UTUYlnMYWrov5OwJqVmi+MjmUH+QdzOMX4dcCi5O7cUMCY2dINtNEca8IxRGzh4WlDR6PcUQ1T+Q/U71U7rIYDdbvxenR1eUeOY/I0eMMzWaEU1HUkR0mTQAA="
     },
     "videoUrl": "https://youtu.be/nCICx9GhvA0",
     "prepTimeMin": 60,
@@ -18043,7 +18190,7 @@
       "srcset": "recipes/protein-pita-400.webp 400w, recipes/protein-pita-800.webp 800w, recipes/protein-pita-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAAAXBuWGIsgni28miRSAAD+6QgVm7DHM+SjRV8VlK+1e9ri2mM3ir77v64h1DJxsuZOjRpu3ngPJ6k/VtKLzwR8kte9vgT0x7mazwUbNAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAAAW+uJiJGTuaNf57n4qYAA/ukIFZuwx93xdYWt9A91bnf2OFVuEb1UAy06mehRnn1bkvAeT1J+rZ4wUTzkbWsi0gw2ZbGVhCAA"
     },
     "videoUrl": "https://youtu.be/19Pl7OA2XgU",
     "prepTimeMin": 15,
@@ -18179,7 +18326,7 @@
       "srcset": "recipes/burrito-tortillas-400.webp 400w, recipes/burrito-tortillas-800.webp 800w, recipes/burrito-tortillas-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR4PoADrGPex9Qc8Mld79ewAP7uzlltpYJrPMqGJF2NfTVZgppUDMmR+SdCxceinPIFPMZmtgkmjf2wJZFt2HbC7pMPYur+wY85D+1BhdOCZM1tVWy1yDGdS6jciWLapNB8st6AAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR4PoADwLWKgmY5gnSLVU3tgAD+7u2O+EYcX8vzRE7VjjFJ9psG9G3FnGsb3zPpvOhNGXHCT6JJ68jUKNsX3p13/LR0s+8aUNzhYST+daTTR0kj0Riz+LDkLLniS4tyBHXrwAAA"
     },
     "videoUrl": "https://youtu.be/42W-FDkG06I",
     "prepTimeMin": 60,
@@ -18336,7 +18483,7 @@
       "srcset": "recipes/nickchicken-meal-prep-400.webp 400w, recipes/nickchicken-meal-prep-800.webp 800w, recipes/nickchicken-meal-prep-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoACAe8qNOWM0skAAPVVwBdGkm1mrYmSMw3NxTWa3Rtq/6klRCuzpdIMTx84ZQxT2QJmu9WmOcw8kSuijj97fpNQJLmqiXV8Wi2uONLP2jJsWlLZR1H7SIsq4Zl2RBCFgAA="
+      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoFWZgQQmhXl5TAcAPVVwBdGkm1HM80sw5NVGzsRlWZ1oJyIkIZ2eETv19p7PEBorHmKZ3ZG2xJiQgeBzUzYTiKI00ZrI7T0GLsdBweMbYO5lrveKGIwdLX4QgAAAA=="
     },
     "videoUrl": "https://youtu.be/qPjRwdaXsvQ",
     "prepTimeMin": 45,
@@ -18482,7 +18629,7 @@
       "srcset": "recipes/1-pizza-meal-prep-400.webp 400w, recipes/1-pizza-meal-prep-800.webp 800w, recipes/1-pizza-meal-prep-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdGaAAVf30Z5LxxwtzG9pxQgAA/vDfp4oiDKVDOfBQQ/MoiY37+S7z2v0Kwk+SWnbUAEwbLRu7f1ojp/JOs8PllwVHeu+W4wFpbXcPz8Ta+C2Bn3yT5lM+tBVx7Po/ucHWxbX2yqvgmfw+xVlG6/J8FBC7jgAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdGaAAV7+2WejiNopFroz6gAD+8N+nisjxDckZYW17Yv4QWKv1Bo6JCLX83YdRcTfP7t6xr9FGwaaQypfh/jWRirHPNoBrfAKpUxloY80GntHJGffJPmXrCVjRt0rmfRRGJltG0EsPslTqRSyC+PRLGf2iqj7/boAA"
     },
     "videoUrl": "https://youtu.be/j5ZtA82n8yM",
     "prepTimeMin": 60,
@@ -18515,11 +18662,11 @@
     "category": "Prep School",
     "servings": 5,
     "macros": {
-      "calories": 0,
-      "fat": 0,
-      "carbs": 0,
+      "calories": 614,
+      "fat": 19,
+      "carbs": 64,
       "netCarbs": null,
-      "protein": 0
+      "protein": 52
     },
     "ingredientGroups": [
       {
@@ -18694,7 +18841,43 @@
       },
       {
         "n": 13,
-        "text": "Once the timer goes off, turn the broiler on high, mix the vegetables around the pan, and broil them for 2-3 minutes. Prep School Prep School 357 357"
+        "text": "Once the timer goes off, turn the broiler on high, mix the vegetables around the pan, and broil them for 2-3 minutes."
+      },
+      {
+        "n": 14,
+        "text": "Add the roasted vegetables to the cooked steak and mix thoroughly."
+      },
+      {
+        "n": 15,
+        "text": "Into a medium bowl, add tomato sauce, chicken bouillon, garlic powder, onion powder, cumin, and oregano. Mix thoroughly."
+      },
+      {
+        "n": 16,
+        "text": "Add chicken broth into a measuring cup and microwave for 1-2 minutes or until broth has reached 120°F."
+      },
+      {
+        "n": 17,
+        "text": "Turn the pan that roasted the vegetables onto medium heat, add avocado oil and rice into the pan, and stir to combine. Frequently stir the mixture until the rice has become golden brown."
+      },
+      {
+        "n": 18,
+        "text": "Add the tomato sauce into the pan, stir to combine, and cook for 30 seconds."
+      },
+      {
+        "n": 19,
+        "text": "Add the chicken broth and stir to combine. Once boiling, turn the heat down to low, cover with a lid, and cook for 12 minutes."
+      },
+      {
+        "n": 20,
+        "text": "Keeping the lid on, move the pan off the heat, let it sit for 15 minutes, and stir to combine."
+      },
+      {
+        "n": 21,
+        "text": "To assemble, distribute the steak fajita mix and mexican rice evenly among 5 meal prep containers. Fill 2 oz plastic cups with salsa verde, cover each container with a lid, and refrigerate."
+      },
+      {
+        "n": 22,
+        "text": "When it’s time to eat, place a wet paper towel over the meal prep containers and microwave them in 60-second intervals until they are heated through. For more even cooking, mix the ingredients between each interval."
       }
     ],
     "image": {
@@ -18702,7 +18885,7 @@
       "srcset": "recipes/steak-fajita-dinner-400.webp 400w, recipes/steak-fajita-dinner-800.webp 800w, recipes/steak-fajita-dinner-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoAA8Nl4IQuQAPthID/Zs8QuJew0q7lzDwdzQ0UasW94eXH16cz9/kqzf4A2jiTzzeqXJZiRs97mjNUapdyO9Vjzil1RtEQJsOAw4AAA"
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoGv/gJ2Ycli5W1gAPthHWk0b6JMUy/qqED4waQx3IlX69OZ+/yVZ0phxuPSx5Gi/geC4Y2znWPy4u5WRwKIBmLDXaO2RJEHmdAAAA=="
     },
     "videoUrl": "https://youtu.be/8AuJY-M3_kc",
     "prepTimeMin": 30,
@@ -18711,7 +18894,8 @@
     "references": [],
     "sourcePages": [
       357,
-      358
+      358,
+      359
     ]
   },
   {
@@ -18867,7 +19051,7 @@
       "srcset": "recipes/chicken-noodle-soup-400.webp 400w, recipes/chicken-noodle-soup-800.webp 800w, recipes/chicken-noodle-soup-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaAC7MoR4GCm9s7VIGblLH+AA/u7qMdWoh785e2wde3o5yChlChVNco6ws51jvdn1TRxUIb5FnluYVNGaBSrnrp+CzvcBrxB7PW0I0wvj7GKnZ122mb4OjIAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JaACdACIJ4xUxxH7LLQAA/u7qNciJrM6uaNNKdxImWbh/RN+D6w26DyN8J1cZahEWsOJrpnCOpbykZWx4Yyg4qxJZI6Hrw4OBbPwy324MSqkKtItNMiB1gZgAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=9czpOZKL3z4#t=0m27s",
     "prepTimeMin": 20,
@@ -19049,7 +19233,7 @@
       },
       {
         "n": 14,
-        "text": "To reheat, add the chicken to a preheated 350° airfryer for 3-4 minutes and repeat steps 11 and 12 to plate. Prep School Prep School 363 363"
+        "text": "To reheat, add the chicken to a preheated 350° airfryer for 3-4 minutes and repeat steps 11 and 12 to plate."
       }
     ],
     "image": {
@@ -19057,7 +19241,7 @@
       "srcset": "recipes/chicken-parm-sandwich-meal-prep-400.webp 400w, recipes/chicken-parm-sandwich-meal-prep-800.webp 800w, recipes/chicken-parm-sandwich-meal-prep-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdACHiBtzRSFV9WqsvwAD+5Ggf5QumnkvKtjEccYuIpkDjPYkzcrHKuopq/DpOzWnXPVo2hGdz8ZSB3EnyfzHo0cQSE1A2rDSozzg2tArMIEt9kg7PaniyCUbIJGxTtzf4ZtnDaPNK7ihKdNvW9a5rgzecYAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACxG144ACTNwdeT17bpb1yAAP7kaCIEHmpvsfauWVOfk9E+4h6cGLL7VQZLuuXYGO0uyFnHf/KlnjaZJ/D8VwVQNYQHYVlk/fixZ1DcbIqUyjABvMyfCUf9trJBqilORBMWyYZn41BiXWSCcwqKgwnHkAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=a64qp6m-ybw&t=32s",
     "prepTimeMin": 15,
@@ -19244,7 +19428,7 @@
       },
       {
         "n": 15,
-        "text": "Add pork to buns, top with barbecue sauce, and enjoy. Prep School Prep School 365 365"
+        "text": "Add pork to buns, top with barbecue sauce, and enjoy."
       }
     ],
     "image": {
@@ -19252,7 +19436,7 @@
       "srcset": "recipes/pulled-pork-mac-400.webp 400w, recipes/pulled-pork-mac-800.webp 800w, recipes/pulled-pork-mac-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7MoADTihNlZRGAW2h9nAA/vDWZtV1JnRNASRKEYNzO6SLUSb+1W87Or15D6sgUFZVmiyuyvtJcBvJR4j8uGFzEdltPqEwLUq/0e9aCz1p4YyWJ4K5GJKTfvBCh+isLZc4pOvwAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7ACHaj3c2qcTLZCNnsAD+8NZkyLjs27HPAN052S5Vepw/ayhbDzWgZXwecOvcKExOIe4zUmMAf1kutM+g1RDNjAMZNSKwTX+j3rQWetTMvfopfjYidIEGh7B91dsQB5/AAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=-WYSxkF5nsA&t=23s",
     "prepTimeMin": 20,
@@ -19426,7 +19610,7 @@
       },
       {
         "n": 11,
-        "text": "Top tostada with ingredients in the order listed and eat. Prep School Prep School 367 367"
+        "text": "Top tostada with ingredients in the order listed and eat."
       }
     ],
     "image": {
@@ -19434,7 +19618,7 @@
       "srcset": "recipes/chicken-tinga-tostadas-400.webp 400w, recipes/chicken-tinga-tostadas-800.webp 800w, recipes/chicken-tinga-tostadas-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JaACdACHZmQiiQZSt5eW/QAD+7s0/2VVc1UwLCEUmYsTXXmY+7BA4PSPa8e3yjFyvAL5LfU0miHXD6zHito05xXDyQ8/ACkI3Ef/mZzgS+fYFgnBXO3d7AcGmm16W5dqVM7gdNAA="
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgC7ACHQT6YAAzfw91OAAP7uzT/gCRc2UDA3q/GRwVvimbdNXrgtn21Jksgbp4zO1Z2DiNBjuyozVJP7s0+g2KdyMpWRjcQhDCNxIAG1Cm2m5jFyJzsIvaRK6qVrwVkkI6RBPiwAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=DGCUFTlvY8Q&t=36s",
     "prepTimeMin": 45,
@@ -19617,7 +19801,7 @@
       },
       {
         "n": 17,
-        "text": "Lay the dough over the top of the bowl and pat the edges of the dough. Prep School Prep School 369 369"
+        "text": "Lay the dough over the top of the bowl and pat the edges of the dough."
       }
     ],
     "image": {
@@ -19625,7 +19809,7 @@
       "srcset": "recipes/pizza-pot-pie-meal-prep-400.webp 400w, recipes/pizza-pot-pie-meal-prep-800.webp 800w, recipes/pizza-pot-pie-meal-prep-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdH8ADAUB85wnhuYxA8nswAP7w+6IwG79/dbP3Aia6eG9zJWwSFXpiZhLByYs2DUSPjRoS6M5boJN1ATuq7/Fi+PiVMnOg52DanJqKX+APhgen8kXZvJ3rMmcboddsssSCg2mbJo9ShxHcTKMdGAAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdIDZDAwj+HdLS8iweZYsEAAD+8PdJh9BW97ZgRDPQ+Uzb2c9gn19blNCGfgRlvuD3M4L/bj1WkXFROJUydg7T1MtSGkty85rra1wIlCn7uPgpzCYQacRhZmL/YGEbsM3n4xCTAAAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=GZ0JjT672xA&t=25s",
     "prepTimeMin": 60,
@@ -19759,7 +19943,7 @@
       },
       {
         "n": 14,
-        "text": "Add buffalo sauce and wings into a large bowl and toss to coat. Plate the combo meal and go to town. Prep School Prep School 373 373"
+        "text": "Add buffalo sauce and wings into a large bowl and toss to coat. Plate the combo meal and go to town."
       }
     ],
     "image": {
@@ -19767,7 +19951,7 @@
       "srcset": "recipes/buffalo-wing-combo-meal-400.webp 400w, recipes/buffalo-wing-combo-meal-800.webp 800w, recipes/buffalo-wing-combo-meal-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACxuMz4o90oRegAA/iWKhvtNYlVRhzCUgbAuSODqab5q9CyYgjtI6wDQC0deEcd72RsI5WEsWbOV9RbB32x5SRkl4gW1qcYFGxEIi07nggy6j7LE+w6gQqCJnCRDocqmAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwBtABnv+8cwNrem6gAP4liob+hI7kzgZy1MkCsKcP6pkLOW7wGGbr7PTsMZLJ5JvOOMLUI0ydpCCuUERYlD4Wwd9seUkZJeIFtanGBRsRCIrfOvsIeGnxnzC5Ppu0FPLF6uAA"
     },
     "videoUrl": "https://www.youtube.com/watch?v=0vs0MamByvI&t=25s",
     "prepTimeMin": 40,

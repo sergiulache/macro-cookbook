@@ -191,14 +191,17 @@ function parseIngredients(page: PageData, colSplit: number): IngredientGroup[] {
   return groups.filter((g) => g.ingredients.length || isGroupHeader(g.name)); // keep header-only parents
 }
 
-function parseSteps(page: PageData, colSplit: number, tipY: number): Step[] {
-  const ingY = labelItem(page, "INGREDIENTS")?.y ?? 210;
-  const right = page.items.filter((i) => i.x >= colSplit && i.y > ingY + 4 && i.y < tipY - 2 && norm(i.str).toUpperCase() !== "DIRECTIONS");
-  const starts = right.filter((i) => /^\d+\.$/.test(i.str.trim())).sort((a, b) => a.y - b.y);
+// Header-independent: works on the primary content page AND on a directions
+// continuation page (two-page-instruction recipes, macros/steps on page 2).
+function parseSteps(page: PageData): Step[] {
+  const starts = page.items.filter((i) => /^\d+\.$/.test(i.str.trim())).sort((a, b) => a.y - b.y);
+  if (!starts.length) return [];
+  const tipItem = page.items.find((i) => /^TIP/i.test(norm(i.str)));
+  const tipY = tipItem ? tipItem.y : page.height - 22;
   return starts.map((s, idx) => {
-    const yEnd = starts[idx + 1]?.y ?? Infinity;
-    const text = right
-      .filter((i) => !/^\d+\.$/.test(i.str.trim()) && i.y >= s.y - 3 && i.y < yEnd - 3 && i.x > s.x + 5)
+    const yEnd = Math.min(starts[idx + 1]?.y ?? Infinity, tipY);
+    const text = page.items
+      .filter((i) => !/^\d+\.$/.test(i.str.trim()) && i.x > s.x + 5 && i.y >= s.y - 3 && i.y < yEnd - 3 && i.y < page.height - 22)
       .sort((a, b) => a.y - b.y || a.x - b.x).map((i) => i.str).join(" ").replace(/\s+/g, " ").trim();
     return { n: Number(s.str.replace(".", "")), text };
   }).filter((s) => s.text);
@@ -213,7 +216,10 @@ export function parseRecipeSpread(pages: PageData[], sourcePages: number[]): Par
   const tipY = tipItem ? tipItem.y : Infinity;
 
   const ingredientGroups = parseIngredients(contentPage, colSplit);
-  const steps = parseSteps(contentPage, colSplit, tipY);
+  // merge steps across the whole spread (continuation pages carry steps 8..N)
+  const byN = new Map<number, Step>();
+  for (const p of pages) for (const s of parseSteps(p)) if (!byN.has(s.n)) byN.set(s.n, s);
+  const steps = [...byN.values()].sort((a, b) => a.n - b.n);
 
   const tips: string[] = [];
   if (tipItem) {

@@ -4,14 +4,26 @@
  * statically; we may compress/optimize freely).
  */
 import sharp from "sharp";
-import { mkdirSync } from "node:fs";
+import { mkdirSync, existsSync } from "node:fs";
 import { ASSETS_OUT } from "./config.js";
 import type { RecipeImage } from "../../src/lib/schema/recipe.js";
 
 const WIDTHS = [400, 800, 1200];
 
-export async function optimizeHero(sourcePath: string, id: string): Promise<RecipeImage> {
+export async function optimizeHero(sourcePath: string, id: string, force = false): Promise<RecipeImage> {
   mkdirSync(ASSETS_OUT, { recursive: true });
+  // skip re-encoding if already generated (fast re-runs when only data changes)
+  if (!force && existsSync(`${ASSETS_OUT}/${id}-800.webp`)) {
+    const have = WIDTHS.filter((w) => existsSync(`${ASSETS_OUT}/${id}-${w}.webp`));
+    const dims = await sharp(`${ASSETS_OUT}/${id}-800.webp`).metadata();
+    const blur = await sharp(`${ASSETS_OUT}/${id}-400.webp`).resize({ width: 16 }).webp({ quality: 40 }).toBuffer();
+    return {
+      src: `recipes/${id}-800.webp`,
+      srcset: have.map((w) => `recipes/${id}-${w}.webp ${w}w`).join(", "),
+      width: dims.width ?? 800, height: dims.height ?? 0,
+      blurDataURL: `data:image/webp;base64,${blur.toString("base64")}`,
+    };
+  }
   const meta = await sharp(sourcePath).metadata();
   const maxW = meta.width ?? 1200;
 

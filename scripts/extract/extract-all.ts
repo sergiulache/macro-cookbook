@@ -30,15 +30,25 @@ const rows: Row[] = [];
 const ids = new Map<string, number>();
 
 for (const c of contentPages) {
-  const spreadNums = [c - 1, c];
-  const pages = (await Promise.all(spreadNums.map(safeGetPage))).filter(Boolean) as PageData[];
+  let spreadNums = [c - 1, c];
+  let pages = (await Promise.all(spreadNums.map(safeGetPage))).filter(Boolean) as PageData[];
   const flags: string[] = [];
-  if (spreadNums.some((n) => corruptSet.has(n))) flags.push("corrupt-page");
   if (!pages.some((p) => p.items.some((i) => /INGREDIENTS/.test(i.str.replace(/\s/g, ""))))) {
-    rows.push({ recipe: null, flags: ["no-content-page", ...flags], pages: spreadNums, title: `(page ${c})` });
+    rows.push({ recipe: null, flags: ["no-content-page", ...(corruptSet.has(c) ? ["corrupt-page"] : [])], pages: spreadNums, title: `(page ${c})` });
     continue;
   }
-  const parsed = parseRecipeSpread(pages, spreadNums);
+  let parsed = parseRecipeSpread(pages, spreadNums);
+  // two-page-instruction recipes: macros (and steps 8..N) overflow to page c+1.
+  // Only extend when the base spread has NO macros, so we never grab the next
+  // recipe's macros from its photo page.
+  const allMacrosZero = (m: typeof parsed.macros) => !m.calories && !m.carbs && !m.protein && !m.fat;
+  if (allMacrosZero(parsed.macros)) {
+    const ext = [...spreadNums, c + 1];
+    const extPages = (await Promise.all(ext.map(safeGetPage))).filter(Boolean) as PageData[];
+    const extParsed = parseRecipeSpread(extPages, ext);
+    if (extParsed.macros.calories > 0) { spreadNums = ext; pages = extPages; parsed = extParsed; }
+  }
+  if (spreadNums.some((n) => corruptSet.has(n))) flags.push("corrupt-page");
   let id = slugify(parsed.title) || `recipe-${c}`;
   if (ids.has(id)) { const k = (ids.get(id)! + 1); ids.set(id, k); id = `${id}-${k}`; } else ids.set(id, 1);
 
@@ -51,7 +61,7 @@ for (const c of contentPages) {
   if (!image) flags.push("no-image");
 
   const nIng = parsed.ingredientGroups.reduce((s, g) => s + g.ingredients.length, 0);
-  if (parsed.macros.calories === 0) flags.push("no-macros");
+  if (allMacrosZero(parsed.macros)) flags.push("macros-missing");
   if (parsed.steps.length < 2) flags.push("few-steps");
   if (nIng < 1) flags.push("no-ingredients");
   if (!parsed.videoUrl) flags.push("no-video");
