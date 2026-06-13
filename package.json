@@ -15,5 +15,9 @@
     "typescript": "^6.0.3"
   },
   "type": "module",
-  "description": "Web app rebuild of the Diet Cheat Codes recipe ebook"
+  "description": "Web app rebuild of the Diet Cheat Codes recipe ebook",
+  "scripts": {
+    "extract:sample": "tsx scripts/extract/build-sample.ts",
+    "extract:report": "tsx scripts/extract/report.ts"
+  }
 }
