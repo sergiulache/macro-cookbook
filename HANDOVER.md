@@ -14,6 +14,7 @@ What I built while you were away, what works, and the things only **you** can ve
 
 - **Extraction (Slice 0–2):** 136 recipes parsed from the PDF text layer (exact numbers, not OCR), schema-validated (zod, `src/lib/schema/`), 12 categories, hero images optimized to webp (~35MB total). Method + parser proved on hard layouts (multi-group, two-page, sub-recipes).
 - **App (Slice 1 + 3):** Vite + React 19 + Tailwind v4 + framer-motion, DESIGN.md monochrome language. Browse (fuzzy search, category + auto-tag filters, sort, animated reflow grid) and recipe detail (hero, serving scaler with tweened totals, ingredient groups, steps, tips, Watch-video button).
+- **Recipe features (Slice 4):** inline cross-reference links in steps (group jumps, recipe-to-recipe links like "FOOLPROOF HOMEMADE MARINARA", video-timestamp deep links), full-screen **cooking mode** with screen wake-lock, and a "You might also like" related-recipes strip. All live and screenshot-verified.
 
 ## NEEDS YOU — blockers / unverifiable
 
@@ -29,7 +30,6 @@ What I built while you were away, what works, and the things only **you** can ve
 
 ## Not built yet (remaining slices)
 
-- **Slice 4** — inline cross-reference links in steps (data is captured in `references[]`, just not yet rendered as links), related-recipes, cooking mode (wake-lock).
 - **Slice 5–8** — favorites + notes, custom-recipe builder, weekly meal plan, shopping list. All gated on the Firebase decision (#1).
 - **Slice 9** — reference pages (intro/techniques/pantry/FAQ), About/credits, ingredient-database table extraction (the per-ingredient macros table for the custom builder — a separate grid parser, not yet written).
 
