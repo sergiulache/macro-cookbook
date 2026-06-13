@@ -235,9 +235,10 @@ function parseIngredients(page: PageData): IngredientGroup[] {
   const ingItem = ingHeaderItem(page);
   if (!ingItem) return [];
   const ingY = ingItem.y;
-  const colSplit = Math.min(dirHeaderX(page) - 10, 180);
   const macrosY = labelItem(page, "MACROS")?.y ?? page.height;
-  const ll = lines(page.items.filter((i) => i.x < colSplit && i.y > ingY + 4 && i.y < Math.min(macrosY - 4, page.height - 22)));
+  // ingredient column is x<75; this excludes the centered recipe caption (x~82+)
+  // which otherwise bleeds into a nearby ingredient line
+  const ll = lines(page.items.filter((i) => i.x < 75 && i.y > ingY + 4 && i.y < Math.min(macrosY - 4, page.height - 22)));
   const groups: IngredientGroup[] = [];
   let cur: IngredientGroup | null = null;
   let prevY = ingY;
@@ -245,13 +246,20 @@ function parseIngredients(page: PageData): IngredientGroup[] {
     if (ln.y - prevY > 70 && cur?.ingredients.length) break; // caption/photo gap on single-page layouts
     prevY = ln.y;
     const text = ln.text.replace(/\s+/g, " ").trim();
+    if (/INGREDIENTS?\s*(CONTINUE|CONT)/i.test(text)) continue; // "(INGREDIENTS CONTINUE)" marker
+    // a header may carry a trailing annotation, e.g. "HONEY BUTTER (Per Biscuit)";
+    // test the core (annotation stripped) so it isn't mistaken for an ingredient
+    const headerCore = norm(text).replace(/\s*\([^)]*\)\s*$/, "").trim();
     // an all-caps line right after an ingredient whose text ends in CAPS is a
     // wrapped continuation (e.g. "40g FOOLPROOF HOMEMADE" + "MARINARA"), NOT a header
     const lastIng = cur?.ingredients[cur.ingredients.length - 1];
-    const contCaps = !!lastIng && /[A-Z]{2,}\s*$/.test(lastIng.item) && /^[A-Z][A-Z' ]*$/.test(norm(text));
-    if (isGroupHeader(text) && !contCaps) { cur = { name: splitHeaderWords(norm(text)), ingredients: [] }; groups.push(cur); continue; }
+    const contCaps = !!lastIng && /[A-Z]{2,}\s*$/.test(lastIng.item) && /^[A-Z][A-Z' ]*$/.test(headerCore);
+    if (isGroupHeader(headerCore) && !contCaps) { cur = { name: splitHeaderWords(headerCore), ingredients: [] }; groups.push(cur); continue; }
     if (!cur) { cur = { name: "Ingredients", ingredients: [] }; groups.push(cur); }
-    if (cur.ingredients.length && !/^(\d|\bpinch\b|\bdash\b)/i.test(text)) {
+    // a continuation is a wrapped line (starts lowercase or "("), an all-caps run
+    // continuing a caps reference, or a bare "or"/"and" connector. A capital-led
+    // complete line (e.g. "Oil spray", "Lettuce") is its OWN no-amount ingredient.
+    if (cur.ingredients.length && (/^[a-z(]/.test(text) || contCaps || /^(or|and)$/i.test(text))) {
       const last = cur.ingredients[cur.ingredients.length - 1];
       last.item = (last.item + " " + text).trim();
       continue;
@@ -259,9 +267,12 @@ function parseIngredients(page: PageData): IngredientGroup[] {
     const ing = parseIngredientLine(text);
     if (ing) cur.ingredients.push(ing);
   }
-  // title-case all-caps ingredient items (cross-reference names like "FOOLPROOF HOMEMADE MARINARA")
+  // title-case all-caps runs in ingredient items (cross-reference names like
+  // "ITALIAN SAUSAGE, cooked" or "FOOLPROOF HOMEMADE MARINARA")
   for (const g of groups) for (const ing of g.ingredients)
-    if (/^[A-Z][A-Z'’ ]{3,}$/.test(ing.item)) ing.item = titleCase(ing.item);
+    ing.item = ing.item
+      .replace(/[A-Z]{2,}(?:[ '’&+]+[A-Z]{2,})*/g, (m) => titleCase(m))
+      .replace(/\s+([,)])/g, "$1").trim();
   return groups.filter((g) => g.ingredients.length || isGroupHeader(g.name)); // keep header-only parents
 }
 

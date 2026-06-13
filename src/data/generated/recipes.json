@@ -48,7 +48,7 @@
           {
             "amount": 30,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 1,
@@ -170,7 +170,7 @@
           {
             "amount": 30,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 1,
@@ -297,7 +297,7 @@
           {
             "amount": 16,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 4.2,
@@ -347,7 +347,7 @@
           {
             "amount": null,
             "unit": null,
-            "item": "1/3 scoop PEScience Snickerdoodle protein powder"
+            "item": "1/3 scoop Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 3,
@@ -549,7 +549,12 @@
           {
             "amount": 75,
             "unit": "g",
-            "item": "Frosting Birthday Cake French Toast"
+            "item": "Frosting"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Birthday Cake French Toast"
           }
         ]
       }
@@ -786,7 +791,12 @@
           {
             "amount": 30,
             "unit": "g",
-            "item": "fat-free milk Salt and black pepper, to taste"
+            "item": "fat-free milk"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Salt and black pepper, to taste"
           },
           {
             "amount": 3.5,
@@ -806,7 +816,12 @@
           {
             "amount": 2,
             "unit": null,
-            "item": "slices original Velveeta® cheese Optional: Pace® picante salsa"
+            "item": "slices original Velveeta® cheese"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Optional: Pace® picante salsa"
           }
         ]
       }
@@ -921,7 +936,17 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "egg Salt, to taste Black pepper, to taste"
+            "item": "egg"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Salt, to taste"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Black pepper, to taste"
           },
           {
             "amount": 1,
@@ -1067,8 +1092,13 @@
           {
             "amount": 1.5,
             "unit": "g",
-            "item": "salt H O N E Y B U T T E R (Per Biscuit)"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "HONEY BUTTER",
+        "ingredients": [
           {
             "amount": 5,
             "unit": "g",
@@ -1087,7 +1117,7 @@
           {
             "amount": 16,
             "unit": "g",
-            "item": "Sriracha Honey Butter Biscuit"
+            "item": "Sriracha"
           }
         ]
       }
@@ -1171,6 +1201,12 @@
         "kind": "group",
         "target": "DREDGE STATION 2",
         "seconds": null
+      },
+      {
+        "raw": "HONEY BUTTER",
+        "kind": "group",
+        "target": "HONEY BUTTER",
+        "seconds": null
       }
     ],
     "sourcePages": [
@@ -1247,7 +1283,7 @@
           {
             "amount": 93,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 3,
@@ -1282,7 +1318,12 @@
           {
             "amount": 35,
             "unit": "g",
-            "item": "lemon juice Zest half lemon"
+            "item": "lemon juice"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Zest half lemon"
           }
         ]
       }
@@ -1418,7 +1459,7 @@
           {
             "amount": 93,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 7,
@@ -1545,12 +1586,12 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "brown sugar erythritol (add 20g if using PEScience Multipurpose protein powder)"
+            "item": "brown sugar erythritol (add 20g if using Pescience Multipurpose protein powder)"
           },
           {
             "amount": 40,
             "unit": "g",
-            "item": "granulated erythritol (add 20g if using PEScience Multipurpose protein powder)"
+            "item": "granulated erythritol (add 20g if using Pescience Multipurpose protein powder)"
           }
         ]
       },
@@ -1565,12 +1606,17 @@
           {
             "amount": 93,
             "unit": "g",
-            "item": "PEScience Pumpkin Pie protein powder (90g PEScience Multipurpose protein powder if sold out)"
+            "item": "Pescience Pumpkin Pie protein powder (90g Pescience Multipurpose protein powder if sold out)"
           },
           {
             "amount": 3,
             "unit": "g",
-            "item": "pumpkin spice (6g if using PEScience Multipurpose protein powder)"
+            "item": "pumpkin spice (6g if using"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Pescience Multipurpose protein powder)"
           },
           {
             "amount": 7,
@@ -1712,7 +1758,7 @@
           {
             "amount": 95,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 3,
@@ -1732,7 +1778,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "xanthan gum M I X- I N"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N"
           },
           {
             "amount": 225,
@@ -1903,7 +1954,7 @@
           {
             "amount": 95,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 3,
@@ -1923,12 +1974,22 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "xanthan gum M I X- I N / T O P P I N G"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N / T O P P I N G"
           },
           {
             "amount": 56,
             "unit": "g",
-            "item": "mini chocolate chips Jumbo Chocolate Chip Muffins"
+            "item": "mini chocolate chips"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Jumbo Chocolate Chip Muffins"
           }
         ]
       }
@@ -2053,7 +2114,7 @@
           {
             "amount": 102,
             "unit": "g",
-            "item": "PEScience Pumpkin Pie protein powder"
+            "item": "Pescience Pumpkin Pie protein powder"
           },
           {
             "amount": 3,
@@ -2078,7 +2139,12 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "baking soda .5g xanthan gum"
+            "item": "baking soda"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g xanthan gum"
           }
         ]
       },
@@ -2380,7 +2446,12 @@
           {
             "amount": 2,
             "unit": null,
-            "item": "slices of bread (35 Cal) Spray oil"
+            "item": "slices of bread (35 Cal)"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Spray oil"
           }
         ]
       }
@@ -2538,7 +2609,17 @@
           {
             "amount": 5,
             "unit": "g",
-            "item": "grated Parmigiano-Reggiano cheese Buns (110 cal) Oil spray"
+            "item": "grated Parmigiano-Reggiano cheese"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Buns (110 cal)"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
           }
         ]
       }
@@ -2683,7 +2764,7 @@
           {
             "amount": 72,
             "unit": "g",
-            "item": "ITALIAN SAUSAGE , cooked"
+            "item": "Italian Sausage"
           },
           {
             "amount": 80,
@@ -2875,7 +2956,17 @@
           {
             "amount": 15,
             "unit": "g",
-            "item": "light mayonnaise Tomato, chopped Lettuce, chopped"
+            "item": "light mayonnaise"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Tomato, chopped"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Lettuce, chopped"
           }
         ]
       }
@@ -2987,7 +3078,12 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "unsalted butter Beefy Poblano Quesadilla"
+            "item": "unsalted butter"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Beefy Poblano Quesadilla"
           }
         ]
       }
@@ -3062,7 +3158,12 @@
           {
             "amount": null,
             "unit": null,
-            "item": "2-3lb skirt steak Corn tortillas (35-40 cal)"
+            "item": "2-3lb skirt steak"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Corn tortillas (35-40 cal)"
           }
         ]
       },
@@ -3142,7 +3243,12 @@
           {
             "amount": 14,
             "unit": "g",
-            "item": "oaxaca cheese, shredded Cilantro and onion, to taste Steak Tacos"
+            "item": "oaxaca cheese, shredded"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cilantro and onion, to taste"
           }
         ]
       }
@@ -3295,7 +3401,12 @@
           {
             "amount": 30,
             "unit": "g",
-            "item": "brown sugar erythritol Keto Culture® buns (50 Cal)"
+            "item": "brown sugar erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Keto Culture® buns (50 Cal)"
           }
         ]
       }
@@ -3391,7 +3502,12 @@
           {
             "amount": 224,
             "unit": "g",
-            "item": "elbow macaroni M I X- I N S"
+            "item": "elbow macaroni"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 15,
@@ -3503,7 +3619,12 @@
           {
             "amount": 224,
             "unit": "g",
-            "item": "medium shells pasta M I X- I N S / T O P P I N G S"
+            "item": "medium shells pasta"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S / T O P P I N G S"
           },
           {
             "amount": 56,
@@ -3725,7 +3846,12 @@
           {
             "amount": 448,
             "unit": "g",
-            "item": "96% lean ground beef Oil spray"
+            "item": "96% lean ground beef"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
           }
         ]
       },
@@ -3810,12 +3936,22 @@
           {
             "amount": 42,
             "unit": "g",
-            "item": "fat-free Greek yogurt OR"
+            "item": "fat-free Greek yogurt Or"
           },
           {
             "amount": 42,
             "unit": "g",
-            "item": "CILANTRO LIME SALSA Lettuce Tomato"
+            "item": "Cilantro Lime Salsa"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Lettuce"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Tomato"
           }
         ]
       }
@@ -3989,7 +4125,17 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "tostada (45 Cal) Jalapeno Cheeseburger Crunchwrap Lettuce, chopped Tomato, deseeded and chopped"
+            "item": "tostada (45 Cal) Jalapeno Cheeseburger Crunchwrap"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Lettuce, chopped"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Tomato, deseeded and chopped"
           }
         ]
       },
@@ -4056,7 +4202,7 @@
       "srcset": "recipes/jalapeno-cheeseburger-nickwrap-400.webp 400w, recipes/jalapeno-cheeseburger-nickwrap-800.webp 800w, recipes/jalapeno-cheeseburger-nickwrap-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3N6Tbh2gAMUc1WZsZ3G/hrQAA/uxYoEGPWilnU6vUsBnaBzDQwxoPipe4MuLUe3URDj/W8ltt8BFnVH9OfC5r8XyOoLlDUPTsGEG7VG8mduD8bXf6iIGYl0JT7w3Lt7LpbciRWTjSBSoxwG4I9erAVCao2oVhrVySgAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3N6TbgAinuBDTDG9aV0nCecAA/uxYoEGPWilnU8CbPBw9717wCWqGIQ/j0vFDEMfdI68zC459bMriZKjDEAMOIDaTWEZMAeEGEHEHSuWlbhfSz7/fCZVrqJb/O0syOHOjNyoSHl/xiZ+nj6ijwODogziNBN9ohlUbUNJ4OQwAAA=="
     },
     "videoUrl": "https://youtu.be/0ueGwwAjP6E",
     "prepTimeMin": 10,
@@ -4150,7 +4296,12 @@
           {
             "amount": 2.5,
             "unit": "g",
-            "item": "black pepper B E E F Y 5 - L AY E R (Makes 2)"
+            "item": "black pepper"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "B E E F Y 5 - L Ay E R"
           },
           {
             "amount": 2,
@@ -4305,7 +4456,7 @@
           {
             "amount": 6,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": 6,
@@ -4522,7 +4673,7 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "Msg P I Z Z a F I L L I N G"
+            "item": "Msg P I Z Z A F I L L I N G"
           },
           {
             "amount": 5,
@@ -4597,7 +4748,12 @@
           {
             "amount": 28,
             "unit": "g",
-            "item": "reduced-fat colby jack cheese Tomatoes, diced"
+            "item": "reduced-fat colby jack cheese"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Tomatoes, diced"
           }
         ]
       }
@@ -4805,7 +4961,12 @@
           {
             "amount": 15,
             "unit": "g",
-            "item": "light mayonnaise Lettuce"
+            "item": "light mayonnaise"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Lettuce"
           }
         ]
       }
@@ -5136,27 +5297,42 @@
     },
     "ingredientGroups": [
       {
-        "name": "Ingredients",
+        "name": "PROTEIN BUN",
         "ingredients": [
-          {
-            "amount": null,
-            "unit": null,
-            "item": "PROTEIN BUN (or bun of choice)"
-          },
           {
             "amount": 4,
             "unit": "g",
-            "item": "unsalted butter (for bun) Two 70g 93% lean ground beef balls"
+            "item": "unsalted butter (for bun)"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Two 70g 93% lean ground beef balls"
           },
           {
             "amount": 5,
             "unit": "g",
-            "item": "unsalted butter (for pan) Salt and black pepper, to taste"
+            "item": "unsalted butter (for pan)"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Salt and black pepper, to taste"
           },
           {
             "amount": 1,
             "unit": null,
-            "item": "slice original Velveeta® cheese Tomatoes, thinly sliced Lettuce, finely chopped"
+            "item": "slice original Velveeta® cheese"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Tomatoes, thinly sliced"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Lettuce, finely chopped"
           },
           {
             "amount": 15,
@@ -5284,7 +5460,7 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": 3,
@@ -5319,12 +5495,17 @@
           {
             "amount": 2,
             "unit": null,
-            "item": "slices tomato Chicken Gyro"
+            "item": "slices tomato"
           },
           {
             "amount": 6,
             "unit": null,
-            "item": "slices onion Parsley, chopped"
+            "item": "slices onion"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Parsley, chopped"
           }
         ]
       }
@@ -5528,7 +5709,7 @@
           {
             "amount": null,
             "unit": null,
-            "item": "½ PROTEIN BAGUETTE (7”), frozen"
+            "item": "½ Protein Baguette"
           },
           {
             "amount": 3,
@@ -5669,7 +5850,12 @@
           {
             "amount": 20,
             "unit": "g",
-            "item": "mustard Salt and pepper, to taste"
+            "item": "mustard"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Salt and pepper, to taste"
           }
         ]
       }
@@ -5744,7 +5930,17 @@
           {
             "amount": 3,
             "unit": null,
-            "item": "chicken breasts Smoked paprika, to taste Chili powder, to taste"
+            "item": "chicken breasts"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Smoked paprika, to taste"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Chili powder, to taste"
           },
           {
             "amount": 200,
@@ -5825,7 +6021,12 @@
           {
             "amount": 126,
             "unit": "g",
-            "item": "chicken, cooked Corn dressing"
+            "item": "chicken, cooked"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Corn dressing"
           },
           {
             "amount": 8,
@@ -5967,7 +6168,7 @@
           {
             "amount": 6,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": 6,
@@ -6011,7 +6212,7 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "PICKLED ONION Chicken Gyro Salad"
+            "item": "Pickled Onion"
           },
           {
             "amount": 42,
@@ -6131,7 +6332,12 @@
           {
             "amount": 2,
             "unit": null,
-            "item": "slices bacon, cooked (80 cal) 1 Hour Calzone Corn meal"
+            "item": "slices bacon, cooked (80 cal)"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Corn meal"
           }
         ]
       },
@@ -6260,7 +6466,7 @@
       "srcset": "recipes/1-hour-calzone-400.webp 400w, recipes/1-hour-calzone-800.webp 800w, recipes/1-hour-calzone-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACnzRVRHJFGn50ywAAD+7BJc9rPASL10g0nWBhp7BGr+Hp4S9be9VKZI4w1HNb7M90fbNpwSSCnb9RTmsZluoHQ0psSo0x0dovRrBYt2G+qP6nCDhi3D164KrzBb3Gil4AAA"
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACn42+NWWMykoFIAAP7sEnW/gDwt7VskZ2ANEbHt73mQjrN2ew1PxS3otjo1zhPzhu5eVNNG83SS19DundqXwyWXqsySTtldfBTIwvJX7wKW4n/qGaBT1aWliQ95AAA="
     },
     "videoUrl": "https://youtu.be/WnMQv6X9Mus",
     "prepTimeMin": 60,
@@ -6370,11 +6576,6 @@
             "amount": 28,
             "unit": "g",
             "item": "turkey pepperoni"
-          },
-          {
-            "amount": 1,
-            "unit": null,
-            "item": "Hour PIzza"
           }
         ]
       }
@@ -6430,7 +6631,7 @@
       "srcset": "recipes/1-hour-pizza-400.webp 400w, recipes/1-hour-pizza-800.webp 800w, recipes/1-hour-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACT/jSPgJ/0rye3iSAD+6dtmgaMGD6qJk1x1DunGkMhmN9X3nRflJUd8lj4nATjM5CCUR8w5qrxOyy6NRSndbryNhTd2JWSlUlcAGj/fYFlJHaRJpxS0g4h+a2K+Z3gCq8FqNlUPiaAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACnGcNu9FtSt1HZd4AD+7MJIapR1YDEIabFN8A1Y01LYaRqdFHGT+CMKN/Vh7PSohOFKcs8Ys2Kc940eBzxNl/yAxPJgDTggrmG4jrsb39VY2o3slXY9pkNV/yT0lPVvgz0ofqDEluYAAAA="
     },
     "videoUrl": "https://youtu.be/TUwomcAaFE4",
     "prepTimeMin": 50,
@@ -6465,13 +6666,8 @@
     },
     "ingredientGroups": [
       {
-        "name": "Ingredients",
+        "name": "DOUGH",
         "ingredients": [
-          {
-            "amount": null,
-            "unit": null,
-            "item": "D O U G H (makes 2 doughs)"
-          },
           {
             "amount": 142,
             "unit": "g",
@@ -6555,7 +6751,7 @@
           {
             "amount": 10,
             "unit": "g",
-            "item": "granulated erythritol (INGREDIENTS CONTINUE)"
+            "item": "granulated erythritol"
           }
         ]
       },
@@ -6678,6 +6874,12 @@
     "tips": [],
     "references": [
       {
+        "raw": "DOUGH",
+        "kind": "group",
+        "target": "DOUGH",
+        "seconds": null
+      },
+      {
         "raw": "HOMEMADE SAUCE",
         "kind": "group",
         "target": "HOMEMADE SAUCE",
@@ -6753,12 +6955,17 @@
           {
             "amount": 4,
             "unit": "g",
-            "item": "extra virgin olive oil Dough"
+            "item": "extra virgin olive oil"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Dough"
           },
           {
             "amount": 220,
             "unit": "g",
-            "item": "no sugar added BBQ sauce"
+            "item": "no sugar added Bbq sauce"
           },
           {
             "amount": 252,
@@ -6773,7 +6980,17 @@
           {
             "amount": 252,
             "unit": "g",
-            "item": "part-skim mozzarella cheese, shredded Cilantro, chopped BBQ Chicken Sheet Pan Pizza"
+            "item": "part-skim mozzarella cheese, shredded"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cilantro, chopped"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Bbq Chicken Sheet Pan Pizza"
           }
         ]
       }
@@ -6927,7 +7144,17 @@
           {
             "amount": 71,
             "unit": "g",
-            "item": "turkey pepperoni Cilantro, chopped Cheese + Pep Sheet Pan Pizza"
+            "item": "turkey pepperoni"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cilantro, chopped"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cheese + Pep Sheet Pan Pizza"
           }
         ]
       }
@@ -7075,7 +7302,7 @@
           {
             "amount": 112,
             "unit": "g",
-            "item": "part-skim mozzarella cheese, shredded Pan Pizza"
+            "item": "part-skim mozzarella cheese, shredded"
           }
         ]
       }
@@ -7280,7 +7507,17 @@
           {
             "amount": 126,
             "unit": "g",
-            "item": "turkey pepperoni Sauce Optional: grated parmesan cheese"
+            "item": "turkey pepperoni"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Sauce"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Optional: grated parmesan cheese"
           }
         ]
       }
@@ -7672,7 +7909,12 @@
           {
             "amount": 14,
             "unit": "g",
-            "item": "corn meal Dough"
+            "item": "corn meal"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Dough"
           },
           {
             "amount": 80,
@@ -7702,7 +7944,7 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "part-skim mozzarella cheese Chicken Alfredo Pizza"
+            "item": "part-skim mozzarella cheese"
           }
         ]
       }
@@ -7907,7 +8149,7 @@
           {
             "amount": 5,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": 2,
@@ -7952,7 +8194,7 @@
           {
             "amount": 24,
             "unit": "g",
-            "item": "beef bouillon (INGREDIENTS CONTINUE)"
+            "item": "beef bouillon"
           }
         ]
       },
@@ -7992,7 +8234,12 @@
           {
             "amount": 187,
             "unit": "g",
-            "item": "part-skim mozzarella cheese, thinly sliced Corn meal"
+            "item": "part-skim mozzarella cheese, thinly sliced"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Corn meal"
           }
         ]
       }
@@ -8142,13 +8389,8 @@
     },
     "ingredientGroups": [
       {
-        "name": "Ingredients",
+        "name": "DOUGH",
         "ingredients": [
-          {
-            "amount": null,
-            "unit": null,
-            "item": "D O U G H ( M A K E S 2 )"
-          },
           {
             "amount": 240,
             "unit": "g",
@@ -8197,7 +8439,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "dried oregano .5g dried basil"
+            "item": "dried oregano"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g dried basil"
           },
           {
             "amount": 1,
@@ -8207,7 +8454,12 @@
           {
             "amount": 5,
             "unit": "g",
-            "item": "salt .5g black pepper"
+            "item": "salt"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g black pepper"
           }
         ]
       },
@@ -8232,7 +8484,12 @@
           {
             "amount": 84,
             "unit": "g",
-            "item": "fat-free mozzarella cheese, shredded Detroit Pizza 98g brick cheese, shredded"
+            "item": "fat-free mozzarella cheese, shredded"
+          },
+          {
+            "amount": 98,
+            "unit": "g",
+            "item": "brick cheese, shredded"
           },
           {
             "amount": 90,
@@ -8324,6 +8581,12 @@
     "cookTimeMin": 30,
     "tips": [],
     "references": [
+      {
+        "raw": "DOUGH",
+        "kind": "group",
+        "target": "DOUGH",
+        "seconds": null
+      },
       {
         "raw": "SAUCE",
         "kind": "group",
@@ -8520,7 +8783,12 @@
           {
             "amount": 148,
             "unit": "g",
-            "item": "crispy rice cereal Oil spray"
+            "item": "crispy rice cereal"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
           }
         ]
       }
@@ -8647,7 +8915,7 @@
           {
             "amount": 42,
             "unit": "g",
-            "item": "PEScience Cookies and Cream protein powder"
+            "item": "Pescience Cookies and Cream protein powder"
           },
           {
             "amount": 10,
@@ -8662,12 +8930,17 @@
           {
             "amount": 3,
             "unit": null,
-            "item": "Oreos® M I X- I N S"
+            "item": "Oreos®"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 1,
             "unit": null,
-            "item": "Oreo®, crushed Oreo McFlurry"
+            "item": "Oreo®, crushed"
           }
         ]
       }
@@ -8801,7 +9074,7 @@
           {
             "amount": 62,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 2,
@@ -8816,7 +9089,7 @@
           {
             "amount": 18,
             "unit": "g",
-            "item": "granulated erythritol CtC Ice Cream V1"
+            "item": "granulated erythritol"
           }
         ]
       }
@@ -8946,7 +9219,7 @@
           {
             "amount": 31,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 10,
@@ -8961,7 +9234,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "ground cinnamon M I X- I N S / T O P P I N G S"
+            "item": "ground cinnamon"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S / T O P P I N G S"
           },
           {
             "amount": 20,
@@ -8971,7 +9249,12 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "Cinnamon Toast Crunch® soft baked Cinnamon Toast Crunch V2 Ice Cream bar"
+            "item": "Cinnamon Toast Crunch® soft baked"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cinnamon Toast Crunch V2 Ice Cream bar"
           }
         ]
       }
@@ -9115,12 +9398,17 @@
           {
             "amount": 62,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 30,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 4,
@@ -9243,12 +9531,17 @@
           {
             "amount": 38,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 18,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 2,
@@ -9413,17 +9706,27 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 18,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 15,
             "unit": "g",
-            "item": "graham crackers SmoresG Protein Ice Cream"
+            "item": "graham crackers"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "SmoresG Protein Ice Cream"
           }
         ]
       }
@@ -9570,17 +9873,27 @@
           {
             "amount": 55,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 15,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 14,
             "unit": "g",
-            "item": "cotton candy Cotton CandyG Protein Ice Cream"
+            "item": "cotton candy"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cotton CandyG Protein Ice Cream"
           }
         ]
       }
@@ -9689,7 +10002,7 @@
           {
             "amount": 31,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 9,
@@ -9704,7 +10017,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "ground cinnamon M I X- I N S"
+            "item": "ground cinnamon"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 1,
@@ -9714,7 +10032,12 @@
           {
             "amount": 14,
             "unit": "g",
-            "item": "mini marshmallows Oatmeal Creme PieG Protein Ice Cream"
+            "item": "mini marshmallows"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oatmeal Creme PieG Protein Ice Cream"
           }
         ]
       }
@@ -9758,7 +10081,7 @@
       "srcset": "recipes/oatmeal-creme-pie-protein-ice-cream-400.webp 400w, recipes/oatmeal-creme-pie-protein-ice-cream-800.webp 800w, recipes/oatmeal-creme-pie-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBdmUGVsiHKfh+TEmCBYoOiAAP7jwFaDQ/EUfMfarYWCRkp/Rj1EbEwOD2XOxb5BEapEueqTJ9Zoh1cNr9rrcAXG6Rh7o3Ps1XHspKSpJ8AehcGs6RCHNNTkev+/6k5xdA/r6uPusAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JQBdmUGVsiHKffV+enkm/0O4AAP7jwFaDQTHZO00QJE15juutEwmhBpTrpbWPkERqkAG0Es/gPm9XQxOFIxg/CA/RivI9ZfQ7z4OUeCeN/2nSEz16hWbfTX7fobheJqLKo6eOfIfSk2gA"
     },
     "videoUrl": "https://youtu.be/S61cOUmlxqM",
     "prepTimeMin": 8,
@@ -9856,7 +10179,12 @@
           {
             "amount": 35,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S / T O P P I N G S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S / T O P P I N G S"
           },
           {
             "amount": 32,
@@ -9866,7 +10194,7 @@
           {
             "amount": 4,
             "unit": "g",
-            "item": "hazelnuts, chopped Nutella Ice Cream"
+            "item": "hazelnuts, chopped"
           }
         ]
       }
@@ -10013,17 +10341,27 @@
           {
             "amount": 62,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 20,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 25,
             "unit": "g",
-            "item": "caramel syrup Caramel Pumpkin SpiceG Protein Ice Cream"
+            "item": "caramel syrup"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Caramel Pumpkin SpiceG Protein Ice Cream"
           },
           {
             "amount": 35,
@@ -10068,7 +10406,7 @@
       "srcset": "recipes/caramel-pumpkin-spice-protein-ice-cream-400.webp 400w, recipes/caramel-pumpkin-spice-protein-ice-cream-800.webp 800w, recipes/caramel-pumpkin-spice-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagC7MoADEFlq/XjV07VEAP7r8F+pOb2/aHiL1AN/bK5+9zMF4mNxSGL9VAzIlMyB32TL2cpdmTXghUSuiSjpDBk48sWkGKdbZ7hRNS2QMmNiDCS+FhIMbi5xRsCoPL1jdEJqCnwAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagC7MoADEFhkJ3zGZmeAAP7r8F+pOb2xOiRem3uPvxbP7EuapDgY2pjlH/KidOLemdyW9UG1WsKHQUqoeL5xmUbZSXEozejPh9PBbJ/PnoTZJl7DZm49zTWU/cgVB8SFEpsgU8h99BWUUTAAAA=="
     },
     "videoUrl": "https://youtu.be/8OqpV9aYfbk",
     "prepTimeMin": 8,
@@ -10173,12 +10511,17 @@
           {
             "amount": 31,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 15,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 2,
@@ -10188,7 +10531,12 @@
           {
             "amount": 60,
             "unit": "g",
-            "item": "CHOCOLATE CHIP COOKIE Cookie DoughG Protein Ice Cream DOUGH"
+            "item": "Chocolate Chip Cookie"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cookie DoughG Protein Ice Cream Dough"
           }
         ]
       }
@@ -10236,7 +10584,7 @@
       "srcset": "recipes/cookie-doughg-protein-ice-cream-400.webp 400w, recipes/cookie-doughg-protein-ice-cream-800.webp 800w, recipes/cookie-doughg-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7MoADgiNiHJvB4WosAP7s2tb5Lvz1J30bErsVV/JSUgwQ2dtJyB8koq3NayYkOOA48pJg9OZGORsEhXvibMOI45IbonkhMqnGGUDYQl0vn3aPbrSA7zMnU4fj33xf7QoJBzkkLskVWEjwjeY2IutVAAAA"
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7MoAC8Rp9ooc28f3VOAD+7NrW+S7DrsDzyaiYGIhjUPaFbAUzVNAVXWp24IQAXnG+PQjfAd4Y3yh3i9BJJtAV4F5pBfuNtqAZQMEymHxIfL9pBJsJ+nUk+bfctvwjyIsM263xegKYnRkQum33FoCTY4AA"
     },
     "videoUrl": "https://youtu.be/-DOLudsiqi0",
     "prepTimeMin": 8,
@@ -10342,17 +10690,22 @@
           {
             "amount": 62,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 30,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 4,
             "unit": null,
-            "item": "Lemon Oreo Thins®, crushed Lemon Ice Cream"
+            "item": "Lemon Oreo Thins®, crushed"
           }
         ]
       }
@@ -10495,12 +10848,22 @@
           {
             "amount": 41,
             "unit": "g",
-            "item": "PEScience Chocolate Peanut Butter Cup protein powder"
+            "item": "Pescience Chocolate Peanut"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Butter Cup protein powder"
           },
           {
             "amount": 30,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 8,
@@ -10510,7 +10873,12 @@
           {
             "amount": 2,
             "unit": null,
-            "item": "Reese’s Thins®, chopped Reeses Ice Cream/Milkshake"
+            "item": "Reese’s Thins®, chopped"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Reeses Ice Cream/Milkshake"
           }
         ]
       }
@@ -10656,12 +11024,17 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 20,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 6,
@@ -10671,7 +11044,12 @@
           {
             "amount": 2,
             "unit": null,
-            "item": "Strawberry Frosted Donut Oreos®, Strawberry Donut Milkshake chopped OR 4 Vanilla Oreo Thins®, chopped"
+            "item": "Strawberry Frosted Donut Oreos®,"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Strawberry Donut Milkshake chopped Or 4 Vanilla Oreo Thins®, chopped"
           }
         ]
       }
@@ -10812,17 +11190,27 @@
           {
             "amount": 47,
             "unit": "g",
-            "item": "PEScience Cake Pop protein powder"
+            "item": "Pescience Cake Pop protein powder"
           },
           {
             "amount": 30,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 3,
             "unit": null,
-            "item": "Little Bites® party cake muffins, chopped Birthday Cake Milkshake 6g sprinkles"
+            "item": "Little Bites® party cake muffins, chopped"
+          },
+          {
+            "amount": 6,
+            "unit": "g",
+            "item": "sprinkles"
           }
         ]
       }
@@ -10950,12 +11338,17 @@
           {
             "amount": 38,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 28,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S / T O P P I N G S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S / T O P P I N G S"
           },
           {
             "amount": 30,
@@ -10965,7 +11358,12 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "maraschino cherry Chicfila Peppermint Milkshake"
+            "item": "maraschino cherry"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Chicfila Peppermint Milkshake"
           },
           {
             "amount": 2,
@@ -11103,22 +11501,32 @@
           {
             "amount": 31,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 20,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 50,
             "unit": "g",
-            "item": "CHOCOLATE CHIP COOKIE DOUGH (refrigerated)"
+            "item": "Chocolate Chip Cookie Dough (refrigerated)"
           },
           {
             "amount": 25,
             "unit": "g",
-            "item": "Nestle Toll House® cookies Chocolate Chip Cookie Blizzard (baked, then frozen)"
+            "item": "Nestle Toll House® cookies"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Chocolate Chip Cookie Blizzard (baked, then frozen)"
           }
         ]
       }
@@ -11170,7 +11578,7 @@
       "srcset": "recipes/chocolate-chip-cookie-blizzard-400.webp 400w, recipes/chocolate-chip-cookie-blizzard-800.webp 800w, recipes/chocolate-chip-cookie-blizzard-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAluAtUwh2lWpRgAAD+8rm33FnUNkZeQWEU4XaICsTP/BcGOvZIrQcgnV6Z7sPeXIxhlPbJRC89ry4rXJ5QdsmuQBAAIDohiuRdGw0wNPh52MvzNe+uDXXkLQw4kuRPDWzGbgpGp5DsCQVOS0IAZtHI5TKFlAGE9TAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoBnAVOG50adYcCOaZ8lvtgAAP7zFyAeCDX/XZ9uLgio2VvfwXBjfKvwJUGxxV1UnSpn6W6QcSaAx/P5edA4+qkVBLsVC8dRLvapN+3GAqaqbpQriWrwMJFXycDwKGo3drLzAtSn3vFPnOOw0LXYBcepsjJyB0DGQe9AAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=n9RG3LlzpJY",
     "prepTimeMin": 8,
@@ -11296,12 +11704,17 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 20,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S / T O P P I N G S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S / T O P P I N G S"
           },
           {
             "amount": 24,
@@ -11479,17 +11892,22 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 20,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 29,
             "unit": "g",
-            "item": "Grasshoppers® or Thin Mints®, Thin Mint Blizzard chopped"
+            "item": "Grasshoppers® or Thin Mints®, chopped"
           }
         ]
       }
@@ -11533,7 +11951,7 @@
       "srcset": "recipes/thin-mint-blizzard-400.webp 400w, recipes/thin-mint-blizzard-800.webp 800w, recipes/thin-mint-blizzard-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC7MoAC7foaoBwfvOeOAAD+8zW3ImvppF6u+q1JLDifLHuWDcM1kZTcGicQxmhgkKIh8y+HpstweJ+jL/Ro928Ncr3rDlvzfY+8X1ZMZs7q5X6JqtplRGLGv93HLWBF+17LJ+qBh3znc96McH8AAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC7MoACYCa2Z3A5oTYAAP7zNbcia+mkd1bmBJeA0puu/uM+jhu5rYKTRzn8Tpxtqjn3fdz8kvRimI30ZAugNCwpoo/le6HA84RccoW19UsGtkj8uEjLVKeF9KWmDqNCAozRjXvNcRz3eYa7wRZk2AAAAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=-dGr2aKb_U0",
     "prepTimeMin": 8,
@@ -11602,12 +12020,17 @@
           {
             "amount": 38,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 25,
             "unit": "g",
-            "item": "granulated erythritol M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 31,
@@ -11622,7 +12045,7 @@
           {
             "amount": 23,
             "unit": "g",
-            "item": "caramel sauce Pecan Pie Blizzard"
+            "item": "caramel sauce"
           }
         ]
       }
@@ -11764,7 +12187,7 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 25,
@@ -12098,7 +12521,12 @@
           {
             "amount": 4,
             "unit": "g",
-            "item": "vanilla extract ½ vanilla bean pod"
+            "item": "vanilla extract"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "½ vanilla bean pod"
           }
         ]
       },
@@ -12637,7 +13065,22 @@
           {
             "amount": 4,
             "unit": "g",
-            "item": "black cocoa powder .5g salt .5g xanthan gum M I X- I N S"
+            "item": "black cocoa powder"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g salt"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 2,
@@ -12647,7 +13090,12 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "Oreo®, chopped Cookies & Cream Ice Cream"
+            "item": "Oreo®, chopped"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Cookies & Cream Ice Cream"
           }
         ]
       }
@@ -12786,7 +13234,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "xanthan gum M I X- I N S"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 9,
@@ -12918,7 +13371,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "xanthan gum M I X- I N S"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 10,
@@ -13045,7 +13503,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "xanthan gum M I X- I N S"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 11,
@@ -13177,7 +13640,12 @@
           {
             "amount": 8,
             "unit": "g",
-            "item": "powdered peanut butter M I X- I N S"
+            "item": "powdered peanut butter"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 8,
@@ -13309,7 +13777,12 @@
           {
             "amount": 8,
             "unit": "g",
-            "item": "black cocoa powder M I X- I N S"
+            "item": "black cocoa powder"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 10,
@@ -13438,7 +13911,12 @@
           {
             "amount": 8,
             "unit": "g",
-            "item": "dutch-processed cocoa powder M I X- I N S"
+            "item": "dutch-processed cocoa powder"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 10,
@@ -13537,7 +14015,7 @@
           {
             "amount": 20,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 40,
@@ -13557,7 +14035,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "xanthan gum M I X- I N S"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 12,
@@ -13578,7 +14061,7 @@
           {
             "amount": null,
             "unit": null,
-            "item": "ground cinnamon Apple Pie Ice Cream",
+            "item": "ground cinnamon",
             "note": "pinch"
           }
         ]
@@ -13683,7 +14166,7 @@
           {
             "amount": 20,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder"
+            "item": "Pescience Gourmet Vanilla protein powder"
           },
           {
             "amount": 40,
@@ -13816,12 +14299,27 @@
           {
             "amount": 16,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein"
+            "item": "Pescience Gourmet Vanilla protein"
           },
           {
             "amount": 40,
             "unit": "g",
-            "item": "granulated erythritol .5g salt .8g xanthan gum M I X- I N S"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g salt"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".8g xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 5,
@@ -13831,7 +14329,7 @@
           {
             "amount": 14,
             "unit": "g",
-            "item": "dark chocolate Cherry Chocolate Chunk"
+            "item": "dark chocolate"
           }
         ]
       }
@@ -14296,7 +14794,12 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "granulated erythritol .5g salt"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g salt"
           }
         ]
       }
@@ -14377,7 +14880,22 @@
           {
             "amount": 50,
             "unit": "g",
-            "item": "granulated erythritol .5g salt .5g xanthan gum Zest of half grapefruit"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g salt"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Zest of half grapefruit"
           }
         ]
       }
@@ -14470,7 +14988,12 @@
           {
             "amount": 30,
             "unit": "g",
-            "item": "granulated erythritol .5g salt"
+            "item": "granulated erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g salt"
           }
         ]
       }
@@ -14546,7 +15069,7 @@
           {
             "amount": 62,
             "unit": "g",
-            "item": "PEScience Gourmet Vanilla protein powder OR"
+            "item": "Pescience Gourmet Vanilla protein powder Or"
           },
           {
             "amount": 71,
@@ -14591,12 +15114,22 @@
           {
             "amount": 24,
             "unit": "g",
-            "item": "brown sugar erythritol M I X- I N S"
+            "item": "brown sugar erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 21,
             "unit": "g",
-            "item": "mini chocolate chips Chocolate Chip Cookie Dough"
+            "item": "mini chocolate chips"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Chocolate Chip Cookie Dough"
           }
         ]
       }
@@ -14694,7 +15227,7 @@
           {
             "amount": 65,
             "unit": "g",
-            "item": "PEScience Peanut Butter Cookie protein powder"
+            "item": "Pescience Peanut Butter Cookie protein powder"
           }
         ]
       },
@@ -14744,7 +15277,12 @@
           {
             "amount": 4,
             "unit": "g",
-            "item": "peanut butter, melted Peanut Butter Cookie Dough ("
+            "item": "peanut butter, melted"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Peanut Butter Cookie Dough ("
           }
         ]
       }
@@ -14837,7 +15375,7 @@
           {
             "amount": 72,
             "unit": "g",
-            "item": "PEScience Snickerdoodle protein powder"
+            "item": "Pescience Snickerdoodle protein powder"
           },
           {
             "amount": 2,
@@ -14892,7 +15430,12 @@
           {
             "amount": 0.5,
             "unit": "g",
-            "item": "ground cinnamon Snickerdoodle Cookie Dough"
+            "item": "ground cinnamon"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Snickerdoodle Cookie Dough"
           }
         ]
       }
@@ -14990,7 +15533,12 @@
           {
             "amount": 71,
             "unit": "g",
-            "item": "Gorilla Mind Vanilla Ice Cream protein powder OR 67g PEScience Frosted Chocolate Cupcake protein powder"
+            "item": "Gorilla Mind Vanilla Ice Cream protein powder Or 67g Pescience"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Frosted Chocolate Cupcake protein powder"
           },
           {
             "amount": 1.5,
@@ -15035,12 +15583,17 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "coffee extract M I X- I N S / T O P P I N G"
+            "item": "coffee extract"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S / T O P P I N G"
           },
           {
             "amount": 3,
             "unit": null,
-            "item": "Oreos®, crushed Oreo Cookie Dough"
+            "item": "Oreos®, crushed"
           }
         ]
       }
@@ -15133,7 +15686,12 @@
           {
             "amount": 71,
             "unit": "g",
-            "item": "Gorilla Mind Vanilla Ice Cream protein powder OR 62g PEScience Gorumet Vanilla protein powder"
+            "item": "Gorilla Mind Vanilla Ice Cream protein powder Or 62g Pescience"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Gorumet Vanilla protein powder"
           },
           {
             "amount": 1.5,
@@ -15173,12 +15731,22 @@
           {
             "amount": 14,
             "unit": "g",
-            "item": "brown sugar erythritol M I X- I N S"
+            "item": "brown sugar erythritol"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "M I X- I N S"
           },
           {
             "amount": 8,
             "unit": "g",
-            "item": "sprinkles Birthday Cake Cookie Dough"
+            "item": "sprinkles"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Birthday Cake Cookie Dough"
           }
         ]
       }
@@ -15266,7 +15834,12 @@
           {
             "amount": 1000,
             "unit": "g",
-            "item": "russet potatoes, peeled (about ~1200g before peeling)"
+            "item": "russet potatoes, peeled (about"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "~1200g before peeling)"
           },
           {
             "amount": 1200,
@@ -15281,7 +15854,12 @@
           {
             "amount": 8,
             "unit": "g",
-            "item": "oil spray Salt, to taste"
+            "item": "oil spray"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Salt, to taste"
           }
         ]
       }
@@ -15329,7 +15907,7 @@
       "srcset": "recipes/mcdonalds-french-fries-400.webp 400w, recipes/mcdonalds-french-fries-800.webp 800w, recipes/mcdonalds-french-fries-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAluhl0lZwO8cTzpegAAP7Q/W0EWmSSsxzxmQR+w93s81XWKWvJjDXSQhr8hX3s9ghJTxAZUG5G2sAI9+WmqVVeZuV+z23s8vddvBs8iymp7p3Y45h1bDBYA8d4DqQrAf8aumRZ8nVaPydikhAAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAltxl85LXiW/Hi3U+6QAD+0P1shbO4BqKawTq8NQAWG5knZM5gGvTdjqwQm03NuLWHJA/AFEAXNMMdiLC2LYlArx/s9t7PL3XbwbPIsprIBvMTaslcs9qSVxfb9LzV+dKsdZ/AAzWBXwoRR2up9M+wAAA="
     },
     "videoUrl": "https://youtu.be/qPjRwdaXsvQ",
     "prepTimeMin": 40,
@@ -15542,7 +16120,7 @@
           {
             "amount": 6,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": 5,
@@ -15617,7 +16195,12 @@
           {
             "amount": 35,
             "unit": "g",
-            "item": "Egg Roll Filling Taco Egg Rolls 30g oil (for frying)"
+            "item": "Egg Roll Filling"
+          },
+          {
+            "amount": 30,
+            "unit": "g",
+            "item": "oil (for frying)"
           }
         ]
       }
@@ -15780,7 +16363,12 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "egg white Oil spray (4 seconds total)"
+            "item": "egg white"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray (4 seconds total)"
           }
         ]
       }
@@ -15889,8 +16477,13 @@
           {
             "amount": 10,
             "unit": "oz",
-            "item": "bag cauliflower rice, frozen B O W L 1 (mixed)"
-          },
+            "item": "bag cauliflower rice, frozen"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 1",
+        "ingredients": [
           {
             "amount": 15,
             "unit": "g",
@@ -15904,7 +16497,7 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": null,
@@ -15990,7 +16583,14 @@
     "prepTimeMin": 10,
     "cookTimeMin": 5,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "BOWL 1",
+        "kind": "group",
+        "target": "BOWL 1",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       281,
       282
@@ -16040,7 +16640,12 @@
           {
             "amount": 8,
             "unit": "g",
-            "item": "avocado oil Sauce"
+            "item": "avocado oil"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Sauce"
           },
           {
             "amount": 20,
@@ -16055,7 +16660,7 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": null,
@@ -16180,8 +16785,13 @@
           {
             "amount": 6,
             "unit": "g",
-            "item": "garlic, minced B O W L 4 (mixed)"
-          },
+            "item": "garlic, minced"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 4",
+        "ingredients": [
           {
             "amount": 84,
             "unit": "g",
@@ -16200,12 +16810,12 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "MSG"
+            "item": "Msg"
           },
           {
             "amount": null,
             "unit": null,
-            "item": "black pepper Kimchi Fried Rice",
+            "item": "black pepper",
             "note": "dash"
           }
         ]
@@ -16260,7 +16870,14 @@
     "prepTimeMin": 10,
     "cookTimeMin": 5,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "BOWL 4",
+        "kind": "group",
+        "target": "BOWL 4",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       285,
       286
@@ -16310,7 +16927,22 @@
           {
             "amount": 5,
             "unit": "g",
-            "item": "garlic, minced Small pinch Mexican oregano Small pinch chili powder Small pinch cumin"
+            "item": "garlic, minced"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Small pinch Mexican oregano"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Small pinch chili powder"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Small pinch cumin"
           }
         ]
       }
@@ -16648,7 +17280,17 @@
           {
             "amount": 5,
             "unit": "g",
-            "item": "salt ¼ tsp dill weed ¼ tsp habanero powder"
+            "item": "salt"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "¼ tsp dill weed"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "¼ tsp habanero powder"
           },
           {
             "amount": null,
@@ -16673,7 +17315,7 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "xanthan gum Taco Bell Spicy Ranch"
+            "item": "xanthan gum"
           }
         ]
       }
@@ -16701,7 +17343,7 @@
       "srcset": "recipes/taco-bell-spicy-ranch-400.webp 400w, recipes/taco-bell-spicy-ranch-800.webp 800w, recipes/taco-bell-spicy-ranch-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACnGcYapYymnXmSzwAD+nWujbMiTiLrTX4DmwXe6DcxDVFYBhYXrnyg1dT6zJVWPq0kwYTDUeywN4acx18rilMOta9XtGHqZ+fq+qISF6luP1DDw6sQ/GNwAAA=="
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACnJielzQw2VF0PyQAD+nWujbN5d/VImFvwRA8J8LyZPpOBYvwQZ58oOQXGq/meL4jpwH5Q4bCA18GkvNYxFRbfkvHwcqhJESTJhRqGxIF4lS12qkHZGViFQWdgAAAA="
     },
     "videoUrl": "https://www.youtube.com/watch?v=MNI44zHwDpQ",
     "prepTimeMin": 5,
@@ -16962,7 +17604,12 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "black pepper BWW Parmesan Garlic Sauce (30g)"
+            "item": "black pepper"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Bww Parmesan Garlic Sauce (30g)"
           }
         ]
       }
@@ -17232,7 +17879,12 @@
           {
             "amount": 4,
             "unit": "g",
-            "item": "garlic, minced Zest of 1 lime"
+            "item": "garlic, minced"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Zest of 1 lime"
           },
           {
             "amount": 16,
@@ -17247,7 +17899,12 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "Valentina® hot sauce Salt and black pepper, to taste"
+            "item": "Valentina® hot sauce"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Salt and black pepper, to taste"
           }
         ]
       }
@@ -17440,7 +18097,12 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "xanthan gum .5g sucralose"
+            "item": "xanthan gum"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g sucralose"
           }
         ]
       }
@@ -17834,12 +18496,17 @@
           {
             "amount": 130,
             "unit": "g",
-            "item": "fat-free milk Tangzhong"
+            "item": "fat-free milk"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Tangzhong"
           },
           {
             "amount": 7,
             "unit": "g",
-            "item": "unsalted butter Protein Buns"
+            "item": "unsalted butter"
           }
         ]
       }
@@ -18023,7 +18690,12 @@
           {
             "amount": 14,
             "unit": "g",
-            "item": "unsalted butter, melted Potato"
+            "item": "unsalted butter, melted"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Potato"
           },
           {
             "amount": 1,
@@ -18380,7 +19052,12 @@
           {
             "amount": 192,
             "unit": "g",
-            "item": "water Corn meal"
+            "item": "water"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Corn meal"
           },
           {
             "amount": 56,
@@ -18469,7 +19146,7 @@
       "srcset": "recipes/hoagie-roll-400.webp 400w, recipes/hoagie-roll-800.webp 800w, recipes/hoagie-roll-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdHYCNAW/+N4AfhJODSglncSyajhgA/uwEfnffvdYtF2t5HlhYql3PukpRfL0Ppff5+5MXHfQ0cfngB9V91tbSiSRirRZqS1NfHtTJAzl35bkm7Rfb3qvUj1NA8+3vxuIuQY1O+fFcpT2iWv+AAAA="
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdHYBi/4D6J7XNjaIJ7RDyoUVgAP7sAK9P0oIEZDIpTq5YWL1+4DzMgRSgT58KByLGNhpekicHBmiaUErcj5qjwAugyh3/dHp3IEoRXsSdpyNds4enn3dtK9WVe+mbqr/KFN1xeJURp6SNZ29hmOmgAA=="
     },
     "videoUrl": "https://www.youtube.com/watch?v=orP2p5zS4jk#t=0m36s",
     "prepTimeMin": 210,
@@ -18575,7 +19252,7 @@
           {
             "amount": null,
             "unit": null,
-            "item": "dried parsley Protein Breadsticks",
+            "item": "dried parsley",
             "note": "dash"
           }
         ]
@@ -18968,7 +19645,12 @@
           {
             "amount": 20,
             "unit": "g",
-            "item": "corn starch Dry Station:"
+            "item": "corn starch"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Dry Station:"
           },
           {
             "amount": 90,
@@ -19155,7 +19837,7 @@
           {
             "amount": 60,
             "unit": "g",
-            "item": "part-skim mozzarella cheese, shredded $1 Pizza Meal Prep"
+            "item": "part-skim mozzarella cheese, shredded"
           }
         ]
       }
@@ -19399,7 +20081,12 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "cumin .5g oregano"
+            "item": "cumin"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": ".5g oregano"
           },
           {
             "amount": 400,
@@ -19669,7 +20356,7 @@
           {
             "amount": 400,
             "unit": "g",
-            "item": "chicken broth Chicken Noodle Soup"
+            "item": "chicken broth"
           }
         ]
       }
@@ -19776,7 +20463,7 @@
           {
             "amount": 100,
             "unit": "g",
-            "item": "AP flour"
+            "item": "Ap flour"
           }
         ]
       },
@@ -19870,7 +20557,12 @@
           {
             "amount": 5,
             "unit": "g",
-            "item": "Parmigiano-Reggiano cheese, grated Oil spray"
+            "item": "Parmigiano-Reggiano cheese, grated"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
           }
         ]
       }
@@ -20061,7 +20753,12 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "barbeque sauce (20 cal) Pulled Pork + Mac 160g OG MAC AND CHEESE"
+            "item": "barbeque sauce (20 cal)"
+          },
+          {
+            "amount": 160,
+            "unit": "g",
+            "item": "OG Mac and Cheese"
           }
         ]
       }
@@ -20259,7 +20956,7 @@
           {
             "amount": 6,
             "unit": "g",
-            "item": "cotija cheese Chicken Tinga Tostadas"
+            "item": "cotija cheese"
           }
         ]
       }
@@ -20426,7 +21123,17 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "butter, melted Oil spray $1 Pizza Pot Pie Meal Prep"
+            "item": "butter, melted"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "$1 Pizza Pot Pie Meal Prep"
           }
         ]
       }
@@ -20565,7 +21272,12 @@
           {
             "amount": 50,
             "unit": "g",
-            "item": "cornstarch Oil spray"
+            "item": "cornstarch"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
           }
         ]
       },
@@ -20580,7 +21292,12 @@
           {
             "amount": 60,
             "unit": "g",
-            "item": "buffalo sauce French fries"
+            "item": "buffalo sauce"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "French fries"
           }
         ]
       }

@@ -34,6 +34,8 @@ for (const r of recipes) {
   for (const g of r.ingredientGroups) for (const ing of g.ingredients) {
     const longest = ing.item.split(/\s+/).filter((w) => !STOP.has(w.toLowerCase())).sort((a, b) => b.length - a.length)[0] ?? "";
     if (longest.length > 3 && !hay.includes(flat(longest))) issues.push(`ingredient "${ing.item}"`);
+    // structural: an embedded run-together caps run means a header got merged in
+    if (/[A-Z]{6,}/.test(ing.item) || /\(per /i.test(ing.item)) issues.push(`merged-header? "${ing.item}"`);
   }
 
   if (issues.length) { problems++; console.log(`\n✗ ${r.id} (pp.${r.sourcePages.join(",")})`); issues.slice(0, 8).forEach((i) => console.log("    " + i)); }
