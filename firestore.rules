@@ -2,22 +2,29 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    // The app is for two people only (D17). UIDs are opaque identifiers, not secrets;
+    // they cannot be used to impersonate the accounts.
+    function isMember() {
+      return request.auth != null && request.auth.uid in [
+        'LDl4A6ilzUdGJOsgVLq5CWUg2PA2', // Sergiu
+        'B2eHoIgwDqhPDZvu1P8iC3Gpefq2'  // Ana
+      ];
+    }
+
     // Per-person data: favorites, notes, custom recipes (D15).
-    // Readable by any signed-in user (mutually viewable); writable only by the owner.
-    // TODO: once both account UIDs are captured, restrict read/write to that
-    // allowlist so nobody else can use the app (D17).
+    // Either member can READ (mutually viewable); only the owner can WRITE.
     match /users/{uid} {
-      allow read: if request.auth != null;
-      allow write: if request.auth != null && request.auth.uid == uid;
+      allow read: if isMember();
+      allow write: if isMember() && request.auth.uid == uid;
       match /{document=**} {
-        allow read: if request.auth != null;
-        allow write: if request.auth != null && request.auth.uid == uid;
+        allow read: if isMember();
+        allow write: if isMember() && request.auth.uid == uid;
       }
     }
 
-    // Joint data: weekly meal plan + shopping list (added in later slices).
+    // Joint data: weekly meal plan + shopping list (D15) — both members read+write.
     match /joint/{document=**} {
-      allow read, write: if request.auth != null;
+      allow read, write: if isMember();
     }
   }
 }
