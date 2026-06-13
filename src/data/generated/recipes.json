@@ -2,7 +2,7 @@
   {
     "id": "banana-pancakes",
     "title": "Banana Pancakes",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 1,
     "macros": {
       "calories": 361,
@@ -128,7 +128,7 @@
   {
     "id": "japanese-pancakes",
     "title": "Japanese Pancakes",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 1,
     "macros": {
       "calories": 350,
@@ -261,7 +261,7 @@
   {
     "id": "stuffed-french-toast",
     "title": "Stuffed French Toast",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 1,
     "macros": {
       "calories": 446,
@@ -317,7 +317,7 @@
         ]
       },
       {
-        "name": "EGGWASH",
+        "name": "EGG WASH",
         "ingredients": [
           {
             "amount": 3,
@@ -433,6 +433,12 @@
         "seconds": null
       },
       {
+        "raw": "EGG WASH",
+        "kind": "group",
+        "target": "EGG WASH",
+        "seconds": null
+      },
+      {
         "raw": "ICING",
         "kind": "group",
         "target": "ICING",
@@ -447,7 +453,7 @@
   {
     "id": "birthday-cake-french-toast",
     "title": "Birthday Cake French Toast",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 1,
     "macros": {
       "calories": 506,
@@ -458,7 +464,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "FRENCHTOAST",
+        "name": "FRENCH TOAST",
         "ingredients": [
           {
             "amount": 3,
@@ -533,7 +539,7 @@
         ]
       },
       {
-        "name": "FRENCHTOASTBUILD",
+        "name": "FRENCH TOAST BUILD",
         "ingredients": [
           {
             "amount": 3,
@@ -607,6 +613,12 @@
     "tips": [],
     "references": [
       {
+        "raw": "FRENCH TOAST",
+        "kind": "group",
+        "target": "FRENCH TOAST",
+        "seconds": null
+      },
+      {
         "raw": "FROSTING",
         "kind": "group",
         "target": "FROSTING",
@@ -619,9 +631,9 @@
     ]
   },
   {
-    "id": "breakfast-sausage",
-    "title": "Breakfast Sausage",
-    "category": "Breakfast Bliss",
+    "id": "breakfast-sausage-patties",
+    "title": "Breakfast Sausage Patties",
+    "category": "Breakfast",
     "servings": 5,
     "macros": {
       "calories": 144,
@@ -712,8 +724,8 @@
       }
     ],
     "image": {
-      "src": "recipes/breakfast-sausage-800.webp",
-      "srcset": "recipes/breakfast-sausage-400.webp 400w, recipes/breakfast-sausage-800.webp 800w, recipes/breakfast-sausage-1200.webp 1200w",
+      "src": "recipes/breakfast-sausage-patties-800.webp",
+      "srcset": "recipes/breakfast-sausage-patties-400.webp 400w, recipes/breakfast-sausage-patties-800.webp 800w, recipes/breakfast-sausage-patties-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoGv/gND+4DUD7uNLlP4EY6AAP0w12NBH+hw3lzKQPOGil1SD/IphrGxrZJ4WnqkpuLE9p7a2sCdwlTmudOWDU9tg16mGbqaLdsL2pqIvD3jWNmhVtVYlVheEL6JTcK6cV9FIQi3HCgYazHDvNVATvWX5mIAAA=="
@@ -733,7 +745,7 @@
   {
     "id": "mcdonalds-breakfast-burrito",
     "title": "McDonalds Breakfast Burrito",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 1,
     "macros": {
       "calories": 466,
@@ -784,7 +796,7 @@
           {
             "amount": 94,
             "unit": "g",
-            "item": "BREAKFAST SAUSAGE"
+            "item": "Breakfast Sausage"
           },
           {
             "amount": 2,
@@ -871,9 +883,9 @@
     ]
   },
   {
-    "id": "200-calorie",
-    "title": "200 Calorie",
-    "category": "Breakfast Bliss",
+    "id": "breakfast-burrito",
+    "title": "Breakfast Burrito",
+    "category": "Breakfast",
     "servings": 1,
     "macros": {
       "calories": 436,
@@ -962,8 +974,8 @@
       }
     ],
     "image": {
-      "src": "recipes/200-calorie-800.webp",
-      "srcset": "recipes/200-calorie-400.webp 400w, recipes/200-calorie-800.webp 800w, recipes/200-calorie-1200.webp 1200w",
+      "src": "recipes/breakfast-burrito-800.webp",
+      "srcset": "recipes/breakfast-burrito-400.webp 400w, recipes/breakfast-burrito-800.webp 800w, recipes/breakfast-burrito-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACWW1K2NfBGtdlOV+gAA/tqspThpdM9nWPdnwv8+cBy4oBUX10ILcIFWy1afzTOEDFrPCrJuFTkX2kE3gFJHW+9uPCltxwOGqbujU4HtkCpeQQ8d/DM5t9zO9FkA+cXo1A6v4AA="
@@ -981,9 +993,9 @@
     ]
   },
   {
-    "id": "honey-butter",
-    "title": "Honey Butter",
-    "category": "Breakfast Bliss",
+    "id": "honey-butter-chicken-biscuit",
+    "title": "Honey Butter Chicken Biscuit",
+    "category": "Breakfast",
     "servings": 4,
     "macros": {
       "calories": 381,
@@ -1004,8 +1016,13 @@
           {
             "amount": 3,
             "unit": null,
-            "item": "chicken breasts D R E D G E S TAT I O N 1"
-          },
+            "item": "chicken breasts"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 1",
+        "ingredients": [
           {
             "amount": 30,
             "unit": "g",
@@ -1034,9 +1051,14 @@
           {
             "amount": null,
             "unit": null,
-            "item": "black pepper D R E D G E S TAT I O N 2",
+            "item": "black pepper",
             "note": "dash"
-          },
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 2",
+        "ingredients": [
           {
             "amount": 60,
             "unit": "g",
@@ -1125,8 +1147,8 @@
       }
     ],
     "image": {
-      "src": "recipes/honey-butter-800.webp",
-      "srcset": "recipes/honey-butter-400.webp 400w, recipes/honey-butter-800.webp 800w, recipes/honey-butter-1200.webp 1200w",
+      "src": "recipes/honey-butter-chicken-biscuit-800.webp",
+      "srcset": "recipes/honey-butter-chicken-biscuit-400.webp 400w, recipes/honey-butter-chicken-biscuit-800.webp 800w, recipes/honey-butter-chicken-biscuit-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3Ff/gPJ9BQI9etE1wAP7c6roulgTm2IQeEAi+dRjlUr6IkG6aCqoCf42BylxW9Y58mBq0lodTdtUsms8zaJIqBQtTmZnXRhMAmCwsYIKEguns7UgjGCUTn4r2VpovEyayrSoyGcRaU8w+1wAAAA=="
@@ -1137,7 +1159,20 @@
     "tips": [
       "Use an extra biscuit with a layer removed to add more volume to your meal. Just cut the chicken in half and split it between biscuits."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "DREDGE STATION 1",
+        "kind": "group",
+        "target": "DREDGE STATION 1",
+        "seconds": null
+      },
+      {
+        "raw": "DREDGE STATION 2",
+        "kind": "group",
+        "target": "DREDGE STATION 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       61,
       62
@@ -1146,7 +1181,7 @@
   {
     "id": "lemon-glaze-muffins",
     "title": "Lemon Glaze Muffins",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 14,
     "macros": {
       "calories": 102,
@@ -1325,9 +1360,9 @@
     ]
   },
   {
-    "id": "banana-bread",
-    "title": "Banana Bread",
-    "category": "Breakfast Bliss",
+    "id": "banana-bread-muffins",
+    "title": "Banana Bread Muffins",
+    "category": "Breakfast",
     "servings": 13,
     "macros": {
       "calories": 101,
@@ -1435,8 +1470,8 @@
       }
     ],
     "image": {
-      "src": "recipes/banana-bread-800.webp",
-      "srcset": "recipes/banana-bread-400.webp 400w, recipes/banana-bread-800.webp 800w, recipes/banana-bread-1200.webp 1200w",
+      "src": "recipes/banana-bread-muffins-800.webp",
+      "srcset": "recipes/banana-bread-muffins-400.webp 400w, recipes/banana-bread-muffins-800.webp 800w, recipes/banana-bread-muffins-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoADTesMHDYSf5ecAP7pW5rA2jYQZwDvsq32vay7YTlnTUmqo0jxQaXCx6Hl3476N29umlo3wkCZyV4ehG7PN6atnyI96YUZy6IqAICVdIsAAA=="
@@ -1469,7 +1504,7 @@
   {
     "id": "pumpkin-pie-muffins",
     "title": "Pumpkin Pie Muffins",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 13,
     "macros": {
       "calories": 97,
@@ -1621,7 +1656,7 @@
   {
     "id": "jumbo-blueberry-muffins",
     "title": "Jumbo Blueberry Muffins",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 6,
     "macros": {
       "calories": 252,
@@ -1807,7 +1842,7 @@
   {
     "id": "jumbo-chocolate-chip-muffins",
     "title": "Jumbo Chocolate Chip Muffins",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 6,
     "macros": {
       "calories": 261,
@@ -1967,7 +2002,7 @@
   {
     "id": "jumbo-pumpkin-cheesecake-muffins",
     "title": "Jumbo Pumpkin Cheesecake Muffins",
-    "category": "Breakfast Bliss",
+    "category": "Breakfast",
     "servings": 6,
     "macros": {
       "calories": 258,
@@ -1978,7 +2013,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "CHEESECAKEFILLING",
+        "name": "CHEESECAKE FILLING",
         "ingredients": [
           {
             "amount": 84,
@@ -2150,6 +2185,12 @@
         "kind": "group",
         "target": "WET",
         "seconds": null
+      },
+      {
+        "raw": "CHEESECAKE FILLING",
+        "kind": "group",
+        "target": "CHEESECAKE FILLING",
+        "seconds": null
       }
     ],
     "sourcePages": [
@@ -2160,7 +2201,7 @@
   {
     "id": "chicken-strips",
     "title": "Chicken Strips",
-    "category": "Midday Munchies",
+    "category": "Lunch",
     "servings": 5,
     "macros": {
       "calories": 349,
@@ -2275,9 +2316,9 @@
     ]
   },
   {
-    "id": "jalapeno-popper",
-    "title": "JalapeÑO Popper",
-    "category": "Midday Munchies",
+    "id": "jalapeno-popper-grilled-cheese",
+    "title": "Jalapeño Popper Grilled Cheese",
+    "category": "Lunch",
     "servings": 1,
     "macros": {
       "calories": 412,
@@ -2379,8 +2420,8 @@
       }
     ],
     "image": {
-      "src": "recipes/jalapeno-popper-800.webp",
-      "srcset": "recipes/jalapeno-popper-400.webp 400w, recipes/jalapeno-popper-800.webp 800w, recipes/jalapeno-popper-1200.webp 1200w",
+      "src": "recipes/jalapeno-popper-grilled-cheese-800.webp",
+      "srcset": "recipes/jalapeno-popper-grilled-cheese-400.webp 400w, recipes/jalapeno-popper-grilled-cheese-800.webp 800w, recipes/jalapeno-popper-grilled-cheese-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbAC7LwBKgBXra80x6mhq3m8uAAD+6f6MnuEFkbCKcBzIzrwZ9fxm67i2xzH8qWPiISZN6v97t4vMRJ+c1FJg8FN9vtWWvETRwOAzEv+8wX1UGUjuBbFXRfgLFQDnYEjTI8yw5W0PQAAA"
@@ -2398,9 +2439,9 @@
     ]
   },
   {
-    "id": "chicken-parmesan",
-    "title": "Chicken Parmesan",
-    "category": "Midday Munchies",
+    "id": "chicken-parmesan-sandwich",
+    "title": "Chicken Parmesan Sandwich",
+    "category": "Lunch",
     "servings": 5,
     "macros": {
       "calories": 412,
@@ -2416,13 +2457,23 @@
           {
             "amount": 3,
             "unit": null,
-            "item": "chicken breasts D R E D G E S TAT I O N 1"
-          },
+            "item": "chicken breasts"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 1",
+        "ingredients": [
           {
             "amount": 40,
             "unit": "g",
-            "item": "all-purpose flour D R E D G E S TAT I O N 2"
-          },
+            "item": "all-purpose flour"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 2",
+        "ingredients": [
           {
             "amount": 1,
             "unit": null,
@@ -2431,8 +2482,13 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "egg white D R E D G E S TAT I O N 3"
-          },
+            "item": "egg white"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 3",
+        "ingredients": [
           {
             "amount": 100,
             "unit": "g",
@@ -2467,7 +2523,7 @@
         ]
       },
       {
-        "name": "CHICKENPARMESANBUILD",
+        "name": "CHICKEN PARMESAN BUILD",
         "ingredients": [
           {
             "amount": 1,
@@ -2477,13 +2533,8 @@
           {
             "amount": 40,
             "unit": "g",
-            "item": "FOOLPROOF HOMEMADE"
-          }
-        ]
-      },
-      {
-        "name": "MARINARA",
-        "ingredients": [
+            "item": "Foolproof Homemade Marinara"
+          },
           {
             "amount": 5,
             "unit": "g",
@@ -2547,8 +2598,8 @@
       }
     ],
     "image": {
-      "src": "recipes/chicken-parmesan-800.webp",
-      "srcset": "recipes/chicken-parmesan-400.webp 400w, recipes/chicken-parmesan-800.webp 800w, recipes/chicken-parmesan-1200.webp 1200w",
+      "src": "recipes/chicken-parmesan-sandwich-800.webp",
+      "srcset": "recipes/chicken-parmesan-sandwich-400.webp 400w, recipes/chicken-parmesan-sandwich-800.webp 800w, recipes/chicken-parmesan-sandwich-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYNcAAxN/yzlr+IATFNyHoAP7a1X1IaaFUqNPlgmWZqCwhvNCJqEG0qDOBLPKkWCCYqQUkPaFj8yo7W8J4Pa8ytEYVfL9NIF/QS3N5pllN/yFHNiZHVmr0OQtjysKvwFsD9mibK5/LYx+d9yscTofYotATzIWPYHZ2Iz1dTrK8gAAA"
@@ -2557,23 +2608,16 @@
     "prepTimeMin": 90,
     "cookTimeMin": 15,
     "tips": [],
-    "references": [
-      {
-        "raw": "MARINARA",
-        "kind": "group",
-        "target": "MARINARA",
-        "seconds": null
-      }
-    ],
+    "references": [],
     "sourcePages": [
       81,
       82
     ]
   },
   {
-    "id": "meatball-sandwich",
-    "title": "Meatball Sandwich",
-    "category": "Midday Munchies",
+    "id": "meatball-sandwich-on-garlic-bread",
+    "title": "Meatball Sandwich on Garlic Bread",
+    "category": "Lunch",
     "servings": 1,
     "macros": {
       "calories": 528,
@@ -2584,7 +2628,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "GARLICBREADSPREAD",
+        "name": "GARLIC BREAD SPREAD",
         "ingredients": [
           {
             "amount": 21,
@@ -2619,7 +2663,7 @@
         ]
       },
       {
-        "name": "MEATBALLSANDWICHBUILD",
+        "name": "MEATBALL SANDWICH BUILD",
         "ingredients": [
           {
             "amount": 2,
@@ -2644,13 +2688,8 @@
           {
             "amount": 80,
             "unit": "g",
-            "item": "FOOLPROOF HOMEMADE"
-          }
-        ]
-      },
-      {
-        "name": "MARINARA",
-        "ingredients": [
+            "item": "Foolproof Homemade Marinara"
+          },
           {
             "amount": 5,
             "unit": "g",
@@ -2690,8 +2729,8 @@
       }
     ],
     "image": {
-      "src": "recipes/meatball-sandwich-800.webp",
-      "srcset": "recipes/meatball-sandwich-400.webp 400w, recipes/meatball-sandwich-800.webp 800w, recipes/meatball-sandwich-1200.webp 1200w",
+      "src": "recipes/meatball-sandwich-on-garlic-bread-800.webp",
+      "srcset": "recipes/meatball-sandwich-on-garlic-bread-400.webp 400w, recipes/meatball-sandwich-on-garlic-bread-800.webp 800w, recipes/meatball-sandwich-on-garlic-bread-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwAz5w/wZu6iMZK9ARqk4AAP7j6f78A+uJuGE1QsIzTKiNxrtY/ygm3LwSHWpaGZONDbx/D4n0rIEDJZeWR4I6+DFXSQRKcSQSeFvmR4hG9twW+2H3it85jyPqUmgAAAA="
@@ -2700,14 +2739,7 @@
     "prepTimeMin": 15,
     "cookTimeMin": 10,
     "tips": [],
-    "references": [
-      {
-        "raw": "MARINARA",
-        "kind": "group",
-        "target": "MARINARA",
-        "seconds": null
-      }
-    ],
+    "references": [],
     "sourcePages": [
       83,
       84
@@ -2716,7 +2748,7 @@
   {
     "id": "reuben",
     "title": "Reuben",
-    "category": "Midday Munchies",
+    "category": "Lunch",
     "servings": 1,
     "macros": {
       "calories": 486,
@@ -2737,7 +2769,7 @@
           {
             "amount": 30,
             "unit": "g",
-            "item": "RUSSIAN DRESSING"
+            "item": "Russian Dressing"
           },
           {
             "amount": 28,
@@ -2811,8 +2843,8 @@
   },
   {
     "id": "ham-and-cheese-pita",
-    "title": "Ham And Cheese Pita",
-    "category": "Midday Munchies",
+    "title": "Ham and Cheese Pita",
+    "category": "Lunch",
     "servings": 1,
     "macros": {
       "calories": 289,
@@ -2828,7 +2860,7 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "PROTEIN PITA"
+            "item": "Protein Pita"
           },
           {
             "amount": 2,
@@ -2884,7 +2916,7 @@
   {
     "id": "beefy-poblano-quesadilla",
     "title": "Beefy Poblano Quesadilla",
-    "category": "Midday Munchies",
+    "category": "Lunch",
     "servings": 11,
     "macros": {
       "calories": 306,
@@ -2920,7 +2952,7 @@
         ]
       },
       {
-        "name": "QUESADILLABUILD",
+        "name": "QUESADILLA BUILD",
         "ingredients": [
           {
             "amount": 1,
@@ -2950,7 +2982,7 @@
           {
             "amount": 25,
             "unit": "g",
-            "item": "SALSA CREMA"
+            "item": "Salsa Crema"
           },
           {
             "amount": 3,
@@ -3014,7 +3046,7 @@
   {
     "id": "steak-tacos",
     "title": "Steak Tacos",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 5,
     "macros": {
       "calories": 438,
@@ -3095,7 +3127,7 @@
         ]
       },
       {
-        "name": "ONESERVING",
+        "name": "ONE SERVING",
         "ingredients": [
           {
             "amount": 3,
@@ -3192,7 +3224,7 @@
   {
     "id": "sloppy-joes",
     "title": "Sloppy Joes",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 10,
     "macros": {
       "calories": 198,
@@ -3327,8 +3359,8 @@
   },
   {
     "id": "og-mac-and-cheese",
-    "title": "Og Mac And Cheese",
-    "category": "Dinner is Served",
+    "title": "OG Mac and Cheese",
+    "category": "Dinner",
     "servings": 2,
     "macros": {
       "calories": 656,
@@ -3339,7 +3371,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "PASTAMIXTURE",
+        "name": "PASTA MIXTURE",
         "ingredients": [
           {
             "amount": 450,
@@ -3429,16 +3461,23 @@
     "prepTimeMin": 5,
     "cookTimeMin": 10,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "PASTA MIXTURE",
+        "kind": "group",
+        "target": "PASTA MIXTURE",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       97,
       98
     ]
   },
   {
-    "id": "buffalo",
-    "title": "Buffalo",
-    "category": "Dinner is Served",
+    "id": "buffalo-mac-and-cheese",
+    "title": "Buffalo Mac and Cheese",
+    "category": "Dinner",
     "servings": 2,
     "macros": {
       "calories": 722,
@@ -3449,7 +3488,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "PASTAMIXTURE",
+        "name": "PASTA MIXTURE",
         "ingredients": [
           {
             "amount": 410,
@@ -3525,8 +3564,8 @@
       }
     ],
     "image": {
-      "src": "recipes/buffalo-800.webp",
-      "srcset": "recipes/buffalo-400.webp 400w, recipes/buffalo-800.webp 800w, recipes/buffalo-1200.webp 1200w",
+      "src": "recipes/buffalo-mac-and-cheese-800.webp",
+      "srcset": "recipes/buffalo-mac-and-cheese-400.webp 400w, recipes/buffalo-mac-and-cheese-800.webp 800w, recipes/buffalo-mac-and-cheese-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMllaABiD1f2LRzZlWrMoAA/uwiSqIJdevxD//FdrP2rNj9tRqAf7eSz2ikpXvHQeP9JlKFo7TqMmBUbLRqgjVWOsp8YRLBdq4q/pwLFvPVZ+ZkeaaHD/93Wa5hUuhCAh1Za8N4J6yLZC3T9caUQAAA"
@@ -3535,7 +3574,14 @@
     "prepTimeMin": 5,
     "cookTimeMin": 10,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "PASTA MIXTURE",
+        "kind": "group",
+        "target": "PASTA MIXTURE",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       99,
       100
@@ -3544,7 +3590,7 @@
   {
     "id": "italian-sausage",
     "title": "Italian Sausage",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 5,
     "macros": {
       "calories": 133,
@@ -3658,7 +3704,7 @@
   {
     "id": "crunchwrap-supreme",
     "title": "Crunchwrap Supreme",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 4,
     "macros": {
       "calories": 456,
@@ -3867,7 +3913,7 @@
   {
     "id": "jalapeno-cheeseburger-crunchwrap",
     "title": "Jalapeno Cheeseburger Crunchwrap",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 4,
     "macros": {
       "calories": 452,
@@ -3893,7 +3939,7 @@
         ]
       },
       {
-        "name": "BURGERSEASONINGS",
+        "name": "BURGER SEASONINGS",
         "ingredients": [
           {
             "amount": 5,
@@ -3913,7 +3959,7 @@
         ]
       },
       {
-        "name": "NICKWRAPFILLING",
+        "name": "NICKWRAP FILLING",
         "ingredients": [
           {
             "amount": 14,
@@ -3939,11 +3985,16 @@
             "amount": 84,
             "unit": "g",
             "item": "cooked ground beef"
+          },
+          {
+            "amount": 1,
+            "unit": null,
+            "item": "tostada (45 Cal) Jalapeno Cheeseburger Crunchwrap Lettuce, chopped Tomato, deseeded and chopped"
           }
         ]
       },
       {
-        "name": "NICKWRAPBUILD",
+        "name": "NICKWRAP BUILD",
         "ingredients": [
           {
             "amount": 1.25,
@@ -3954,16 +4005,6 @@
             "amount": 32,
             "unit": "g",
             "item": "Jalapeño cheddar cheese dip"
-          }
-        ]
-      },
-      {
-        "name": "NICKWRAPFILLING",
-        "ingredients": [
-          {
-            "amount": 1,
-            "unit": null,
-            "item": "tostada (45 Cal) Jalapeno Cheeseburger Crunchwrap Lettuce, chopped Tomato, deseeded and chopped"
           }
         ]
       }
@@ -4021,7 +4062,20 @@
     "prepTimeMin": 10,
     "cookTimeMin": 20,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "BURGER SEASONINGS",
+        "kind": "group",
+        "target": "BURGER SEASONINGS",
+        "seconds": null
+      },
+      {
+        "raw": "NICKWRAP FILLING",
+        "kind": "group",
+        "target": "NICKWRAP FILLING",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       105,
       106
@@ -4030,7 +4084,7 @@
   {
     "id": "beefy-5-layer",
     "title": "Beefy 5 Layer",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 3,
     "macros": {
       "calories": 517,
@@ -4051,7 +4105,7 @@
         ]
       },
       {
-        "name": "SEASONINGFORBEEF",
+        "name": "SEASONING FOR BEEF",
         "ingredients": [
           {
             "amount": 3,
@@ -4220,7 +4274,7 @@
   {
     "id": "cheesy-gordita-crunch",
     "title": "Cheesy Gordita Crunch",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 13,
     "macros": {
       "calories": 303,
@@ -4231,7 +4285,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "TACOFILLING",
+        "name": "TACO FILLING",
         "ingredients": [
           {
             "amount": null,
@@ -4311,12 +4365,12 @@
         ]
       },
       {
-        "name": "GORDITACRUNCHBUILD",
+        "name": "GORDITA CRUNCH BUILD",
         "ingredients": [
           {
             "amount": 1,
             "unit": null,
-            "item": "PROTEIN PITA"
+            "item": "Protein Pita"
           },
           {
             "amount": 21,
@@ -4336,7 +4390,7 @@
           {
             "amount": 13,
             "unit": "g",
-            "item": "SPICY RANCH"
+            "item": "Spicy Ranch"
           },
           {
             "amount": 15,
@@ -4411,7 +4465,14 @@
     "prepTimeMin": 30,
     "cookTimeMin": 30,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "TACO FILLING",
+        "kind": "group",
+        "target": "TACO FILLING",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       109,
       110
@@ -4420,7 +4481,7 @@
   {
     "id": "taco-bell-mexican-pizza",
     "title": "Taco Bell Mexican Pizza",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 6,
     "macros": {
       "calories": 395,
@@ -4431,7 +4492,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "SEASONINGMIX",
+        "name": "SEASONING MIX",
         "ingredients": [
           {
             "amount": 8,
@@ -4461,13 +4522,8 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "MSG"
-          }
-        ]
-      },
-      {
-        "name": "PIZZA FILLING",
-        "ingredients": [
+            "item": "Msg P I Z Z a F I L L I N G"
+          },
           {
             "amount": 5,
             "unit": "g",
@@ -4516,7 +4572,7 @@
         ]
       },
       {
-        "name": "MEXICANPIZZABUILD",
+        "name": "MEXICAN PIZZA BUILD",
         "ingredients": [
           {
             "amount": 2,
@@ -4605,9 +4661,9 @@
     "tips": [],
     "references": [
       {
-        "raw": "PIZZA FILLING",
+        "raw": "SEASONING MIX",
         "kind": "group",
-        "target": "PIZZA FILLING",
+        "target": "SEASONING MIX",
         "seconds": null
       }
     ],
@@ -4619,7 +4675,7 @@
   {
     "id": "nickchicken",
     "title": "Nickchicken",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 5,
     "macros": {
       "calories": 0,
@@ -4630,7 +4686,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "CHICKENMIX",
+        "name": "CHICKEN MIX",
         "ingredients": [
           {
             "amount": 700,
@@ -4650,13 +4706,12 @@
         ]
       },
       {
-        "name": "DREDGESTATIONS",
+        "name": "DREDGE STATIONS",
+        "ingredients": []
+      },
+      {
+        "name": "WET STATION 1",
         "ingredients": [
-          {
-            "amount": null,
-            "unit": null,
-            "item": "W E T S TAT I O N 1"
-          },
           {
             "amount": 230,
             "unit": "g",
@@ -4670,7 +4725,7 @@
         ]
       },
       {
-        "name": "DRYSTATION",
+        "name": "DRY STATION",
         "ingredients": [
           {
             "amount": 90,
@@ -4700,8 +4755,13 @@
           {
             "amount": 3,
             "unit": "g",
-            "item": "black pepper W E T S TAT I O N 2"
-          },
+            "item": "black pepper"
+          }
+        ]
+      },
+      {
+        "name": "WET STATION 2",
+        "ingredients": [
           {
             "amount": 1,
             "unit": null,
@@ -4720,7 +4780,7 @@
         ]
       },
       {
-        "name": "FINISHINGTOUCHES",
+        "name": "FINISHING TOUCHES",
         "ingredients": [
           {
             "amount": null,
@@ -4730,7 +4790,7 @@
         ]
       },
       {
-        "name": "NICKCHICKENBUILD",
+        "name": "NICKCHICKEN BUILD",
         "ingredients": [
           {
             "amount": null,
@@ -4793,7 +4853,14 @@
     "tips": [
       "putting patty into the dry station. Then you can easily add the dry mixture to the top of the patty after it is already in the dry station container. (RECIPE CONTINUES)"
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "CHICKEN MIX",
+        "kind": "group",
+        "target": "CHICKEN MIX",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       113,
       114
@@ -4802,7 +4869,7 @@
   {
     "id": "dominos-cheesy-bread",
     "title": "Dominos Cheesy Bread",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 985,
@@ -5058,7 +5125,7 @@
   {
     "id": "smashburger",
     "title": "Smashburger",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 487,
@@ -5151,7 +5218,7 @@
   {
     "id": "chicken-gyro",
     "title": "Chicken Gyro",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 5,
     "macros": {
       "calories": 264,
@@ -5172,7 +5239,7 @@
         ]
       },
       {
-        "name": "CHICKENMARINADE",
+        "name": "CHICKEN MARINADE",
         "ingredients": [
           {
             "amount": 3,
@@ -5227,12 +5294,12 @@
         ]
       },
       {
-        "name": "CHICKENGYROBUILD",
+        "name": "CHICKEN GYRO BUILD",
         "ingredients": [
           {
             "amount": 1,
             "unit": null,
-            "item": "PROTEIN PITA"
+            "item": "Protein Pita"
           },
           {
             "amount": 63,
@@ -5242,7 +5309,7 @@
           {
             "amount": 60,
             "unit": "g",
-            "item": "TZATZIKI SAUCE"
+            "item": "Tzatziki Sauce"
           },
           {
             "amount": 7,
@@ -5303,7 +5370,14 @@
     "prepTimeMin": 90,
     "cookTimeMin": 30,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "CHICKEN MARINADE",
+        "kind": "group",
+        "target": "CHICKEN MARINADE",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       123,
       124
@@ -5312,7 +5386,7 @@
   {
     "id": "meatball-sub",
     "title": "Meatball Sub",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 4,
     "macros": {
       "calories": 917,
@@ -5384,7 +5458,7 @@
         ]
       },
       {
-        "name": "MEATBALLMIXTURE",
+        "name": "MEATBALL MIXTURE",
         "ingredients": [
           {
             "amount": 250,
@@ -5449,7 +5523,7 @@
         ]
       },
       {
-        "name": "SANDWICHBUILD",
+        "name": "SANDWICH BUILD",
         "ingredients": [
           {
             "amount": null,
@@ -5533,6 +5607,12 @@
         "kind": "group",
         "target": "SAUCE",
         "seconds": null
+      },
+      {
+        "raw": "MEATBALL MIXTURE",
+        "kind": "group",
+        "target": "MEATBALL MIXTURE",
+        "seconds": null
       }
     ],
     "sourcePages": [
@@ -5543,7 +5623,7 @@
   {
     "id": "smashburger-salad",
     "title": "Smashburger Salad",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 533,
@@ -5648,7 +5728,7 @@
   {
     "id": "elote-salad",
     "title": "Elote Salad",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 577,
@@ -5735,7 +5815,7 @@
         ]
       },
       {
-        "name": "ELOTESALADBUILD",
+        "name": "ELOTE SALAD BUILD",
         "ingredients": [
           {
             "amount": 200,
@@ -5821,7 +5901,7 @@
   {
     "id": "chicken-gyro-salad",
     "title": "Chicken Gyro Salad",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 481,
@@ -5842,7 +5922,7 @@
         ]
       },
       {
-        "name": "CHICKENMARINADE",
+        "name": "CHICKEN MARINADE",
         "ingredients": [
           {
             "amount": 6,
@@ -5897,7 +5977,7 @@
         ]
       },
       {
-        "name": "CHICKENGYROSALAD",
+        "name": "CHICKEN GYRO SALAD",
         "ingredients": []
       },
       {
@@ -5926,7 +6006,7 @@
           {
             "amount": 170,
             "unit": "g",
-            "item": "TZATZIKI SAUCE"
+            "item": "Tzatziki Sauce"
           },
           {
             "amount": 40,
@@ -5988,16 +6068,23 @@
     "tips": [
       "Although there is a lot of prep work for this recipe, if you make it once, you should have enough prepared ingredients for the entire week. The only thing you will have to prep each day is the lettuce, cucumber, and tomato — and even those can be prepared for multiple days at a time if you prefer."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "CHICKEN MARINADE",
+        "kind": "group",
+        "target": "CHICKEN MARINADE",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       131,
       132
     ]
   },
   {
-    "id": "1-hour-calzone",
-    "title": "1 Hour Calzone",
-    "category": "Dinner is Served",
+    "id": "untitled",
+    "title": "Untitled",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 501,
@@ -6009,7 +6096,44 @@
     "ingredientGroups": [
       {
         "name": "DOUGH",
-        "ingredients": []
+        "ingredients": [
+          {
+            "amount": 21,
+            "unit": "g",
+            "item": "part-skim ricotta cheese"
+          },
+          {
+            "amount": 21,
+            "unit": "g",
+            "item": "fat-free mozzarella cheese"
+          },
+          {
+            "amount": 21,
+            "unit": "g",
+            "item": "part-skim mozzarella cheese"
+          },
+          {
+            "amount": 4,
+            "unit": "g",
+            "item": "garlic, roasted"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "salt",
+            "note": "pinch"
+          },
+          {
+            "amount": 42,
+            "unit": "g",
+            "item": "chicken, cooked"
+          },
+          {
+            "amount": 2,
+            "unit": null,
+            "item": "slices bacon, cooked (80 cal) 1 Hour Calzone Corn meal"
+          }
+        ]
       },
       {
         "name": "DRY",
@@ -6057,49 +6181,8 @@
         ]
       },
       {
-        "name": "CALZONEBUILD",
+        "name": "CALZONE BUILD",
         "ingredients": []
-      },
-      {
-        "name": "DOUGH",
-        "ingredients": [
-          {
-            "amount": 21,
-            "unit": "g",
-            "item": "part-skim ricotta cheese"
-          },
-          {
-            "amount": 21,
-            "unit": "g",
-            "item": "fat-free mozzarella cheese"
-          },
-          {
-            "amount": 21,
-            "unit": "g",
-            "item": "part-skim mozzarella cheese"
-          },
-          {
-            "amount": 4,
-            "unit": "g",
-            "item": "garlic, roasted"
-          },
-          {
-            "amount": null,
-            "unit": null,
-            "item": "salt",
-            "note": "pinch"
-          },
-          {
-            "amount": 42,
-            "unit": "g",
-            "item": "chicken, cooked"
-          },
-          {
-            "amount": 2,
-            "unit": null,
-            "item": "slices bacon, cooked (80 cal) 1 Hour Calzone Corn meal"
-          }
-        ]
       }
     ],
     "steps": [
@@ -6173,11 +6256,11 @@
       }
     ],
     "image": {
-      "src": "recipes/1-hour-calzone-800.webp",
-      "srcset": "recipes/1-hour-calzone-400.webp 400w, recipes/1-hour-calzone-800.webp 800w, recipes/1-hour-calzone-1200.webp 1200w",
+      "src": "recipes/untitled-800.webp",
+      "srcset": "recipes/untitled-400.webp 400w, recipes/untitled-800.webp 800w, recipes/untitled-1200.webp 1200w",
       "width": 800,
       "height": 1000,
-      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACn42+NWWMykoFIAAP7sEnW/gDwt7VskZ2ANEbHt73mQjrN2ew1PxS3otjo1zhPzhu5eVNNG83SS19DundqXwyWXqsySTtldfBTIwvJX7wKW4n/qGaBT1aWliQ95AAA="
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoO4AHSrOnWRLfDcJ0YMAAD+6/9GgWLl+h0sb/ltdrQM9S0oTUpaSxeb6e+LMywOuo4K1mnrPiYseXZKJdHQ49iXtUgMhntcOGyHL9kQfT8JOU+pX+rX5kxgKVA10UZQbOdnI0eprbgWcpP7isMIPLoUFFMxNxeOr8UQAA=="
     },
     "videoUrl": "https://youtu.be/WnMQv6X9Mus",
     "prepTimeMin": 60,
@@ -6203,9 +6286,9 @@
     ]
   },
   {
-    "id": "1-hour-pizza",
-    "title": "1 Hour Pizza",
-    "category": "Dinner is Served",
+    "id": "untitled-2",
+    "title": "Untitled",
+    "category": "Dinner",
     "servings": 2,
     "macros": {
       "calories": 729,
@@ -6218,16 +6301,6 @@
       {
         "name": "Ingredients",
         "ingredients": [
-          {
-            "amount": null,
-            "unit": null,
-            "item": "D O U G H (makes 2 doughs)"
-          },
-          {
-            "amount": 120,
-            "unit": "g",
-            "item": "tipo 00 flour"
-          },
           {
             "amount": 40,
             "unit": "g",
@@ -6276,13 +6349,8 @@
           {
             "amount": 90,
             "unit": "g",
-            "item": "FOOLPROOF HOMEMADE"
-          }
-        ]
-      },
-      {
-        "name": "MARINARA",
-        "ingredients": [
+            "item": "Foolproof Homemade Marinara"
+          },
           {
             "amount": 5,
             "unit": "g",
@@ -6358,8 +6426,8 @@
       }
     ],
     "image": {
-      "src": "recipes/1-hour-pizza-800.webp",
-      "srcset": "recipes/1-hour-pizza-400.webp 400w, recipes/1-hour-pizza-800.webp 800w, recipes/1-hour-pizza-1200.webp 1200w",
+      "src": "recipes/untitled-2-800.webp",
+      "srcset": "recipes/untitled-2-400.webp 400w, recipes/untitled-2-800.webp 800w, recipes/untitled-2-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACnGcNu9FtSt1HZd4AD+7MJIapR1YDEIabFN8A1Y01LYaRqdFHGT+CMKN/Vh7PSohOFKcs8Ys2Kc940eBzxNl/yAxPJgDTggrmG4jrsb39VY2o3slXY9pkNV/yT0lPVvgz0ofqDEluYAAAA="
@@ -6371,12 +6439,6 @@
       "If you only want to make one pizza you can store the extra dough in the fridge for up to a week. In a high-sided container, spray with oil, place the dough ball (not rolled out), cover, and throw it in the fridge. An hour before you are ready to eat, take the dough out of the fridge and then start at step 4."
     ],
     "references": [
-      {
-        "raw": "MARINARA",
-        "kind": "group",
-        "target": "MARINARA",
-        "seconds": null
-      },
       {
         "raw": "PIZZA",
         "kind": "group",
@@ -6392,7 +6454,7 @@
   {
     "id": "pizza-pot-pie",
     "title": "Pizza Pot Pie",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 2,
     "macros": {
       "calories": 619,
@@ -6443,7 +6505,7 @@
         ]
       },
       {
-        "name": "HOMEMADESAUCE",
+        "name": "HOMEMADE SAUCE",
         "ingredients": [
           {
             "amount": 28,
@@ -6494,6 +6556,41 @@
             "amount": 10,
             "unit": "g",
             "item": "granulated erythritol (INGREDIENTS CONTINUE)"
+          }
+        ]
+      },
+      {
+        "name": "PIZZA",
+        "ingredients": [
+          {
+            "amount": null,
+            "unit": null,
+            "item": "Oil spray"
+          },
+          {
+            "amount": 65,
+            "unit": "g",
+            "item": "part skim mozzarella (thinly sliced)"
+          },
+          {
+            "amount": 65,
+            "unit": "g",
+            "item": "fat-free mozzarella"
+          },
+          {
+            "amount": 85,
+            "unit": "g",
+            "item": "Homemade Sauce"
+          },
+          {
+            "amount": 1,
+            "unit": null,
+            "item": "Dough"
+          },
+          {
+            "amount": 3,
+            "unit": "g",
+            "item": "unsalted butter"
           }
         ]
       }
@@ -6579,7 +6676,14 @@
     "prepTimeMin": 90,
     "cookTimeMin": 45,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "HOMEMADE SAUCE",
+        "kind": "group",
+        "target": "HOMEMADE SAUCE",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       137,
       138,
@@ -6587,9 +6691,9 @@
     ]
   },
   {
-    "id": "bbq-chicken",
-    "title": "Bbq Chicken",
-    "category": "Dinner is Served",
+    "id": "bbq-chicken-sheet-pan-pizza",
+    "title": "Bbq Chicken Sheet Pan Pizza",
+    "category": "Dinner",
     "servings": 8,
     "macros": {
       "calories": 430,
@@ -6713,8 +6817,8 @@
       }
     ],
     "image": {
-      "src": "recipes/bbq-chicken-800.webp",
-      "srcset": "recipes/bbq-chicken-400.webp 400w, recipes/bbq-chicken-800.webp 800w, recipes/bbq-chicken-1200.webp 1200w",
+      "src": "recipes/bbq-chicken-sheet-pan-pizza-800.webp",
+      "srcset": "recipes/bbq-chicken-sheet-pan-pizza-400.webp 400w, recipes/bbq-chicken-sheet-pan-pizza-800.webp 800w, recipes/bbq-chicken-sheet-pan-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdL1yBluA95Baz8EQnQADOIw+0agNV74nO4jI/kC9g0VhM1oXg7qTZAmOGhoXJynFdifmz9KWmO/7EbmS+dIfxXoHqz+3deymOM0IlFCUx1O5+sKu+RqfiKXVjshGm/EnYlD85Dqz2xi41Z0wA"
@@ -6745,9 +6849,9 @@
     ]
   },
   {
-    "id": "cheese-and-pepperoni",
-    "title": "Cheese And Pepperoni",
-    "category": "Dinner is Served",
+    "id": "cheese-and-pepperoni-sheet-pan-pizza",
+    "title": "Cheese and Pepperoni Sheet Pan Pizza",
+    "category": "Dinner",
     "servings": 32,
     "macros": {
       "calories": 116,
@@ -6813,13 +6917,8 @@
           {
             "amount": 250,
             "unit": "g",
-            "item": "FOOLPROOF HOMEMADE"
-          }
-        ]
-      },
-      {
-        "name": "MARINARA",
-        "ingredients": [
+            "item": "Foolproof Homemade Marinara"
+          },
           {
             "amount": 476,
             "unit": "g",
@@ -6876,8 +6975,8 @@
       }
     ],
     "image": {
-      "src": "recipes/cheese-and-pepperoni-800.webp",
-      "srcset": "recipes/cheese-and-pepperoni-400.webp 400w, recipes/cheese-and-pepperoni-800.webp 800w, recipes/cheese-and-pepperoni-1200.webp 1200w",
+      "src": "recipes/cheese-and-pepperoni-sheet-pan-pizza-800.webp",
+      "srcset": "recipes/cheese-and-pepperoni-sheet-pan-pizza-400.webp 400w, recipes/cheese-and-pepperoni-sheet-pan-pizza-800.webp 800w, recipes/cheese-and-pepperoni-sheet-pan-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR2WCmkch+zf1/SBygnSWAA/jx4+AB3jMd5xbAKqYYxD0AlN0H0ZviGCdl3I3MSUP/EJPw02+WwhrWi4d6FgXCNoVIFDDwGRP0iky2ggTsntBdE8vv9j8n4W9/AAA=="
@@ -6900,12 +6999,6 @@
         "kind": "group",
         "target": "DOUGH",
         "seconds": null
-      },
-      {
-        "raw": "MARINARA",
-        "kind": "group",
-        "target": "MARINARA",
-        "seconds": null
       }
     ],
     "sourcePages": [
@@ -6916,7 +7009,7 @@
   {
     "id": "pan-pizza",
     "title": "Pan Pizza",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 983,
@@ -6967,13 +7060,8 @@
           {
             "amount": 100,
             "unit": "g",
-            "item": "FOOLPROOF HOMEMADE"
-          }
-        ]
-      },
-      {
-        "name": "MARINARA",
-        "ingredients": [
+            "item": "Foolproof Homemade Marinara"
+          },
           {
             "amount": 5,
             "unit": "g",
@@ -7057,7 +7145,7 @@
   {
     "id": "deep-dish-pizza",
     "title": "Deep Dish Pizza",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 8,
     "macros": {
       "calories": 363,
@@ -7290,9 +7378,9 @@
     ]
   },
   {
-    "id": "lous-sausage",
-    "title": "Lou’S Sausage",
-    "category": "Dinner is Served",
+    "id": "lous-sausage-deep-dish-pizza",
+    "title": "Lou’s Sausage Deep Dish Pizza",
+    "category": "Dinner",
     "servings": 6,
     "macros": {
       "calories": 387,
@@ -7491,8 +7579,8 @@
       }
     ],
     "image": {
-      "src": "recipes/lous-sausage-800.webp",
-      "srcset": "recipes/lous-sausage-400.webp 400w, recipes/lous-sausage-800.webp 800w, recipes/lous-sausage-1200.webp 1200w",
+      "src": "recipes/lous-sausage-deep-dish-pizza-800.webp",
+      "srcset": "recipes/lous-sausage-deep-dish-pizza-400.webp 400w, recipes/lous-sausage-deep-dish-pizza-800.webp 800w, recipes/lous-sausage-deep-dish-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdIIjguxfuLpcsXbzbVAD+8SCmb3hmM+XYlgx1ooXfh+97gVz+ub1p1Q13LGKumQVKBgB2prsR+bdWlOt9/km/ALkJUNmCc+rSw54dT0WMVBE3z7Jjl8C6GbETZOcElHfxMWQyOkNJ4w6LnxhD2soqKqz3JDqn0MAA"
@@ -7521,9 +7609,9 @@
     ]
   },
   {
-    "id": "chicken",
-    "title": "Chicken",
-    "category": "Dinner is Served",
+    "id": "chicken-alfredo-pizza",
+    "title": "Chicken Alfredo Pizza",
+    "category": "Dinner",
     "servings": 1,
     "macros": {
       "calories": 903,
@@ -7674,8 +7762,8 @@
       }
     ],
     "image": {
-      "src": "recipes/chicken-800.webp",
-      "srcset": "recipes/chicken-400.webp 400w, recipes/chicken-800.webp 800w, recipes/chicken-1200.webp 1200w",
+      "src": "recipes/chicken-alfredo-pizza-800.webp",
+      "srcset": "recipes/chicken-alfredo-pizza-400.webp 400w, recipes/chicken-alfredo-pizza-800.webp 800w, recipes/chicken-alfredo-pizza-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoADTfOZT7ij4vJKhKAA/vLxcsMZ5bsa56u9z48IejPjDHc/xGO6HMqOXOWxEfIeN+vGqC2fv2a1bpw8gO6XyBDF3DFMUjHS/YXG/U8D1jK0tisBUAAtIAAA"
@@ -7702,7 +7790,7 @@
   {
     "id": "italian-beef-pizza",
     "title": "Italian Beef Pizza",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 4,
     "macros": {
       "calories": 479,
@@ -7784,7 +7872,7 @@
         ]
       },
       {
-        "name": "AUJUS",
+        "name": "AU JUS",
         "ingredients": [
           {
             "amount": 1,
@@ -7865,6 +7953,46 @@
             "amount": 24,
             "unit": "g",
             "item": "beef bouillon (INGREDIENTS CONTINUE)"
+          }
+        ]
+      },
+      {
+        "name": "PIZZA BUILD",
+        "ingredients": [
+          {
+            "amount": 130,
+            "unit": "g",
+            "item": "pizza sauce"
+          },
+          {
+            "amount": 224,
+            "unit": "g",
+            "item": "italian beef, thinly sliced"
+          },
+          {
+            "amount": 120,
+            "unit": "g",
+            "item": "giardiniera"
+          },
+          {
+            "amount": 8,
+            "unit": "g",
+            "item": "pecorino romano cheese, grated"
+          },
+          {
+            "amount": 8,
+            "unit": "g",
+            "item": "parmigiano reggiano cheese, grated"
+          },
+          {
+            "amount": 112,
+            "unit": "g",
+            "item": "fat-free mozzarella cheese, shredded"
+          },
+          {
+            "amount": 187,
+            "unit": "g",
+            "item": "part-skim mozzarella cheese, thinly sliced Corn meal"
           }
         ]
       }
@@ -7982,6 +8110,12 @@
         "seconds": null
       },
       {
+        "raw": "AU JUS",
+        "kind": "group",
+        "target": "AU JUS",
+        "seconds": null
+      },
+      {
         "raw": "PIZZA SAUCE",
         "kind": "group",
         "target": "PIZZA SAUCE",
@@ -7997,7 +8131,7 @@
   {
     "id": "detroit-pizza",
     "title": "Detroit Pizza",
-    "category": "Dinner is Served",
+    "category": "Dinner",
     "servings": 2,
     "macros": {
       "calories": 612,
@@ -8205,7 +8339,7 @@
   {
     "id": "candied-pecans",
     "title": "Candied Pecans",
-    "category": "Sweet Treats",
+    "category": "Desserts",
     "servings": 8,
     "macros": {
       "calories": 147,
@@ -8340,7 +8474,7 @@
   {
     "id": "crispy-rice-squares",
     "title": "Crispy Rice Squares",
-    "category": "Sweet Treats",
+    "category": "Desserts",
     "servings": 9,
     "macros": {
       "calories": 150,
@@ -8445,9 +8579,9 @@
     ]
   },
   {
-    "id": "oreo-mcflurry",
-    "title": "Oreo McFlurry",
-    "category": "Blender Ice Cream",
+    "id": "cookies-n-cream-nickflurry",
+    "title": "Cookies N’ Cream Nickflurry",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 547,
@@ -8463,8 +8597,13 @@
           {
             "amount": 480,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 130,
             "unit": "g",
@@ -8483,8 +8622,13 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -8559,8 +8703,8 @@
       }
     ],
     "image": {
-      "src": "recipes/oreo-mcflurry-800.webp",
-      "srcset": "recipes/oreo-mcflurry-400.webp 400w, recipes/oreo-mcflurry-800.webp 800w, recipes/oreo-mcflurry-1200.webp 1200w",
+      "src": "recipes/cookies-n-cream-nickflurry-800.webp",
+      "srcset": "recipes/cookies-n-cream-nickflurry-400.webp 400w, recipes/cookies-n-cream-nickflurry-800.webp 800w, recipes/cookies-n-cream-nickflurry-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBdmUABflMqghvqk1EPtoAD+zdBXoQAGpCVIHpwJ1uhjcx2Dz4qebxqIZ3HC5iVOgpKQYbeWKZNAC8NBdvaQtdGWNMrdCvDMiYawsYcX12s7FYTxoJ+Ddicsbhe2YX+nlMrHiJwAAA=="
@@ -8569,16 +8713,29 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       169,
       170
     ]
   },
   {
-    "id": "crunchy-cinnamon-squares",
-    "title": "Crunchy Cinnamon Squares",
-    "category": "Blender Ice Cream",
+    "id": "crunchy-cinnamon-squares-protein-ice-cream-v1",
+    "title": "Crunchy Cinnamon Squares Protein Ice Cream V1",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 368,
@@ -8594,8 +8751,13 @@
           {
             "amount": 440,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 84,
             "unit": "g",
@@ -8614,8 +8776,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -8681,8 +8848,8 @@
       }
     ],
     "image": {
-      "src": "recipes/crunchy-cinnamon-squares-800.webp",
-      "srcset": "recipes/crunchy-cinnamon-squares-400.webp 400w, recipes/crunchy-cinnamon-squares-800.webp 800w, recipes/crunchy-cinnamon-squares-1200.webp 1200w",
+      "src": "recipes/crunchy-cinnamon-squares-protein-ice-cream-v1-800.webp",
+      "srcset": "recipes/crunchy-cinnamon-squares-protein-ice-cream-v1-400.webp 400w, recipes/crunchy-cinnamon-squares-protein-ice-cream-v1-800.webp 800w, recipes/crunchy-cinnamon-squares-protein-ice-cream-v1-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JYgC7MoADCp+xOhvoupahTkAA/uPAPGQ03+Fl/JXmNYJbJ42Mbkd7j8gffaSTti2h2OJ8mQoNWCOWgwQJ6p0jArqgHokxHbECEweASiMGvoN6+2H/eKjhvNtkhOu+zVn6wO8T96NlnuxmLQAAAA=="
@@ -8691,16 +8858,29 @@
     "prepTimeMin": 6,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       171,
       172
     ]
   },
   {
-    "id": "crunchy-cinnamon-square",
-    "title": "Crunchy Cinnamon Square",
-    "category": "Blender Ice Cream",
+    "id": "crunchy-cinnamon-square-protein-ice-cream-v2",
+    "title": "Crunchy Cinnamon Square Protein Ice Cream V2",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 394,
@@ -8716,8 +8896,13 @@
           {
             "amount": 420,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 80,
             "unit": "g",
@@ -8736,8 +8921,13 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -8817,8 +9007,8 @@
       }
     ],
     "image": {
-      "src": "recipes/crunchy-cinnamon-square-800.webp",
-      "srcset": "recipes/crunchy-cinnamon-square-400.webp 400w, recipes/crunchy-cinnamon-square-800.webp 800w, recipes/crunchy-cinnamon-square-1200.webp 1200w",
+      "src": "recipes/crunchy-cinnamon-square-protein-ice-cream-v2-800.webp",
+      "srcset": "recipes/crunchy-cinnamon-square-protein-ice-cream-v2-400.webp 400w, recipes/crunchy-cinnamon-square-protein-ice-cream-v2-800.webp 800w, recipes/crunchy-cinnamon-square-protein-ice-cream-v2-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZAC7MoMYJn/AfVjbt9xN/x96PwAA/vKv2fLyktaHaXgzsimzyQHzPg4dpj53ZbtkSht2jVmDBApDr9OlG+ui/znanbHY03SKkik5t8HZbXeY0YVus8Z1Srw8v28QEwZW90ynB2PgEI09Db2s9jb0AAA="
@@ -8827,16 +9017,29 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       173,
       174
     ]
   },
   {
-    "id": "mint-chocolate-cookie",
-    "title": "Mint Chocolate Cookie",
-    "category": "Blender Ice Cream",
+    "id": "mint-chocolate-cookie-protein-ice-cream",
+    "title": "Mint Chocolate Cookie Protein Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 571,
@@ -8852,8 +9055,13 @@
           {
             "amount": 480,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 84,
             "unit": "g",
@@ -8882,8 +9090,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 10,
             "unit": "g",
@@ -8957,8 +9170,8 @@
       }
     ],
     "image": {
-      "src": "recipes/mint-chocolate-cookie-800.webp",
-      "srcset": "recipes/mint-chocolate-cookie-400.webp 400w, recipes/mint-chocolate-cookie-800.webp 800w, recipes/mint-chocolate-cookie-1200.webp 1200w",
+      "src": "recipes/mint-chocolate-cookie-protein-ice-cream-800.webp",
+      "srcset": "recipes/mint-chocolate-cookie-protein-ice-cream-400.webp 400w, recipes/mint-chocolate-cookie-protein-ice-cream-800.webp 800w, recipes/mint-chocolate-cookie-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZAC7MoACYZbWpQeJu5LbvAD+2gz2Y9Ur4F9XeqBEHzAlOvcNiPi+19XHBV/qn4vcYhn1klFhXEfZBiiSO5R+8VahKTja+0D1Ey486Lnxf1trEBbM7hXmsEHS48W0VREarBdivRiv4scBffK0QuBQAAA="
@@ -8967,16 +9180,29 @@
     "prepTimeMin": 6,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       175,
       176
     ]
   },
   {
-    "id": "salted-caramel-fudge",
-    "title": "Salted Caramel Fudge",
-    "category": "Blender Ice Cream",
+    "id": "salted-caramel-fudge-brownie-protein-ice-cream",
+    "title": "Salted Caramel Fudge Brownie Protein Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 523,
@@ -8990,30 +9216,15 @@
         "name": "Ingredients",
         "ingredients": [
           {
-            "amount": 400,
-            "unit": "g",
-            "item": "ice S P I N 1"
-          },
-          {
-            "amount": 90,
-            "unit": "g",
-            "item": "fat-free milk"
-          },
-          {
-            "amount": 90,
-            "unit": "g",
-            "item": "fat-free Greek yogurt"
-          },
-          {
-            "amount": 4.2,
-            "unit": "g",
-            "item": "vanilla extract"
-          },
-          {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9103,8 +9314,8 @@
       }
     ],
     "image": {
-      "src": "recipes/salted-caramel-fudge-800.webp",
-      "srcset": "recipes/salted-caramel-fudge-400.webp 400w, recipes/salted-caramel-fudge-800.webp 800w, recipes/salted-caramel-fudge-1200.webp 1200w",
+      "src": "recipes/salted-caramel-fudge-brownie-protein-ice-cream-800.webp",
+      "srcset": "recipes/salted-caramel-fudge-brownie-protein-ice-cream-400.webp 400w, recipes/salted-caramel-fudge-brownie-protein-ice-cream-800.webp 800w, recipes/salted-caramel-fudge-brownie-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdMoAC/LQu57efDqoimoAA/vK0IDOTnkOMSFceeihcNolp4LUoguQKvRaO5Hf9eeETmelboho1lEq414ogb8qfU/3ipSKCj9Guy0VGIc09JwUEvYwL7Xh2gkTucHlhtgZ79FoKGLsZxUrZUDkAxtNEogRuNllhAAAA"
@@ -9115,7 +9326,14 @@
     "tips": [
       "For an even better eating experience, after step 7, line a large glass with the sea salt caramel. Then sprinkle some of the Mix-ins into the glass which will stick directly onto the caramel. Pour the ice cream into your glass, top with remaining caramel and Mix-ins, and continually get bites filled with caramel, Oreo®, and brownie as you eat your way down the glass."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       177,
       178
@@ -9124,7 +9342,7 @@
   {
     "id": "smoresg-protein-ice-cream",
     "title": "SmoresG Protein Ice Cream",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 460,
@@ -9140,8 +9358,13 @@
           {
             "amount": 480,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 84,
             "unit": "g",
@@ -9165,8 +9388,13 @@
           {
             "amount": 6,
             "unit": null,
-            "item": "large marshmallows (150 Cal) S P I N 2"
-          },
+            "item": "large marshmallows (150 Cal)"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9249,7 +9477,20 @@
     "prepTimeMin": 10,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       179,
       180
@@ -9258,7 +9499,7 @@
   {
     "id": "cotton-candyg-protein-ice-cream",
     "title": "Cotton CandyG Protein Ice Cream",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 384,
@@ -9274,8 +9515,13 @@
           {
             "amount": 460,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 70,
             "unit": "g",
@@ -9299,8 +9545,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9375,7 +9626,20 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       181,
       182
@@ -9384,7 +9648,7 @@
   {
     "id": "oatmeal-creme-pieg-protein-ice-cream",
     "title": "Oatmeal Creme PieG Protein Ice Cream",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 432,
@@ -9398,30 +9662,15 @@
         "name": "Ingredients",
         "ingredients": [
           {
-            "amount": 420,
-            "unit": "g",
-            "item": "ice S P I N 1"
-          },
-          {
-            "amount": 75,
-            "unit": "g",
-            "item": "fat-free milk"
-          },
-          {
-            "amount": 75,
-            "unit": "g",
-            "item": "fat-free Greek yogurt"
-          },
-          {
-            "amount": 4.2,
-            "unit": "g",
-            "item": "vanilla extract"
-          },
-          {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9515,16 +9764,23 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       183,
       184
     ]
   },
   {
-    "id": "nutella-ice-cream",
-    "title": "Nutella Ice Cream",
-    "category": "Blender Ice Cream",
+    "id": "hazelnut-protein-ice-cream",
+    "title": "Hazelnut Protein Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 492,
@@ -9540,8 +9796,13 @@
           {
             "amount": 500,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 90,
             "unit": "g",
@@ -9565,8 +9826,13 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9644,8 +9910,8 @@
       }
     ],
     "image": {
-      "src": "recipes/nutella-ice-cream-800.webp",
-      "srcset": "recipes/nutella-ice-cream-400.webp 400w, recipes/nutella-ice-cream-800.webp 800w, recipes/nutella-ice-cream-1200.webp 1200w",
+      "src": "recipes/hazelnut-protein-ice-cream-800.webp",
+      "srcset": "recipes/hazelnut-protein-ice-cream-400.webp 400w, recipes/hazelnut-protein-ice-cream-800.webp 800w, recipes/hazelnut-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdMoMjb0fBmpdrnv+5pU9NosAA/uZpwKW1xf+pZFMAlWgJKfmPYSy8q7uTuITe4JqIyWRLLRhrddNIxmGfKUvT7XNABlBv09eSVNRd6pextDjWMqzOQ78bhckBhRz/ZlHZqjC63lA5+6o13wKURxC5MuhZB0MEkaQtSVpHQ7gJdgRpozt+UnhsoAAA"
@@ -9654,7 +9920,20 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       185,
       186
@@ -9663,7 +9942,7 @@
   {
     "id": "caramel-pumpkin-spiceg-protein-ice-cream",
     "title": "Caramel Pumpkin SpiceG Protein Ice Cream",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 505,
@@ -9679,8 +9958,13 @@
           {
             "amount": 480,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 122,
             "unit": "g",
@@ -9699,8 +9983,13 @@
           {
             "amount": 4.2,
             "unit": "g",
-            "item": "vanilla extract S P I N 2"
-          },
+            "item": "vanilla extract"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9791,6 +10080,18 @@
         "kind": "group",
         "target": "BLENDER",
         "seconds": null
+      },
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
       }
     ],
     "sourcePages": [
@@ -9801,7 +10102,7 @@
   {
     "id": "cookie-doughg-protein-ice-cream-dough",
     "title": "Cookie DoughG Protein Ice Cream DOUGH",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 501,
@@ -9817,8 +10118,13 @@
           {
             "amount": 400,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 18,
             "unit": "g",
@@ -9842,8 +10148,13 @@
           {
             "amount": 1.5,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -9933,16 +10244,29 @@
     "tips": [
       "For a more aesthetic milkshake, line the drinking container with a third of the cookie dough, mix in a third of the cookie dough, and top with a third of the cookie dough."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       189,
       190
     ]
   },
   {
-    "id": "lemon-ice-cream",
-    "title": "Lemon Ice Cream",
-    "category": "Blender Ice Cream",
+    "id": "lemon-protein-ice-cream",
+    "title": "Lemon Protein Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 506,
@@ -9958,8 +10282,13 @@
           {
             "amount": 420,
             "unit": "g",
-            "item": "Ice S P I N 1"
-          },
+            "item": "Ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 56,
             "unit": "g",
@@ -9988,8 +10317,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10058,8 +10392,8 @@
       }
     ],
     "image": {
-      "src": "recipes/lemon-ice-cream-800.webp",
-      "srcset": "recipes/lemon-ice-cream-400.webp 400w, recipes/lemon-ice-cream-800.webp 800w, recipes/lemon-ice-cream-1200.webp 1200w",
+      "src": "recipes/lemon-protein-ice-cream-800.webp",
+      "srcset": "recipes/lemon-protein-ice-cream-400.webp 400w, recipes/lemon-protein-ice-cream-800.webp 800w, recipes/lemon-protein-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JQBfuKA6tsBrdMKzKDpolvTMqgAD+3IVgMkx/WG8nKfgGkPEUDzJaWxyRzAvOSVdVe91RFZ5hbir7I8QToKUzAWRXW1RhNh3Je4wh0tP3C8sfp045edqIodAdULHnYUaDqKcSnhywAAAA"
@@ -10068,16 +10402,29 @@
     "prepTimeMin": 12,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       191,
       192
     ]
   },
   {
-    "id": "peanut-butter-cup",
-    "title": "Peanut Butter Cup",
-    "category": "Blender Ice Cream",
+    "id": "peanut-butter-cup-milkshake",
+    "title": "Peanut Butter Cup Milkshake",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 558,
@@ -10093,8 +10440,13 @@
           {
             "amount": 460,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 120,
             "unit": "g",
@@ -10108,8 +10460,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10189,8 +10546,8 @@
       }
     ],
     "image": {
-      "src": "recipes/peanut-butter-cup-800.webp",
-      "srcset": "recipes/peanut-butter-cup-400.webp 400w, recipes/peanut-butter-cup-800.webp 800w, recipes/peanut-butter-cup-1200.webp 1200w",
+      "src": "recipes/peanut-butter-cup-milkshake-800.webp",
+      "srcset": "recipes/peanut-butter-cup-milkshake-400.webp 400w, recipes/peanut-butter-cup-milkshake-800.webp 800w, recipes/peanut-butter-cup-milkshake-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACxC8I/+AsbkJdppFXdNpxAAP7m5/DVYA8QbYrfSWN3gqGynexj6Pe2bfepJG+un80CwcQA4i4HiH+R6ivUZALdryA5EZoZiIweMVIEGhiEs07jVRgEz5KIGLvuEjutAAAA"
@@ -10201,7 +10558,20 @@
     "tips": [
       "Leave Reese’s® in the freezer to make them easier to chop when ready to make a shake. This will also slow the melting process of the milkshake so you can enjoy for longer."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       193,
       194
@@ -10210,7 +10580,7 @@
   {
     "id": "strawberry-donut-milkshake",
     "title": "Strawberry Donut Milkshake",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 513,
@@ -10226,8 +10596,13 @@
           {
             "amount": 360,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 100,
             "unit": "g",
@@ -10256,8 +10631,13 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10339,16 +10719,29 @@
     "tips": [
       "You can use pre-packaged frozen strawberries or buy your own from the store. If you buy fresh from the produce sections just cut off the stem of the strawberries and add them to a plastic bag. They should be frozen and ready to go in just a few hours. T I P : If you want an even deeper strawberry flavor, substitute some of the ice for frozen strawberries. Just make sure you account for any changes in your calorie tracking. Also, depending on the freshness and sweetness of your strawberries you may need to add more or less granulated erythritol."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       195,
       196
     ]
   },
   {
-    "id": "birthday-cake",
-    "title": "Birthday Cake",
-    "category": "Blender Ice Cream",
+    "id": "birthday-cake-milkshake",
+    "title": "Birthday Cake Milkshake",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 464,
@@ -10364,8 +10757,13 @@
           {
             "amount": 440,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 84,
             "unit": "g",
@@ -10389,8 +10787,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10459,8 +10862,8 @@
       }
     ],
     "image": {
-      "src": "recipes/birthday-cake-800.webp",
-      "srcset": "recipes/birthday-cake-400.webp 400w, recipes/birthday-cake-800.webp 800w, recipes/birthday-cake-1200.webp 1200w",
+      "src": "recipes/birthday-cake-milkshake-800.webp",
+      "srcset": "recipes/birthday-cake-milkshake-400.webp 400w, recipes/birthday-cake-milkshake-800.webp 800w, recipes/birthday-cake-milkshake-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoADZg0wSMm1cmc6NuRgAP70Lyf8x/J2yTN5uS02hlkBFrs67m92adKtND3SDAzLBZqX4Guge0HGcsOvpO8ZiqshUenVWHlOZ33XBX8GS9aVeTIWajdeNvIGpexXjQkQcc1I6tzpD7sBAWV4S+rLvfr4M2qWyry2pP1zxeWM/VwAAA=="
@@ -10469,7 +10872,20 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       197,
       198
@@ -10478,7 +10894,7 @@
   {
     "id": "chicfila-peppermint-milkshake",
     "title": "Chicfila Peppermint Milkshake",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 507,
@@ -10491,21 +10907,6 @@
       {
         "name": "Ingredients",
         "ingredients": [
-          {
-            "amount": 440,
-            "unit": "g",
-            "item": "ice S P I N 1"
-          },
-          {
-            "amount": 160,
-            "unit": "g",
-            "item": "1% milk"
-          },
-          {
-            "amount": 140,
-            "unit": "g",
-            "item": "fat-free Greek yogurt"
-          },
           {
             "amount": 4.2,
             "unit": "g",
@@ -10524,8 +10925,13 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10610,16 +11016,23 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       199,
       200
     ]
   },
   {
-    "id": "chocolate-chip",
-    "title": "Chocolate Chip",
-    "category": "Blender Ice Cream",
+    "id": "chocolate-chip-cookie-freeze",
+    "title": "Chocolate Chip Cookie Freeze",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 497,
@@ -10635,8 +11048,13 @@
           {
             "amount": 420,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 65,
             "unit": "g",
@@ -10660,8 +11078,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10743,8 +11166,8 @@
       }
     ],
     "image": {
-      "src": "recipes/chocolate-chip-800.webp",
-      "srcset": "recipes/chocolate-chip-400.webp 400w, recipes/chocolate-chip-800.webp 800w, recipes/chocolate-chip-1200.webp 1200w",
+      "src": "recipes/chocolate-chip-cookie-freeze-800.webp",
+      "srcset": "recipes/chocolate-chip-cookie-freeze-400.webp 400w, recipes/chocolate-chip-cookie-freeze-800.webp 800w, recipes/chocolate-chip-cookie-freeze-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoBnAVOG50adYcCOaZ8lvtgAAP7zFyAeCDX/XZ9uLgio2VvfwXBjfKvwJUGxxV1UnSpn6W6QcSaAx/P5edA4+qkVBLsVC8dRLvapN+3GAqaqbpQriWrwMJFXycDwKGo3drLzAtSn3vFPnOOw0LXYBcepsjJyB0DGQe9AAA=="
@@ -10755,7 +11178,20 @@
     "tips": [
       "For a more aesthetic freeze along with cookie dough bites throughout, line the drinking container with a third of the cookie dough, add some of the chopped cookies, and mix in the remaining cookie dough/cookie pieces."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       201,
       202
@@ -10764,7 +11200,7 @@
   {
     "id": "animal-cracker-blizzard",
     "title": "Animal Cracker Blizzard",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 489,
@@ -10775,7 +11211,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "HOMEMADEFROSTING",
+        "name": "HOMEMADE FROSTING",
         "ingredients": [
           {
             "amount": 226,
@@ -10800,13 +11236,18 @@
         ]
       },
       {
-        "name": "ANIMALCRACKERFREEZE",
+        "name": "ANIMAL CRACKER FREEZE",
         "ingredients": [
           {
             "amount": 460,
             "unit": "g",
-            "item": "Ice S P I N 1"
-          },
+            "item": "Ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 70,
             "unit": "g",
@@ -10830,8 +11271,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -10929,7 +11375,26 @@
     "tips": [
       "If you want the cream to look more aesthetic put a gallon bag in a cup, add frosting to it, cut the tip of the bag off, and pipe the frosting on top of your freeze."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "HOMEMADE FROSTING",
+        "kind": "group",
+        "target": "HOMEMADE FROSTING",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       203,
       204
@@ -10938,7 +11403,7 @@
   {
     "id": "mint-cookie-freeze",
     "title": "Mint Cookie Freeze",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 490,
@@ -10954,8 +11419,13 @@
           {
             "amount": 460,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 65,
             "unit": "g",
@@ -10984,8 +11454,13 @@
           {
             "amount": 1,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -11064,7 +11539,20 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       205,
       206
@@ -11073,7 +11561,7 @@
   {
     "id": "pecan-pie-blizzard",
     "title": "Pecan Pie Blizzard",
-    "category": "Blender Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 594,
@@ -11087,30 +11575,15 @@
         "name": "Ingredients",
         "ingredients": [
           {
-            "amount": 480,
-            "unit": "g",
-            "item": "ice S P I N 1"
-          },
-          {
-            "amount": 120,
-            "unit": "g",
-            "item": "fat-free milk"
-          },
-          {
-            "amount": 120,
-            "unit": "g",
-            "item": "fat-free Greek yogurt"
-          },
-          {
-            "amount": 4.2,
-            "unit": "g",
-            "item": "vanilla extract"
-          },
-          {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -11209,16 +11682,23 @@
     "tips": [
       "For a more aesthetic freeze, line the inside of a large glass with ¾ of the caramel after step 7 and immediately pour it into the glass. Top with the remaining Mix-ins and caramel and enjoy!"
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       207,
       208
     ]
   },
   {
-    "id": "strawberry-frosty",
-    "title": "Strawberry Frosty",
-    "category": "Blender Ice Cream",
+    "id": "strawberry-soft-serve",
+    "title": "Strawberry Soft Serve",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 388,
@@ -11234,8 +11714,13 @@
           {
             "amount": 470,
             "unit": "g",
-            "item": "ice S P I N 1"
-          },
+            "item": "ice"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 1",
+        "ingredients": [
           {
             "amount": 110,
             "unit": "g",
@@ -11254,8 +11739,13 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "salt S P I N 2"
-          },
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "SPIN 2",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
@@ -11311,8 +11801,8 @@
       }
     ],
     "image": {
-      "src": "recipes/strawberry-frosty-800.webp",
-      "srcset": "recipes/strawberry-frosty-400.webp 400w, recipes/strawberry-frosty-800.webp 800w, recipes/strawberry-frosty-1200.webp 1200w",
+      "src": "recipes/strawberry-soft-serve-800.webp",
+      "srcset": "recipes/strawberry-soft-serve-400.webp 400w, recipes/strawberry-soft-serve-800.webp 800w, recipes/strawberry-soft-serve-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoQABQAPu1iqk2ppaQiMAgBMB2JQAALfh9bb8V/v7UjWgAA/psY2hDsYGkPpMvJfm9fUXfrLe7SWkrW/ndWmoDyee3xCSW5P95pDKDuJNo81OlOl1IK3WfBvp5w4YTtROyvEi1gAAA="
@@ -11321,16 +11811,29 @@
     "prepTimeMin": 8,
     "cookTimeMin": 4,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "SPIN 1",
+        "kind": "group",
+        "target": "SPIN 1",
+        "seconds": null
+      },
+      {
+        "raw": "SPIN 2",
+        "kind": "group",
+        "target": "SPIN 2",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       209,
       210
     ]
   },
   {
-    "id": "vanilla-base",
-    "title": "Vanilla Base",
-    "category": "Ice Cream Pints",
+    "id": "vanilla-base-good",
+    "title": "Vanilla Base “good”",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 143,
@@ -11420,8 +11923,8 @@
       }
     ],
     "image": {
-      "src": "recipes/vanilla-base-800.webp",
-      "srcset": "recipes/vanilla-base-400.webp 400w, recipes/vanilla-base-800.webp 800w, recipes/vanilla-base-1200.webp 1200w",
+      "src": "recipes/vanilla-base-good-800.webp",
+      "srcset": "recipes/vanilla-base-good-400.webp 400w, recipes/vanilla-base-good-800.webp 800w, recipes/vanilla-base-good-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZQAAW9vmeZvBULDQMDGfAAD+8OxkoggKN49FnmpS6GiuFMPibbpABUKoZgB67DVhV/kphZWS5+775xFzyBPTuMZ7nGgjvpFXgINBYgeNn2RyMjvovD7NwAA="
@@ -11450,9 +11953,9 @@
     ]
   },
   {
-    "id": "vanilla-base-2",
-    "title": "Vanilla Base",
-    "category": "Ice Cream Pints",
+    "id": "vanilla-base-better",
+    "title": "Vanilla Base “better”",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 201,
@@ -11537,8 +12040,8 @@
       }
     ],
     "image": {
-      "src": "recipes/vanilla-base-2-800.webp",
-      "srcset": "recipes/vanilla-base-2-400.webp 400w, recipes/vanilla-base-2-800.webp 800w, recipes/vanilla-base-2-1200.webp 1200w",
+      "src": "recipes/vanilla-base-better-800.webp",
+      "srcset": "recipes/vanilla-base-better-400.webp 400w, recipes/vanilla-base-better-800.webp 800w, recipes/vanilla-base-better-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JQBOmUABlJSC/65/8l3ePBMCAAP66gPpV77+lIl/kiDNOEmi95B17+rElL6VDZWtwF2Ru8BfCOlgPQvaW4NOANCaHAgVG9o8FntxjefI0tgo4BYiiTq8VHceAAA=="
@@ -11567,9 +12070,9 @@
     ]
   },
   {
-    "id": "vanilla-base-3",
-    "title": "Vanilla Base",
-    "category": "Ice Cream Pints",
+    "id": "vanilla-base-best",
+    "title": "Vanilla Base “best”",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 285,
@@ -11663,8 +12166,8 @@
       }
     ],
     "image": {
-      "src": "recipes/vanilla-base-3-800.webp",
-      "srcset": "recipes/vanilla-base-3-400.webp 400w, recipes/vanilla-base-3-800.webp 800w, recipes/vanilla-base-3-1200.webp 1200w",
+      "src": "recipes/vanilla-base-best-800.webp",
+      "srcset": "recipes/vanilla-base-best-400.webp 400w, recipes/vanilla-base-best-800.webp 800w, recipes/vanilla-base-best-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZAC/OBoeeU+Otuf+4HQwAP7sLZHgAIific4L0MZu8DAQsUJwx8JORHS7FjGokGiPWJ5aOEST+ak9SQ4othIXLqxGi4x/YFV1xBF2WZEWVQK84BTyEmzdQUIjuu+UCyfgAA=="
@@ -11694,8 +12197,8 @@
   },
   {
     "id": "chocolate-base-good",
-    "title": "Chocolate Base “Good”",
-    "category": "Ice Cream Pints",
+    "title": "Chocolate Base “good”",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 143,
@@ -11821,8 +12324,8 @@
   },
   {
     "id": "chocolate-base-better",
-    "title": "Chocolate Base “Better”",
-    "category": "Ice Cream Pints",
+    "title": "Chocolate Base “better”",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 225,
@@ -11943,8 +12446,8 @@
   },
   {
     "id": "chocolate-base-best",
-    "title": "Chocolate Base “Best”",
-    "category": "Ice Cream Pints",
+    "title": "Chocolate Base “best”",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 345,
@@ -12088,7 +12591,7 @@
   {
     "id": "cookies-cream",
     "title": "Cookies & Cream",
-    "category": "Ice Cream Pints",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 512,
@@ -12230,9 +12733,9 @@
     ]
   },
   {
-    "id": "fruity-crisps",
-    "title": "Fruity Crisps",
-    "category": "Ice Cream Pints",
+    "id": "fruity-crisps-ice-cream",
+    "title": "Fruity Crisps Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 205,
@@ -12332,8 +12835,8 @@
       }
     ],
     "image": {
-      "src": "recipes/fruity-crisps-800.webp",
-      "srcset": "recipes/fruity-crisps-400.webp 400w, recipes/fruity-crisps-800.webp 800w, recipes/fruity-crisps-1200.webp 1200w",
+      "src": "recipes/fruity-crisps-ice-cream-800.webp",
+      "srcset": "recipes/fruity-crisps-ice-cream-400.webp 400w, recipes/fruity-crisps-ice-cream-800.webp 800w, recipes/fruity-crisps-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JagCdMoAC7uvrRyIeYAD+6eqLrkXblVF/wzUo238sitEdp6i262EVGns1xfSj/R7GUDEKy8TtX3Ju9LKYdFbharbJCeD5u8QIzha5H+VX8ulP0ffg68JPe+5ElLRiLSAAAA=="
@@ -12362,9 +12865,9 @@
     ]
   },
   {
-    "id": "crunchy-cinnamon-squares-2",
-    "title": "Crunchy Cinnamon Squares",
-    "category": "Ice Cream Pints",
+    "id": "crunchy-cinnamon-squares-ice-cream",
+    "title": "Crunchy Cinnamon Squares Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 162,
@@ -12464,8 +12967,8 @@
       }
     ],
     "image": {
-      "src": "recipes/crunchy-cinnamon-squares-2-800.webp",
-      "srcset": "recipes/crunchy-cinnamon-squares-2-400.webp 400w, recipes/crunchy-cinnamon-squares-2-800.webp 800w, recipes/crunchy-cinnamon-squares-2-1200.webp 1200w",
+      "src": "recipes/crunchy-cinnamon-squares-ice-cream-800.webp",
+      "srcset": "recipes/crunchy-cinnamon-squares-ice-cream-400.webp 400w, recipes/crunchy-cinnamon-squares-ice-cream-800.webp 800w, recipes/crunchy-cinnamon-squares-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZACdMoAC8QZDGBzg2JYpN8AA/u7CS1GTInTk+XI3U4+l0vKulxVjO1DLe5jWcuggh48CkwnjHurdwaMyyF8PJvFJgb58UFn8VBtiKhyFDWM/tGIzZ4zsmRpHuhpD+bm3siK4pxYFGZHFfd2N2+GzDlQAAA=="
@@ -12494,9 +12997,9 @@
     ]
   },
   {
-    "id": "marshmallows",
-    "title": "Marshmallows +",
-    "category": "Ice Cream Pints",
+    "id": "marshmallows-crisps-ice-cream",
+    "title": "Marshmallows + Crisps Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 160,
@@ -12591,8 +13094,8 @@
       }
     ],
     "image": {
-      "src": "recipes/marshmallows-800.webp",
-      "srcset": "recipes/marshmallows-400.webp 400w, recipes/marshmallows-800.webp 800w, recipes/marshmallows-1200.webp 1200w",
+      "src": "recipes/marshmallows-crisps-ice-cream-800.webp",
+      "srcset": "recipes/marshmallows-crisps-ice-cream-400.webp 400w, recipes/marshmallows-crisps-ice-cream-800.webp 800w, recipes/marshmallows-crisps-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADQBACdASoQABQAPu1iqU2ppaQiMAgBMB2JaAC7L175WngACp1JVwv5VRaOS+0ewAD+6RTZ+1t2BN+iL/j3FyoIcnQN8PyAApPmJnUmBLm4bdz0jUTgwa5jb7r4B6n7nfFbM3MJx298OOZ2nzx414ILgg7bDSIVxhMgEefHeJOri/8oZ3oF7L3JpLzDz4SRLkF6dXEXa80rrdRlAAA="
@@ -12621,9 +13124,9 @@
     ]
   },
   {
-    "id": "peanut-butter-puffs",
-    "title": "Peanut Butter Puffs",
-    "category": "Ice Cream Pints",
+    "id": "peanut-butter-puffs-ice-cream",
+    "title": "Peanut Butter Puffs Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 170,
@@ -12723,8 +13226,8 @@
       }
     ],
     "image": {
-      "src": "recipes/peanut-butter-puffs-800.webp",
-      "srcset": "recipes/peanut-butter-puffs-400.webp 400w, recipes/peanut-butter-puffs-800.webp 800w, recipes/peanut-butter-puffs-1200.webp 1200w",
+      "src": "recipes/peanut-butter-puffs-ice-cream-800.webp",
+      "srcset": "recipes/peanut-butter-puffs-ice-cream-400.webp 400w, recipes/peanut-butter-puffs-ice-cream-800.webp 800w, recipes/peanut-butter-puffs-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACZzTUyeqmphLMbg0MAA+frm6AZFxguuQzdFj3U1RA47tobI1XG1OVI3OrWXcXcF8jfRxiVtQZXy2yFW9QiJzq5mkmjMBa1EYJgHejTFgT2gkSKqJL3EQnFj7yAJdJzy3GKAAAA="
@@ -12753,9 +13256,9 @@
     ]
   },
   {
-    "id": "cookies-n-crunch",
-    "title": "Cookies N’ Crunch",
-    "category": "Ice Cream Pints",
+    "id": "cookies-n-crunch-ice-cream",
+    "title": "Cookies N’ Crunch Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 34,
@@ -12855,8 +13358,8 @@
       }
     ],
     "image": {
-      "src": "recipes/cookies-n-crunch-800.webp",
-      "srcset": "recipes/cookies-n-crunch-400.webp 400w, recipes/cookies-n-crunch-800.webp 800w, recipes/cookies-n-crunch-1200.webp 1200w",
+      "src": "recipes/cookies-n-crunch-ice-cream-800.webp",
+      "srcset": "recipes/cookies-n-crunch-ice-cream-400.webp 400w, recipes/cookies-n-crunch-ice-cream-800.webp 800w, recipes/cookies-n-crunch-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JYgC7ABAYYilxvoNvQAD+ntbAvekxN58+StIrOOX8RuFvN1e1P/L4FAKlQEzVpvsMWhhEXiNwimzDqaxXa1Mn8c1+VEhRXdlZ+7Vh7gsjmEj6nn/Qu3ddObXkNdeWUVDd/gz7z+E5MJdL6Vx4dI1LiUpwpgAA"
@@ -12887,9 +13390,9 @@
     ]
   },
   {
-    "id": "cocoa-crisps",
-    "title": "Cocoa Crisps",
-    "category": "Ice Cream Pints",
+    "id": "cocoa-crisps-ice-cream",
+    "title": "Cocoa Crisps Ice Cream",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 176,
@@ -12984,8 +13487,8 @@
       }
     ],
     "image": {
-      "src": "recipes/cocoa-crisps-800.webp",
-      "srcset": "recipes/cocoa-crisps-400.webp 400w, recipes/cocoa-crisps-800.webp 800w, recipes/cocoa-crisps-1200.webp 1200w",
+      "src": "recipes/cocoa-crisps-ice-cream-800.webp",
+      "srcset": "recipes/cocoa-crisps-ice-cream-400.webp 400w, recipes/cocoa-crisps-ice-cream-800.webp 800w, recipes/cocoa-crisps-ice-cream-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBACdASoQABQAPu1iqU2ppaQiMAgBMB2JZgCdMoMYA0h1kwISmj04/QdqLAD+8N+C/THygkDTAWTKZJ/0kDJkKDGz2igk2WImUu61WwgnBanSGsDxk1CENLyyjJaY6lVb5YKhnnI+BJwcg0YjNFjJS1q4n6ZGZVd1derXfjPCgCEn4jXeuo0Ip+5LLOvtXGI1nG42AAA="
@@ -13018,7 +13521,7 @@
   {
     "id": "apple-pie-ice-cream",
     "title": "Apple Pie Ice Cream",
-    "category": "Ice Cream Pints",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 375,
@@ -13028,26 +13531,6 @@
       "protein": 41
     },
     "ingredientGroups": [
-      {
-        "name": "WET",
-        "ingredients": [
-          {
-            "amount": 410,
-            "unit": "g",
-            "item": "1% milk"
-          },
-          {
-            "amount": 4.2,
-            "unit": "g",
-            "item": "vanilla extract"
-          },
-          {
-            "amount": 1,
-            "unit": null,
-            "item": "egg yolk (or 20g extra milk)"
-          }
-        ]
-      },
       {
         "name": "DRY",
         "ingredients": [
@@ -13160,12 +13643,6 @@
     "tips": [],
     "references": [
       {
-        "raw": "WET",
-        "kind": "group",
-        "target": "WET",
-        "seconds": null
-      },
-      {
         "raw": "DRY",
         "kind": "group",
         "target": "DRY",
@@ -13180,7 +13657,7 @@
   {
     "id": "eggnog-ice-cream",
     "title": "Eggnog Ice Cream",
-    "category": "Ice Cream Pints",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 342,
@@ -13191,23 +13668,8 @@
     },
     "ingredientGroups": [
       {
-        "name": "WET",
+        "name": "Ingredients",
         "ingredients": [
-          {
-            "amount": 290,
-            "unit": "g",
-            "item": "1% milk"
-          },
-          {
-            "amount": 120,
-            "unit": "g",
-            "item": "almond milk eggnog"
-          },
-          {
-            "amount": 4.2,
-            "unit": "g",
-            "item": "vanilla extract"
-          },
           {
             "amount": 1,
             "unit": null,
@@ -13299,12 +13761,6 @@
     "tips": [],
     "references": [
       {
-        "raw": "WET",
-        "kind": "group",
-        "target": "WET",
-        "seconds": null
-      },
-      {
         "raw": "DRY",
         "kind": "group",
         "target": "DRY",
@@ -13319,7 +13775,7 @@
   {
     "id": "cherry-chocolate-chunk",
     "title": "Cherry Chocolate Chunk",
-    "category": "Ice Cream Pints",
+    "category": "Ice Cream",
     "servings": 1,
     "macros": {
       "calories": 497,
@@ -13457,7 +13913,7 @@
   {
     "id": "watermelon-sorbet",
     "title": "Watermelon Sorbet",
-    "category": "Fruit Sorbets",
+    "category": "Sorbets",
     "servings": 1,
     "macros": {
       "calories": 99,
@@ -13478,7 +13934,7 @@
         ]
       },
       {
-        "name": "PINTINGREDIENTS",
+        "name": "PINT INGREDIENTS",
         "ingredients": [
           {
             "amount": 330,
@@ -13574,7 +14030,14 @@
     "tips": [
       "Instead of blending every gram of watermelon, put some chunks in containers to have as a quick snack or great pre-workout meal. T I P : You can buy pre-cut fruit to make the first part of this process go much faster, but it will also be much more expensive to do so. In addition, after you cut and puree the watermelon you will have enough for 10+ sorbets, so it’s worth putting the extra work in."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "PINT INGREDIENTS",
+        "kind": "group",
+        "target": "PINT INGREDIENTS",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       247,
       248
@@ -13583,7 +14046,7 @@
   {
     "id": "strawberry-sorbet",
     "title": "Strawberry Sorbet",
-    "category": "Fruit Sorbets",
+    "category": "Sorbets",
     "servings": 1,
     "macros": {
       "calories": 96,
@@ -13604,7 +14067,7 @@
         ]
       },
       {
-        "name": "PINTINGREDIENTS",
+        "name": "PINT INGREDIENTS",
         "ingredients": [
           {
             "amount": 300,
@@ -13668,7 +14131,14 @@
     "tips": [
       "If you don’t have an immersion blender, you can use a food processor or regular blender to break down the strawberries. T I P : If you want a more ice cream-like consistency, unload the pint after the re-spin and using a spoon, push the contents of the CREAMi® down, smooth and level the surface, and re-spin for a second time."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "PINT INGREDIENTS",
+        "kind": "group",
+        "target": "PINT INGREDIENTS",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       249,
       250
@@ -13677,7 +14147,7 @@
   {
     "id": "cantaloupe-sorbet",
     "title": "Cantaloupe Sorbet",
-    "category": "Fruit Sorbets",
+    "category": "Sorbets",
     "servings": 1,
     "macros": {
       "calories": 102,
@@ -13698,7 +14168,7 @@
         ]
       },
       {
-        "name": "PINTINGREDIENTS",
+        "name": "PINT INGREDIENTS",
         "ingredients": [
           {
             "amount": 300,
@@ -13784,7 +14254,14 @@
     "prepTimeMin": 15,
     "cookTimeMin": 5,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "PINT INGREDIENTS",
+        "kind": "group",
+        "target": "PINT INGREDIENTS",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       251,
       252
@@ -13793,7 +14270,7 @@
   {
     "id": "raspberry-sorbet",
     "title": "Raspberry Sorbet",
-    "category": "Fruit Sorbets",
+    "category": "Sorbets",
     "servings": 1,
     "macros": {
       "calories": 120,
@@ -13874,7 +14351,7 @@
   {
     "id": "grapefruit-sorbet",
     "title": "Grapefruit Sorbet",
-    "category": "Fruit Sorbets",
+    "category": "Sorbets",
     "servings": 1,
     "macros": {
       "calories": 73,
@@ -13967,7 +14444,7 @@
   {
     "id": "peach-sorbet",
     "title": "Peach Sorbet",
-    "category": "Fruit Sorbets",
+    "category": "Sorbets",
     "servings": 1,
     "macros": {
       "calories": 117,
@@ -14189,8 +14666,8 @@
     ]
   },
   {
-    "id": "peanut-butter",
-    "title": "Peanut Butter",
+    "id": "peanut-butter-cookie-dough",
+    "title": "Peanut Butter Cookie Dough",
     "category": "Cookie Dough",
     "servings": 7,
     "macros": {
@@ -14307,8 +14784,8 @@
       }
     ],
     "image": {
-      "src": "recipes/peanut-butter-800.webp",
-      "srcset": "recipes/peanut-butter-400.webp 400w, recipes/peanut-butter-800.webp 800w, recipes/peanut-butter-1200.webp 1200w",
+      "src": "recipes/peanut-butter-cookie-dough-800.webp",
+      "srcset": "recipes/peanut-butter-cookie-dough-400.webp 400w, recipes/peanut-butter-cookie-dough-800.webp 800w, recipes/peanut-butter-cookie-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdEf/gRynKjd2Cxl1mzOVYAP4khsTvJgkmMz7Ihwg2jRNg3rZq64WlKxSVaUrHbA+vvKHarRVqzdqmtP07AwRaFQjRk1nPPa0pCD/czU6Tw8yQcbllo6F2BdiIP3QAAA=="
@@ -14485,8 +14962,8 @@
     ]
   },
   {
-    "id": "oreo-cookie-dough",
-    "title": "Oreo Cookie Dough",
+    "id": "cookies-n-cream-cookie-dough",
+    "title": "Cookies N’ Cream Cookie Dough",
     "category": "Cookie Dough",
     "servings": 8,
     "macros": {
@@ -14603,8 +15080,8 @@
       }
     ],
     "image": {
-      "src": "recipes/oreo-cookie-dough-800.webp",
-      "srcset": "recipes/oreo-cookie-dough-400.webp 400w, recipes/oreo-cookie-dough-800.webp 800w, recipes/oreo-cookie-dough-1200.webp 1200w",
+      "src": "recipes/cookies-n-cream-cookie-dough-800.webp",
+      "srcset": "recipes/cookies-n-cream-cookie-dough-400.webp 400w, recipes/cookies-n-cream-cookie-dough-800.webp 800w, recipes/cookies-n-cream-cookie-dough-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoAC28RdUgg8lgJiAAD+7q8Nb949GMSpnQIAqcmCj3Vxo0eVcJUZw9C8yfJWwtoEv2HAs1CFE9LjmH4dc7W+Dle6fi50NGzSPFO9OJ/KV2M7M25olMF8pKaPsEpo4u6VowGXxSYE1AAAAA=="
@@ -14772,8 +15249,8 @@
   },
   {
     "id": "nickdonalds-french-fries",
-    "title": "Nickdonald’S French Fries",
-    "category": "Shareables",
+    "title": "Nickdonald’s French Fries",
+    "category": "Snacks",
     "servings": 5,
     "macros": {
       "calories": 172,
@@ -14869,7 +15346,7 @@
   {
     "id": "mozzarella-sticks",
     "title": "Mozzarella Sticks",
-    "category": "Shareables",
+    "category": "Snacks",
     "servings": 1,
     "macros": {
       "calories": 498,
@@ -14885,13 +15362,23 @@
           {
             "amount": 6,
             "unit": null,
-            "item": "mozzarella sticks (45 Cal) D R E D G E S TAT I O N 1"
-          },
+            "item": "mozzarella sticks (45 Cal)"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 1",
+        "ingredients": [
           {
             "amount": 30,
             "unit": "g",
-            "item": "all-purpose flour D R E D G E S TAT I O N 2"
-          },
+            "item": "all-purpose flour"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 2",
+        "ingredients": [
           {
             "amount": 1,
             "unit": null,
@@ -14900,8 +15387,13 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "egg white D R E D G E S TAT I O N 3"
-          },
+            "item": "egg white"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 3",
+        "ingredients": [
           {
             "amount": 100,
             "unit": "g",
@@ -14991,7 +15483,26 @@
     "tips": [
       "Keep a close eye on the mozzarella sticks as they will start leaking if cooked for too long. T I P : Put breaded mozzarella sticks in the freezer for one hour or more to allow the mozzarella sticks to achieve a better browning and crisp in the air fryer."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "DREDGE STATION 1",
+        "kind": "group",
+        "target": "DREDGE STATION 1",
+        "seconds": null
+      },
+      {
+        "raw": "DREDGE STATION 2",
+        "kind": "group",
+        "target": "DREDGE STATION 2",
+        "seconds": null
+      },
+      {
+        "raw": "DREDGE STATION 3",
+        "kind": "group",
+        "target": "DREDGE STATION 3",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       275,
       276
@@ -15000,7 +15511,7 @@
   {
     "id": "taco-egg-rolls",
     "title": "Taco Egg Rolls",
-    "category": "Shareables",
+    "category": "Snacks",
     "servings": 14,
     "macros": {
       "calories": 158,
@@ -15011,7 +15522,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "EGGROLLFILLING",
+        "name": "EGGROLL FILLING",
         "ingredients": [
           {
             "amount": null,
@@ -15189,9 +15700,9 @@
     ]
   },
   {
-    "id": "mac-and-cheese",
-    "title": "Mac And Cheese",
-    "category": "Shareables",
+    "id": "mac-and-cheese-egg-rolls",
+    "title": "Mac and Cheese Egg Rolls",
+    "category": "Snacks",
     "servings": 4,
     "macros": {
       "calories": 271,
@@ -15217,7 +15728,7 @@
         ]
       },
       {
-        "name": "CHEESEMIX",
+        "name": "CHEESE MIX",
         "ingredients": [
           {
             "amount": 4,
@@ -15259,7 +15770,7 @@
         ]
       },
       {
-        "name": "EGGROLLBUILD",
+        "name": "EGGROLL BUILD",
         "ingredients": [
           {
             "amount": 4,
@@ -15329,8 +15840,8 @@
       }
     ],
     "image": {
-      "src": "recipes/mac-and-cheese-800.webp",
-      "srcset": "recipes/mac-and-cheese-400.webp 400w, recipes/mac-and-cheese-800.webp 800w, recipes/mac-and-cheese-1200.webp 1200w",
+      "src": "recipes/mac-and-cheese-egg-rolls-800.webp",
+      "srcset": "recipes/mac-and-cheese-egg-rolls-400.webp 400w, recipes/mac-and-cheese-egg-rolls-800.webp 800w, recipes/mac-and-cheese-egg-rolls-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYAEPxT3cYkRcAAP6DgyxwLPPwnTjfzFVpSN7ZwFv5wcyfTj9b1rpP66aDJ1XyH8zEySbe8+4jeD8nmuuIuEN58u1xsykrehJNn8nu/+NuwdydjyFYnPbgAAA="
@@ -15341,7 +15852,14 @@
     "tips": [
       "Make double the egg rolls, pull them from the freezer, and air fry whenever you need a quick snack or meal. T I P : Use these as an appetizer or as a side to another low-calorie entrée."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "CHEESE MIX",
+        "kind": "group",
+        "target": "CHEESE MIX",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       279,
       280
@@ -15350,7 +15868,7 @@
   {
     "id": "dumpling-fried-rice",
     "title": "Dumpling Fried Rice",
-    "category": "Shareables",
+    "category": "Snacks",
     "servings": 1,
     "macros": {
       "calories": 311,
@@ -15391,19 +15909,34 @@
           {
             "amount": null,
             "unit": null,
-            "item": "black pepper B O W L 2",
+            "item": "black pepper",
             "note": "dash"
-          },
+          }
+        ]
+      },
+      {
+        "name": "BOWL 2",
+        "ingredients": [
           {
             "amount": 9,
             "unit": "g",
-            "item": "avocado oil B O W L 3"
-          },
+            "item": "avocado oil"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 3",
+        "ingredients": [
           {
             "amount": 7,
             "unit": "g",
-            "item": "green onion, chopped B O W L 4"
-          },
+            "item": "green onion, chopped"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 4",
+        "ingredients": [
           {
             "amount": 8,
             "unit": "g",
@@ -15466,7 +15999,7 @@
   {
     "id": "shrimp-fried-rice",
     "title": "Shrimp Fried Rice",
-    "category": "Shareables",
+    "category": "Snacks",
     "servings": 1,
     "macros": {
       "calories": 296,
@@ -15591,7 +16124,7 @@
   {
     "id": "kimchi-fried-rice",
     "title": "Kimchi Fried Rice",
-    "category": "Shareables",
+    "category": "Snacks",
     "servings": 1,
     "macros": {
       "calories": 308,
@@ -15617,18 +16150,33 @@
           {
             "amount": 2,
             "unit": "g",
-            "item": "avocado oil B O W L 1"
-          },
+            "item": "avocado oil"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 1",
+        "ingredients": [
           {
             "amount": 2,
             "unit": null,
-            "item": "slices center cut bacon, chopped B O W L 2"
-          },
+            "item": "slices center cut bacon, chopped"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 2",
+        "ingredients": [
           {
             "amount": 11,
             "unit": "g",
-            "item": "green onion, chopped B O W L 3"
-          },
+            "item": "green onion, chopped"
+          }
+        ]
+      },
+      {
+        "name": "BOWL 3",
+        "ingredients": [
           {
             "amount": 6,
             "unit": "g",
@@ -15721,7 +16269,7 @@
   {
     "id": "refried-beans",
     "title": "Refried Beans",
-    "category": "Shareables",
+    "category": "Snacks",
     "servings": 5,
     "macros": {
       "calories": 152,
@@ -15821,7 +16369,7 @@
   {
     "id": "foolproof-homemade-marinara",
     "title": "Foolproof Homemade Marinara",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 15,
     "macros": {
       "calories": 25,
@@ -15926,9 +16474,9 @@
     ]
   },
   {
-    "id": "homemade-marinara",
-    "title": "Homemade Marinara",
-    "category": "Let’s Get Saucy",
+    "id": "homemade-marinara-cooked",
+    "title": "Homemade Marinara (cooked)",
+    "category": "Sauces",
     "servings": 14,
     "macros": {
       "calories": 32,
@@ -16030,8 +16578,8 @@
       }
     ],
     "image": {
-      "src": "recipes/homemade-marinara-800.webp",
-      "srcset": "recipes/homemade-marinara-400.webp 400w, recipes/homemade-marinara-800.webp 800w, recipes/homemade-marinara-1200.webp 1200w",
+      "src": "recipes/homemade-marinara-cooked-800.webp",
+      "srcset": "recipes/homemade-marinara-cooked-400.webp 400w, recipes/homemade-marinara-cooked-800.webp 800w, recipes/homemade-marinara-cooked-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACTbcPsQZrFFqmRrgAD+7q8vQf/oYKdfyF4x3DObxlvCrgVCGjB38y3q7Gqp4eG9RaTLHUu7ujnBuVYwQGi8Y6cjdY1bTbBhQQlpbC7uyskOWPV7QZTSsAA="
@@ -16049,7 +16597,7 @@
   {
     "id": "spicy-ranch",
     "title": "Spicy Ranch",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 14,
     "macros": {
       "calories": 35,
@@ -16060,7 +16608,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "RANCHINGREDIENTS",
+        "name": "RANCH INGREDIENTS",
         "ingredients": [
           {
             "amount": 170,
@@ -16115,7 +16663,7 @@
         ]
       },
       {
-        "name": "EMULSIFIERBLEND",
+        "name": "EMULSIFIER BLEND",
         "ingredients": [
           {
             "amount": 8,
@@ -16161,7 +16709,20 @@
     "tips": [
       "If you don’t have an immersion blender you can use a food processor or a blender cup."
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "RANCH INGREDIENTS",
+        "kind": "group",
+        "target": "RANCH INGREDIENTS",
+        "seconds": null
+      },
+      {
+        "raw": "EMULSIFIER BLEND",
+        "kind": "group",
+        "target": "EMULSIFIER BLEND",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       295,
       296
@@ -16170,7 +16731,7 @@
   {
     "id": "chipotle-aioli",
     "title": "Chipotle Aioli",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 19,
     "macros": {
       "calories": 34,
@@ -16298,9 +16859,9 @@
     ]
   },
   {
-    "id": "garlic",
-    "title": "Garlic",
-    "category": "Let’s Get Saucy",
+    "id": "garlic-parmesan-sauce",
+    "title": "Garlic Parmesan Sauce",
+    "category": "Sauces",
     "servings": 8,
     "macros": {
       "calories": 48,
@@ -16441,8 +17002,8 @@
       }
     ],
     "image": {
-      "src": "recipes/garlic-800.webp",
-      "srcset": "recipes/garlic-400.webp 400w, recipes/garlic-800.webp 800w, recipes/garlic-1200.webp 1200w",
+      "src": "recipes/garlic-parmesan-sauce-800.webp",
+      "srcset": "recipes/garlic-parmesan-sauce-400.webp 400w, recipes/garlic-parmesan-sauce-800.webp 800w, recipes/garlic-parmesan-sauce-1200.webp 1200w",
       "width": 800,
       "height": 1000,
       "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoR3ABcMyYxee6HsAAD+qhAxAtRR+myRbiy9xwSl+TeRYBUFhkLFP/G8/L+zB0kMtF47JzU9TvIGp8KUxMs18nSYVKhr6Rwh0bIlKJQBcEgNaryNbD3EfrDmMUJUabTokxFQOv0mGGgyVTzDddRmi0P0AAA="
@@ -16462,7 +17023,7 @@
   {
     "id": "tzatziki-sauce",
     "title": "Tzatziki Sauce",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 10,
     "macros": {
       "calories": 18,
@@ -16558,7 +17119,7 @@
   {
     "id": "salsa-crema",
     "title": "Salsa Crema",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 12,
     "macros": {
       "calories": 14,
@@ -16645,7 +17206,7 @@
   {
     "id": "cilantro-lime-salsa",
     "title": "Cilantro Lime Salsa",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 10,
     "macros": {
       "calories": 20,
@@ -16727,7 +17288,7 @@
   {
     "id": "russian-dressing",
     "title": "Russian Dressing",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 9,
     "macros": {
       "calories": 31,
@@ -16828,7 +17389,7 @@
   {
     "id": "maple-syrup",
     "title": "Maple Syrup",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 18,
     "macros": {
       "calories": 0,
@@ -16947,7 +17508,7 @@
   {
     "id": "buffalo-sauce",
     "title": "Buffalo Sauce",
-    "category": "Let’s Get Saucy",
+    "category": "Sauces",
     "servings": 10,
     "macros": {
       "calories": 29,
@@ -17039,7 +17600,7 @@
   {
     "id": "protein-bread",
     "title": "Protein Bread",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 23,
     "macros": {
       "calories": 59,
@@ -17198,7 +17759,7 @@
   {
     "id": "protein-buns",
     "title": "Protein Buns",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 6,
     "macros": {
       "calories": 158,
@@ -17382,7 +17943,7 @@
   {
     "id": "potato-buns",
     "title": "Potato Buns",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 6,
     "macros": {
       "calories": 155,
@@ -17393,7 +17954,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "MASHEDPOTATO",
+        "name": "MASHED POTATO",
         "ingredients": [
           {
             "amount": 70,
@@ -17472,7 +18033,7 @@
         ]
       },
       {
-        "name": "EGGWASH",
+        "name": "EGG WASH",
         "ingredients": [
           {
             "amount": 1,
@@ -17566,6 +18127,12 @@
         "kind": "group",
         "target": "DOUGH",
         "seconds": null
+      },
+      {
+        "raw": "EGG WASH",
+        "kind": "group",
+        "target": "EGG WASH",
+        "seconds": null
       }
     ],
     "sourcePages": [
@@ -17576,7 +18143,7 @@
   {
     "id": "protein-baguette",
     "title": "Protein Baguette",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 8,
     "macros": {
       "calories": 321,
@@ -17757,7 +18324,7 @@
   {
     "id": "hoagie-rolls",
     "title": "Hoagie Rolls",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 4,
     "macros": {
       "calories": 306,
@@ -17925,7 +18492,7 @@
   {
     "id": "protein-breadsticks",
     "title": "Protein Breadsticks",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 6,
     "macros": {
       "calories": 117,
@@ -18087,7 +18654,7 @@
   {
     "id": "protein-pita",
     "title": "Protein Pita",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 2,
     "macros": {
       "calories": 106,
@@ -18214,7 +18781,7 @@
   {
     "id": "burrito-tortillas",
     "title": "Burrito Tortillas",
-    "category": "Doughlicious",
+    "category": "Breads",
     "servings": 2,
     "macros": {
       "calories": 177,
@@ -18356,7 +18923,7 @@
   {
     "id": "nickchicken-meal-prep",
     "title": "Nickchicken Meal Prep",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 0,
@@ -18367,7 +18934,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "CHICKENMIX",
+        "name": "CHICKEN MIX",
         "ingredients": [
           {
             "amount": 700,
@@ -18387,11 +18954,11 @@
         ]
       },
       {
-        "name": "DREDGESTATIONS",
+        "name": "DREDGE STATIONS",
         "ingredients": []
       },
       {
-        "name": "WETSTATIONONE",
+        "name": "WET STATION ONE",
         "ingredients": [
           {
             "amount": 230,
@@ -18491,7 +19058,14 @@
     "tips": [
       "putting patty into the dry station. Then you can easily add the dry mixture to the top of the patty after it is already in the dry station container. (RECIPE CONTINUES)"
     ],
-    "references": [],
+    "references": [
+      {
+        "raw": "CHICKEN MIX",
+        "kind": "group",
+        "target": "CHICKEN MIX",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       351,
       352
@@ -18500,7 +19074,7 @@
   {
     "id": "1-pizza-meal-prep",
     "title": "$1 Pizza Meal Prep",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 651,
@@ -18659,7 +19233,7 @@
   {
     "id": "steak-fajita-dinner",
     "title": "Steak Fajita Dinner",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 614,
@@ -18670,7 +19244,7 @@
     },
     "ingredientGroups": [
       {
-        "name": "STEAKFAJITA",
+        "name": "STEAK FAJITA",
         "ingredients": [
           {
             "amount": 896,
@@ -18788,6 +19362,101 @@
             "item": "avocado oil"
           }
         ]
+      },
+      {
+        "name": "MEXICAN RICE",
+        "ingredients": [
+          {
+            "amount": 8,
+            "unit": "g",
+            "item": "avocado oil"
+          },
+          {
+            "amount": 170,
+            "unit": "g",
+            "item": "white rice, washed"
+          },
+          {
+            "amount": 150,
+            "unit": "g",
+            "item": "tomato sauce"
+          },
+          {
+            "amount": 12,
+            "unit": "g",
+            "item": "chicken bouillon"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "garlic powder"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "onion powder"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "cumin .5g oregano"
+          },
+          {
+            "amount": 400,
+            "unit": "g",
+            "item": "chicken broth"
+          }
+        ]
+      },
+      {
+        "name": "ROASTED SALSA VERDE",
+        "ingredients": [
+          {
+            "amount": 300,
+            "unit": "g",
+            "item": "tomatillos"
+          },
+          {
+            "amount": 50,
+            "unit": "g",
+            "item": "onion, chopped"
+          },
+          {
+            "amount": 62,
+            "unit": "g",
+            "item": "jalapeño"
+          },
+          {
+            "amount": 21,
+            "unit": "g",
+            "item": "serrano pepper"
+          },
+          {
+            "amount": 12,
+            "unit": "g",
+            "item": "roasted garlic"
+          },
+          {
+            "amount": 6,
+            "unit": "g",
+            "item": "cilantro"
+          },
+          {
+            "amount": 15,
+            "unit": "g",
+            "item": "lime juice"
+          },
+          {
+            "amount": 50,
+            "unit": "g",
+            "item": "water"
+          },
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "salt"
+          }
+        ]
       }
     ],
     "steps": [
@@ -18891,7 +19560,20 @@
     "prepTimeMin": 30,
     "cookTimeMin": 50,
     "tips": [],
-    "references": [],
+    "references": [
+      {
+        "raw": "STEAK FAJITA",
+        "kind": "group",
+        "target": "STEAK FAJITA",
+        "seconds": null
+      },
+      {
+        "raw": "MEXICAN RICE",
+        "kind": "group",
+        "target": "MEXICAN RICE",
+        "seconds": null
+      }
+    ],
     "sourcePages": [
       357,
       358,
@@ -18901,7 +19583,7 @@
   {
     "id": "chicken-noodle-soup",
     "title": "Chicken Noodle Soup",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 515,
@@ -19068,7 +19750,7 @@
   {
     "id": "chicken-parm-sandwich-meal-prep",
     "title": "Chicken Parm Sandwich Meal Prep",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 450,
@@ -19084,13 +19766,23 @@
           {
             "amount": 5,
             "unit": null,
-            "item": "thinly sliced chicken breasts D R E D G E S TAT I O N 1"
-          },
+            "item": "thinly sliced chicken breasts"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 1",
+        "ingredients": [
           {
             "amount": 100,
             "unit": "g",
-            "item": "AP flour D R E D G E S TAT I O N 2"
-          },
+            "item": "AP flour"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 2",
+        "ingredients": [
           {
             "amount": 1,
             "unit": null,
@@ -19099,8 +19791,13 @@
           {
             "amount": 1,
             "unit": null,
-            "item": "egg white D R E D G E S TAT I O N 3"
-          },
+            "item": "egg white"
+          }
+        ]
+      },
+      {
+        "name": "DREDGE STATION 3",
+        "ingredients": [
           {
             "amount": 160,
             "unit": "g",
@@ -19154,7 +19851,7 @@
         ]
       },
       {
-        "name": "CHICKENPARMBUILD",
+        "name": "CHICKEN PARM BUILD",
         "ingredients": []
       },
       {
@@ -19263,7 +19960,7 @@
   {
     "id": "pulled-pork-mac",
     "title": "Pulled Pork + Mac",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 6,
     "macros": {
       "calories": 604,
@@ -19349,7 +20046,7 @@
         ]
       },
       {
-        "name": "MEALPREPBUILD",
+        "name": "MEAL PREP BUILD",
         "ingredients": [
           {
             "amount": 2,
@@ -19451,7 +20148,7 @@
   {
     "id": "chicken-tinga-tostadas",
     "title": "Chicken Tinga Tostadas",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 611,
@@ -19527,7 +20224,7 @@
         ]
       },
       {
-        "name": "TOSTADAPLATE",
+        "name": "TOSTADA PLATE",
         "ingredients": [
           {
             "amount": 3,
@@ -19537,7 +20234,7 @@
           {
             "amount": 170,
             "unit": "g",
-            "item": "REFRIED BEANS"
+            "item": "Refried Beans"
           },
           {
             "amount": 250,
@@ -19633,7 +20330,7 @@
   {
     "id": "pizza-pot-pie-meal-prep",
     "title": "Pizza Pot Pie Meal Prep",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 585,
@@ -19704,7 +20401,7 @@
         ]
       },
       {
-        "name": "POTPIEBUILD",
+        "name": "POTPIE BUILD",
         "ingredients": [
           {
             "amount": 1,
@@ -19837,7 +20534,7 @@
   {
     "id": "buffalo-wing-combo-meal",
     "title": "Buffalo Wing Combo Meal",
-    "category": "Prep School",
+    "category": "Meal Prep",
     "servings": 5,
     "macros": {
       "calories": 603,
@@ -19873,7 +20570,7 @@
         ]
       },
       {
-        "name": "MEALPREPBUILD",
+        "name": "MEAL PREP BUILD",
         "ingredients": [
           {
             "amount": 6,

@@ -66,6 +66,11 @@ for (const c of contentPages) {
   if (nIng < 1) flags.push("no-ingredients");
   if (!parsed.videoUrl) flags.push("no-video");
   if (!/^[A-Z]/.test(parsed.title) || parsed.title.length < 3) flags.push("title?");
+  // structural anomaly checks (catch the bug classes found in spot-checks)
+  if (parsed.ingredientGroups.some((g) => g.name.split(/\s+/).some((w) => w.length >= 13))) flags.push("header-unsplit");
+  if (parsed.ingredientGroups.some((g) => g.ingredients.some((i) => i.amount == null && /^[A-Z][A-Z0-9'’ ]{4,}$/.test(i.item) && i.item !== i.item.toLowerCase())))
+    flags.push("ingredient-as-header");
+  if (parsed.title.split(/\s+/).length === 1) flags.push("title-single-word");
 
   const candidate = { id, ...parsed, image, sourcePages: spreadNums };
   const res = Recipe.safeParse(candidate);

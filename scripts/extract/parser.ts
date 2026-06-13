@@ -74,31 +74,48 @@ function parseIngredientLine(text: string): Ingredient | null {
   }
   return { amount: null, unit: null, item: t };
 }
-// Letter-spaced multi-word headers collapse to one token ("INSIDECHEESE"); the
-// word boundary is lost in the text layer. Recover it with a section vocabulary
-// (greedy longest-prefix). Hardened against the full book in Slice 2.
+// Letter-spaced multi-word headers collapse to one token ("INSIDECHEESE") with
+// the word boundary lost in the text layer. Recover it with a greedy
+// longest-match over the closed vocabulary of every header word in the book
+// (validated to segment all 106 unique headers). Trailing digits ("DREDGE
+// STATION 1") are preserved.
 const HEADER_VOCAB = [
-  "INSIDE", "OUTSIDE", "CHEESES", "CHEESE", "DOUGH", "DRY", "WET", "TOPPINGS", "TOPPING",
-  "COATING", "FILLING", "SAUCE", "BATCH", "GARLIC", "OIL", "SAUSAGE", "ITALIAN", "PIZZA",
-  "BUILD", "MARINARA", "GLAZE", "CRUST", "SEASONINGS", "SEASONING", "BREADING", "ASSEMBLY",
-  "CHICKEN", "BEEF", "MEAT", "BUTTER", "GLAZE", "FROSTING", "BATTER", "WINGS", "RICE",
-];
-function splitHeaderWords(name: string): string {
-  if (name.includes(" ")) return name;
+  "NICKCHICKEN", "NICKWRAP", "CHEESECAKE", "CHOCOLATE", "PARMESAN", "MARINARA", "INGREDIENTS",
+  "EMULSIFIER", "QUESADILLA", "SEASONINGS", "SEASONING", "FINISHING", "TOUCHES", "MEATBALL",
+  "SANDWICH", "BREAKFAST", "BAGUETTE", "GORDITA", "TANGZHONG", "MEXICAN", "CILANTRO", "FOOLPROOF",
+  "HOMEMADE", "GARLIC", "STATIONS", "STATION", "FILLINGS", "FILLING", "DRESSING", "FROSTING",
+  "CRACKER", "ANIMAL", "FREEZE", "CHICKEN", "CALZONE", "MASHED", "POTATO", "PROTEIN", "REFRIED",
+  "RUSSIAN", "TZATZIKI", "TOSTADA", "MIXTURE", "SAUSAGE", "COOKIE", "CRUNCH", "SPREAD", "BURGER",
+  "SALAD", "GYRO", "MARINADE", "BUILD", "BLENDER", "BLEND", "CHEESE", "INSIDE", "OUTSIDE",
+  "TOPPINGS", "TOPPING", "COATING", "DOUGH", "DREDGE", "BOWL", "EGGROLL", "EGG", "ROLL", "WASH",
+  "ELOTE", "PIZZA", "PASTA", "PINT", "SAUCE", "SPICY", "RANCH", "SALSA", "CREMA", "PICKLED",
+  "ONION", "BEANS", "STEAK", "FAJITA", "TACO", "PLATE", "HONEY", "BUTTER", "FRENCH", "TOAST",
+  "GLAZE", "ICING", "MEAL", "PREP", "POTPIE", "POT", "PIE", "BUN", "PITA", "WET", "DRY", "MIX",
+  "MAC", "AND", "JUS", "SERVING", "WINGS", "BEEF", "LIME", "CHIP", "SPIN", "BREAD", "OG", "AU",
+  "ONE", "BATCH", "OIL", "PARM", "FOR",
+  // continuation-page + misc recipe section words
+  "VEGETABLES", "AROMATICS", "CONDIMENTS", "ROASTED", "SEAFOOD", "BALANCE", "VERDE", "RICE",
+  "ROAST", "SLOW", "SHAKE", "MILK", "SLAW", "CRUMBLE", "STREUSEL", "DRIZZLE", "ASSEMBLY", "CRUST",
+  "ITALIAN",
+].sort((a, b) => b.length - a.length);
+
+export function splitHeaderWords(name: string): string {
+  if (name.includes(" ")) return name; // already spaced
   const up = name.toUpperCase();
-  const words: string[] = [];
+  const out: string[] = [];
   let i = 0;
   while (i < up.length) {
+    if (/\d/.test(up[i])) { const m = up.slice(i).match(/^\d+/)![0]; out.push(m); i += m.length; continue; }
     const w = HEADER_VOCAB.find((v) => up.startsWith(v, i));
-    if (!w) return name; // unknown token -> leave concatenated (flagged for Slice 2)
-    words.push(w);
+    if (!w) return name; // unknown -> leave concatenated (validator will flag it)
+    out.push(w);
     i += w.length;
   }
-  return words.join(" ");
+  return out.join(" ");
 }
 const isGroupHeader = (text: string) => {
   const n = norm(text);
-  return /^[A-Z][A-Z ]+$/.test(n) && !/\d/.test(n) && n.length <= 24 && !["INGREDIENTS", "DIRECTIONS", "MACROS"].includes(n);
+  return /^[A-Z][A-Z0-9 ]*$/.test(n) && n.length <= 28 && !["INGREDIENTS", "DIRECTIONS", "MACROS"].includes(n);
 };
 
 function parseMacros(page: PageData): Macros {
@@ -149,26 +166,71 @@ const isCaption = (t: string) =>
   /^[A-Z][A-Za-z'’.&-]*(?:\s+[A-Z0-9][A-Za-z'’.&-]*)*$/.test(t) &&
   t.split(/\s+/).length <= 6 && /[a-z]/.test(t) && !/\.$/.test(t) && t.toUpperCase() !== "DIET CHEAT CODES";
 
-function parseTitle(pages: PageData[]): string {
-  // the title-case caption near the photo/macros (y ~ 480-515) is the canonical full title
-  for (const p of pages) {
-    const cap = lines(p.items.filter((i) => i.y > 478 && i.y < 520))
-      .map((l) => norm(l.text)).find(isCaption);
-    if (cap) return cap;
-  }
-  // fallback: largest-font heading in the top band, title-cased
-  const top = pages.flatMap((p) => p.items).filter((i) => i.y < 200 && norm(i.str).toUpperCase() !== "DIET CHEAT CODES");
-  const big = [...top].sort((a, b) => b.h - a.h)[0];
-  return norm(big?.str ?? "Untitled").replace(/\b([A-Z])([A-Z]+)\b/g, (_, a, b) => a + b.toLowerCase());
+const TITLE_SMALL = new Set(["and", "on", "the", "of", "with", "a", "to", "in", "or", "for"]);
+const titleCase = (s: string) =>
+  s.toLowerCase()
+    .replace(/(^|\s|-)([a-z])([\wáéíóúñ'’]*)/g, (_, sep, first, rest, off) =>
+      sep + (off > 0 && TITLE_SMALL.has(first + rest) ? first : first.toUpperCase()) + rest)
+    .replace(/\bOg\b/g, "OG");
+
+/** The left-aligned title block at the top of the PRIMARY content page (title + subtitle).
+ *  Must use only the primary page: a continuation page's top-left holds "INGREDIENTS, CONT". */
+const TITLE_SKIP = new Set(["DIET CHEAT CODES", "SERVES", "PREP", "COOK", "INGREDIENTS", "DIRECTIONS"]);
+function headingTitle(page: PageData): string {
+  // title block sits above the serves/prep/cook row (y < 160); drop those labels +
+  // their numeric values by content so a centered title (e.g. "REUBEN") is kept.
+  const items = page.items.filter((i) => {
+    if (i.y >= 160) return false;
+    const n = norm(i.str).toUpperCase();
+    const c = n.replace(/\s+/g, "");
+    return !TITLE_SKIP.has(n) && !/^\d/.test(c) && !/^(MINS?|HRS?)$/.test(c); // drop labels, numbers, stray time units
+  });
+  if (!items.length) return "";
+  return titleCase(norm(lines(items).map((l) => l.text).join(" ")));
 }
 
+function parseTitle(pages: PageData[], contentPage: PageData): string {
+  let caption = "";
+  for (const p of pages) {
+    const cap = lines(p.items.filter((i) => i.y > 478 && i.y < 520)).map((l) => norm(l.text)).find(isCaption);
+    if (cap) { caption = cap; break; }
+  }
+  const heading = headingTitle(contentPage);
+  // pick the fuller name (caption is fuller for some recipes, heading for others)
+  const wc = (s: string) => (s ? s.trim().split(/\s+/).length : 0);
+  const best = wc(heading) > wc(caption) ? heading : caption || heading;
+  return best || "Untitled";
+}
+
+// Normalize the book's playful section names to plain categories.
+const CATEGORY_MAP: Record<string, string> = {
+  "Breakfast Bliss": "Breakfast",
+  "Midday Munchies": "Lunch",
+  "Dinner is Served": "Dinner",
+  "Sweet Treats": "Desserts",
+  "Blender Ice Cream": "Ice Cream",
+  "Ice Cream Pints": "Ice Cream",
+  "Fruit Sorbets": "Sorbets",
+  "Cookie Dough": "Cookie Dough",
+  "Shareables": "Snacks",
+  "Let's Get Saucy": "Sauces",
+  "Doughlicious": "Breads",
+  "Prep School": "Meal Prep",
+};
 function parseCategory(page: PageData): string {
   const footer = page.items.filter((i) => i.y > page.height - 22 && !/^\d+$/.test(i.str.trim()));
-  return norm(footer.sort((a, b) => a.x - b.x)[0]?.str ?? "Uncategorized");
+  const raw = norm(footer.sort((a, b) => a.x - b.x)[0]?.str ?? "Uncategorized").replace(/[’']/g, "'");
+  return CATEGORY_MAP[raw] ?? raw;
 }
 
-function parseIngredients(page: PageData, colSplit: number): IngredientGroup[] {
-  const ingY = labelItem(page, "INGREDIENTS")?.y ?? 210;
+const ingHeaderItem = (p: PageData) => p.items.find((i) => /^INGREDIENTS/.test(norm(i.str).toUpperCase()));
+const dirHeaderX = (p: PageData) => p.items.find((i) => /^DIRECTIONS/.test(norm(i.str).toUpperCase()))?.x ?? 210;
+
+function parseIngredients(page: PageData): IngredientGroup[] {
+  const ingItem = ingHeaderItem(page);
+  if (!ingItem) return [];
+  const ingY = ingItem.y;
+  const colSplit = Math.min(dirHeaderX(page) - 10, 180);
   const macrosY = labelItem(page, "MACROS")?.y ?? page.height;
   const ll = lines(page.items.filter((i) => i.x < colSplit && i.y > ingY + 4 && i.y < Math.min(macrosY - 4, page.height - 22)));
   const groups: IngredientGroup[] = [];
@@ -178,7 +240,11 @@ function parseIngredients(page: PageData, colSplit: number): IngredientGroup[] {
     if (ln.y - prevY > 70 && cur?.ingredients.length) break; // caption/photo gap on single-page layouts
     prevY = ln.y;
     const text = ln.text.replace(/\s+/g, " ").trim();
-    if (isGroupHeader(text)) { cur = { name: splitHeaderWords(norm(text)), ingredients: [] }; groups.push(cur); continue; }
+    // an all-caps line right after an ingredient whose text ends in CAPS is a
+    // wrapped continuation (e.g. "40g FOOLPROOF HOMEMADE" + "MARINARA"), NOT a header
+    const lastIng = cur?.ingredients[cur.ingredients.length - 1];
+    const contCaps = !!lastIng && /[A-Z]{2,}\s*$/.test(lastIng.item) && /^[A-Z][A-Z' ]*$/.test(norm(text));
+    if (isGroupHeader(text) && !contCaps) { cur = { name: splitHeaderWords(norm(text)), ingredients: [] }; groups.push(cur); continue; }
     if (!cur) { cur = { name: "Ingredients", ingredients: [] }; groups.push(cur); }
     if (cur.ingredients.length && !/^(\d|\bpinch\b|\bdash\b)/i.test(text)) {
       const last = cur.ingredients[cur.ingredients.length - 1];
@@ -188,6 +254,9 @@ function parseIngredients(page: PageData, colSplit: number): IngredientGroup[] {
     const ing = parseIngredientLine(text);
     if (ing) cur.ingredients.push(ing);
   }
+  // title-case all-caps ingredient items (cross-reference names like "FOOLPROOF HOMEMADE MARINARA")
+  for (const g of groups) for (const ing of g.ingredients)
+    if (/^[A-Z][A-Z'’ ]{3,}$/.test(ing.item)) ing.item = titleCase(ing.item);
   return groups.filter((g) => g.ingredients.length || isGroupHeader(g.name)); // keep header-only parents
 }
 
@@ -208,14 +277,18 @@ function parseSteps(page: PageData): Step[] {
 }
 
 export function parseRecipeSpread(pages: PageData[], sourcePages: number[]): ParsedRecipe {
-  const contentPage = pages.find((p) => hasLabel(p, "INGREDIENTS")) ?? pages[pages.length - 1];
+  // pages that hold ingredients (incl. "INGREDIENTS, CONT" continuation pages)
+  const ingPages = pages.filter((p) => ingHeaderItem(p));
+  const contentPage = ingPages[0] ?? pages[pages.length - 1];
   const macrosPage = pages.find((p) => hasLabel(p, "MACROS")) ?? contentPage;
-  const dirX = labelItem(contentPage, "DIRECTIONS")?.x ?? 210;
-  const colSplit = Math.min(dirX - 10, 180);
   const tipItem = contentPage.items.find((i) => /^TIP/i.test(norm(i.str)));
-  const tipY = tipItem ? tipItem.y : Infinity;
 
-  const ingredientGroups = parseIngredients(contentPage, colSplit);
+  const ingredientGroups: IngredientGroup[] = [];
+  for (const g of ingPages.flatMap(parseIngredients)) {
+    const existing = ingredientGroups.find((m) => m.name === g.name);
+    if (existing) existing.ingredients.push(...g.ingredients);
+    else ingredientGroups.push(g);
+  }
   // merge steps across the whole spread (continuation pages carry steps 8..N)
   const byN = new Map<number, Step>();
   for (const p of pages) for (const s of parseSteps(p)) if (!byN.has(s.n)) byN.set(s.n, s);
@@ -245,7 +318,7 @@ export function parseRecipeSpread(pages: PageData[], sourcePages: number[]): Par
 
   const { servings, prep, cook } = parseTimes(contentPage);
   return {
-    title: parseTitle(pages),
+    title: parseTitle(pages, contentPage),
     category: parseCategory(contentPage),
     servings, macros: parseMacros(macrosPage), ingredientGroups, steps,
     prepTimeMin: prep, cookTimeMin: cook, tips, videoUrl, references,
