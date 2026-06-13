@@ -7,26 +7,32 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { renderPage } from "./render.js";
 import { optimizeHero } from "./images.js";
 import { getPage } from "./pdf.js";
-import { parseRecipePage } from "./parser.js";
+import { parseRecipeSpread } from "./parser.js";
 import { RecipeArray, type Recipe } from "../../src/lib/schema/recipe.js";
 import { DATA_OUT } from "./config.js";
 
-const SAMPLES = [
-  { photoPage: 47, contentPage: 48 }, // Banana Pancakes (grouped, tips, video link)
-  { photoPage: 49, contentPage: 50 }, // Japanese Pancakes (flat list, 12 steps, no tips)
+// Each sample is the set of pages forming one recipe spread (photo + content).
+const SAMPLES: number[][] = [
+  [47, 48],   // Banana Pancakes — grouped (WET/DRY), tips, video link
+  [49, 50],   // Japanese Pancakes — flat list, 12 steps, no tips
+  [119, 120], // Dominos Cheesy Bread — macros on photo page, 6 groups incl. nested DOUGH, sub-recipe ref
+  [149, 150], // Lou's Sausage Deep Dish Pizza — deep-dish layout
+  [291, 292], // Foolproof Homemade Marinara — sub-recipe, "(61G SERVING)" macros
 ];
 
 const slugify = (s: string) =>
   s.toLowerCase().normalize("NFKD").replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-").replace(/-+/g, "-");
 
 const recipes: Recipe[] = [];
-for (const s of SAMPLES) {
-  const page = await getPage(s.contentPage);
-  const parsed = parseRecipePage(page, [s.photoPage, s.contentPage]);
-  const image = await optimizeHero(renderPage(s.photoPage), slugify(parsed.title));
-  const recipe: Recipe = { id: slugify(parsed.title), ...parsed, image, sourcePages: [s.photoPage, s.contentPage] };
+for (const pageNums of SAMPLES) {
+  const pages = await Promise.all(pageNums.map((n) => getPage(n)));
+  const parsed = parseRecipeSpread(pages, pageNums);
+  const photoPageNum = pageNums.find((n, i) => !pages[i].items.some((it) => /INGREDIENTS/.test(it.str.replace(/\s/g, "")))) ?? pageNums[0];
+  const image = await optimizeHero(renderPage(photoPageNum), slugify(parsed.title));
+  const recipe: Recipe = { id: slugify(parsed.title), ...parsed, image, sourcePages: pageNums };
   recipes.push(recipe);
-  console.log(`✓ ${recipe.title}: ${recipe.macros.calories}cal ${recipe.macros.protein}p · ${recipe.ingredientGroups.reduce((n, g) => n + g.ingredients.length, 0)} ingredients · ${recipe.steps.length} steps · video ${recipe.videoUrl ?? "none"}`);
+  const nIng = recipe.ingredientGroups.reduce((n, g) => n + g.ingredients.length, 0);
+  console.log(`✓ ${recipe.title} [${recipe.category}]: ${recipe.macros.calories}cal ${recipe.macros.protein}p · groups ${recipe.ingredientGroups.map((g) => g.name + "(" + g.ingredients.length + ")").join("/")} · ${nIng} ing · ${recipe.steps.length} steps · prep ${recipe.prepTimeMin} cook ${recipe.cookTimeMin} · video ${recipe.videoUrl ? "yes" : "no"}`);
 }
 
 const validated = RecipeArray.parse(recipes);

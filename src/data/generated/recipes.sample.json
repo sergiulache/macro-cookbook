@@ -108,13 +108,13 @@
     ],
     "references": [
       {
-        "raw": "WET Ingredients",
+        "raw": "WET",
         "kind": "group",
         "target": "WET",
         "seconds": null
       },
       {
-        "raw": "DRY Ingredients",
+        "raw": "DRY",
         "kind": "group",
         "target": "DRY",
         "seconds": null
@@ -256,6 +256,600 @@
     "sourcePages": [
       49,
       50
+    ]
+  },
+  {
+    "id": "dominos-cheesy-bread",
+    "title": "Dominos Cheesy Bread",
+    "category": "Dinner is Served",
+    "servings": 1,
+    "macros": {
+      "calories": 985,
+      "fat": 29,
+      "carbs": 114,
+      "netCarbs": 109,
+      "protein": 75
+    },
+    "ingredientGroups": [
+      {
+        "name": "DOUGH",
+        "ingredients": []
+      },
+      {
+        "name": "DRY",
+        "ingredients": [
+          {
+            "amount": 115,
+            "unit": "g",
+            "item": "all-purpose flour"
+          },
+          {
+            "amount": 30,
+            "unit": "g",
+            "item": "vital wheat gluten"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "salt"
+          },
+          {
+            "amount": 3,
+            "unit": "g",
+            "item": "instant yeast"
+          },
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "granulated erythritol"
+          }
+        ]
+      },
+      {
+        "name": "WET",
+        "ingredients": [
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "avocado oil"
+          },
+          {
+            "amount": 1,
+            "unit": "g",
+            "item": "imitation butter"
+          },
+          {
+            "amount": 105,
+            "unit": "g",
+            "item": "water"
+          }
+        ]
+      },
+      {
+        "name": "COATING",
+        "ingredients": [
+          {
+            "amount": 30,
+            "unit": "g",
+            "item": "corn meal"
+          }
+        ]
+      },
+      {
+        "name": "INSIDE CHEESE",
+        "ingredients": [
+          {
+            "amount": 42,
+            "unit": "g",
+            "item": "fat-free mozzarella cheese"
+          },
+          {
+            "amount": 42,
+            "unit": "g",
+            "item": "part-skim mozzarella cheese"
+          }
+        ]
+      },
+      {
+        "name": "OUTSIDE CHEESE",
+        "ingredients": [
+          {
+            "amount": 14,
+            "unit": "g",
+            "item": "fat-free cheddar cheese"
+          },
+          {
+            "amount": 14,
+            "unit": "g",
+            "item": "fat-free mozzarella cheese"
+          },
+          {
+            "amount": 14,
+            "unit": "g",
+            "item": "mild cheddar cheese"
+          },
+          {
+            "amount": 14,
+            "unit": "g",
+            "item": "part-skim mozzarella cheese"
+          }
+        ]
+      },
+      {
+        "name": "TOPPINGS",
+        "ingredients": [
+          {
+            "amount": null,
+            "unit": null,
+            "item": "5-6g garlic oil"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "dried parsley",
+            "note": "pinch"
+          }
+        ]
+      },
+      {
+        "name": "BATCH GARLIC OIL",
+        "ingredients": [
+          {
+            "amount": 100,
+            "unit": "g",
+            "item": "avocado oil (or oil of choice)"
+          },
+          {
+            "amount": 3,
+            "unit": "g",
+            "item": "imitation butter"
+          },
+          {
+            "amount": 4,
+            "unit": "g",
+            "item": "garlic powder"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "salt"
+          },
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "grated parmesan cheese"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "n": 1,
+        "text": "Add Dry Ingredients to a food processor and process on high for 15 seconds."
+      },
+      {
+        "n": 2,
+        "text": "Add avocado oil and imitation butter to food processor. Heat water up to 110°F."
+      },
+      {
+        "n": 3,
+        "text": "While processing on high, pour water into the food processor over a 15 second period and continue to process for an additional 30 seconds."
+      },
+      {
+        "n": 4,
+        "text": "Dump dough onto the counter, KNEAD for 1-2 minutes, form into a ball, put it in a lightly oiled bowl, cover, and let rise in a warm place for one hour or until doubled in size."
+      },
+      {
+        "n": 5,
+        "text": "While dough is rising, shred the cheese, make the garlic oil, and/or make a FOOLPROOF HOMEMADE MARINARA for dipping sauce."
+      },
+      {
+        "n": 6,
+        "text": "Pour cornmeal on the top of the dough, flip dough out onto counter, and sprinkle additional cornmeal on the top."
+      },
+      {
+        "n": 7,
+        "text": "Using the tips of your fingers, press and stretch dough until it is shaped into a roughly 9x8” rectangle."
+      },
+      {
+        "n": 8,
+        "text": "Mix Inside Cheese together, then sprinkle the inside cheese mixture on half of the dough. Fold the other half of the dough over the cheese, and seal edge of dough."
+      },
+      {
+        "n": 9,
+        "text": "Rip off 6 inches of parchment paper, place dough on top of it, and slice the folded dough into 8 pieces."
+      },
+      {
+        "n": 10,
+        "text": "Mix the fat-free cheeses of the Outside Cheeses together and sprinkle over the top of the cheesy bread. Mix the rest of the cheeses together and add over the top of the fat-free cheeses."
+      },
+      {
+        "n": 11,
+        "text": "Put the finished cheesy bread into a preheated 450°F oven for 12-16 minutes."
+      },
+      {
+        "n": 12,
+        "text": "Add Toppings and it’s time to eat. Dinner is Served 119"
+      }
+    ],
+    "image": {
+      "src": "recipes/dominos-cheesy-bread-800.webp",
+      "srcset": "recipes/dominos-cheesy-bread-400.webp 400w, recipes/dominos-cheesy-bread-800.webp 800w, recipes/dominos-cheesy-bread-1200.webp 1200w",
+      "width": 800,
+      "height": 1000,
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JbACw7CHiEt0EPSFG5oMgAP7ynY3KAH9wVOgCV+CyUnUpMGrQi1zpeFppvcEgDkpKu90XogtjeEG8OSiVM/quoov9Iy2dK/2Ct6MtjeoVrqBrvkFksaVl8ILP5tLRjX447WAA"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=C_EpZYv09Nw",
+    "prepTimeMin": 75,
+    "cookTimeMin": 15,
+    "tips": [],
+    "references": [
+      {
+        "raw": "DRY",
+        "kind": "group",
+        "target": "DRY",
+        "seconds": null
+      },
+      {
+        "raw": "DOUGH",
+        "kind": "group",
+        "target": "DOUGH",
+        "seconds": null
+      },
+      {
+        "raw": "INSIDE CHEESE",
+        "kind": "group",
+        "target": "INSIDE CHEESE",
+        "seconds": null
+      },
+      {
+        "raw": "TOPPINGS",
+        "kind": "group",
+        "target": "TOPPINGS",
+        "seconds": null
+      }
+    ],
+    "sourcePages": [
+      119,
+      120
+    ]
+  },
+  {
+    "id": "lous-sausage",
+    "title": "Lou’S Sausage",
+    "category": "Dinner is Served",
+    "servings": 6,
+    "macros": {
+      "calories": 387,
+      "fat": 18,
+      "carbs": 25,
+      "netCarbs": null,
+      "protein": 31
+    },
+    "ingredientGroups": [
+      {
+        "name": "DOUGH",
+        "ingredients": []
+      },
+      {
+        "name": "DRY",
+        "ingredients": [
+          {
+            "amount": 160,
+            "unit": "g",
+            "item": "all-purpose flour"
+          },
+          {
+            "amount": 30,
+            "unit": "g",
+            "item": "vital wheat gluten"
+          },
+          {
+            "amount": 1,
+            "unit": "g",
+            "item": "instant yeast"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "salt"
+          }
+        ]
+      },
+      {
+        "name": "WET",
+        "ingredients": [
+          {
+            "amount": 25,
+            "unit": "g",
+            "item": "corn oil"
+          },
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "olive oil"
+          },
+          {
+            "amount": 90,
+            "unit": "g",
+            "item": "water"
+          }
+        ]
+      },
+      {
+        "name": "ITALIAN SAUSAGE",
+        "ingredients": [
+          {
+            "amount": 448,
+            "unit": "g",
+            "item": "90% lean ground pork"
+          },
+          {
+            "amount": 9,
+            "unit": "g",
+            "item": "salt"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "item": "black pepper"
+          },
+          {
+            "amount": 1.5,
+            "unit": "g",
+            "item": "garlic powder"
+          }
+        ]
+      },
+      {
+        "name": "PIZZA BUILD",
+        "ingredients": [
+          {
+            "amount": 1.5,
+            "unit": "g",
+            "item": "Crisco®"
+          },
+          {
+            "amount": 1,
+            "unit": null,
+            "item": "dough"
+          },
+          {
+            "amount": 140,
+            "unit": "g",
+            "item": "fat-free mozzarella cheese, shredded"
+          },
+          {
+            "amount": 168,
+            "unit": "g",
+            "item": "whole milk low moisture mozzarella cheese, thinly sliced"
+          },
+          {
+            "amount": 280,
+            "unit": "g",
+            "item": "sausage"
+          },
+          {
+            "amount": 180,
+            "unit": "g",
+            "item": "6/1 tomato sauce"
+          },
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "pecorino romano, grated"
+          },
+          {
+            "amount": 5,
+            "unit": "g",
+            "item": "Parmigiano-Reggiano, grated"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "dried oregano",
+            "note": "pinch"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "n": 1,
+        "text": "Place dry ingredients into a food processor and mix for 60 seconds."
+      },
+      {
+        "n": 2,
+        "text": "Add corn oil and olive oil into processor and blend on high for 10 seconds. While blending, slowly add water over a 15-20 second period and continue blending for an additional 20 seconds."
+      },
+      {
+        "n": 3,
+        "text": "Place dough on the counter. Use a piece of the dough to scrape up any ingredients that remain in the food processor."
+      },
+      {
+        "n": 4,
+        "text": "Knead the ingredients into the dough for one minute, place in a bowl, cover with cling wrap, and refrigerate for 24-48 hours."
+      },
+      {
+        "n": 5,
+        "text": "Top the ground pork with salt, black pepper, and garlic powder and knead the seasonings into the meat for 3-4 minutes. Place the sausage in a bowl, cover with cling wrap, and refrigerate for 24-48 hours."
+      },
+      {
+        "n": 6,
+        "text": "Take dough out of the fridge 2-3 hours before cooking to rise. Spread Crisco® in a 10” springform pan, making sure the bottom and sides are completely covered."
+      },
+      {
+        "n": 7,
+        "text": "Add dough into the pan and stretch the dough edge to edge, making sure the outside edge of the dough is thicker than the rest of the dough."
+      },
+      {
+        "n": 8,
+        "text": "Using your fingertips, bring the edge of the dough 1” up the pan. The dough along the edge of the pan should be very thin."
+      },
+      {
+        "n": 9,
+        "text": "Add fat-free mozzarella on top of the dough. Then overlap the whole milk mozzarella slices along the edge of the pan, followed by another piece placed in the middle. Evenly distribute any remaining slices."
+      },
+      {
+        "n": 10,
+        "text": "Place pieces of sausage throughout the pan and push the pieces into the cheese to ensure a thin layer of sausage once finished. I like start on the edge of the pan and work my way in."
+      },
+      {
+        "n": 11,
+        "text": "Add sauce onto the middle of the pizza and push the sauce out to the edges."
+      },
+      {
+        "n": 12,
+        "text": "Mix the parmesan, romano, and oregano in a small bowl. Spread across the pizza."
+      },
+      {
+        "n": 13,
+        "text": "Using 3”x4” pieces of aluminum foil, cover the pizza crust at the sauce line and wrap any extra foil around the top of the pan."
+      },
+      {
+        "n": 14,
+        "text": "Bake pizza in a preheated 450°F oven for 25-30 minutes."
+      },
+      {
+        "n": 15,
+        "text": "Remove from the oven and immediately place the pizza on a wire rack. Let cool for 5 minutes before slicing into 6 pieces and eating the shit out of it. Dinner is Served 149"
+      }
+    ],
+    "image": {
+      "src": "recipes/lous-sausage-800.webp",
+      "srcset": "recipes/lous-sausage-400.webp 400w, recipes/lous-sausage-800.webp 800w, recipes/lous-sausage-1200.webp 1200w",
+      "width": 800,
+      "height": 1000,
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdH8AgwRf59vulSu2ysLR+lMAA/vEgqWOk3XcnqVl+iCHtJZ0h7ijpOLkejtejEekk1ySr6hABCJOKmNMzh4YdYBHz15DBccZZaZ5nhLdnSGmmJmMAOj16FqH3DO3OjB/nBvFedNfuEMaRA5WGudMwiKigHNhuG/nAAAA="
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=sTNnn948WxU&t=36s",
+    "prepTimeMin": 1440,
+    "cookTimeMin": 30,
+    "tips": [],
+    "references": [
+      {
+        "raw": "DRY",
+        "kind": "group",
+        "target": "DRY",
+        "seconds": null
+      },
+      {
+        "raw": "DOUGH",
+        "kind": "group",
+        "target": "DOUGH",
+        "seconds": null
+      }
+    ],
+    "sourcePages": [
+      149,
+      150
+    ]
+  },
+  {
+    "id": "foolproof-homemade-marinara",
+    "title": "Foolproof Homemade Marinara",
+    "category": "Let’s Get Saucy",
+    "servings": 15,
+    "macros": {
+      "calories": 25,
+      "fat": 1,
+      "carbs": 5,
+      "netCarbs": 4,
+      "protein": 1
+    },
+    "ingredientGroups": [
+      {
+        "name": "Ingredients",
+        "ingredients": [
+          {
+            "amount": 28,
+            "unit": "oz",
+            "item": "can Cento® San Marzano whole peeled tomatoes"
+          },
+          {
+            "amount": 66,
+            "unit": "g",
+            "item": "tomato paste"
+          },
+          {
+            "amount": 8,
+            "unit": "g",
+            "item": "extra virgin olive oil"
+          },
+          {
+            "amount": 7,
+            "unit": "g",
+            "item": "garlic, minced"
+          },
+          {
+            "amount": 2.3,
+            "unit": "g",
+            "item": "onion powder"
+          },
+          {
+            "amount": 1,
+            "unit": "g",
+            "item": "dried oregano"
+          },
+          {
+            "amount": 1,
+            "unit": "g",
+            "item": "crushed red pepper flakes"
+          },
+          {
+            "amount": 6,
+            "unit": "g",
+            "item": "salt, or to taste"
+          },
+          {
+            "amount": 10,
+            "unit": "g",
+            "item": "granulated erythritol, or to taste"
+          },
+          {
+            "amount": null,
+            "unit": null,
+            "item": "black pepper",
+            "note": "dash"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "n": 1,
+        "text": "Pour half of the tomatoes into a large bowl."
+      },
+      {
+        "n": 2,
+        "text": "Add the rest of the ingredients and mix with an immersion blender until desired consistency."
+      },
+      {
+        "n": 3,
+        "text": "Pour the other half of the tomatoes into the container and mix with an immersion blender again until desired consistency is achieved."
+      },
+      {
+        "n": 4,
+        "text": "Use right away or store in the fridge/freezer until ready for use."
+      }
+    ],
+    "image": {
+      "src": "recipes/foolproof-homemade-marinara-800.webp",
+      "srcset": "recipes/foolproof-homemade-marinara-400.webp 400w, recipes/foolproof-homemade-marinara-800.webp 800w, recipes/foolproof-homemade-marinara-1200.webp 1200w",
+      "width": 800,
+      "height": 1000,
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACXFegwACVR06PYAAP7s3Q33AwF2M92zlhDK2GLWMoFQOmWGjtaJfq5Q+dzUTv3EZ+4P1ML4GeMSmHxyuJiNyAKIM4KmjFJrQuTfQhA3nRt4I58qvt4yZ2ZAIKu1P+zSExzhkAAAAA=="
+    },
+    "videoUrl": null,
+    "prepTimeMin": 5,
+    "cookTimeMin": null,
+    "tips": [
+      "If you want a chunkier sauce, crush tomatoes by hand and mix all ingredients with a whisk or spatula instead of an immersion blender. T I P : If you want a zero clean up marinara, pour and mix ingredients directly in the container they will be stored in."
+    ],
+    "references": [],
+    "sourcePages": [
+      291,
+      292
     ]
   }
 ]

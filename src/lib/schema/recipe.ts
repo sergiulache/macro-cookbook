@@ -19,10 +19,14 @@ export const Ingredient = z.object({
 });
 export type Ingredient = z.infer<typeof Ingredient>;
 
-/** A capitalized group ("DOUGH", "Wet Ingredients") referenced from steps (D21). */
+/**
+ * A capitalized group ("DOUGH", "Wet Ingredients") referenced from steps (D21).
+ * `ingredients` may be empty: some recipes use a parent header (e.g. DOUGH) over
+ * sub-groups (DRY/WET) — the header-only group is kept to preserve structure.
+ */
 export const IngredientGroup = z.object({
   name: z.string().min(1),
-  ingredients: z.array(Ingredient).min(1),
+  ingredients: z.array(Ingredient),
 });
 export type IngredientGroup = z.infer<typeof IngredientGroup>;
 

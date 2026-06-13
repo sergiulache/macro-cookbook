@@ -1,8 +1,12 @@
 /**
- * Parse a recipe content page into structured fields from the exact text layer
- * (D6: text layer is source of truth; never visual reading). Geometry-driven:
- * ingredients in the left column, directions in the right, macros bottom-left,
- * category in the footer, video from the title link annotation (D3).
+ * Parse a recipe SPREAD (photo page + content page, sometimes more) into
+ * structured fields from the exact text layer (D6). Geometry-driven and robust
+ * to layout variance discovered on real pages:
+ *  - macros and ingredients can live on different pages of the spread
+ *  - the photo-page caption is the canonical (full) title
+ *  - parent headers (DOUGH) sit over sub-groups (DRY/WET) as header-only groups
+ *  - prep/cook may be in hours; the footer holds the category
+ *  - the video URL is a link annotation (usually on the title) (D3)
  */
 import type { PageData, TextItem } from "./pdf.js";
 import type { Macros, IngredientGroup, Ingredient, Step, Reference } from "../../src/lib/schema/recipe.js";
@@ -35,61 +39,75 @@ export function deLetterSpace(s: string): string {
     .join(" ")
     .trim();
 }
-
 const norm = (s: string) => deLetterSpace(s).replace(/\s+/g, " ").trim();
-/** group items into lines by similar y */
-function lines(items: TextItem[]): { y: number; x: number; items: TextItem[]; text: string }[] {
+
+function lines(items: TextItem[]): { y: number; x: number; text: string }[] {
   const sorted = [...items].sort((a, b) => a.y - b.y || a.x - b.x);
-  const out: { y: number; x: number; items: TextItem[]; text: string }[] = [];
+  const out: { y: number; x: number; text: string }[] = [];
   for (const it of sorted) {
     const last = out[out.length - 1];
-    if (last && Math.abs(it.y - last.y) <= 4) {
-      last.items.push(it);
-      last.text += " " + it.str;
-    } else {
-      out.push({ y: it.y, x: it.x, items: [it], text: it.str });
-    }
+    // join separate items with a DOUBLE space so deLetterSpace keeps the word
+    // boundary for letter-spaced multi-word headers ("INSIDE  CHEESE" → "INSIDE CHEESE")
+    if (last && Math.abs(it.y - last.y) <= 4) { last.text += "  " + it.str; }
+    else out.push({ y: it.y, x: it.x, text: it.str });
   }
   return out;
 }
-
-function findLabelY(page: PageData, label: string): number | null {
-  const it = page.items.find((i) => norm(i.str).toUpperCase() === label);
-  return it ? it.y : null;
-}
+const labelItem = (page: PageData, label: string) => page.items.find((i) => norm(i.str).toUpperCase() === label);
+const hasLabel = (page: PageData, label: string) => !!labelItem(page, label);
 
 function parseIngredientLine(text: string): Ingredient | null {
   const t = text.trim();
   if (!t) return null;
-  // "Pinch salt (~.4 grams)" / "Dash cream of tartar"
   const pinch = /^(pinch|dash)\s+(.*)$/i.exec(t);
   if (pinch) {
     const m = /\(~?\s*(\.?\d*\.?\d+)\s*grams?\)/i.exec(pinch[2]);
     const item = pinch[2].replace(/\s*\(.*?\)\s*/g, "").trim();
     return { amount: m ? Number(m[1]) : null, unit: m ? "g" : null, item, note: pinch[1].toLowerCase() };
   }
-  // leading amount with attached unit ("120g banana") or spaced count ("2 eggs")
   const m = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)?\s+(.*)$/.exec(t);
   if (m) {
     const amount = Number(m[1]);
     const maybeUnit = m[2]?.toLowerCase();
     if (maybeUnit && UNITS.has(maybeUnit)) return { amount, unit: maybeUnit, item: m[3].trim() };
-    // no recognized unit -> token belongs to the item ("2 eggs")
     return { amount, unit: null, item: [m[2], m[3]].filter(Boolean).join(" ").trim() };
   }
   return { amount: null, unit: null, item: t };
 }
-
-function isGroupHeader(text: string): boolean {
-  const n = norm(text);
-  return /^[A-Z][A-Z ]+$/.test(n) && !/\d/.test(n) && n.length <= 24;
+// Letter-spaced multi-word headers collapse to one token ("INSIDECHEESE"); the
+// word boundary is lost in the text layer. Recover it with a section vocabulary
+// (greedy longest-prefix). Hardened against the full book in Slice 2.
+const HEADER_VOCAB = [
+  "INSIDE", "OUTSIDE", "CHEESES", "CHEESE", "DOUGH", "DRY", "WET", "TOPPINGS", "TOPPING",
+  "COATING", "FILLING", "SAUCE", "BATCH", "GARLIC", "OIL", "SAUSAGE", "ITALIAN", "PIZZA",
+  "BUILD", "MARINARA", "GLAZE", "CRUST", "SEASONINGS", "SEASONING", "BREADING", "ASSEMBLY",
+  "CHICKEN", "BEEF", "MEAT", "BUTTER", "GLAZE", "FROSTING", "BATTER", "WINGS", "RICE",
+];
+function splitHeaderWords(name: string): string {
+  if (name.includes(" ")) return name;
+  const up = name.toUpperCase();
+  const words: string[] = [];
+  let i = 0;
+  while (i < up.length) {
+    const w = HEADER_VOCAB.find((v) => up.startsWith(v, i));
+    if (!w) return name; // unknown token -> leave concatenated (flagged for Slice 2)
+    words.push(w);
+    i += w.length;
+  }
+  return words.join(" ");
 }
+const isGroupHeader = (text: string) => {
+  const n = norm(text);
+  return /^[A-Z][A-Z ]+$/.test(n) && !/\d/.test(n) && n.length <= 24 && !["INGREDIENTS", "DIRECTIONS", "MACROS"].includes(n);
+};
 
-function parseMacros(page: PageData, macrosY: number): Macros {
+function parseMacros(page: PageData): Macros {
+  const macrosY = labelItem(page, "MACROS")?.y ?? -1;
   const macro: Partial<Macros> = {};
-  for (const ln of lines(page.items.filter((i) => i.x < 150 && i.y > macrosY + 5))) {
+  if (macrosY < 0) return { calories: 0, fat: 0, carbs: 0, netCarbs: null, protein: 0 };
+  for (const ln of lines(page.items.filter((i) => i.y > macrosY + 5 && i.y < macrosY + 160))) {
     const n = norm(ln.text).toUpperCase().replace(/\s+/g, "");
-    const m = /^(\d+)G?(CALORIES|FAT|NETCARBS|CARBS|PROTEIN)$/.exec(n);
+    const m = /(\d+)G?(CALORIES|FAT|NETCARBS|CARBS|PROTEIN)/.exec(n);
     if (!m) continue;
     const v = Number(m[1]);
     if (m[2] === "CALORIES") macro.calories = v;
@@ -98,62 +116,70 @@ function parseMacros(page: PageData, macrosY: number): Macros {
     else if (m[2] === "CARBS") macro.carbs = v;
     else if (m[2] === "PROTEIN") macro.protein = v;
   }
-  return {
-    calories: macro.calories ?? 0, fat: macro.fat ?? 0, carbs: macro.carbs ?? 0,
-    netCarbs: macro.netCarbs ?? null, protein: macro.protein ?? 0,
-  };
+  return { calories: macro.calories ?? 0, fat: macro.fat ?? 0, carbs: macro.carbs ?? 0, netCarbs: macro.netCarbs ?? null, protein: macro.protein ?? 0 };
 }
 
-function parseTimes(page: PageData): { servings: number; prep: number | null; cook: number | null } {
+function durationMin(s: string | null): number | null {
+  if (!s) return null;
+  const c = s.replace(/\s+/g, "");
+  const hr = /(\d+\.?\d*)\s*HRS?/i.exec(c);
+  if (hr) return Math.round(Number(hr[1]) * 60);
+  const mn = /(\d+)\s*MIN/i.exec(c);
+  return mn ? Number(mn[1]) : null;
+}
+function parseTimes(page: PageData) {
   const valueBelow = (label: string): string | null => {
-    const lab = page.items.find((i) => norm(i.str).toUpperCase() === label);
+    const lab = labelItem(page, label);
     if (!lab) return null;
-    // value may be split across items ("1 0" + "M I N S"); gather the whole row
     const row = page.items
       .filter((i) => i.y > lab.y && i.y < lab.y + 22 && i.x > lab.x - 20 && i.x < lab.x + 90)
-      .sort((a, b) => a.x - b.x)
-      .map((i) => i.str)
-      .join(" ");
+      .sort((a, b) => a.x - b.x).map((i) => i.str).join(" ");
     return row ? norm(row) : null;
   };
-  const mins = (s: string | null) => (s ? Number((/(\d+)\s*MIN/i.exec(s.replace(/\s+/g, "")) ?? [])[1] ?? NaN) : NaN);
   const serves = valueBelow("SERVES");
   return {
     servings: serves ? Number((/\d+/.exec(serves.replace(/\s+/g, "")) ?? ["1"])[0]) : 1,
-    prep: Number.isFinite(mins(valueBelow("PREP"))) ? mins(valueBelow("PREP")) : null,
-    cook: Number.isFinite(mins(valueBelow("COOK"))) ? mins(valueBelow("COOK")) : null,
+    prep: durationMin(valueBelow("PREP")),
+    cook: durationMin(valueBelow("COOK")),
   };
 }
 
-export function parseRecipePage(page: PageData, sourcePages: number[]): ParsedRecipe {
-  const ingHeaderY = findLabelY(page, "INGREDIENTS") ?? 220;
-  const dirHeaderX = page.items.find((i) => norm(i.str).toUpperCase() === "DIRECTIONS")?.x ?? 210;
-  const colSplit = Math.min(dirHeaderX - 10, 180);
-  const macrosY = findLabelY(page, "MACROS") ?? page.height - 180;
-  const tipItem = page.items.find((i) => /^TIP/i.test(norm(i.str)));
-  const tipY = tipItem ? tipItem.y : Infinity;
+// a caption is a short Title-Case phrase (every word capitalized), no trailing period
+const isCaption = (t: string) =>
+  /^[A-Z][A-Za-z'’.&-]*(?:\s+[A-Z0-9][A-Za-z'’.&-]*)*$/.test(t) &&
+  t.split(/\s+/).length <= 6 && /[a-z]/.test(t) && !/\.$/.test(t) && t.toUpperCase() !== "DIET CHEAT CODES";
 
-  // ---- title: largest-font item in the top band (not the running header) ----
-  const topItems = page.items.filter((i) => i.y < ingHeaderY - 10 && norm(i.str).toUpperCase() !== "DIET CHEAT CODES");
-  const title = norm([...topItems].sort((a, b) => b.h - a.h)[0]?.str ?? "Untitled")
-    .replace(/\b([A-Z])([A-Z]+)\b/g, (_, a, b) => a + b.toLowerCase()); // TITLECASE the all-caps heading
+function parseTitle(pages: PageData[]): string {
+  // the title-case caption near the photo/macros (y ~ 480-515) is the canonical full title
+  for (const p of pages) {
+    const cap = lines(p.items.filter((i) => i.y > 478 && i.y < 520))
+      .map((l) => norm(l.text)).find(isCaption);
+    if (cap) return cap;
+  }
+  // fallback: largest-font heading in the top band, title-cased
+  const top = pages.flatMap((p) => p.items).filter((i) => i.y < 200 && norm(i.str).toUpperCase() !== "DIET CHEAT CODES");
+  const big = [...top].sort((a, b) => b.h - a.h)[0];
+  return norm(big?.str ?? "Untitled").replace(/\b([A-Z])([A-Z]+)\b/g, (_, a, b) => a + b.toLowerCase());
+}
 
-  // ---- category: footer-left text ----
-  const footer = page.items.filter((i) => i.y > page.height - 40 && !/^\d+$/.test(i.str.trim()));
-  const category = norm(footer.sort((a, b) => a.x - b.x)[0]?.str ?? "Uncategorized");
+function parseCategory(page: PageData): string {
+  const footer = page.items.filter((i) => i.y > page.height - 22 && !/^\d+$/.test(i.str.trim()));
+  return norm(footer.sort((a, b) => a.x - b.x)[0]?.str ?? "Uncategorized");
+}
 
-  // ---- ingredients (left column, gap-bounded so the photo caption is excluded) ----
-  const leftLines = lines(page.items.filter((i) => i.x < colSplit && i.y > ingHeaderY + 4 && i.y < macrosY - 4));
+function parseIngredients(page: PageData, colSplit: number): IngredientGroup[] {
+  const ingY = labelItem(page, "INGREDIENTS")?.y ?? 210;
+  const macrosY = labelItem(page, "MACROS")?.y ?? page.height;
+  const ll = lines(page.items.filter((i) => i.x < colSplit && i.y > ingY + 4 && i.y < Math.min(macrosY - 4, page.height - 22)));
   const groups: IngredientGroup[] = [];
   let cur: IngredientGroup | null = null;
-  let prevY = ingHeaderY;
-  for (const ln of leftLines) {
-    if (ln.y - prevY > 30 && cur) break; // big gap -> end of ingredient block (caption follows)
+  let prevY = ingY;
+  for (const ln of ll) {
+    if (ln.y - prevY > 70 && cur?.ingredients.length) break; // caption/photo gap on single-page layouts
     prevY = ln.y;
     const text = ln.text.replace(/\s+/g, " ").trim();
-    if (isGroupHeader(text)) { cur = { name: norm(text), ingredients: [] }; groups.push(cur); continue; }
+    if (isGroupHeader(text)) { cur = { name: splitHeaderWords(norm(text)), ingredients: [] }; groups.push(cur); continue; }
     if (!cur) { cur = { name: "Ingredients", ingredients: [] }; groups.push(cur); }
-    // continuation line (no leading number, previous ingredient exists) -> append
     if (cur.ingredients.length && !/^(\d|\bpinch\b|\bdash\b)/i.test(text)) {
       const last = cur.ingredients[cur.ingredients.length - 1];
       last.item = (last.item + " " + text).trim();
@@ -162,45 +188,60 @@ export function parseRecipePage(page: PageData, sourcePages: number[]): ParsedRe
     const ing = parseIngredientLine(text);
     if (ing) cur.ingredients.push(ing);
   }
+  return groups.filter((g) => g.ingredients.length || isGroupHeader(g.name)); // keep header-only parents
+}
 
-  // ---- directions (right column, bounded above the tip block) ----
-  const rightItems = page.items.filter((i) => i.x >= colSplit && i.y > ingHeaderY + 4 && i.y < tipY - 2 && norm(i.str).toUpperCase() !== "DIRECTIONS");
-  const stepStarts = rightItems.filter((i) => /^\d+\.$/.test(i.str.trim())).sort((a, b) => a.y - b.y);
-  const steps: Step[] = stepStarts.map((s, idx) => {
-    const yEnd = stepStarts[idx + 1]?.y ?? Infinity;
-    const text = rightItems
+function parseSteps(page: PageData, colSplit: number, tipY: number): Step[] {
+  const ingY = labelItem(page, "INGREDIENTS")?.y ?? 210;
+  const right = page.items.filter((i) => i.x >= colSplit && i.y > ingY + 4 && i.y < tipY - 2 && norm(i.str).toUpperCase() !== "DIRECTIONS");
+  const starts = right.filter((i) => /^\d+\.$/.test(i.str.trim())).sort((a, b) => a.y - b.y);
+  return starts.map((s, idx) => {
+    const yEnd = starts[idx + 1]?.y ?? Infinity;
+    const text = right
       .filter((i) => !/^\d+\.$/.test(i.str.trim()) && i.y >= s.y - 3 && i.y < yEnd - 3 && i.x > s.x + 5)
-      .sort((a, b) => a.y - b.y || a.x - b.x)
-      .map((i) => i.str).join(" ").replace(/\s+/g, " ").trim();
+      .sort((a, b) => a.y - b.y || a.x - b.x).map((i) => i.str).join(" ").replace(/\s+/g, " ").trim();
     return { n: Number(s.str.replace(".", "")), text };
   }).filter((s) => s.text);
+}
 
-  // ---- tips ----
+export function parseRecipeSpread(pages: PageData[], sourcePages: number[]): ParsedRecipe {
+  const contentPage = pages.find((p) => hasLabel(p, "INGREDIENTS")) ?? pages[pages.length - 1];
+  const macrosPage = pages.find((p) => hasLabel(p, "MACROS")) ?? contentPage;
+  const dirX = labelItem(contentPage, "DIRECTIONS")?.x ?? 210;
+  const colSplit = Math.min(dirX - 10, 180);
+  const tipItem = contentPage.items.find((i) => /^TIP/i.test(norm(i.str)));
+  const tipY = tipItem ? tipItem.y : Infinity;
+
+  const ingredientGroups = parseIngredients(contentPage, colSplit);
+  const steps = parseSteps(contentPage, colSplit, tipY);
+
   const tips: string[] = [];
   if (tipItem) {
-    const tipText = page.items
-      .filter((i) => i !== tipItem && i.y >= tipItem.y - 2 && i.y < page.height - 40 && i.x >= tipItem.x - 2)
-      .sort((a, b) => a.y - b.y || a.x - b.x)
-      .map((i) => i.str).join(" ")
+    const tipText = contentPage.items
+      .filter((i) => i !== tipItem && i.y >= tipItem.y - 2 && i.y < contentPage.height - 40 && i.x >= tipItem.x - 2)
+      .sort((a, b) => a.y - b.y || a.x - b.x).map((i) => i.str).join(" ")
       .replace(/^\s*:?\s*/, "").replace(/\s+/g, " ").trim();
     if (tipText) tips.push(tipText);
   }
 
-  // ---- video: youtube link annotation (usually on the title) ----
-  const videoUrl = page.links.find((l) => /youtu\.?be|youtube/.test(l.url))?.url ?? null;
+  const videoUrl = pages.flatMap((p) => p.links).find((l) => /youtu\.?be|youtube/.test(l.url))?.url ?? null;
 
-  // ---- references: group names mentioned in steps (D21) ----
-  const groupNames = groups.map((g) => g.name).filter((n) => n.toLowerCase() !== "ingredients");
+  const groupNames = ingredientGroups.map((g) => g.name).filter((n) => n.toLowerCase() !== "ingredients");
   const references: Reference[] = [];
   for (const s of steps) {
     for (const g of groupNames) {
-      const re = new RegExp(`\\b${g}\\s+Ingredients\\b|\\b${g}\\b(?=\\s+Ingredients)`, "i");
-      if (re.test(s.text) && !references.some((r) => r.target === g)) {
-        references.push({ raw: `${g} Ingredients`, kind: "group", target: g, seconds: null });
+      const words = g.replace(/\s+/g, "\\s+");
+      if (new RegExp(`\\b${words}\\b`, "i").test(s.text) && !references.some((r) => r.target === g)) {
+        references.push({ raw: g, kind: "group", target: g, seconds: null });
       }
     }
   }
 
-  const { servings, prep, cook } = parseTimes(page);
-  return { title, category, servings, macros: parseMacros(page, macrosY), ingredientGroups: groups, steps, prepTimeMin: prep, cookTimeMin: cook, tips, videoUrl, references };
+  const { servings, prep, cook } = parseTimes(contentPage);
+  return {
+    title: parseTitle(pages),
+    category: parseCategory(contentPage),
+    servings, macros: parseMacros(macrosPage), ingredientGroups, steps,
+    prepTimeMin: prep, cookTimeMin: cook, tips, videoUrl, references,
+  };
 }
