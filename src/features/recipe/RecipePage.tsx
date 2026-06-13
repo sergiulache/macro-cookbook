@@ -6,6 +6,7 @@ import { AnimatedNumber } from "../../components/AnimatedNumber";
 import { renderStep, groupAnchor } from "../../lib/recipes/references";
 import { relatedTo } from "../../lib/recipes/related";
 import { RecipeCard } from "../../components/RecipeCard";
+import { FavoriteButton } from "../../components/FavoriteButton";
 
 const fmt = (n: number) => (n >= 10 ? Math.round(n) : Math.round(n * 10) / 10);
 
@@ -50,7 +51,8 @@ export function RecipePage() {
             <span>{recipe.servings} {recipe.servings === 1 ? "serving" : "servings"}</span>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
+          <div className="rounded-full border border-hairline-strong"><FavoriteButton id={recipe.id} /></div>
           <Link to={`/r/${recipe.id}/cook`} className="inline-flex h-9 items-center gap-2 rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink">
             Cook mode
           </Link>

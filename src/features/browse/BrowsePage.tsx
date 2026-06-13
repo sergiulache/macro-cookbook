@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { recipes, categories } from "../../lib/recipes/loadRecipes";
 import { deriveTags, ALL_TAGS, totalTimeMin } from "../../lib/recipes/tags";
 import { RecipeCard } from "../../components/RecipeCard";
+import { useFavorites } from "../../lib/data/useFavorites";
 import type { Recipe } from "../../lib/schema/recipe";
 
 const tagsOf = new Map(recipes.map((r) => [r.id, deriveTags(r)]));
@@ -44,11 +45,14 @@ export function BrowsePage() {
   const [cats, setCats] = useState<Set<string>>(new Set());
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [sort, setSort] = useState<Sort>("featured");
+  const [favOnly, setFavOnly] = useState(false);
   const [page, setPage] = useState(1);
   const PER_PAGE = 24;
+  const { favorites } = useFavorites();
 
   const results = useMemo(() => {
     let list: Recipe[] = q.trim() ? fuse.search(q).map((r) => r.item) : recipes.slice();
+    if (favOnly) list = list.filter((r) => favorites.has(r.id));
     if (cats.size) list = list.filter((r) => cats.has(r.category));
     if (tags.size) list = list.filter((r) => (tagsOf.get(r.id) ?? []).some((t) => tags.has(t)));
     const by: Record<Sort, (a: Recipe, b: Recipe) => number> = {
@@ -60,10 +64,10 @@ export function BrowsePage() {
     };
     if (sort !== "featured" || !q) list = [...list].sort(by[sort]);
     return list;
-  }, [q, cats, tags, sort]);
+  }, [q, cats, tags, sort, favOnly, favorites]);
 
   // reset to first page whenever the result set changes
-  useEffect(() => setPage(1), [q, cats, tags, sort]);
+  useEffect(() => setPage(1), [q, cats, tags, sort, favOnly, favorites]);
   const pageCount = Math.max(1, Math.ceil(results.length / PER_PAGE));
   const pageItems = results.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
@@ -96,6 +100,7 @@ export function BrowsePage() {
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
+          <Chip active={favOnly} onClick={() => setFavOnly((v) => !v)}>♥ Favorites</Chip>
           {ALL_TAGS.map((t) => (
             <Chip key={t} active={tags.has(t)} onClick={() => toggle(tags, t, setTags)}>{t}</Chip>
           ))}

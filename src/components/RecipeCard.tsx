@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Recipe } from "../lib/schema/recipe";
 import { imageUrl } from "../lib/recipes/loadRecipes";
+import { FavoriteButton } from "./FavoriteButton";
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   const { image, macros } = recipe;
@@ -9,9 +10,10 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
     <motion.div layout="position" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
       <Link to={`/r/${recipe.id}`} className="group block">
         <div
-          className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-surface-soft bg-cover bg-center"
+          className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-surface-soft bg-cover bg-center"
           style={image ? { backgroundImage: `url(${image.blurDataURL})` } : undefined}
         >
+          <div className="absolute right-2 top-2 z-10"><FavoriteButton id={recipe.id} /></div>
           {image && (
             <img
               src={imageUrl(image.src)}

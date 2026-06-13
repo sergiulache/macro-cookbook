@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Per-person data: favorites, notes, custom recipes (D15).
+    // Readable by any signed-in user (mutually viewable); writable only by the owner.
+    // TODO: once both account UIDs are captured, restrict read/write to that
+    // allowlist so nobody else can use the app (D17).
+    match /users/{uid} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == uid;
+      match /{document=**} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Joint data: weekly meal plan + shopping list (added in later slices).
+    match /joint/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
