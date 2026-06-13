@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* DESIGN.md tokens — strict monochrome, pills, rounded display face (D20) */
+@theme {
+  --color-canvas: #ffffff;
+  --color-surface-soft: #fafafa;
+  --color-surface-dark: #171717;
+  --color-ink: #000000;
+  --color-ink-deep: #090909;
+  --color-charcoal: #525252;
+  --color-body: #737373;
+  --color-mute: #a3a3a3;
+  --color-hairline: #e5e5e5;
+  --color-hairline-strong: #d4d4d4;
+  --color-on-dark: #ffffff;
+
+  --font-display: "Nunito", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body { margin: 0; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+  ::selection { background: #000; color: #fff; }
+}

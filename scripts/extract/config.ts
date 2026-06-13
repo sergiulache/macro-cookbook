@@ -6,5 +6,5 @@ export const SOURCE_PDF =
 export const OUT_DIR = "out/sample";
 export const PAGES_DIR = `${OUT_DIR}/pages`;
 export const PHOTOS_DIR = `${OUT_DIR}/photos`;
-export const ASSETS_OUT = "src/assets/recipes";
+export const ASSETS_OUT = "public/recipes";
 export const DATA_OUT = "src/data/generated";

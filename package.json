@@ -5,15 +5,26 @@
   "author": "sergiulache <phatiacyy@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "framer-motion": "^12.40.0",
+    "fuse.js": "^7.4.2",
     "jsqr": "^1.4.0",
     "pdfjs-dist": "^6.0.227",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.17.0",
     "sharp": "^0.35.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
     "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "tailwindcss": "^4.3.1",
     "tsx": "^4.22.4",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
   },
   "type": "module",
   "description": "Web app rebuild of the Diet Cheat Codes recipe ebook",
@@ -21,6 +32,10 @@
     "extract:sample": "tsx scripts/extract/build-sample.ts",
     "extract:report": "tsx scripts/extract/report.ts",
     "extract:all": "tsx scripts/extract/extract-all.ts",
-    "extract:scan": "tsx scripts/extract/scan.ts"
+    "extract:scan": "tsx scripts/extract/scan.ts",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b"
   }
 }
