@@ -1,7 +1,15 @@
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { useEffect } from "react";
+import { HashRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import { BrowsePage } from "./features/browse/BrowsePage";
 import { RecipePage } from "./features/recipe/RecipePage";
 import { CookingMode } from "./features/recipe/CookingMode";
+
+/** Reset scroll to top on every route change (so a recipe opens at its top). */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => window.scrollTo(0, 0), [pathname]);
+  return null;
+}
 
 function Nav() {
   return (
@@ -19,6 +27,7 @@ function Nav() {
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={<BrowsePage />} />

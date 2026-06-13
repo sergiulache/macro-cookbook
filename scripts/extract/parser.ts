@@ -163,7 +163,7 @@ function parseTimes(page: PageData) {
 
 // a caption is a short Title-Case phrase (every word capitalized), no trailing period
 const isCaption = (t: string) =>
-  /^[A-Z][A-Za-z'’.&-]*(?:\s+[A-Z0-9][A-Za-z'’.&-]*)*$/.test(t) &&
+  /^[A-Z0-9][A-Za-z0-9'’.&-]*(?:\s+[A-Z0-9][A-Za-z0-9'’.&-]*)*$/.test(t) &&
   t.split(/\s+/).length <= 6 && /[a-z]/.test(t) && !/\.$/.test(t) && t.toUpperCase() !== "DIET CHEAT CODES";
 
 const TITLE_SMALL = new Set(["and", "on", "the", "of", "with", "a", "to", "in", "or", "for"]);
@@ -192,7 +192,12 @@ function headingTitle(page: PageData): string {
 function parseTitle(pages: PageData[], contentPage: PageData): string {
   let caption = "";
   for (const p of pages) {
-    const cap = lines(p.items.filter((i) => i.y > 478 && i.y < 520)).map((l) => norm(l.text)).find(isCaption);
+    // on a content page the caption shares its row with ingredient/step columns,
+    // so restrict to the centered band (x 60-200); on a photo page allow any x
+    const isContentPg = !!ingHeaderItem(p);
+    const cap = p.items
+      .filter((i) => i.y > 470 && i.y < 535 && (!isContentPg || (i.x >= 60 && i.x <= 200)))
+      .map((i) => norm(i.str)).find(isCaption);
     if (cap) { caption = cap; break; }
   }
   const heading = headingTitle(contentPage);
