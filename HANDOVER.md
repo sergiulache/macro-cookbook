@@ -8,6 +8,7 @@ What I built while you were away, what works, and the things only **you** can ve
 - **Repo:** github.com/sergiulache/macro-cookbook (public — required for free Pages; ADR-0001).
 - `yarn dev` — local dev · `yarn build` — prod build · `yarn preview` — serve build.
 - `yarn extract:all` — re-run full extraction (regenerates `src/data/generated/recipes.json` + `public/recipes/*.webp` + `out/sample/coverage.html`).
+- `yarn verify` — deterministic data check: every title word, macro number, and ingredient must appear in the source page text, plus a structural merged-header check. Currently passes all 136.
 - `yarn typecheck` — `tsc -b`.
 
 ## What's done
@@ -15,6 +16,8 @@ What I built while you were away, what works, and the things only **you** can ve
 - **Extraction (Slice 0–2):** 136 recipes parsed from the PDF text layer (exact numbers, not OCR), schema-validated (zod, `src/lib/schema/`), 12 categories, hero images optimized to webp (~35MB total). Method + parser proved on hard layouts (multi-group, two-page, sub-recipes).
 - **App (Slice 1 + 3):** Vite + React 19 + Tailwind v4 + framer-motion, DESIGN.md monochrome language. Browse (fuzzy search, category + auto-tag filters, sort, animated reflow grid) and recipe detail (hero, serving scaler with tweened totals, ingredient groups, steps, tips, Watch-video button).
 - **Recipe features (Slice 4):** inline cross-reference links in steps (group jumps, recipe-to-recipe links like "FOOLPROOF HOMEMADE MARINARA", video-timestamp deep links), full-screen **cooking mode** with screen wake-lock, and a "You might also like" related-recipes strip. All live and screenshot-verified.
+- **Data quality pass:** after spot-checks found a high defect rate, the parser was overhauled and the book re-extracted. Fixed: multi-word run-together headers (complete segmenter), digit-led titles, dense-layout captions, "INGREDIENTS CONT" continuation pages, header annotations like "(Per Biscuit)", caption-bleed into ingredients, caps reference-ingredients, and over-eager continuation merging. Categories normalized to plain words. `yarn verify` passes all 136.
+- **UI fixes:** filter bar no longer sticky (was eating the mobile screen), results paginated at 24/page, and scroll resets to top on navigation.
 
 ## NEEDS YOU — blockers / unverifiable
 
@@ -22,7 +25,7 @@ What I built while you were away, what works, and the things only **you** can ve
 
 2. **2 recipes have no macros — manual entry.** *Nickchicken* and *Nickchicken Meal Prep*. Their macro values sit on PDF pages **115 / 353, which are corrupt/image-only** — unreadable by any tool I have (render comes out blank). Please read the macros from the physical book / another PDF viewer and paste them here; I'll patch the data. (They're the only two with all-zero macros; *Maple Syrup* is legitimately 0-cal.)
 
-3. **Spot-check extraction accuracy.** I verified the *parsing logic* and cross-checked the fixtures, but I can't confirm every number against the physical book. Open `out/sample/coverage.html` (after `yarn extract:all`) — it flags 7 recipes. Worth eyeballing a handful of multi-page recipes (deep dishes, anything in "Doughlicious"/"Prep School").
+3. **Spot-check extraction accuracy.** `yarn verify` confirms nothing is missing/invented and catches merged-header structure, but it cannot catch every structural nuance (e.g. an ingredient placed in the wrong group). A full vision pass (parallel subagents comparing each render to its JSON) was offered and deferred. If you find issues by eye, tell me and I fix the class. Known-fixed examples to re-check: protein-buns, chicken-parmesan-sandwich, honey-butter-chicken-biscuit, chicken-gyro-salad, crunchwrap-supreme, the deep-dish/pot-pie recipes.
 
 4. **A few cosmetic parser edges:** wrapped captions can truncate (e.g. title shows "Lou'S Sausage" instead of "Lou's Sausage Deep Dish Pizza"); multi-word group headers are recovered via a vocabulary list (`HEADER_VOCAB` in `scripts/extract/parser.ts`) — if any recipe shows a run-together header like "SOMETHINGNEW", add the words there and re-run.
 
