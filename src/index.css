@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* DESIGN.md tokens — strict monochrome, pills, rounded display face (D20) */
+/* DESIGN.md tokens - strict monochrome, pills, rounded display face (D20) */
 @theme {
   --color-canvas: #ffffff;
   --color-surface-soft: #fafafa;

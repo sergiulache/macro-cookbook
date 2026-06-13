@@ -1,5 +1,5 @@
 /**
- * Slice-0 sample build — fully parser-driven (D6). For each sample we give only
+ * Slice-0 sample build - fully parser-driven (D6). For each sample we give only
  * the photo + content page numbers; ALL text/numbers come from the text layer
  * via the parser. Enrich with optimized hero image, validate, write, report.
  */
@@ -13,11 +13,11 @@ import { DATA_OUT } from "./config.js";
 
 // Each sample is the set of pages forming one recipe spread (photo + content).
 const SAMPLES: number[][] = [
-  [47, 48],   // Banana Pancakes — grouped (WET/DRY), tips, video link
-  [49, 50],   // Japanese Pancakes — flat list, 12 steps, no tips
-  [119, 120], // Dominos Cheesy Bread — macros on photo page, 6 groups incl. nested DOUGH, sub-recipe ref
-  [149, 150], // Lou's Sausage Deep Dish Pizza — deep-dish layout
-  [291, 292], // Foolproof Homemade Marinara — sub-recipe, "(61G SERVING)" macros
+  [47, 48],   // Banana Pancakes - grouped (WET/DRY), tips, video link
+  [49, 50],   // Japanese Pancakes - flat list, 12 steps, no tips
+  [119, 120], // Dominos Cheesy Bread - macros on photo page, 6 groups incl. nested DOUGH, sub-recipe ref
+  [149, 150], // Lou's Sausage Deep Dish Pizza - deep-dish layout
+  [291, 292], // Foolproof Homemade Marinara - sub-recipe, "(61G SERVING)" macros
 ];
 
 const slugify = (s: string) =>

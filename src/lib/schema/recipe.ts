@@ -22,7 +22,7 @@ export type Ingredient = z.infer<typeof Ingredient>;
 /**
  * A capitalized group ("DOUGH", "Wet Ingredients") referenced from steps (D21).
  * `ingredients` may be empty: some recipes use a parent header (e.g. DOUGH) over
- * sub-groups (DRY/WET) — the header-only group is kept to preserve structure.
+ * sub-groups (DRY/WET) - the header-only group is kept to preserve structure.
  */
 export const IngredientGroup = z.object({
   name: z.string().min(1),
@@ -45,7 +45,7 @@ export const RecipeImage = z.object({
 });
 export type RecipeImage = z.infer<typeof RecipeImage>;
 
-/** Resolved cross-reference found in a step (D21–D23). */
+/** Resolved cross-reference found in a step (D21-D23). */
 export const Reference = z.object({
   raw: z.string(), // the literal text matched
   kind: z.enum(["group", "recipe", "video-timestamp"]),

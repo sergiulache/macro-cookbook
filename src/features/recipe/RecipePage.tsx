@@ -89,7 +89,7 @@ export function RecipePage() {
             { k: "Fat", v: m.fat, s: "g" },
           ].map((x) => (
             <div key={x.k}>
-              <div className="font-display text-[22px] font-700 tabular-nums">{x.v > 0 || x.k === "Cal" ? x.v : "—"}{x.v > 0 && x.s ? x.s : ""}</div>
+              <div className="font-display text-[22px] font-700 tabular-nums">{x.v > 0 || x.k === "Cal" ? x.v : "-"}{x.v > 0 && x.s ? x.s : ""}</div>
               <div className="text-[12px] text-mute">{x.k}</div>
             </div>
           ))}

@@ -12,7 +12,7 @@ for (const r of recipes) if (r.title.split(/\s+/).length >= 2) titleToId.set(nor
 
 interface Span { start: number; end: number; node: (key: number) => ReactNode; }
 
-/** Render a step with inline links: group jumps, recipe links, video timestamps (D21–D23). */
+/** Render a step with inline links: group jumps, recipe links, video timestamps (D21-D23). */
 export function renderStep(text: string, recipe: Recipe): ReactNode {
   const spans: Span[] = [];
   const claim = (start: number, end: number, node: (k: number) => ReactNode) => {

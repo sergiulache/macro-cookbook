@@ -14,7 +14,7 @@ const pagePath = (p: number) => `pages/page-${String(p).padStart(3, "0")}.png`;
 const heroPath = (src: string) => `../../src/assets/recipes/${src.replace(/^recipes\//, "")}`;
 
 function macrosRow(m: Recipe["macros"]) {
-  return `cal <b>${m.calories}</b> · fat <b>${m.fat}g</b> · carbs <b>${m.carbs}g</b> · net <b>${m.netCarbs ?? "—"}g</b> · protein <b>${m.protein}g</b>`;
+  return `cal <b>${m.calories}</b> · fat <b>${m.fat}g</b> · carbs <b>${m.carbs}g</b> · net <b>${m.netCarbs ?? "-"}g</b> · protein <b>${m.protein}g</b>`;
 }
 
 function card(r: Recipe): string {
@@ -31,7 +31,7 @@ function card(r: Recipe): string {
     <div class="renders">${renders}</div>
     <div class="data">
       <h2>${esc(r.title)} <span class="ok">✓ schema</span></h2>
-      <p class="meta">${esc(r.category)} · serves ${r.servings} · prep ${r.prepTimeMin ?? "—"}m · cook ${r.cookTimeMin ?? "—"}m · pp.${r.sourcePages.join(",")}</p>
+      <p class="meta">${esc(r.category)} · serves ${r.servings} · prep ${r.prepTimeMin ?? "-"}m · cook ${r.cookTimeMin ?? "-"}m · pp.${r.sourcePages.join(",")}</p>
       <p class="macros">${macrosRow(r.macros)}</p>
       <div class="hero"><img src="${heroPath(r.image?.src ?? "")}" width="180"><span class="muted">optimized hero (${r.image ? "ok" : "MISSING"})</span></div>
       <div class="groups">${groups}</div>
@@ -43,7 +43,7 @@ function card(r: Recipe): string {
   </section>`;
 }
 
-const html = `<!doctype html><meta charset="utf8"><title>Extraction sample — review</title>
+const html = `<!doctype html><meta charset="utf8"><title>Extraction sample - review</title>
 <style>
   body{font:15px/1.5 system-ui;margin:0;background:#fafafa;color:#171717}
   header{padding:24px 32px;border-bottom:1px solid #e5e5e5;background:#fff}
@@ -57,7 +57,7 @@ const html = `<!doctype html><meta charset="utf8"><title>Extraction sample — r
   .hero img{border-radius:8px} .tips{background:#fafafa;border-left:3px solid #d4d4d4;padding:6px 12px;margin:8px 0}
   .muted{color:#a3a3a3} .warn{color:#b45309} code{background:#f0f0f0;padding:1px 5px;border-radius:4px;font-size:12px}
 </style>
-<header><h1>Extraction sample — review</h1><p class="sub">${recipes.length} recipes · compare each render with the extracted data · every recipe passed the zod schema</p></header>
+<header><h1>Extraction sample - review</h1><p class="sub">${recipes.length} recipes · compare each render with the extracted data · every recipe passed the zod schema</p></header>
 ${recipes.map(card).join("")}`;
 
 writeFileSync(`${OUT_DIR}/report.html`, html);

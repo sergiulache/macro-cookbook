@@ -7,7 +7,7 @@ service cloud.firestore {
     function isMember() {
       return request.auth != null && request.auth.uid in [
         'LDl4A6ilzUdGJOsgVLq5CWUg2PA2', // Sergiu
-        'B2eHoIgwDqhPDZvu1P8iC3Gpefq2'  // Ana
+        'B2eHoIgwDqhPDZvu1P8iC3Gpefq2'  // Ane
       ];
     }
 
@@ -22,7 +22,7 @@ service cloud.firestore {
       }
     }
 
-    // Joint data: weekly meal plan + shopping list (D15) — both members read+write.
+    // Joint data: weekly meal plan + shopping list (D15) - both members read+write.
     match /joint/{document=**} {
       allow read, write: if isMember();
     }

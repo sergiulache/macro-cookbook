@@ -1,6 +1,6 @@
 # Joint vs Mutually-Viewable data ownership
 
-Data is split by two distinct sharing semantics rather than a single "shared" notion. The **Meal Plan** and **Shopping List** are *Joint* — one shared object both people edit and see identically, because cooking and shopping happen together. **Favorites** and **Custom Recipes** are *Mutually Viewable* — each person owns their own set and can view the other's, but the sets are never merged into one pile. Macro goals are personal.
+Data is split by two distinct sharing semantics rather than a single "shared" notion. The **Meal Plan** and **Shopping List** are *Joint* - one shared object both people edit and see identically, because cooking and shopping happen together. **Favorites** and **Custom Recipes** are *Mutually Viewable* - each person owns their own set and can view the other's, but the sets are never merged into one pile. Macro goals are personal.
 
 ## Consequences
 

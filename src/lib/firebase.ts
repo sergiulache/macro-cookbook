@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// Public client config (not a secret — safe to commit). Project: macro-cookbook.
+// Public client config (not a secret - safe to commit). Project: macro-cookbook.
 const firebaseConfig = {
   apiKey: "AIzaSyDk02SZbiVAgPlgOlMogan80NPOoyYE3iE",
   authDomain: "macro-cookbook.firebaseapp.com",

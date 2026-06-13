@@ -1,20 +1,20 @@
-# Macro Cookbook — Implementation Plan (Vertical Slices)
+# Macro Cookbook - Implementation Plan (Vertical Slices)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Turn the 401-page *Diet Cheat Codes* PDF into a fast, login-gated, two-person web cookbook with search/filter/scaling, a custom-recipe builder, a joint weekly meal plan, and a synced shopping list — built and deployed end-to-end.
+**Goal:** Turn the 401-page *Diet Cheat Codes* PDF into a fast, login-gated, two-person web cookbook with search/filter/scaling, a custom-recipe builder, a joint weekly meal plan, and a synced shopping list - built and deployed end-to-end.
 
-**Architecture:** Static Vite/React/TS SPA (recipe content bundled as JSON + optimized images) deployed to GitHub Pages; Firebase (Google Auth + Firestore) as the only backend, gating the whole app and storing synced personal/joint data. A single zod schema is the contract shared by the extraction pipeline and the app. See `DECISIONS.md` (D1–D34) and `docs/adr/` for the *why* behind every choice.
+**Architecture:** Static Vite/React/TS SPA (recipe content bundled as JSON + optimized images) deployed to GitHub Pages; Firebase (Google Auth + Firestore) as the only backend, gating the whole app and storing synced personal/joint data. A single zod schema is the contract shared by the extraction pipeline and the app. See `DECISIONS.md` (D1-D34) and `docs/adr/` for the *why* behind every choice.
 
 **Tech Stack:** Vite, React, TypeScript, Tailwind (DESIGN.md tokens), shadcn/ui (Radix primitives restyled to the tokens), framer-motion, zod, Fuse.js (fuzzy search), Firebase JS SDK, **yarn**, vitest. Extraction: a TS script run with yarn + Poppler (`pdftoppm`, `pdfimages`, `pdftotext`), `sharp` (image optimization), `jsqr` (QR decode off the page render).
 
-**Scaffolding conventions:** use native CLIs — `npm create vite@latest`, `npx shadcn@latest init`/`add`, etc. — and only hand-edit the generated files afterward. Never write a vite/tailwind/tsconfig from scratch if a generator produces it. Installs use **yarn**.
+**Scaffolding conventions:** use native CLIs - `npm create vite@latest`, `npx shadcn@latest init`/`add`, etc. - and only hand-edit the generated files afterward. Never write a vite/tailwind/tsconfig from scratch if a generator produces it. Installs use **yarn**.
 
 ---
 
 ## Method: how vertical slices work here
 
-Each slice cuts top-to-bottom through **one capability** — the minimum data/rules + UI + tests + docs to prove it works and is deployed — rather than building a whole layer at once. Every slice after Slice 1 ends with something openable in the browser. Earlier slices stand up the thin infra later slices reuse (auth shell, routing, design tokens, the two Firestore data patterns), but only as much as the current feature needs.
+Each slice cuts top-to-bottom through **one capability** - the minimum data/rules + UI + tests + docs to prove it works and is deployed - rather than building a whole layer at once. Every slice after Slice 1 ends with something openable in the browser. Earlier slices stand up the thin infra later slices reuse (auth shell, routing, design tokens, the two Firestore data patterns), but only as much as the current feature needs.
 
 **Extraction is de-risked before it is scaled.** Slice 0 proves the extraction method on a tiny representative sample and shows you the output for sign-off. Only Slice 2 runs it on all ~150 recipes.
 
@@ -44,7 +44,7 @@ macro-cookbook/
 ├── src/
 │   ├── main.tsx  App.tsx  router.tsx
 │   ├── lib/
-│   │   ├── schema/                   # zod contracts — SHARED with scripts/extract
+│   │   ├── schema/                   # zod contracts - SHARED with scripts/extract
 │   │   │   ├── recipe.ts  ingredient.ts  subrecipe.ts  userdata.ts
 │   │   ├── design/tokens.ts          # DESIGN.md tokens → Tailwind preset
 │   │   ├── firebase.ts               # SDK init
@@ -68,15 +68,15 @@ macro-cookbook/
 
 ---
 
-## Slice 0 — Extraction proof-of-concept (SPIKE, gated by your review)
+## Slice 0 - Extraction proof-of-concept (SPIKE, gated by your review)
 
-**Proves:** the extraction method produces correct, typed, lossless data + optimized images from real pages — *before* we commit to all 150. Output is a review artifact, not app UI.
+**Proves:** the extraction method produces correct, typed, lossless data + optimized images from real pages - *before* we commit to all 150. Output is a review artifact, not app UI.
 
 **Infra stood up:** repo init, bun project, Poppler/sharp/jsqr toolchain, the zod schema (first draft), extraction script structure.
 
 **Sample (representative of every hard case):** pick ~6 items at execution by scanning the TOC + pages:
-- one simple single-page recipe (e.g. *Banana Pancakes* — Wet/Dry Ingredient groups),
-- one two-page-instructions recipe (macros on page 2 — e.g. a deep-dish pizza),
+- one simple single-page recipe (e.g. *Banana Pancakes* - Wet/Dry Ingredient groups),
+- one two-page-instructions recipe (macros on page 2 - e.g. a deep-dish pizza),
 - one recipe referencing a sub-recipe by name (*Dominos Cheesy Bread* → "FOOLPROOF HOMEMADE MARINARA"),
 - one recipe with a `TIP:` block and a video-timestamp reference,
 - one shared sub-procedure / illustrated process spread (e.g. *Deep dish Process*),
@@ -85,13 +85,13 @@ macro-cookbook/
 **Tasks:**
 
 - [ ] **0.1** `git init`, `yarn init -y`, `yarn add zod sharp jsqr tsx`, ensure `pdftoppm/pdfimages/pdftotext` present. Commit.
-- [ ] **0.2** Write `src/lib/schema/recipe.ts`, `ingredient.ts`, `subrecipe.ts` (the v1 contract — see schema below). Commit.
+- [ ] **0.2** Write `src/lib/schema/recipe.ts`, `ingredient.ts`, `subrecipe.ts` (the v1 contract - see schema below). Commit.
 - [ ] **0.3** `scripts/extract/images.ts`: render a page to PNG (`pdftoppm`), extract embedded photo (`pdfimages`), output responsive AVIF+WebP at 400/800/1200px via `sharp`, return `{src, srcset, width, height, blurDataURL}`. 
 - [ ] **0.4** `scripts/extract/qr.ts`: locate + decode the QR on the page render with `jsqr`, return the YouTube URL (or null).
 - [ ] **0.5** `scripts/extract/extract.ts`: for each sample page, produce a `Recipe` object conforming to the schema by reading the rendered page (visual extraction; text layer is unreliable per D6). Stitch two-page recipes. Capture prepTime/cookTime/tips conditionally (D5).
 - [ ] **0.6** `scripts/extract/report.ts`: emit `out/sample/report.html` showing, per recipe, the **page render side-by-side with the extracted JSON**, plus a zod-validation pass/fail badge and a list of any low-confidence fields (D-verification: flag the shaky ones).
 - [ ] **0.7** Run on the sample. Open the report.
-- [ ] **0.8 — REVIEW GATE (you):** eyeball the report. Confirm the schema captures everything, nothing is lost, the method is sound. Adjust schema/method and re-run until you sign off. **No further slice starts until this passes.**
+- [ ] **0.8 - REVIEW GATE (you):** eyeball the report. Confirm the schema captures everything, nothing is lost, the method is sound. Adjust schema/method and re-run until you sign off. **No further slice starts until this passes.**
 
 **The v1 schema (`src/lib/schema/recipe.ts`):**
 ```ts
@@ -107,7 +107,7 @@ export const Ingredient = z.object({
   note: z.string().optional(),        // "(optional)", brand hints
 });
 export const IngredientGroup = z.object({
-  name: z.string().min(1),            // "DOUGH", "Wet Ingredients" — referenced in steps
+  name: z.string().min(1),            // "DOUGH", "Wet Ingredients" - referenced in steps
   ingredients: z.array(Ingredient).min(1),
 });
 export const Step = z.object({ n: z.number(), text: z.string().min(1) });
@@ -135,9 +135,9 @@ export type Recipe = z.infer<typeof Recipe>;
 
 ---
 
-## Slice 1 — Walking skeleton: deploy + auth gate + one recipe rendered
+## Slice 1 - Walking skeleton: deploy + auth gate + one recipe rendered
 
-**Proves:** the full pipeline is real — build → GitHub Pages deploy → open URL → Google sign-in → see ONE real recipe rendered in the DESIGN.md language, loaded from bundled JSON and schema-validated.
+**Proves:** the full pipeline is real - build → GitHub Pages deploy → open URL → Google sign-in → see ONE real recipe rendered in the DESIGN.md language, loaded from bundled JSON and schema-validated.
 
 **Infra stood up (reused by every later slice):** Vite/React/TS app, Tailwind preset from DESIGN.md tokens, client routing, Firebase init, Google auth context + whole-app `AuthGate` (D17), CI deploy, motion primitives skeleton.
 
@@ -148,9 +148,9 @@ export type Recipe = z.infer<typeof Recipe>;
 
 **Tasks:**
 
-- [ ] **1.1** Scaffold with native CLIs: `npm create vite@latest . -- --template react-ts`, `yarn`, add Tailwind, then `npx shadcn@latest init`. Hand-edit the generated `tailwind.config.ts` to consume `src/lib/design/tokens.ts` (colors/typography/rounded/spacing from DESIGN.md); add fonts (Nunito for SF-Pro-Rounded substitute, Inter for body, JetBrains Mono — per DESIGN.md "Font Substitutes"); set `vite.config.ts` `base: "/macro-cookbook/"`. shadcn primitives (dialog, slider, dropdown, drawer) added per-slice via `npx shadcn@latest add` and restyled to the tokens. Commit.
+- [ ] **1.1** Scaffold with native CLIs: `npm create vite@latest . -- --template react-ts`, `yarn`, add Tailwind, then `npx shadcn@latest init`. Hand-edit the generated `tailwind.config.ts` to consume `src/lib/design/tokens.ts` (colors/typography/rounded/spacing from DESIGN.md); add fonts (Nunito for SF-Pro-Rounded substitute, Inter for body, JetBrains Mono - per DESIGN.md "Font Substitutes"); set `vite.config.ts` `base: "/macro-cookbook/"`. shadcn primitives (dialog, slider, dropdown, drawer) added per-slice via `npx shadcn@latest add` and restyled to the tokens. Commit.
 - [ ] **1.2** Firebase: `firebase projects:create macro-cookbook-<suffix>`, link ReziQuiz's billing account (`gcloud billing projects link` using the account on `reziquiz-827cc`), enable Google auth provider, add web app, write `src/lib/firebase.ts` + `.firebaserc` + `firebase.json` (Firestore only; hosting stays GitHub Pages). Public Firebase web config is committed (it's not a secret). Commit.
-- [ ] **1.3** `src/lib/auth/`: `AuthContext` (onAuthStateChanged), `useAuth()`, `AuthGate` wrapping the app — unauthenticated → login screen with a single black-pill "Sign in with Google" (DESIGN.md `button-primary`). Commit.
+- [ ] **1.3** `src/lib/auth/`: `AuthContext` (onAuthStateChanged), `useAuth()`, `AuthGate` wrapping the app - unauthenticated → login screen with a single black-pill "Sign in with Google" (DESIGN.md `button-primary`). Commit.
 - [ ] **1.4** `src/router.tsx`: routes `/` (browse stub), `/r/:id` (recipe detail), with a `NavDrawer` (DESIGN.md hamburger drawer). Per-recipe URLs (D26). Commit.
 - [ ] **1.5** Copy the Slice-0 sample JSON+images into `src/data/generated/` + `src/assets/recipes/`. `src/lib/recipes/loadRecipes.ts` imports + `z.array(Recipe).parse()` at module load (build-time gate, D33).
 - [ ] **1.6 (TDD)** `src/lib/recipes/slug.ts` `slugify(title)`; test: `slugify("Domino's Cheesy Bread") === "dominos-cheesy-bread"`. Red → green → commit.
@@ -160,7 +160,7 @@ export type Recipe = z.infer<typeof Recipe>;
 
 ---
 
-## Slice 2 — Full extraction & validation
+## Slice 2 - Full extraction & validation
 
 **Proves:** all ~150 recipes + the full ingredient database + sub-procedures are extracted, schema-valid, and verified.
 
@@ -170,14 +170,14 @@ export type Recipe = z.infer<typeof Recipe>;
 - [ ] **2.2** Run the (Slice-0-proven) pipeline over all recipes → `recipes.json`; extract the full macro table → `ingredients.json` (schema `ingredient.ts`); extract shared sub-procedures → `subrecipes.json` (D24). Optimize all images.
 - [ ] **2.3** Resolve references (D21-D23): for each capitalized in-step token, match a local group → else a recipe/subrecipe title → else leave plain. Populate `references[]`.
 - [ ] **2.4** Run the full coverage report (`report.ts`): counts, every recipe render-vs-JSON, flagged low-confidence list.
-- [ ] **2.5 — REVIEW GATE (you):** spot-check the flagged recipes against the PDF (D-verification). Fix + re-run until clean.
+- [ ] **2.5 - REVIEW GATE (you):** spot-check the flagged recipes against the PDF (D-verification). Fix + re-run until clean.
 - [ ] **2.6** Drop artifact-only pages (D27); confirm About/credits content captured. Commit all generated data.
 
 ---
 
-## Slice 3 — Browse: search / filter / sort / tags + signature motion
+## Slice 3 - Browse: search / filter / sort / tags + signature motion
 
-**Proves:** the core "better than a PDF" experience — find any recipe instantly, with the card→detail shared-element transition and animated reflow (D34).
+**Proves:** the core "better than a PDF" experience - find any recipe instantly, with the card→detail shared-element transition and animated reflow (D34).
 
 **Backend cut:** none (static data). **Frontend cut:** browse grid + controls. **Tests:** search/filter/sort/tags pure functions. **Docs:** none.
 
@@ -191,7 +191,7 @@ export type Recipe = z.infer<typeof Recipe>;
 
 ---
 
-## Slice 4 — Recipe-detail power features: scaler, cooking mode, cross-links, related
+## Slice 4 - Recipe-detail power features: scaler, cooking mode, cross-links, related
 
 **Proves:** everything you'd do on a single recipe beyond reading it.
 
@@ -207,7 +207,7 @@ export type Recipe = z.infer<typeof Recipe>;
 
 ---
 
-## Slice 5 — Favorites + personal notes (first Firestore user data)
+## Slice 5 - Favorites + personal notes (first Firestore user data)
 
 **Proves:** the per-person, Mutually-Viewable Firestore pattern + rules + your gf's account registered (D15, D32).
 
@@ -217,11 +217,11 @@ export type Recipe = z.infer<typeof Recipe>;
 - [ ] **5.2** `firestore.rules`: `users/{uid}/**` readable if `request.auth.uid in [UID_A, UID_B]`, writable only if `request.auth.uid == uid`. Deploy rules.
 - [ ] **5.3 (TDD, emulator)** rules test: owner can write own favorite; partner can read it; stranger denied. `firebase emulators:exec "vitest run test/rules"`. Commit.
 - [ ] **5.4** `src/lib/data/useFavorites.ts`, `useNotes.ts` (live `onSnapshot`). Star control on cards + detail; per-recipe notes editor (your notes editable, partner's read-only) (D32). Commit.
-- [ ] **5.5** Favorites view (yours / partner's, not merged — D15). **Checkpoint:** sign in as each, confirm isolation + cross-visibility. Commit.
+- [ ] **5.5** Favorites view (yours / partner's, not merged - D15). **Checkpoint:** sign in as each, confirm isolation + cross-visibility. Commit.
 
 ---
 
-## Slice 6 — Custom recipe builder
+## Slice 6 - Custom recipe builder
 
 **Proves:** the ingredient database powers user-authored recipes that behave like book recipes everywhere (D8, D31).
 
@@ -233,7 +233,7 @@ export type Recipe = z.infer<typeof Recipe>;
 
 ---
 
-## Slice 7 — Weekly meal plan (Joint)
+## Slice 7 - Weekly meal plan (Joint)
 
 **Proves:** the Joint shared-data pattern + navigable date-keyed weeks (D11, D12, D29).
 
@@ -241,11 +241,11 @@ export type Recipe = z.infer<typeof Recipe>;
 
 - [ ] **7.1 (TDD)** `src/lib/plan/week.ts` `isoWeekKey(date)` + `addToDay/removeFromDay/setServings`; tests incl. year boundary. Commit.
 - [ ] **7.2** `firestore.rules`: `joint/**` read+write if uid ∈ allowlist. Deploy + emulator test (both can write, stranger denied). Commit.
-- [ ] **7.3** `useWeekPlan(weekKey)` live doc. Week view (7 days, freeform list per day — D11), prev/next week nav, per-entry serving count, per-day macro total (informational, not a goal — D11/§10). "Add to plan" action on recipes. **Checkpoint:** edit on one client, see it on another. Commit.
+- [ ] **7.3** `useWeekPlan(weekKey)` live doc. Week view (7 days, freeform list per day - D11), prev/next week nav, per-entry serving count, per-day macro total (informational, not a goal - D11/§10). "Add to plan" action on recipes. **Checkpoint:** edit on one client, see it on another. Commit.
 
 ---
 
-## Slice 8 — Shopping list (Joint snapshot from the plan)
+## Slice 8 - Shopping list (Joint snapshot from the plan)
 
 **Proves:** the plan→list generation with safe aggregation, the store workflow (D13, D30).
 
@@ -253,29 +253,29 @@ export type Recipe = z.infer<typeof Recipe>;
 
 - [ ] **8.1 (TDD)** `src/lib/shopping/aggregate.ts` `aggregate(planEntries) → CategorizedList`; tests: `200g chicken + 100g chicken → 300g`; `1 onion + 150g onion → two lines` (no conversion); items grouped by category; servings scale quantities (D13). Red→green→commit.
 - [ ] **8.2 (TDD)** `categorize(item) → category` (produce/dairy/meat/pantry/frozen/bakery/other) via keyword map; leave a documented seam for the future Romanian-aisle ordering (D14). Tests on representative items. Commit.
-- [ ] **8.3** Shopping view: "Generate from week" (snapshot, with replace/merge prompt on regen — D30), category sections, check-off (persisted), add manual item; live-synced (`onSnapshot`). **Checkpoint:** generate, check items on two phones simultaneously. Commit.
+- [ ] **8.3** Shopping view: "Generate from week" (snapshot, with replace/merge prompt on regen - D30), category sections, check-off (persisted), add manual item; live-synced (`onSnapshot`). **Checkpoint:** generate, check items on two phones simultaneously. Commit.
 
 ---
 
-## Slice 9 — Reference pages, About/credits, final polish
+## Slice 9 - Reference pages, About/credits, final polish
 
 **Proves:** lossless content transfer is complete and the product is finished.
 
 - [ ] **9.1** Reference pages from extracted prose: Intro, Cooking Techniques, Pantry Essentials, Kitchen Gear, FAQ, Informative Illustrations (D1). Route + drawer links. Commit.
 - [ ] **9.2** Sub-procedures (`subrecipes.json`) as their own linkable entries that recipe links resolve to (D24). Commit.
-- [ ] **9.3** Ingredient database reference page (searchable/sortable table — D2). Commit.
+- [ ] **9.3** Ingredient database reference page (searchable/sortable table - D2). Commit.
 - [ ] **9.4** About page: credit Nick Kenney, photographer, the book, link to exercise4cheatmeals.com (D27/copyright posture). Commit.
 - [ ] **9.5** Polish pass: route transitions + micro-interactions (D34), empty states, loading skeletons, focus rings (DESIGN.md), mobile drawer + responsive breakpoints. Commit.
 - [ ] **9.6** README + minimal docs: run, build, deploy, re-run extraction, add a person. Final deploy. **Checkpoint.**
 
 ---
 
-## Self-Review (spec coverage D1–D34)
+## Self-Review (spec coverage D1-D34)
 
-- Content/scope D1✓(S9) D2✓(S2/S9) D3✓(S1) D27✓(S2/S9.4) — Data model D4✓(S0) D5✓(S0) D6✓(S0/S2)
-- Features D7✓(S3) D8✓(S6) D9✓(S4.1) D10✓(S4.7) — Cross-refs D21-D25✓(S4/S9.2)
+- Content/scope D1✓(S9) D2✓(S2/S9) D3✓(S1) D27✓(S2/S9.4) - Data model D4✓(S0) D5✓(S0) D6✓(S0/S2)
+- Features D7✓(S3) D8✓(S6) D9✓(S4.1) D10✓(S4.7) - Cross-refs D21-D25✓(S4/S9.2)
 - Planning/shopping D11/D12✓(S7) D13✓(S8) D14✓(S8.2 seam) D29✓(S7.1) D30✓(S8.3)
-- Sharing D15✓(S5/S7) D32✓(S5.4) — Auth/privacy D17✓(S1.3/S5.2) D18✓(S1.8 public Pages)
-- Tech D19✓(S1) D26✓(S1.4) D28✓(online-only; no offline code added) D33✓(schema gate S0/S1.5 + unit tests throughout) — Design D20✓(S1.7) D34✓(S3.5/S4/S9.5)
+- Sharing D15✓(S5/S7) D32✓(S5.4) - Auth/privacy D17✓(S1.3/S5.2) D18✓(S1.8 public Pages)
+- Tech D19✓(S1) D26✓(S1.4) D28✓(online-only; no offline code added) D33✓(schema gate S0/S1.5 + unit tests throughout) - Design D20✓(S1.7) D34✓(S3.5/S4/S9.5)
 
 **Open items resolved at execution (no decision needed):** exact category list (S2.1), recipe slugs (S1.6), two-page stitching (S0.5), gf UID registration (S5.1), billing-account link (S1.2).

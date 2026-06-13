@@ -24,7 +24,7 @@ const SORTS: { key: Sort; label: string }[] = [
   { key: "protein", label: "Most protein" },
   { key: "calories", label: "Fewest calories" },
   { key: "time", label: "Quickest" },
-  { key: "name", label: "A–Z" },
+  { key: "name", label: "A-Z" },
 ];
 
 function Chip({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {

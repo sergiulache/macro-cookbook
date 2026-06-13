@@ -1,7 +1,7 @@
 import { animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
-/** Tween a number when it changes — used by the serving scaler (D34). */
+/** Tween a number when it changes - used by the serving scaler (D34). */
 export function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
   const [display, setDisplay] = useState(value);
   useEffect(() => {
