@@ -19,6 +19,8 @@
   "description": "Web app rebuild of the Diet Cheat Codes recipe ebook",
   "scripts": {
     "extract:sample": "tsx scripts/extract/build-sample.ts",
-    "extract:report": "tsx scripts/extract/report.ts"
+    "extract:report": "tsx scripts/extract/report.ts",
+    "extract:all": "tsx scripts/extract/extract-all.ts",
+    "extract:scan": "tsx scripts/extract/scan.ts"
   }
 }
