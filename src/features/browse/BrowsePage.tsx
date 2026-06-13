@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { recipes, categories } from "../../lib/recipes/loadRecipes";
 import { deriveTags, ALL_TAGS, totalTimeMin } from "../../lib/recipes/tags";
@@ -44,6 +44,8 @@ export function BrowsePage() {
   const [cats, setCats] = useState<Set<string>>(new Set());
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [sort, setSort] = useState<Sort>("featured");
+  const [page, setPage] = useState(1);
+  const PER_PAGE = 24;
 
   const results = useMemo(() => {
     let list: Recipe[] = q.trim() ? fuse.search(q).map((r) => r.item) : recipes.slice();
@@ -60,6 +62,11 @@ export function BrowsePage() {
     return list;
   }, [q, cats, tags, sort]);
 
+  // reset to first page whenever the result set changes
+  useEffect(() => setPage(1), [q, cats, tags, sort]);
+  const pageCount = Math.max(1, Math.ceil(results.length / PER_PAGE));
+  const pageItems = results.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
   const toggle = (set: Set<string>, v: string, fn: (s: Set<string>) => void) => {
     const n = new Set(set);
     n.has(v) ? n.delete(v) : n.add(v);
@@ -73,8 +80,8 @@ export function BrowsePage() {
         <p className="mt-2 text-body">{recipes.length} recipes · search, filter by macros, plan your week.</p>
       </header>
 
-      {/* search */}
-      <div className="sticky top-0 z-10 -mx-5 bg-canvas/90 px-5 py-3 backdrop-blur">
+      {/* search + filters (non-sticky so it scrolls away on mobile) */}
+      <div className="-mx-5 px-5 py-1">
         <div className="flex h-11 items-center gap-2 rounded-full bg-surface-soft px-4">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-mute">
             <circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" />
@@ -113,9 +120,25 @@ export function BrowsePage() {
 
       <motion.div layout className="mt-4 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
         <AnimatePresence mode="popLayout">
-          {results.map((r) => <RecipeCard key={r.id} recipe={r} />)}
+          {pageItems.map((r) => <RecipeCard key={r.id} recipe={r} />)}
         </AnimatePresence>
       </motion.div>
+
+      {pageCount > 1 && (
+        <div className="mt-12 flex items-center justify-center gap-2">
+          <button
+            onClick={() => { setPage((p) => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            disabled={page === 1}
+            className="h-9 rounded-full border border-hairline-strong px-4 text-[13px] font-500 disabled:opacity-30 enabled:hover:border-ink"
+          >Prev</button>
+          <span className="px-2 text-[13px] text-body">Page {page} of {pageCount}</span>
+          <button
+            onClick={() => { setPage((p) => Math.min(pageCount, p + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            disabled={page === pageCount}
+            className="h-9 rounded-full border border-hairline-strong px-4 text-[13px] font-500 disabled:opacity-30 enabled:hover:border-ink"
+          >Next</button>
+        </div>
+      )}
 
       {results.length === 0 && (
         <div className="py-24 text-center text-body">No recipes match. <button onClick={() => { setQ(""); setCats(new Set()); setTags(new Set()); }} className="underline">Clear filters</button></div>
