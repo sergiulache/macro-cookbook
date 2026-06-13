@@ -19,9 +19,11 @@ What I built while you were away, what works, and the things only **you** can ve
 - **Data quality pass:** after spot-checks found a high defect rate, the parser was overhauled and the book re-extracted. Fixed: multi-word run-together headers (complete segmenter), digit-led titles, dense-layout captions, "INGREDIENTS CONT" continuation pages, header annotations like "(Per Biscuit)", caption-bleed into ingredients, caps reference-ingredients, and over-eager continuation merging. Categories normalized to plain words. `yarn verify` passes all 136.
 - **UI fixes:** filter bar no longer sticky (was eating the mobile screen), results paginated at 24/page, and scroll resets to top on navigation.
 
-## NEEDS YOU — blockers / unverifiable
+## Firebase (done)
 
-1. **Firebase project + login gate (biggest item).** The app is currently **open** (no auth). The login gate (D17) and everything that stores data — favorites, notes, the weekly plan, the synced shopping list (Slices 5–8) — need a Firebase project. I did **not** create it because it should sit under your ReziQuiz billing account and the billing link needs `gcloud auth`. To unblock: tell me to create `macro-cookbook-*` (you're already `firebase login`'d), or create it in the console and I'll wire it. ReziQuiz project id for the billing account: `reziquiz-827cc`.
+Project `macro-cookbook` (console: https://console.firebase.google.com/project/macro-cookbook), billing linked to ReziQuiz's account (`01E673-1FEEA7-6F5D06`), Firestore in `eur3`, Google sign-in enabled, web app + public config in `src/lib/firebase.ts`. Rules (`firestore.rules`) are **locked to two UIDs** (Sergiu `LDl4A6ilzUdGJOsgVLq5CWUg2PA2`, Ana `B2eHoIgwDqhPDZvu1P8iC3Gpefq2`) in `src/lib/data/people.ts`. To add a person: sign them in once, fetch their UID (`accounts:query` Admin API), add it to both `firestore.rules` and `people.ts`, redeploy rules (`firebase deploy --only firestore:rules`).
+
+## NEEDS YOU — remaining
 
 2. **2 recipes have no macros — manual entry.** *Nickchicken* and *Nickchicken Meal Prep*. Their macro values sit on PDF pages **115 / 353, which are corrupt/image-only** — unreadable by any tool I have (render comes out blank). Please read the macros from the physical book / another PDF viewer and paste them here; I'll patch the data. (They're the only two with all-zero macros; *Maple Syrup* is legitimately 0-cal.)
 
@@ -31,10 +33,17 @@ What I built while you were away, what works, and the things only **you** can ve
 
 5. **Design / animation taste.** Open the live site and judge it — that's yours to call.
 
-## Not built yet (remaining slices)
+## Done since: Slices 5, 7, 8
 
-- **Slice 5–8** — favorites + notes, custom-recipe builder, weekly meal plan, shopping list. All gated on the Firebase decision (#1).
-- **Slice 9** — reference pages (intro/techniques/pantry/FAQ), About/credits, ingredient-database table extraction (the per-ingredient macros table for the custom builder — a separate grid parser, not yet written).
+- **Slice 5** — Google sign-in gate (whole app), per-person favorites (star on cards + detail, Favorites filter), Firestore rules locked to the two members.
+- **Slice 7** — joint weekly meal plan: navigable ISO weeks, 7-day view, per-day cal/protein, add-to-plan from a recipe with chosen servings, live-synced.
+- **Slice 8** — joint shopping list: generate a snapshot from the week, sum matching item+unit (mismatched units kept separate), group by store category, check-off + manual items, live-synced. AI Romanian-aisle ordering seam left in `aggregate.ts` (D14).
+
+## Not built yet
+
+- **Slice 5 remainder** — per-recipe personal notes (small).
+- **Slice 6** — custom-recipe builder. Needs the per-ingredient macro table extracted first (a separate grid parser; the recipe parser does not handle the table layout).
+- **Slice 9** — reference pages (intro/techniques/pantry/FAQ), About/credits, the ingredient-database table.
 
 ## Notes / decisions taken autonomously
 
