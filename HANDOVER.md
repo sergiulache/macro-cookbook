@@ -11,6 +11,7 @@ What I built while you were away, what works, and the things only **you** can ve
 - `yarn verify` - deterministic data check: every title word, macro number, and ingredient must appear in the source page text, plus a structural merged-header check. Currently passes all 136.
 - `yarn extract:ingredients` - build the ingredient macro database from the reference tables (regenerates `src/data/generated/ingredients.json`, 244 entries).
 - `yarn verify:ingredients` - deterministic check that every ingredient name and macro number appears verbatim on its source table page. Currently clean.
+- `yarn extract:usda` - normalize the USDA SR Legacy dataset into `src/data/generated/usda-ingredients.json` (~7,450 foods). The raw dataset is external (not committed); download once: `curl -o /tmp/srl.zip https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip && unzip -o /tmp/srl.zip -d /tmp/srl`, then run with `USDA_DIR=/tmp/srl/FoodData_Central_sr_legacy_food_csv_2018-04`.
 - `yarn typecheck` - `tsc -b`.
 
 ## What's done
@@ -45,6 +46,7 @@ Project `macro-cookbook` (console: https://console.firebase.google.com/project/m
 
 - **Slice 6a - ingredient macro database.** New grid parser (`scripts/extract/ingredients.ts`) over the book's REFERENCE TABLES (pp.376-401): Meat+Seafood (per 85g cooked), Fruit + Vegetable (per 100g, with fiber), Seasonings+Dried (per 100g), and Control Macros (per-row serving, brand split). Reads only the alphabetical sort pages so rows are not double-counted. 244 entries to `src/data/generated/ingredients.json`, zod-validated, with a deterministic `yarn verify:ingredients`. Note: there is **no** separate "Protein Macros"/"Dairy Macros" table (those names in the old next-session notes were guesses); dairy lives in Control Macros.
 - **Slice 6b - the builder.** `/build` (and `/build/:id` to edit): search the DB, add gram-quantity lines, macros compute live (value * grams / reference amount), set servings + optional directions, save to `users/{uid}/customRecipes/{id}` (Mutually-Viewable). A merged `RecipeIndex` context makes custom recipes behave like book recipes everywhere - browse search/filter/sort, detail + scaler, cooking mode, planner totals, shopping list - with no special-casing. Owner can edit/delete from the recipe page. Existing Firestore rules already cover the subcollection (no rules change).
+- **Slice 6c - USDA external ingredients.** The book tables only cover whole foods + staples, so the builder also searches ~7,450 verified USDA SR Legacy foods (public domain, per 100g), lazy-loaded as its own chunk. Unified ranked search shows book results first then USDA, with a small USDA tag on external rows and a 'top N of M, keep typing to narrow' hint. Custom recipe lines snapshot the ingredient's per-amount + macros, so USDA-based recipes total correctly everywhere without loading the big set. (Considered Open Food Facts and the live USDA API; rejected for crowd-sourced noise and the fact that a USDA key in a public repo gets deactivated. Build-time normalization is the clean/fast fit.) **Needs the same live owner test as 6b.**
 
 ## Not built yet
 
