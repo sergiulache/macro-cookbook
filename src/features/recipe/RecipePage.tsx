@@ -11,6 +11,7 @@ import { renderStep, groupAnchor } from "../../lib/recipes/references";
 import { relatedTo } from "../../lib/recipes/related";
 import { RecipeCard } from "../../components/RecipeCard";
 import { FavoriteButton } from "../../components/FavoriteButton";
+import { useFavorites } from "../../lib/data/useFavorites";
 import { AddToPlan } from "../plan/AddToPlan";
 import { NotesSection } from "./NotesSection";
 
@@ -20,6 +21,7 @@ export function RecipePage() {
   const { id } = useParams();
   const { byId, customById } = useRecipeIndex();
   const { user } = useAuth();
+  const { partnerHas, partnerName } = useFavorites();
   const recipe = id ? byId.get(id) : undefined;
   const custom = id ? customById.get(id) : undefined;
   const [servings, setServings] = useState(recipe?.servings ?? 1);
@@ -66,6 +68,7 @@ export function RecipePage() {
             {recipe.cookTimeMin != null && <span>Cook {recipe.cookTimeMin}m</span>}
             <span>{recipe.servings} {recipe.servings === 1 ? "serving" : "servings"}</span>
           </div>
+          {partnerHas(recipe.id) && <p className="mt-1.5 text-[13px] text-mute">♥ Loved by {partnerName}</p>}
         </div>
         <div className="flex items-center gap-2">
           <div className="rounded-full border border-hairline-strong"><FavoriteButton id={recipe.id} /></div>

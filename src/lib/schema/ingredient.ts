@@ -10,8 +10,8 @@ import { Macros } from "./recipe";
 export const IngredientCategory = z.enum(["meat", "fruit", "vegetable", "seasoning", "pantry"]);
 export type IngredientCategory = z.infer<typeof IngredientCategory>;
 
-/** Where an ingredient's macros come from: the book's tables or the USDA database. */
-export const IngredientSource = z.enum(["book", "usda"]);
+/** Where an ingredient's macros come from: the book's tables, the USDA database, or hand-entered. */
+export const IngredientSource = z.enum(["book", "usda", "manual"]);
 export type IngredientSource = z.infer<typeof IngredientSource>;
 
 export const IngredientDBEntry = z.object({

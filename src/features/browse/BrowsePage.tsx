@@ -35,10 +35,10 @@ export function BrowsePage() {
   const [cats, setCats] = useState<Set<string>>(new Set());
   const [tags, setTags] = useState<Set<string>>(new Set());
   const [sort, setSort] = useState<Sort>("featured");
-  const [favOnly, setFavOnly] = useState(false);
+  const [favView, setFavView] = useState<"off" | "mine" | "partner">("off");
   const [page, setPage] = useState(1);
   const PER_PAGE = 24;
-  const { favorites } = useFavorites();
+  const { favorites, partnerFavorites, partnerName } = useFavorites();
   const { all } = useRecipeIndex();
 
   const fuse = useMemo(
@@ -58,7 +58,8 @@ export function BrowsePage() {
 
   const results = useMemo(() => {
     let list: Recipe[] = q.trim() ? fuse.search(q).map((r) => r.item) : all.slice();
-    if (favOnly) list = list.filter((r) => favorites.has(r.id));
+    if (favView === "mine") list = list.filter((r) => favorites.has(r.id));
+    else if (favView === "partner") list = list.filter((r) => partnerFavorites.has(r.id));
     if (cats.size) list = list.filter((r) => cats.has(r.category));
     if (tags.size) list = list.filter((r) => (tagsOf.get(r.id) ?? []).some((t) => tags.has(t)));
     const by: Record<Sort, (a: Recipe, b: Recipe) => number> = {
@@ -70,10 +71,10 @@ export function BrowsePage() {
     };
     if (sort !== "featured" || !q) list = [...list].sort(by[sort]);
     return list;
-  }, [q, cats, tags, sort, favOnly, favorites, all, fuse, tagsOf]);
+  }, [q, cats, tags, sort, favView, favorites, partnerFavorites, all, fuse, tagsOf]);
 
   // reset to first page whenever the result set changes
-  useEffect(() => setPage(1), [q, cats, tags, sort, favOnly, favorites]);
+  useEffect(() => setPage(1), [q, cats, tags, sort, favView, favorites, partnerFavorites]);
   const pageCount = Math.max(1, Math.ceil(results.length / PER_PAGE));
   const pageItems = results.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
@@ -109,7 +110,10 @@ export function BrowsePage() {
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <Chip active={favOnly} onClick={() => setFavOnly((v) => !v)}>♥ Favorites</Chip>
+          <Chip active={favView === "mine"} onClick={() => setFavView((v) => (v === "mine" ? "off" : "mine"))}>♥ Favorites</Chip>
+          {partnerName && partnerFavorites.size > 0 && (
+            <Chip active={favView === "partner"} onClick={() => setFavView((v) => (v === "partner" ? "off" : "partner"))}>♥ {partnerName}'s</Chip>
+          )}
           {ALL_TAGS.map((t) => (
             <Chip key={t} active={tags.has(t)} onClick={() => toggle(tags, t, setTags)}>{t}</Chip>
           ))}
