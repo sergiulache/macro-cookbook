@@ -6,16 +6,21 @@ import { Macros } from "./recipe.js";
  * Macros are given for a reference amount (e.g. per 100 g, per 1 egg) and are
  * the source of truth for computing custom-recipe macros (D8, D31).
  */
+/** Which book table the row came from; drives grouping/filtering in the builder. */
+export const IngredientCategory = z.enum(["meat", "fruit", "vegetable", "seasoning", "pantry"]);
+export type IngredientCategory = z.infer<typeof IngredientCategory>;
+
 export const IngredientDBEntry = z.object({
   id: z.string().min(1), // slug
   name: z.string().min(1),
   brand: z.string().nullable(), // book sometimes specifies a brand
+  category: IngredientCategory,
   per: z.object({
     amount: z.number().positive(),
     unit: z.string().min(1), // "g", "egg", "tbsp", "ml"
   }),
   macros: Macros,
-  note: z.string().optional(),
+  note: z.string().optional(), // e.g. "per 85g cooked (113g raw)"
 });
 export type IngredientDBEntry = z.infer<typeof IngredientDBEntry>;
 

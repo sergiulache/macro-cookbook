@@ -33,11 +33,13 @@
     "extract:sample": "tsx scripts/extract/build-sample.ts",
     "extract:report": "tsx scripts/extract/report.ts",
     "extract:all": "tsx scripts/extract/extract-all.ts",
+    "extract:ingredients": "tsx scripts/extract/ingredients.ts",
     "extract:scan": "tsx scripts/extract/scan.ts",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "verify": "tsx scripts/extract/verify.ts"
+    "verify": "tsx scripts/extract/verify.ts",
+    "verify:ingredients": "tsx scripts/extract/verify-ingredients.ts"
   }
 }
