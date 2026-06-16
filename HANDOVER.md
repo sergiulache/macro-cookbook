@@ -9,6 +9,8 @@ What I built while you were away, what works, and the things only **you** can ve
 - `yarn dev` - local dev · `yarn build` - prod build · `yarn preview` - serve build.
 - `yarn extract:all` - re-run full extraction (regenerates `src/data/generated/recipes.json` + `public/recipes/*.webp` + `out/sample/coverage.html`).
 - `yarn verify` - deterministic data check: every title word, macro number, and ingredient must appear in the source page text, plus a structural merged-header check. Currently passes all 136.
+- `yarn extract:ingredients` - build the ingredient macro database from the reference tables (regenerates `src/data/generated/ingredients.json`, 244 entries).
+- `yarn verify:ingredients` - deterministic check that every ingredient name and macro number appears verbatim on its source table page. Currently clean.
 - `yarn typecheck` - `tsc -b`.
 
 ## What's done
@@ -39,11 +41,15 @@ Project `macro-cookbook` (console: https://console.firebase.google.com/project/m
 - **Slice 7** - joint weekly meal plan: navigable ISO weeks, 7-day view, per-day cal/protein, add-to-plan from a recipe with chosen servings, live-synced.
 - **Slice 8** - joint shopping list: generate a snapshot from the week, sum matching item+unit (mismatched units kept separate), group by store category, check-off + manual items, live-synced. AI Romanian-aisle ordering seam left in `aggregate.ts` (D14).
 
+## Done since: Slice 6 (custom recipe builder)
+
+- **Slice 6a - ingredient macro database.** New grid parser (`scripts/extract/ingredients.ts`) over the book's REFERENCE TABLES (pp.376-401): Meat+Seafood (per 85g cooked), Fruit + Vegetable (per 100g, with fiber), Seasonings+Dried (per 100g), and Control Macros (per-row serving, brand split). Reads only the alphabetical sort pages so rows are not double-counted. 244 entries to `src/data/generated/ingredients.json`, zod-validated, with a deterministic `yarn verify:ingredients`. Note: there is **no** separate "Protein Macros"/"Dairy Macros" table (those names in the old next-session notes were guesses); dairy lives in Control Macros.
+- **Slice 6b - the builder.** `/build` (and `/build/:id` to edit): search the DB, add gram-quantity lines, macros compute live (value * grams / reference amount), set servings + optional directions, save to `users/{uid}/customRecipes/{id}` (Mutually-Viewable). A merged `RecipeIndex` context makes custom recipes behave like book recipes everywhere - browse search/filter/sort, detail + scaler, cooking mode, planner totals, shopping list - with no special-casing. Owner can edit/delete from the recipe page. Existing Firestore rules already cover the subcollection (no rules change).
+
 ## Not built yet
 
-- **Slice 5 remainder** - per-recipe personal notes (small).
-- **Slice 6** - custom-recipe builder. Needs the per-ingredient macro table extracted first (a separate grid parser; the recipe parser does not handle the table layout).
-- **Slice 9** - reference pages (intro/techniques/pantry/FAQ), About/credits, the ingredient-database table.
+- **Slice 9** - reference pages (intro/techniques/pantry/FAQ), About/credits. (The ingredient-database table is now extracted as data, Slice 6a; the Satiety Index p400 is the remaining reference-only table.)
+- **Optional grouped sections** in custom recipes (D31 allows them; builder ships flat single-group lines for now).
 
 ## Notes / decisions taken autonomously
 
