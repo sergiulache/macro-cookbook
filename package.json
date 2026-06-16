@@ -34,6 +34,7 @@
     "extract:report": "tsx scripts/extract/report.ts",
     "extract:all": "tsx scripts/extract/extract-all.ts",
     "extract:ingredients": "tsx scripts/extract/ingredients.ts",
+    "extract:usda": "tsx scripts/extract/usda.ts",
     "extract:scan": "tsx scripts/extract/scan.ts",
     "dev": "vite",
     "build": "vite build",

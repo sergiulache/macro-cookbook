@@ -4,6 +4,7 @@
     "name": "80/20 Ground Beef",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -22,6 +23,7 @@
     "name": "85/15 Ground Beef",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -40,6 +42,7 @@
     "name": "90/10 Ground Beef",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -58,6 +61,7 @@
     "name": "93/7 Ground Beef",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -76,6 +80,7 @@
     "name": "96/4 Ground Beef",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -94,6 +99,7 @@
     "name": "Anchovies",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -112,6 +118,7 @@
     "name": "Baby Back Ribs",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -130,6 +137,7 @@
     "name": "Bacon",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -148,6 +156,7 @@
     "name": "Beef Brisket",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -166,6 +175,7 @@
     "name": "Beef Tenderloin",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -184,6 +194,7 @@
     "name": "Boneless Chuck Roast",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -202,6 +213,7 @@
     "name": "Bottom Round Roast",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -220,6 +232,7 @@
     "name": "Calamari (Squid)",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -238,6 +251,7 @@
     "name": "Catfish",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -256,6 +270,7 @@
     "name": "Caviar",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -274,6 +289,7 @@
     "name": "Chicken Breasts, skinless",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -292,6 +308,7 @@
     "name": "Chicken Drumsticks",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -310,6 +327,7 @@
     "name": "Chicken Drumsticks, skinless",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -328,6 +346,7 @@
     "name": "Chicken Thighs, skinless",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -346,6 +365,7 @@
     "name": "Chicken Wings",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -364,6 +384,7 @@
     "name": "Chicken Wings, air fried",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -382,6 +403,7 @@
     "name": "Chicken Wings, skinless",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -400,6 +422,7 @@
     "name": "Clams",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -418,6 +441,7 @@
     "name": "Cod",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -436,6 +460,7 @@
     "name": "Crab, Blue",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -454,6 +479,7 @@
     "name": "Crab, King",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -472,6 +498,7 @@
     "name": "Crab, Snow",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -490,6 +517,7 @@
     "name": "Eel (Unagi)",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -508,6 +536,7 @@
     "name": "Filet Mignon",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -526,6 +555,7 @@
     "name": "Flank Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -544,6 +574,7 @@
     "name": "Flat Iron Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -562,6 +593,7 @@
     "name": "Frog Legs",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -580,6 +612,7 @@
     "name": "Lobster, Northern",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -598,6 +631,7 @@
     "name": "Lobster, Rock",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -616,6 +650,7 @@
     "name": "Mock Tender Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -634,6 +669,7 @@
     "name": "New York Strip Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -652,6 +688,7 @@
     "name": "Oxtail",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -670,6 +707,7 @@
     "name": "Oysters, Eastern",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -688,6 +726,7 @@
     "name": "Oysters, Pacific",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -706,6 +745,7 @@
     "name": "Pollock",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -724,6 +764,7 @@
     "name": "Pork Chop",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -742,6 +783,7 @@
     "name": "Pork Sirloin Roast",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -760,6 +802,7 @@
     "name": "Pork Tenderloin",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -778,6 +821,7 @@
     "name": "Ranch Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -796,6 +840,7 @@
     "name": "Rib Tips",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -814,6 +859,7 @@
     "name": "Ribeye Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -832,6 +878,7 @@
     "name": "Salmon, Atlantic (Farmed)",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -850,6 +897,7 @@
     "name": "Salmon, Pink",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -868,6 +916,7 @@
     "name": "Salmon, Sockeye",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -886,6 +935,7 @@
     "name": "Sardines",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -904,6 +954,7 @@
     "name": "Short Ribs",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -922,6 +973,7 @@
     "name": "Shrimp",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -940,6 +992,7 @@
     "name": "Skirt Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -958,6 +1011,7 @@
     "name": "Spareribs",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -976,6 +1030,7 @@
     "name": "T-Bone Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -994,6 +1049,7 @@
     "name": "Tilapia",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -1012,6 +1068,7 @@
     "name": "Top Round Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -1030,6 +1087,7 @@
     "name": "Top Sirloin Steak",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -1048,6 +1106,7 @@
     "name": "Trout",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -1066,6 +1125,7 @@
     "name": "Tuna, Albacore",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -1084,6 +1144,7 @@
     "name": "Tuna, Chunk Light",
     "brand": null,
     "category": "meat",
+    "source": "book",
     "per": {
       "amount": 85,
       "unit": "g"
@@ -1102,6 +1163,7 @@
     "name": "Apples, fuji",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1119,6 +1181,7 @@
     "name": "Apples, gala",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1136,6 +1199,7 @@
     "name": "Apples, honeycrisp",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1153,6 +1217,7 @@
     "name": "Apples, granny smith",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1170,6 +1235,7 @@
     "name": "Apples, red delicious",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1187,6 +1253,7 @@
     "name": "Apples, general",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1204,6 +1271,7 @@
     "name": "Apricots",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1221,6 +1289,7 @@
     "name": "Avocado",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1238,6 +1307,7 @@
     "name": "Bananas",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1255,6 +1325,7 @@
     "name": "Blackberries",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1272,6 +1343,7 @@
     "name": "Blueberries",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1289,6 +1361,7 @@
     "name": "Boysenberry",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1306,6 +1379,7 @@
     "name": "Cantaloupe",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1323,6 +1397,7 @@
     "name": "Clemintines",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1340,6 +1415,7 @@
     "name": "Coconut",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1357,6 +1433,7 @@
     "name": "Cranberry",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1374,6 +1451,7 @@
     "name": "Dragon Fruit",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1391,6 +1469,7 @@
     "name": "Durian",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1408,6 +1487,7 @@
     "name": "Figs",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1425,6 +1505,7 @@
     "name": "Grapefruit",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1442,6 +1523,7 @@
     "name": "Grapes, green",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1459,6 +1541,7 @@
     "name": "Grapes, red",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1476,6 +1559,7 @@
     "name": "Guava",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1493,6 +1577,7 @@
     "name": "Honeydew",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1510,6 +1595,7 @@
     "name": "Jackfruit",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1527,6 +1613,7 @@
     "name": "Kiwi",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1544,6 +1631,7 @@
     "name": "Kumquat",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1561,6 +1649,7 @@
     "name": "Lemon",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1578,6 +1667,7 @@
     "name": "Lemon, juice",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1595,6 +1685,7 @@
     "name": "Lime",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1612,6 +1703,7 @@
     "name": "Lime, juice",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1629,6 +1721,7 @@
     "name": "Lychee",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1646,6 +1739,7 @@
     "name": "Mango",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1663,6 +1757,7 @@
     "name": "Nectarine",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1680,6 +1775,7 @@
     "name": "Olives",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1697,6 +1793,7 @@
     "name": "Oranges",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1714,6 +1811,7 @@
     "name": "Papaya",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1731,6 +1829,7 @@
     "name": "Passion Fruit",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1748,6 +1847,7 @@
     "name": "Peaches",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1765,6 +1865,7 @@
     "name": "Pears",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1782,6 +1883,7 @@
     "name": "Persimmon",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1799,6 +1901,7 @@
     "name": "Pineapple",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1816,6 +1919,7 @@
     "name": "Plantain",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1833,6 +1937,7 @@
     "name": "Plums",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1850,6 +1955,7 @@
     "name": "Pomegranate",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1867,6 +1973,7 @@
     "name": "Rambutan",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1884,6 +1991,7 @@
     "name": "Raspberries",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1901,6 +2009,7 @@
     "name": "Cherries, Sour",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1918,6 +2027,7 @@
     "name": "Cherries, Sweet",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1935,6 +2045,7 @@
     "name": "Starfruit",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1952,6 +2063,7 @@
     "name": "Strawberries",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1969,6 +2081,7 @@
     "name": "Tangerines",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -1986,6 +2099,7 @@
     "name": "Watermelon",
     "brand": null,
     "category": "fruit",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2003,6 +2117,7 @@
     "name": "Anaheim Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2020,6 +2135,7 @@
     "name": "Artichoke",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2037,6 +2153,7 @@
     "name": "Arugula",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2054,6 +2171,7 @@
     "name": "Asparagus",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2071,6 +2189,7 @@
     "name": "Banana Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2088,6 +2207,7 @@
     "name": "Beans, black (dry)*",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2105,6 +2225,7 @@
     "name": "Beets",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2122,6 +2243,7 @@
     "name": "Bitter Melon (Bitter Gourd)",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2139,6 +2261,7 @@
     "name": "Bok Choy",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2156,6 +2279,7 @@
     "name": "Broccoflower",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2173,6 +2297,7 @@
     "name": "Broccoli",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2190,6 +2315,7 @@
     "name": "Brussel Sprouts",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2207,6 +2333,7 @@
     "name": "Cabbage",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2224,6 +2351,7 @@
     "name": "Carrots",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2241,6 +2369,7 @@
     "name": "Cassava/Yucca",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2258,6 +2387,7 @@
     "name": "Cauliflower",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2275,6 +2405,7 @@
     "name": "Celery",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2292,6 +2423,7 @@
     "name": "Cilantro",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2309,6 +2441,7 @@
     "name": "Collard Greens",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2326,6 +2459,7 @@
     "name": "Cucumber",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2343,6 +2477,7 @@
     "name": "Dandelion Greens",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2360,6 +2495,7 @@
     "name": "Edamame",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2377,6 +2513,7 @@
     "name": "Eggplant",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2394,6 +2531,7 @@
     "name": "Endive",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2411,6 +2549,7 @@
     "name": "Fennel",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2428,6 +2567,7 @@
     "name": "Fiddleheads",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2445,6 +2585,7 @@
     "name": "Garlic",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2462,6 +2603,7 @@
     "name": "Green Beans",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2479,6 +2621,7 @@
     "name": "Green Bell Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2496,6 +2639,7 @@
     "name": "Green Onion",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2513,6 +2657,7 @@
     "name": "Iceburg Lettuce",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2530,6 +2675,7 @@
     "name": "Jalapenos",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2547,6 +2693,7 @@
     "name": "Kale",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2564,6 +2711,7 @@
     "name": "Moringa (pods)",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2581,6 +2729,7 @@
     "name": "Mushroom, portabella",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2598,6 +2747,7 @@
     "name": "Mushroom, shiitake",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2615,6 +2765,7 @@
     "name": "Mushroom, white button",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2632,6 +2783,7 @@
     "name": "Nopalitos",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2649,6 +2801,7 @@
     "name": "Okra",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2666,6 +2819,7 @@
     "name": "Orange Bell Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2683,6 +2837,7 @@
     "name": "Parsley",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2700,6 +2855,7 @@
     "name": "Parsnips",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2717,6 +2873,7 @@
     "name": "Peas",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2734,6 +2891,7 @@
     "name": "Poblano Peppers",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2751,6 +2909,7 @@
     "name": "Potatoes, Gold",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2768,6 +2927,7 @@
     "name": "Potatoes, Red",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2785,6 +2945,7 @@
     "name": "Potatoes, Russet",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2802,6 +2963,7 @@
     "name": "Potatoes, Sweet**",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2819,6 +2981,7 @@
     "name": "Pumpkin",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2836,6 +2999,7 @@
     "name": "Radish",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2853,6 +3017,7 @@
     "name": "Rapini",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2870,6 +3035,7 @@
     "name": "Red Bell Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2887,6 +3053,7 @@
     "name": "Red Onion",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2904,6 +3071,7 @@
     "name": "Rhubarb",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2921,6 +3089,7 @@
     "name": "Romaine Lettuce",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2938,6 +3107,7 @@
     "name": "Rutabaga",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2955,6 +3125,7 @@
     "name": "Serrano Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2972,6 +3143,7 @@
     "name": "Snowpeas",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -2989,6 +3161,7 @@
     "name": "Spinach",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3006,6 +3179,7 @@
     "name": "Sprouts (alfalfa)",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3023,6 +3197,7 @@
     "name": "Squash, Butternut",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3040,6 +3215,7 @@
     "name": "Squash, Chayote",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3057,6 +3233,7 @@
     "name": "Squash, Spaghetti",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3074,6 +3251,7 @@
     "name": "Swiss Chard/Beets Greens",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3091,6 +3269,7 @@
     "name": "Tomatillos",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3108,6 +3287,7 @@
     "name": "Tomatoes",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3125,6 +3305,7 @@
     "name": "Turnip",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3142,6 +3323,7 @@
     "name": "Watercress",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3159,6 +3341,7 @@
     "name": "White Onion",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3176,6 +3359,7 @@
     "name": "Yellow Corn",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3193,6 +3377,7 @@
     "name": "Yellow Bell Pepper",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3210,6 +3395,7 @@
     "name": "Zucchini",
     "brand": null,
     "category": "vegetable",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3227,6 +3413,7 @@
     "name": "Allspice",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3244,6 +3431,7 @@
     "name": "Baking Powder",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3261,6 +3449,7 @@
     "name": "Baking Soda",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3278,6 +3467,7 @@
     "name": "Black Pepper",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3295,6 +3485,7 @@
     "name": "Cayenne Pepper",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3312,6 +3503,7 @@
     "name": "Chili Powder",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3329,6 +3521,7 @@
     "name": "Cinnamon",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3346,6 +3539,7 @@
     "name": "Coriander",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3363,6 +3557,7 @@
     "name": "Corn Starch",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3380,6 +3575,7 @@
     "name": "Cream of Tartar",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3397,6 +3593,7 @@
     "name": "Crushed Red Pepper",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3414,6 +3611,7 @@
     "name": "Cumin",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3431,6 +3629,7 @@
     "name": "Curry Powder",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3448,6 +3647,7 @@
     "name": "Dried Basil",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3465,6 +3665,7 @@
     "name": "Dried Basil",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3482,6 +3683,7 @@
     "name": "Dried Chives",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3499,6 +3701,7 @@
     "name": "Dried Dill Weed",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3516,6 +3719,7 @@
     "name": "Dried Minced Onion",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3533,6 +3737,7 @@
     "name": "Dried Oregano",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3550,6 +3755,7 @@
     "name": "Dried Parsley",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3567,6 +3773,7 @@
     "name": "Fennel Seeds",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3584,6 +3791,7 @@
     "name": "Garlic Powder",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3601,6 +3809,7 @@
     "name": "Ground Ginger",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3618,6 +3827,7 @@
     "name": "Ground Mustard",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3635,6 +3845,7 @@
     "name": "Habanero Powder",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3652,6 +3863,7 @@
     "name": "Marjoram",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3669,6 +3881,7 @@
     "name": "Nutmeg",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3686,6 +3899,7 @@
     "name": "Onion Powder",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3703,6 +3917,7 @@
     "name": "Paprika",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3720,6 +3935,7 @@
     "name": "Poppy Seed",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3737,6 +3953,7 @@
     "name": "Sage",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3754,6 +3971,7 @@
     "name": "Sesame Seed",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3771,6 +3989,7 @@
     "name": "Thyme",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3788,6 +4007,7 @@
     "name": "Turmeric",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3805,6 +4025,7 @@
     "name": "White Pepper",
     "brand": null,
     "category": "seasoning",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3822,6 +4043,7 @@
     "name": "1% Milk",
     "brand": "Fairlife",
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 240,
       "unit": "g"
@@ -3839,6 +4061,7 @@
     "name": "2% Milk",
     "brand": "Fairlife",
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 240,
       "unit": "g"
@@ -3856,6 +4079,7 @@
     "name": "AP Flour",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 30,
       "unit": "g"
@@ -3873,6 +4097,7 @@
     "name": "Apple Cider Vinegar",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -3890,6 +4115,7 @@
     "name": "Avocado Oil",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 14,
       "unit": "g"
@@ -3907,6 +4133,7 @@
     "name": "Bread Flour",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 30,
       "unit": "g"
@@ -3924,6 +4151,7 @@
     "name": "Cocoa",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 5,
       "unit": "g"
@@ -3941,6 +4169,7 @@
     "name": "Egg Whites",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 33,
       "unit": "g"
@@ -3958,6 +4187,7 @@
     "name": "Fat Free Greek Yogurt",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 170,
       "unit": "g"
@@ -3975,6 +4205,7 @@
     "name": "Fat Free Milk",
     "brand": "Fairlife",
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 240,
       "unit": "g"
@@ -3992,6 +4223,7 @@
     "name": "Guar Gum",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 9,
       "unit": "g"
@@ -4009,6 +4241,7 @@
     "name": "Large Egg",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 50,
       "unit": "g"
@@ -4026,6 +4259,7 @@
     "name": "Light Mayo",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 14,
       "unit": "g"
@@ -4043,6 +4277,7 @@
     "name": "Mustard",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 5,
       "unit": "g"
@@ -4060,6 +4295,7 @@
     "name": "Olive Oil",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 13.5,
       "unit": "g"
@@ -4077,6 +4313,7 @@
     "name": "Part Skim Mozzarella",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 28,
       "unit": "g"
@@ -4094,6 +4331,7 @@
     "name": "Powdered Peanut Butter",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 16,
       "unit": "g"
@@ -4111,6 +4349,7 @@
     "name": "Turkey Pepperoni",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 30,
       "unit": "g"
@@ -4128,6 +4367,7 @@
     "name": "Unsweetened Almond Milk",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 240,
       "unit": "g"
@@ -4145,6 +4385,7 @@
     "name": "Vanilla Extract",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 4.2,
       "unit": "g"
@@ -4162,6 +4403,7 @@
     "name": "Vinegar",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 100,
       "unit": "g"
@@ -4179,6 +4421,7 @@
     "name": "Vital Wheat Gluten",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 30,
       "unit": "g"
@@ -4196,6 +4439,7 @@
     "name": "Xanthan Gum",
     "brand": null,
     "category": "pantry",
+    "source": "book",
     "per": {
       "amount": 1.5,
       "unit": "g"

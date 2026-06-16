@@ -6,15 +6,20 @@ import { Macros } from "./recipe";
  * Macros are given for a reference amount (e.g. per 100 g, per 1 egg) and are
  * the source of truth for computing custom-recipe macros (D8, D31).
  */
-/** Which book table the row came from; drives grouping/filtering in the builder. */
+/** Book-table category (the 5 reference tables); drives grouping/filtering in the builder. */
 export const IngredientCategory = z.enum(["meat", "fruit", "vegetable", "seasoning", "pantry"]);
 export type IngredientCategory = z.infer<typeof IngredientCategory>;
+
+/** Where an ingredient's macros come from: the book's tables or the USDA database. */
+export const IngredientSource = z.enum(["book", "usda"]);
+export type IngredientSource = z.infer<typeof IngredientSource>;
 
 export const IngredientDBEntry = z.object({
   id: z.string().min(1), // slug
   name: z.string().min(1),
   brand: z.string().nullable(), // book sometimes specifies a brand
-  category: IngredientCategory,
+  category: z.string().min(1), // book: meat/fruit/... · usda: a friendly food group
+  source: IngredientSource.default("book"),
   per: z.object({
     amount: z.number().positive(),
     unit: z.string().min(1), // "g", "egg", "tbsp", "ml"

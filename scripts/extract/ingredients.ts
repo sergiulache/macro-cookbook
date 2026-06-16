@@ -109,6 +109,7 @@ function parseTable(spec: TableSpec, pageItems: Map<number, TextItem[]>): Ingred
         name,
         brand,
         category: spec.category,
+        source: "book",
         per,
         macros: {
           calories: byCol.calories ?? 0,

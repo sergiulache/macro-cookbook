@@ -1,23 +1,31 @@
 import type { Macros, Recipe } from "../schema/recipe";
 import type { CustomLine, CustomRecipe } from "../schema/custom";
-import { ingredientById, ingredientLabel, type IngredientDBEntry } from "./ingredientsDb";
+import { ingredientById } from "./ingredientsDb";
 
 const ZERO: Macros = { calories: 0, fat: 0, carbs: 0, netCarbs: null, protein: 0 };
 const round1 = (n: number) => Math.round(n * 10) / 10;
 
+/** Reference {per, macros} for a line: the stored snapshot, or (legacy lines) the book DB. */
+function lineRef(line: CustomLine): { per: { amount: number }; macros: Macros } | null {
+  if (line.macros && line.per) return { per: line.per, macros: line.macros };
+  const e = ingredientById.get(line.ingredientId);
+  return e ? { per: e.per, macros: e.macros } : null;
+}
+
 /**
- * Macro contribution of `grams` of an ingredient, scaled linearly from its
+ * Macro contribution of one line, scaled linearly from the ingredient's
  * reference amount (the book's method, D8): value * grams / per.amount.
  */
-export function lineMacros(entry: IngredientDBEntry | undefined, grams: number): Macros {
-  if (!entry || entry.per.amount <= 0 || grams <= 0) return ZERO;
-  const f = grams / entry.per.amount;
+export function lineMacros(line: CustomLine): Macros {
+  const ref = lineRef(line);
+  if (!ref || ref.per.amount <= 0 || line.grams <= 0) return ZERO;
+  const f = line.grams / ref.per.amount;
   return {
-    calories: entry.macros.calories * f,
-    fat: entry.macros.fat * f,
-    carbs: entry.macros.carbs * f,
+    calories: ref.macros.calories * f,
+    fat: ref.macros.fat * f,
+    carbs: ref.macros.carbs * f,
     netCarbs: null, // owner does not rely on net carbs; left null for custom recipes
-    protein: entry.macros.protein * f,
+    protein: ref.macros.protein * f,
   };
 }
 
@@ -25,7 +33,7 @@ export function lineMacros(entry: IngredientDBEntry | undefined, grams: number):
 export function totalMacros(lines: CustomLine[]): Macros {
   const t = { calories: 0, fat: 0, carbs: 0, protein: 0 };
   for (const l of lines) {
-    const m = lineMacros(ingredientById.get(l.ingredientId), l.grams);
+    const m = lineMacros(l);
     t.calories += m.calories;
     t.fat += m.fat;
     t.carbs += m.carbs;
@@ -53,10 +61,7 @@ export function perServingMacros(lines: CustomLine[], servings: number): Macros 
  * shopping - D31). Image/video/times are null; tips/references empty.
  */
 export function customToRecipe(c: CustomRecipe): Recipe {
-  const ingredients = c.lines.map((l) => {
-    const e = ingredientById.get(l.ingredientId);
-    return { amount: l.grams, unit: "g", item: e ? ingredientLabel(e) : l.name };
-  });
+  const ingredients = c.lines.map((l) => ({ amount: l.grams, unit: "g", item: l.name }));
   const steps = c.steps
     .map((t) => t.trim())
     .filter(Boolean)

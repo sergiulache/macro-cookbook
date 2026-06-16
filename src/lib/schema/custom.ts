@@ -1,16 +1,24 @@
 import { z } from "zod";
+import { Macros } from "./recipe";
+import { IngredientSource } from "./ingredient";
 
 /**
  * A user-built recipe (D8/D31): full structure minus a photo. Stored per-person
- * at users/{uid}/customRecipes/{id} (Mutually-Viewable, D15). Macros are NOT
- * stored; they are computed from the line grams against the ingredient DB so
- * they always stay consistent with the book's numbers. `name` is snapshotted on
- * each line so a recipe still renders if a DB id ever changes.
+ * at users/{uid}/customRecipes/{id} (Mutually-Viewable, D15).
+ *
+ * Each line snapshots the chosen ingredient's reference amount + macros, so a
+ * custom recipe is self-contained: it renders and totals correctly on browse,
+ * detail, planner and shopping WITHOUT loading the large USDA set. `per`/`macros`
+ * are optional for backward-compatibility with the earliest book-only lines
+ * (those fall back to a lookup in the bundled book DB).
  */
 export const CustomLine = z.object({
   ingredientId: z.string().min(1),
   name: z.string().min(1),
+  source: IngredientSource.default("book"),
   grams: z.number().nonnegative(),
+  per: z.object({ amount: z.number().positive(), unit: z.string().min(1) }).optional(),
+  macros: Macros.optional(),
 });
 export type CustomLine = z.infer<typeof CustomLine>;
 
