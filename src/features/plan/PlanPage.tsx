@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useWeekPlan, isoWeekKey, weekDates, shiftWeek, DAY_NAMES } from "../../lib/data/useWeekPlan";
-import { recipeById } from "../../lib/recipes/loadRecipes";
+import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 
 export function PlanPage() {
+  const { byId } = useRecipeIndex();
   const [base, setBase] = useState(() => new Date());
   const weekKey = isoWeekKey(base);
   const dates = weekDates(base);
@@ -27,8 +28,8 @@ export function PlanPage() {
       <div className="space-y-4">
         {dates.map((date, day) => {
           const dayEntries = entries.filter((e) => e.day === day);
-          const cal = dayEntries.reduce((s, e) => s + (recipeById.get(e.recipeId)?.macros.calories ?? 0) * e.servings, 0);
-          const protein = dayEntries.reduce((s, e) => s + (recipeById.get(e.recipeId)?.macros.protein ?? 0) * e.servings, 0);
+          const cal = dayEntries.reduce((s, e) => s + (byId.get(e.recipeId)?.macros.calories ?? 0) * e.servings, 0);
+          const protein = dayEntries.reduce((s, e) => s + (byId.get(e.recipeId)?.macros.protein ?? 0) * e.servings, 0);
           const isToday = date.toDateString() === today;
           return (
             <section key={day} className={`rounded-2xl border p-4 ${isToday ? "border-ink" : "border-hairline"}`}>
@@ -41,7 +42,7 @@ export function PlanPage() {
               ) : (
                 <ul className="mt-2 divide-y divide-hairline">
                   {dayEntries.map((e) => {
-                    const r = recipeById.get(e.recipeId);
+                    const r = byId.get(e.recipeId);
                     return (
                       <li key={e.id} className="flex items-center justify-between gap-3 py-2">
                         <Link to={`/r/${e.recipeId}`} className="flex-1 truncate text-[15px] hover:underline">{r?.title ?? e.recipeId}</Link>

@@ -1,0 +1,82 @@
+import type { Macros, Recipe } from "../schema/recipe";
+import type { CustomLine, CustomRecipe } from "../schema/custom";
+import { ingredientById, ingredientLabel, type IngredientDBEntry } from "./ingredientsDb";
+
+const ZERO: Macros = { calories: 0, fat: 0, carbs: 0, netCarbs: null, protein: 0 };
+const round1 = (n: number) => Math.round(n * 10) / 10;
+
+/**
+ * Macro contribution of `grams` of an ingredient, scaled linearly from its
+ * reference amount (the book's method, D8): value * grams / per.amount.
+ */
+export function lineMacros(entry: IngredientDBEntry | undefined, grams: number): Macros {
+  if (!entry || entry.per.amount <= 0 || grams <= 0) return ZERO;
+  const f = grams / entry.per.amount;
+  return {
+    calories: entry.macros.calories * f,
+    fat: entry.macros.fat * f,
+    carbs: entry.macros.carbs * f,
+    netCarbs: null, // owner does not rely on net carbs; left null for custom recipes
+    protein: entry.macros.protein * f,
+  };
+}
+
+/** Sum the whole-recipe macros across all lines. */
+export function totalMacros(lines: CustomLine[]): Macros {
+  const t = { calories: 0, fat: 0, carbs: 0, protein: 0 };
+  for (const l of lines) {
+    const m = lineMacros(ingredientById.get(l.ingredientId), l.grams);
+    t.calories += m.calories;
+    t.fat += m.fat;
+    t.carbs += m.carbs;
+    t.protein += m.protein;
+  }
+  return { calories: round1(t.calories), fat: round1(t.fat), carbs: round1(t.carbs), netCarbs: null, protein: round1(t.protein) };
+}
+
+/** Whole-recipe macros divided by serving count (what the cards/detail show). */
+export function perServingMacros(lines: CustomLine[], servings: number): Macros {
+  const t = totalMacros(lines);
+  const s = Math.max(1, servings);
+  return {
+    calories: Math.round(t.calories / s),
+    fat: round1(t.fat / s),
+    carbs: round1(t.carbs / s),
+    netCarbs: null,
+    protein: round1(t.protein / s),
+  };
+}
+
+/**
+ * Adapt a stored CustomRecipe to the Recipe shape so it renders and aggregates
+ * exactly like a book recipe everywhere (browse, detail, scaler, planner,
+ * shopping - D31). Image/video/times are null; tips/references empty.
+ */
+export function customToRecipe(c: CustomRecipe): Recipe {
+  const ingredients = c.lines.map((l) => {
+    const e = ingredientById.get(l.ingredientId);
+    return { amount: l.grams, unit: "g", item: e ? ingredientLabel(e) : l.name };
+  });
+  const steps = c.steps
+    .map((t) => t.trim())
+    .filter(Boolean)
+    .map((text, i) => ({ n: i + 1, text }));
+  return {
+    id: c.id,
+    title: c.title,
+    category: c.category || "Custom",
+    servings: c.servings,
+    macros: perServingMacros(c.lines, c.servings),
+    ingredientGroups: [{ name: "Ingredients", ingredients }],
+    steps,
+    image: null,
+    videoUrl: null,
+    prepTimeMin: null,
+    cookTimeMin: null,
+    tips: [],
+    references: [],
+    sourcePages: [],
+  };
+}
+
+export const isCustomId = (id: string) => id.startsWith("c-");

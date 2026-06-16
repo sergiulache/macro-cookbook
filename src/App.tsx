@@ -5,8 +5,10 @@ import { RecipePage } from "./features/recipe/RecipePage";
 import { CookingMode } from "./features/recipe/CookingMode";
 import { PlanPage } from "./features/plan/PlanPage";
 import { ShoppingPage } from "./features/shopping/ShoppingPage";
+import { BuilderPage } from "./features/build/BuilderPage";
 import { AuthProvider, useAuth } from "./lib/auth/auth";
 import { AuthGate } from "./components/AuthGate";
+import { RecipeIndexProvider } from "./lib/recipes/RecipeIndex";
 
 /** Reset scroll to top on every route change (so a recipe opens at its top). */
 function ScrollToTop() {
@@ -25,6 +27,7 @@ function Nav() {
         </Link>
         <div className="flex items-center gap-5 text-[13px] font-500">
           <Link to="/" className="text-charcoal hover:text-ink">Recipes</Link>
+          <Link to="/build" className="text-charcoal hover:text-ink">New</Link>
           <Link to="/plan" className="text-charcoal hover:text-ink">Plan</Link>
           <Link to="/shopping" className="text-charcoal hover:text-ink">Shopping</Link>
           <button onClick={() => logout()} className="text-mute hover:text-ink" title={user?.email ?? ""}>Sign out</button>
@@ -40,15 +43,19 @@ export default function App() {
       <HashRouter>
         <ScrollToTop />
         <AuthGate>
-          <Nav />
-          <Routes>
-            <Route path="/" element={<BrowsePage />} />
-            <Route path="/r/:id" element={<RecipePage />} />
-            <Route path="/r/:id/cook" element={<CookingMode />} />
-            <Route path="/plan" element={<PlanPage />} />
-            <Route path="/shopping" element={<ShoppingPage />} />
-            <Route path="*" element={<BrowsePage />} />
-          </Routes>
+          <RecipeIndexProvider>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<BrowsePage />} />
+              <Route path="/r/:id" element={<RecipePage />} />
+              <Route path="/r/:id/cook" element={<CookingMode />} />
+              <Route path="/build" element={<BuilderPage />} />
+              <Route path="/build/:id" element={<BuilderPage />} />
+              <Route path="/plan" element={<PlanPage />} />
+              <Route path="/shopping" element={<ShoppingPage />} />
+              <Route path="*" element={<BrowsePage />} />
+            </Routes>
+          </RecipeIndexProvider>
         </AuthGate>
       </HashRouter>
     </AuthProvider>

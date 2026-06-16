@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Macros } from "./recipe.js";
+import { Macros } from "./recipe";
 
 /**
  * One row of the book's per-ingredient macro reference TABLE (D2).

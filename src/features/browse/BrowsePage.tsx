@@ -1,22 +1,12 @@
 import Fuse from "fuse.js";
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { recipes, categories } from "../../lib/recipes/loadRecipes";
+import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { deriveTags, ALL_TAGS, totalTimeMin } from "../../lib/recipes/tags";
 import { RecipeCard } from "../../components/RecipeCard";
 import { useFavorites } from "../../lib/data/useFavorites";
 import type { Recipe } from "../../lib/schema/recipe";
-
-const tagsOf = new Map(recipes.map((r) => [r.id, deriveTags(r)]));
-const fuse = new Fuse(recipes, {
-  keys: [
-    { name: "title", weight: 3 },
-    { name: "ingredientGroups.ingredients.item", weight: 1 },
-    { name: "tips", weight: 0.5 },
-  ],
-  threshold: 0.38,
-  ignoreLocation: true,
-});
 
 type Sort = "featured" | "calories" | "protein" | "time" | "name";
 const SORTS: { key: Sort; label: string }[] = [
@@ -49,9 +39,25 @@ export function BrowsePage() {
   const [page, setPage] = useState(1);
   const PER_PAGE = 24;
   const { favorites } = useFavorites();
+  const { all } = useRecipeIndex();
+
+  const fuse = useMemo(
+    () => new Fuse(all, {
+      keys: [
+        { name: "title", weight: 3 },
+        { name: "ingredientGroups.ingredients.item", weight: 1 },
+        { name: "tips", weight: 0.5 },
+      ],
+      threshold: 0.38,
+      ignoreLocation: true,
+    }),
+    [all],
+  );
+  const tagsOf = useMemo(() => new Map(all.map((r) => [r.id, deriveTags(r)])), [all]);
+  const categories = useMemo(() => Array.from(new Set(all.map((r) => r.category))), [all]);
 
   const results = useMemo(() => {
-    let list: Recipe[] = q.trim() ? fuse.search(q).map((r) => r.item) : recipes.slice();
+    let list: Recipe[] = q.trim() ? fuse.search(q).map((r) => r.item) : all.slice();
     if (favOnly) list = list.filter((r) => favorites.has(r.id));
     if (cats.size) list = list.filter((r) => cats.has(r.category));
     if (tags.size) list = list.filter((r) => (tagsOf.get(r.id) ?? []).some((t) => tags.has(t)));
@@ -64,7 +70,7 @@ export function BrowsePage() {
     };
     if (sort !== "featured" || !q) list = [...list].sort(by[sort]);
     return list;
-  }, [q, cats, tags, sort, favOnly, favorites]);
+  }, [q, cats, tags, sort, favOnly, favorites, all, fuse, tagsOf]);
 
   // reset to first page whenever the result set changes
   useEffect(() => setPage(1), [q, cats, tags, sort, favOnly, favorites]);
@@ -80,8 +86,11 @@ export function BrowsePage() {
   return (
     <div className="mx-auto max-w-[1100px] px-5 pb-24">
       <header className="pt-10 pb-6">
-        <h1 className="font-display text-[34px] font-700 leading-none tracking-tight">The Cookbook</h1>
-        <p className="mt-2 text-body">{recipes.length} recipes · search, filter by macros, plan your week.</p>
+        <div className="flex items-start justify-between gap-4">
+          <h1 className="font-display text-[34px] font-700 leading-none tracking-tight">The Cookbook</h1>
+          <Link to="/build" className="inline-flex h-9 shrink-0 items-center rounded-full bg-ink px-4 text-[13px] font-500 text-canvas hover:bg-ink-deep">+ New recipe</Link>
+        </div>
+        <p className="mt-2 text-body">{all.length} recipes · search, filter by macros, plan your week.</p>
       </header>
 
       {/* search + filters (non-sticky so it scrolls away on mobile) */}

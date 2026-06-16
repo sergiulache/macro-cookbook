@@ -3,16 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useShoppingList } from "../../lib/data/useShoppingList";
 import { useWeekPlan, isoWeekKey } from "../../lib/data/useWeekPlan";
 import { aggregate, CATEGORY_ORDER } from "../../lib/shopping/aggregate";
-import { recipeById } from "../../lib/recipes/loadRecipes";
+import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 
 export function ShoppingPage() {
   const weekKey = isoWeekKey(new Date());
+  const { byId } = useRecipeIndex();
   const { entries } = useWeekPlan(weekKey);
   const { items, weekKey: listWeek, toggle, addManual, clearChecked, generate } = useShoppingList();
   const [manual, setManual] = useState("");
 
   const onGenerate = () => {
-    const fresh = aggregate(entries, recipeById);
+    const fresh = aggregate(entries, byId);
     if (!fresh.length) return;
     if (items.length && !confirm("Replace the shopping list with this week's plan? (your manual items are kept)")) return;
     generate(fresh, weekKey);

@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { recipeById, imageUrl } from "../../lib/recipes/loadRecipes";
+import { imageUrl } from "../../lib/recipes/loadRecipes";
+import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
+import { isCustomId } from "../../lib/recipes/custom";
+import { useAuth } from "../../lib/auth/auth";
+import { nameFor } from "../../lib/data/people";
 import { AnimatedNumber } from "../../components/AnimatedNumber";
 import { renderStep, groupAnchor } from "../../lib/recipes/references";
 import { relatedTo } from "../../lib/recipes/related";
@@ -14,10 +18,18 @@ const fmt = (n: number) => (n >= 10 ? Math.round(n) : Math.round(n * 10) / 10);
 
 export function RecipePage() {
   const { id } = useParams();
-  const recipe = id ? recipeById.get(id) : undefined;
+  const { byId, customById } = useRecipeIndex();
+  const { user } = useAuth();
+  const recipe = id ? byId.get(id) : undefined;
+  const custom = id ? customById.get(id) : undefined;
   const [servings, setServings] = useState(recipe?.servings ?? 1);
+  useEffect(() => { if (recipe) setServings(recipe.servings); }, [recipe?.id]);
 
   if (!recipe) {
+    // a custom recipe may still be loading from Firestore
+    if (id && isCustomId(id)) {
+      return <div className="mx-auto max-w-[720px] px-5 py-24 text-center text-mute">Loading…</div>;
+    }
     return (
       <div className="mx-auto max-w-[720px] px-5 py-24 text-center text-body">
         Recipe not found. <Link to="/" className="underline">Back to the cookbook</Link>
@@ -25,6 +37,7 @@ export function RecipePage() {
     );
   }
 
+  const ownsCustom = !!custom && custom.ownerUid === user?.uid;
   const factor = servings / recipe.servings;
   const m = recipe.macros;
 
@@ -47,6 +60,7 @@ export function RecipePage() {
         <div>
           <p className="text-[13px] font-500 uppercase tracking-wide text-mute">{recipe.category}</p>
           <h1 className="mt-1 font-display text-[32px] font-700 leading-tight tracking-tight">{recipe.title}</h1>
+          {custom && <p className="mt-1 text-[13px] text-mute">Custom recipe by {nameFor(custom.ownerUid)}</p>}
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-body">
             {recipe.prepTimeMin != null && <span>Prep {recipe.prepTimeMin}m</span>}
             {recipe.cookTimeMin != null && <span>Cook {recipe.cookTimeMin}m</span>}
@@ -56,9 +70,16 @@ export function RecipePage() {
         <div className="flex items-center gap-2">
           <div className="rounded-full border border-hairline-strong"><FavoriteButton id={recipe.id} /></div>
           <AddToPlan recipeId={recipe.id} servings={servings} />
-          <Link to={`/r/${recipe.id}/cook`} className="inline-flex h-9 items-center gap-2 rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink">
-            Cook mode
-          </Link>
+          {recipe.steps.length > 0 && (
+            <Link to={`/r/${recipe.id}/cook`} className="inline-flex h-9 items-center gap-2 rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink">
+              Cook mode
+            </Link>
+          )}
+          {custom && ownsCustom && (
+            <Link to={`/build/${recipe.id}`} className="inline-flex h-9 items-center gap-2 rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink">
+              Edit
+            </Link>
+          )}
           {recipe.videoUrl && (
             <a href={recipe.videoUrl} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[13px] font-500 text-canvas hover:bg-ink-deep">
               ▶ Watch video
@@ -124,6 +145,7 @@ export function RecipePage() {
       </section>
 
       {/* directions */}
+      {recipe.steps.length > 0 && (
       <section className="mt-9">
         <h2 className="font-display text-[20px] font-600">Directions</h2>
         <ol className="mt-3 space-y-4">
@@ -135,6 +157,7 @@ export function RecipePage() {
           ))}
         </ol>
       </section>
+      )}
 
       {recipe.tips.length > 0 && (
         <section className="mt-8 rounded-2xl bg-surface-soft p-5">

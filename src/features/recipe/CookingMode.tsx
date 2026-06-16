@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { recipeById } from "../../lib/recipes/loadRecipes";
+import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { renderStep } from "../../lib/recipes/references";
 
 export function CookingMode() {
   const { id } = useParams();
-  const recipe = id ? recipeById.get(id) : undefined;
+  const { byId } = useRecipeIndex();
+  const recipe = id ? byId.get(id) : undefined;
   const [i, setI] = useState(0);
 
   // keep the screen awake while cooking (D10)
@@ -21,8 +22,9 @@ export function CookingMode() {
     return () => { document.removeEventListener("visibilitychange", onVis); lock?.release?.(); };
   }, []);
 
-  if (!recipe) return <div className="p-10">Not found. <Link to="/" className="underline">Home</Link></div>;
-  const step = recipe.steps[i];
+  if (!recipe || recipe.steps.length === 0)
+    return <div className="p-10">No steps to cook. <Link to={id ? `/r/${id}` : "/"} className="underline">Back</Link></div>;
+  const step = recipe.steps[Math.min(i, recipe.steps.length - 1)];
   const last = recipe.steps.length - 1;
 
   return (
