@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useWeekPlan, isoWeekKey, weekDates, shiftWeek, DAY_NAMES } from "../../lib/data/useWeekPlan";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 
@@ -21,9 +22,9 @@ export function PlanPage() {
       </header>
 
       <div className="mb-6 flex items-center gap-3">
-        <button onClick={() => setBase((b) => shiftWeek(b, -1))} className="h-8 w-8 rounded-full border border-hairline-strong hover:border-ink">‹</button>
+        <button onClick={() => setBase((b) => shiftWeek(b, -1))} className="grid h-8 w-8 place-items-center rounded-full border border-hairline-strong hover:border-ink" aria-label="Previous week"><ChevronLeft size={16} /></button>
         <span className="text-[14px] font-500 tabular-nums">{range}</span>
-        <button onClick={() => setBase((b) => shiftWeek(b, 1))} className="h-8 w-8 rounded-full border border-hairline-strong hover:border-ink">›</button>
+        <button onClick={() => setBase((b) => shiftWeek(b, 1))} className="grid h-8 w-8 place-items-center rounded-full border border-hairline-strong hover:border-ink" aria-label="Next week"><ChevronRight size={16} /></button>
         <button onClick={() => setBase(new Date())} className="text-[13px] text-body hover:text-ink">This week</button>
       </div>
 
@@ -53,7 +54,7 @@ export function PlanPage() {
                           <span className="w-6 text-center text-[13px] tabular-nums">{e.servings}</span>
                           <button onClick={() => setServings(e.id, e.servings + 1)} className="h-6 w-6 rounded-full hover:bg-canvas">+</button>
                         </div>
-                        <button onClick={() => remove(e.id)} className="text-mute hover:text-ink">✕</button>
+                        <button onClick={() => remove(e.id)} className="text-mute hover:text-ink" aria-label="Remove"><X size={15} /></button>
                       </li>
                     );
                   })}

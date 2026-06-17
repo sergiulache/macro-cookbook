@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Info } from "lucide-react";
+import { ChevronDown, Info, Sparkles, AlertTriangle, Pencil, Trash2 } from "lucide-react";
 import { useShoppingList } from "../../lib/data/useShoppingList";
 import { useWeekPlan, isoWeekKey, weekKeyRange } from "../../lib/data/useWeekPlan";
 import { aggregate } from "../../lib/shopping/aggregate";
@@ -84,8 +84,8 @@ export function ShoppingPage() {
                         <span className="w-3 shrink-0 text-ink">{l.active ? "✓" : ""}</span>
                         <span className="truncate">{l.name}</span>
                       </button>
-                      <button onClick={() => { const n = prompt("Rename list", l.name); if (n != null && n.trim()) renameList(l.id, n); }} title="Rename" className="shrink-0 px-1.5 text-[13px] text-mute hover:text-ink">✎</button>
-                      {!l.active && <button onClick={() => { if (confirm(`Delete “${l.name}”?`)) deleteList(l.id); }} title="Delete" className="shrink-0 px-1.5 text-[13px] text-mute hover:text-ink">✕</button>}
+                      <button onClick={() => { const n = prompt("Rename list", l.name); if (n != null && n.trim()) renameList(l.id, n); }} title="Rename" className="shrink-0 px-1.5 text-mute hover:text-ink"><Pencil size={13} /></button>
+                      {!l.active && <button onClick={() => { if (confirm(`Delete “${l.name}”?`)) deleteList(l.id); }} title="Delete" className="shrink-0 px-1.5 text-mute hover:text-ink"><Trash2 size={13} /></button>}
                     </div>
                   ))}
                   <div className="mt-1 border-t border-hairline px-2 pt-1">
@@ -104,7 +104,7 @@ export function ShoppingPage() {
           </div>
           <button onClick={onTidy} disabled={tidying || !items.length}
             className="inline-flex h-9 items-center rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink disabled:opacity-30">
-            {tidying ? "Tidying…" : "✦ Tidy with AI"}
+            {tidying ? "Tidying…" : <span className="inline-flex items-center gap-1.5"><Sparkles size={14} /> Tidy with AI</span>}
           </button>
           <button onClick={onGenerate} className="inline-flex h-9 items-center rounded-full bg-ink px-4 text-[13px] font-500 text-canvas hover:bg-ink-deep">
             Generate from week
@@ -135,7 +135,7 @@ export function ShoppingPage() {
 
       {aiErr && (
         <div className="mb-4 flex items-start gap-2 rounded-xl border-2 border-ink bg-surface-soft px-4 py-3">
-          <span className="text-[15px]">⚠</span><span className="text-[14px] font-600 text-ink">{aiErr}</span>
+          <AlertTriangle size={17} className="mt-0.5 shrink-0 text-ink" /><span className="text-[14px] font-600 text-ink">{aiErr}</span>
         </div>
       )}
 

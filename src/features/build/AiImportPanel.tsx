@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Sparkles, AlertTriangle, X } from "lucide-react";
 import { useAISettings } from "../../lib/data/useAISettings";
 import { timeAgo } from "../../lib/timeAgo";
 import { importRecipe, draftToLines, AiError, type Source } from "../../lib/ai/ai";
 import type { CustomLine } from "../../lib/schema/custom";
 
-export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string; image?: string | null }
+export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string; image?: string | null; category?: string; prepTimeMin?: number | null; cookTimeMin?: number | null }
 
 const ytThumb = (url: string): string | null => {
   const m = url.match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/);
@@ -45,6 +46,7 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
       onApply({
         title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n"),
         image: ytSrc ? ytThumb(ytSrc.content) : null,
+        category: draft.category, prepTimeMin: draft.prepTimeMin ?? null, cookTimeMin: draft.cookTimeMin ?? null,
       });
       addUsage(usage);
       setLastTokens(usage.totalTokenCount ?? null);
@@ -61,7 +63,7 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
   return (
     <div className="mt-4 overflow-hidden rounded-2xl border border-hairline">
       <button onClick={() => setOpen((v) => !v)} className="flex w-full items-center justify-between px-5 py-3 text-left hover:bg-surface-soft">
-        <span className="font-display text-[16px] font-600">✦ Import with AI</span>
+        <span className="inline-flex items-center gap-2 font-display text-[16px] font-600"><Sparkles size={16} /> Import with AI</span>
         <span className="text-[13px] text-mute">{open ? "Hide" : "Paste text, a YouTube link, or notes"}</span>
       </button>
 
@@ -86,7 +88,7 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
                           <textarea value={s.content} onChange={(e) => setContent(i, e.target.value)} placeholder={meta.placeholder} rows={s.type === "notes" ? 2 : 4}
                             className="flex-1 resize-y rounded-lg bg-surface-soft p-3 text-[14px] leading-relaxed outline-none placeholder:text-mute" />
                         )}
-                        <button onClick={() => removeSource(i)} disabled={sources.length === 1} className="mt-1 text-mute hover:text-ink disabled:opacity-30" aria-label="Remove source">✕</button>
+                        <button onClick={() => removeSource(i)} disabled={sources.length === 1} className="mt-1 text-mute hover:text-ink disabled:opacity-30" aria-label="Remove source"><X size={16} /></button>
                       </motion.div>
                     );
                   })}
@@ -136,7 +138,7 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
                 {error && (
                   <motion.div initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
                     className="flex items-start gap-2 rounded-xl border-2 border-ink bg-surface-soft px-4 py-3">
-                    <span className="text-[15px]">⚠</span>
+                    <AlertTriangle size={17} className="mt-0.5 shrink-0 text-ink" />
                     <span className="text-[14px] font-600 text-ink">{error}</span>
                   </motion.div>
                 )}

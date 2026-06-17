@@ -29,6 +29,8 @@ export const CustomRecipe = z.object({
   title: z.string().min(1),
   category: z.string().default("Custom"),
   servings: z.number().positive(),
+  prepTimeMin: z.number().nullable().optional(),
+  cookTimeMin: z.number().nullable().optional(),
   lines: z.array(CustomLine),
   steps: z.array(z.string()).default([]),
   image: z.string().nullable().optional(), // YouTube thumbnail URL or an uploaded data URL

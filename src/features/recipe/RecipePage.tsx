@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowLeft, Play } from "lucide-react";
 import { imageUrl } from "../../lib/recipes/loadRecipes";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { isCustomId } from "../../lib/recipes/custom";
 import { useAuth } from "../../lib/auth/auth";
 import { nameFor } from "../../lib/data/people";
+import { timeAgo } from "../../lib/timeAgo";
 import { AnimatedNumber } from "../../components/AnimatedNumber";
 import { renderStep, groupAnchor } from "../../lib/recipes/references";
 import { relatedTo } from "../../lib/recipes/related";
@@ -50,7 +52,7 @@ export function RecipePage() {
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="mx-auto max-w-[760px] px-5 pb-24"
     >
-      <Link to="/" className="mt-6 inline-flex items-center gap-1 text-[13px] text-body hover:text-ink">← All recipes</Link>
+      <Link to="/" className="mt-6 inline-flex items-center gap-1.5 text-[13px] text-body hover:text-ink"><ArrowLeft size={15} /> All recipes</Link>
 
       {recipe.image && (
         <div className="mt-4 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-hairline bg-surface-soft" style={{ backgroundImage: `url(${recipe.image.blurDataURL})`, backgroundSize: "cover" }}>
@@ -62,7 +64,13 @@ export function RecipePage() {
         <div>
           <p className="text-[13px] font-500 uppercase tracking-wide text-mute">{recipe.category}</p>
           <h1 className="mt-1 font-display text-[32px] font-700 leading-tight tracking-tight">{recipe.title}</h1>
-          {custom && <p className="mt-1 text-[13px] text-mute">Custom recipe by {nameFor(custom.ownerUid)}</p>}
+          {custom && (
+            <p className="mt-1 text-[13px] text-mute">
+              Custom recipe by {nameFor(custom.ownerUid)}
+              {custom.createdAt ? ` · added ${timeAgo(custom.createdAt)}` : ""}
+              {custom.updatedAt && custom.updatedAt - (custom.createdAt ?? 0) > 60000 ? ` · updated ${timeAgo(custom.updatedAt)}` : ""}
+            </p>
+          )}
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-body">
             {recipe.prepTimeMin != null && <span>Prep {recipe.prepTimeMin}m</span>}
             {recipe.cookTimeMin != null && <span>Cook {recipe.cookTimeMin}m</span>}
@@ -85,7 +93,7 @@ export function RecipePage() {
           )}
           {recipe.videoUrl && (
             <a href={recipe.videoUrl} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[13px] font-500 text-canvas hover:bg-ink-deep">
-              ▶ Watch video
+              <Play size={13} fill="currentColor" /> Watch video
             </a>
           )}
         </div>

@@ -2,6 +2,7 @@ import Fuse from "fuse.js";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { Heart, Search, X } from "lucide-react";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { loadBrowseState, patchBrowseState } from "../../lib/browseState";
 import { deriveTags, ALL_TAGS, totalTimeMin } from "../../lib/recipes/tags";
@@ -9,9 +10,10 @@ import { RecipeCard } from "../../components/RecipeCard";
 import { useFavorites } from "../../lib/data/useFavorites";
 import type { Recipe } from "../../lib/schema/recipe";
 
-type Sort = "featured" | "calories" | "protein" | "time" | "name";
+type Sort = "featured" | "calories" | "protein" | "time" | "name" | "added";
 const SORTS: { key: Sort; label: string }[] = [
   { key: "featured", label: "Featured" },
+  { key: "added", label: "Recently added" },
   { key: "protein", label: "Most protein" },
   { key: "calories", label: "Fewest calories" },
   { key: "time", label: "Quickest" },
@@ -70,6 +72,7 @@ export function BrowsePage() {
       protein: (a, b) => b.macros.protein - a.macros.protein,
       time: (a, b) => (totalTimeMin(a) || 9e9) - (totalTimeMin(b) || 9e9),
       name: (a, b) => a.title.localeCompare(b.title),
+      added: (a, b) => (b.createdAt ?? 0) - (a.createdAt ?? 0),
     };
     if (sort !== "featured" || !q) list = [...list].sort(by[sort]);
     return list;
@@ -118,22 +121,20 @@ export function BrowsePage() {
       {/* search + filters (non-sticky so it scrolls away on mobile) */}
       <div className="-mx-5 px-5 py-1">
         <div className="flex h-11 items-center gap-2 rounded-full bg-surface-soft px-4">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-mute">
-            <circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" />
-          </svg>
+          <Search size={16} className="shrink-0 text-mute" />
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search recipes, ingredients…"
             className="h-full w-full bg-transparent text-[15px] outline-none placeholder:text-mute"
           />
-          {q && <button onClick={() => setQ("")} className="text-mute hover:text-ink">✕</button>}
+          {q && <button onClick={() => setQ("")} className="text-mute hover:text-ink" aria-label="Clear search"><X size={16} /></button>}
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <Chip active={favView === "mine"} onClick={() => setFavView((v) => (v === "mine" ? "off" : "mine"))}>♥ Favorites</Chip>
+          <Chip active={favView === "mine"} onClick={() => setFavView((v) => (v === "mine" ? "off" : "mine"))}><span className="inline-flex items-center gap-1"><Heart size={13} fill={favView === "mine" ? "currentColor" : "none"} /> Favorites</span></Chip>
           {partnerName && partnerFavorites.size > 0 && (
-            <Chip active={favView === "partner"} onClick={() => setFavView((v) => (v === "partner" ? "off" : "partner"))}>♥ {partnerName}'s</Chip>
+            <Chip active={favView === "partner"} onClick={() => setFavView((v) => (v === "partner" ? "off" : "partner"))}><span className="inline-flex items-center gap-1"><Heart size={13} fill={favView === "partner" ? "currentColor" : "none"} /> {partnerName}'s</span></Chip>
           )}
           {ALL_TAGS.map((t) => (
             <Chip key={t} active={tags.has(t)} onClick={() => toggle(tags, t, setTags)}>{t}</Chip>

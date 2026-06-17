@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "../../lib/auth/auth";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
+import { categories } from "../../lib/recipes/loadRecipes";
+import { Globe, X } from "lucide-react";
 import { searchAll, loadUsda, usdaReady, ingredientLabel } from "../../lib/recipes/ingredientSearch";
 import { lineMacros, totalMacros, perServingMacros } from "../../lib/recipes/custom";
 import type { IngredientDBEntry, IngredientSource } from "../../lib/schema/ingredient";
@@ -36,9 +38,7 @@ function SourceTag({ source }: { source: IngredientSource }) {
   const label = source === "usda" ? "USDA" : source === "ai" ? "AI" : "Custom";
   return (
     <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-hairline-strong px-1.5 text-[10px] font-600 uppercase tracking-wide text-mute">
-      {source === "usda" ? (
-        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
-      ) : null}
+      {source === "usda" ? <Globe size={9} strokeWidth={2.4} /> : null}
       {label}
     </span>
   );
@@ -81,6 +81,9 @@ export function BuilderPage() {
   const [lines, setLines] = useState<CustomLine[]>([]);
   const [stepsText, setStepsText] = useState("");
   const [image, setImage] = useState<string | null>(null);
+  const [category, setCategory] = useState("Custom");
+  const [prepTime, setPrepTime] = useState("");
+  const [cookTime, setCookTime] = useState("");
   const [q, setQ] = useState("");
   const [focused, setFocused] = useState(false);
   const [active, setActive] = useState(0);
@@ -105,6 +108,9 @@ export function BuilderPage() {
     if (editId && existing && !loaded) {
       setTitle(existing.title); setServings(existing.servings); setLines(existing.lines);
       setStepsText(existing.steps.join("\n")); setImage(existing.image ?? null);
+      setCategory(existing.category || "Custom");
+      setPrepTime(existing.prepTimeMin != null ? String(existing.prepTimeMin) : "");
+      setCookTime(existing.cookTimeMin != null ? String(existing.cookTimeMin) : "");
       idRef.current = existing.id; setLoaded(true);
     }
   }, [editId, existing, loaded]);
@@ -158,7 +164,9 @@ export function BuilderPage() {
     setSaving(true);
     const now = Date.now();
     const rec: CustomRecipe = {
-      id: idRef.current, ownerUid: user.uid, title: title.trim(), category: "Custom", servings, lines,
+      id: idRef.current, ownerUid: user.uid, title: title.trim(), category: category || "Custom", servings, lines,
+      prepTimeMin: prepTime ? Number(prepTime) : null,
+      cookTimeMin: cookTime ? Number(cookTime) : null,
       steps: stepsText.split("\n").map((s) => s.trim()).filter(Boolean),
       image: image ?? null,
       createdAt: existing?.createdAt ?? now, updatedAt: now,
@@ -166,7 +174,13 @@ export function BuilderPage() {
     try { await saveCustom(rec); nav(`/r/${rec.id}`); } finally { setSaving(false); }
   };
   const onDelete = async () => { if (editId && confirm("Delete this custom recipe?")) { await removeCustom(editId); nav("/"); } };
-  const applyDraft = (a: AppliedDraft) => { setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps); if (a.image) setImage(a.image); };
+  const applyDraft = (a: AppliedDraft) => {
+    setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps);
+    if (a.image) setImage(a.image);
+    if (a.category) setCategory(a.category);
+    setPrepTime(a.prepTimeMin != null ? String(a.prepTimeMin) : "");
+    setCookTime(a.cookTimeMin != null ? String(a.cookTimeMin) : "");
+  };
 
   if (editId && !ownsIt && loaded) {
     return <div className="mx-auto max-w-[720px] px-5 py-24 text-center text-body">You can only edit your own custom recipes. <Link to={`/r/${editId}`} className="underline">View it</Link></div>;
@@ -195,6 +209,20 @@ export function BuilderPage() {
             <span className="w-8 text-center font-500 tabular-nums">{servings}</span>
             <button onClick={() => setServings((s) => s + 1)} className="h-8 w-8 rounded-full text-ink hover:bg-canvas">+</button>
           </div>
+        </label>
+        <label>
+          <span className="text-[13px] font-500 text-body">Category</span>
+          <select value={category} onChange={(e) => setCategory(e.target.value)} className="mt-1 h-11 rounded-xl bg-surface-soft px-3 text-[15px] outline-none">
+            {[...new Set(["Custom", ...categories, category])].map((c) => <option key={c} value={c}>{c}</option>)}
+          </select>
+        </label>
+        <label>
+          <span className="text-[13px] font-500 text-body">Prep min</span>
+          <input type="number" min={0} value={prepTime} onChange={(e) => setPrepTime(e.target.value)} className="mt-1 h-11 w-[70px] rounded-xl bg-surface-soft px-3 text-[15px] tabular-nums outline-none" />
+        </label>
+        <label>
+          <span className="text-[13px] font-500 text-body">Cook min</span>
+          <input type="number" min={0} value={cookTime} onChange={(e) => setCookTime(e.target.value)} className="mt-1 h-11 w-[70px] rounded-xl bg-surface-soft px-3 text-[15px] tabular-nums outline-none" />
         </label>
       </div>
 
@@ -318,7 +346,7 @@ export function BuilderPage() {
                         <input type="number" value={l.grams} min={0} onChange={(e) => setGrams(i, Number(e.target.value))} className="h-9 w-16 bg-transparent pl-3 text-right text-[14px] tabular-nums outline-none" />
                         <span className="px-2 text-[13px] text-mute">g</span>
                       </div>
-                      <button onClick={() => removeLine(i)} className="text-mute hover:text-ink" aria-label="Remove">✕</button>
+                      <button onClick={() => removeLine(i)} className="text-mute hover:text-ink" aria-label="Remove"><X size={16} /></button>
                     </motion.li>
                   );
                 })}

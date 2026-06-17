@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { renderStep } from "../../lib/recipes/references";
 
@@ -31,7 +32,7 @@ export function CookingMode() {
     <div className="fixed inset-0 z-50 flex flex-col bg-canvas">
       <header className="flex items-center justify-between border-b border-hairline px-5 py-3">
         <span className="font-display text-[15px] font-600">{recipe.title}</span>
-        <Link to={`/r/${recipe.id}`} className="text-[13px] text-body hover:text-ink">Exit ✕</Link>
+        <Link to={`/r/${recipe.id}`} className="inline-flex items-center gap-1 text-[13px] text-body hover:text-ink">Exit <X size={14} /></Link>
       </header>
 
       <div className="h-1 bg-hairline">

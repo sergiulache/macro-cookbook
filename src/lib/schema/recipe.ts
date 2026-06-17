@@ -70,6 +70,8 @@ export const Recipe = z.object({
   tips: z.array(z.string()).default([]), // empty → not rendered (D5)
   references: z.array(Reference).default([]),
   sourcePages: z.array(z.number()), // provenance for verification
+  createdAt: z.number().optional(), // custom recipes only
+  updatedAt: z.number().optional(),
 });
 export type Recipe = z.infer<typeof Recipe>;
 

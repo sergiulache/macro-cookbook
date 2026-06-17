@@ -76,11 +76,13 @@ export function customToRecipe(c: CustomRecipe): Recipe {
     steps,
     image: c.image ? { src: c.image, srcset: c.image, width: 0, height: 0, blurDataURL: "" } : null,
     videoUrl: null,
-    prepTimeMin: null,
-    cookTimeMin: null,
+    prepTimeMin: c.prepTimeMin ?? null,
+    cookTimeMin: c.cookTimeMin ?? null,
     tips: [],
     references: [],
     sourcePages: [],
+    createdAt: c.createdAt,
+    updatedAt: c.updatedAt,
   };
 }
 

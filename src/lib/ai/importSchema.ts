@@ -14,6 +14,9 @@ export const AiIngredient = z.object({
 export const AiRecipeDraft = z.object({
   title: z.string().min(1),
   servings: z.number().int().positive(),
+  category: z.string().optional(),
+  prepTimeMin: z.number().nullable().optional(),
+  cookTimeMin: z.number().nullable().optional(),
   confidence: z.enum(["high", "medium", "low"]).optional(),
   ingredients: z.array(AiIngredient).min(1),
   steps: z.array(z.string()).default([]),
@@ -27,6 +30,9 @@ export const IMPORT_RESPONSE_SCHEMA = {
   properties: {
     title: { type: "string" },
     servings: { type: "integer" },
+    category: { type: "string" },
+    prepTimeMin: { type: "integer" },
+    cookTimeMin: { type: "integer" },
     confidence: { type: "string", enum: ["high", "medium", "low"] },
     ingredients: {
       type: "array",
@@ -47,5 +53,5 @@ export const IMPORT_RESPONSE_SCHEMA = {
     steps: { type: "array", items: { type: "string" } },
     notes: { type: "string" },
   },
-  required: ["title", "servings", "ingredients", "steps"],
+  required: ["title", "servings", "category", "prepTimeMin", "cookTimeMin", "ingredients", "steps"],
 } as const;
