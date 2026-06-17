@@ -11,7 +11,7 @@ export const IngredientCategory = z.enum(["meat", "fruit", "vegetable", "seasoni
 export type IngredientCategory = z.infer<typeof IngredientCategory>;
 
 /** Where an ingredient's macros come from: the book's tables, the USDA database, or hand-entered. */
-export const IngredientSource = z.enum(["book", "usda", "manual"]);
+export const IngredientSource = z.enum(["book", "usda", "manual", "ai"]);
 export type IngredientSource = z.infer<typeof IngredientSource>;
 
 export const IngredientDBEntry = z.object({

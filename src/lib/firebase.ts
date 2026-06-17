@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getFunctions } from "firebase/functions";
 
 // Public client config (not a secret - safe to commit). Project: macro-cookbook.
 const firebaseConfig = {
@@ -15,3 +16,5 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+// AI proxy lives in europe-west1 (see functions/index.js)
+export const functions = getFunctions(app, "europe-west1");

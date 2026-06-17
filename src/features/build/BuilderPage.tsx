@@ -7,6 +7,7 @@ import { searchAll, loadUsda, usdaReady, ingredientLabel } from "../../lib/recip
 import { lineMacros, totalMacros, perServingMacros } from "../../lib/recipes/custom";
 import type { IngredientDBEntry, IngredientSource } from "../../lib/schema/ingredient";
 import type { CustomLine, CustomRecipe } from "../../lib/schema/custom";
+import { AiImportPanel, type AppliedDraft } from "./AiImportPanel";
 
 const round1 = (n: number) => Math.round(n * 10) / 10;
 const BOOK_CAT: Record<string, string> = { meat: "Meat & Seafood", fruit: "Fruit", vegetable: "Vegetable", seasoning: "Seasoning", pantry: "Pantry" };
@@ -15,12 +16,13 @@ const catLabel = (e: IngredientDBEntry) => (e.source === "book" ? BOOK_CAT[e.cat
 /** Small monochrome tag marking an ingredient that did not come from the book's own tables. */
 function SourceTag({ source }: { source: IngredientSource }) {
   if (source === "book") return null;
+  const label = source === "usda" ? "USDA" : source === "ai" ? "AI" : "Custom";
   return (
     <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-hairline-strong px-1.5 text-[10px] font-600 uppercase tracking-wide text-mute">
       {source === "usda" ? (
         <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
       ) : null}
-      {source === "usda" ? "USDA" : "Custom"}
+      {label}
     </span>
   );
 }
@@ -143,6 +145,7 @@ export function BuilderPage() {
     try { await saveCustom(rec); nav(`/r/${rec.id}`); } finally { setSaving(false); }
   };
   const onDelete = async () => { if (editId && confirm("Delete this custom recipe?")) { await removeCustom(editId); nav("/"); } };
+  const applyDraft = (a: AppliedDraft) => { setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps); };
 
   if (editId && !ownsIt && loaded) {
     return <div className="mx-auto max-w-[720px] px-5 py-24 text-center text-body">You can only edit your own custom recipes. <Link to={`/r/${editId}`} className="underline">View it</Link></div>;
@@ -154,7 +157,9 @@ export function BuilderPage() {
     <div className="mx-auto max-w-[760px] px-5 pb-28">
       <Link to="/" className="mt-6 inline-flex items-center gap-1 text-[13px] text-body hover:text-ink">← All recipes</Link>
       <h1 className="mt-4 font-display text-[30px] font-700 tracking-tight">{editId ? "Edit recipe" : "New recipe"}</h1>
-      <p className="mt-1 text-[13px] text-mute">Macros compute automatically. Search the book's ingredients or the USDA food database.</p>
+      <p className="mt-1 text-[13px] text-mute">Macros compute automatically. Import a recipe with AI, or search the book's ingredients and the USDA food database.</p>
+
+      {!editId && <AiImportPanel onApply={applyDraft} />}
 
       <div className="mt-6 flex flex-wrap items-end gap-4">
         <label className="flex-1">
