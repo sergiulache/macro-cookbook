@@ -9,3 +9,6 @@ out/
 firebase-debug.log
 .vite/
 coverage/
+
+functions/node_modules
+functions/.env*
