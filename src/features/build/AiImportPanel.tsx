@@ -5,7 +5,12 @@ import { timeAgo } from "../../lib/timeAgo";
 import { importRecipe, draftToLines, AiError, type Source } from "../../lib/ai/ai";
 import type { CustomLine } from "../../lib/schema/custom";
 
-export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string }
+export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string; image?: string | null }
+
+const ytThumb = (url: string): string | null => {
+  const m = url.match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/);
+  return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : null;
+};
 
 const SOURCE_TYPES: { v: Source["type"]; label: string; placeholder: string }[] = [
   { v: "text", label: "Paste text", placeholder: "Paste a recipe in any language…" },
@@ -36,7 +41,11 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
     setBusy(true); setError(null); setOk(false);
     try {
       const { draft, usage } = await importRecipe(sources.map(({ type, content }) => ({ type, content })), systemPrompt);
-      onApply({ title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n") });
+      const ytSrc = sources.find((s) => s.type === "youtube" && s.content.trim());
+      onApply({
+        title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n"),
+        image: ytSrc ? ytThumb(ytSrc.content) : null,
+      });
       addUsage(usage);
       setLastTokens(usage.totalTokenCount ?? null);
       setOk(true);

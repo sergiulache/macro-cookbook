@@ -16,6 +16,7 @@ export const Ingredient = z.object({
   unit: z.string().nullable(),
   item: z.string().min(1),
   note: z.string().optional(), // "(optional)", brand hints, prep ("diced")
+  optional: z.boolean().optional(), // shown de-emphasized, can be skipped
 });
 export type Ingredient = z.infer<typeof Ingredient>;
 

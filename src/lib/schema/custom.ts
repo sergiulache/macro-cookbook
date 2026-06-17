@@ -16,6 +16,7 @@ export const CustomLine = z.object({
   ingredientId: z.string().min(1),
   name: z.string().min(1),
   source: IngredientSource.default("book"),
+  optional: z.boolean().optional(),
   grams: z.number().nonnegative(),
   per: z.object({ amount: z.number().positive(), unit: z.string().min(1) }).optional(),
   macros: Macros.optional(),
@@ -30,6 +31,7 @@ export const CustomRecipe = z.object({
   servings: z.number().positive(),
   lines: z.array(CustomLine),
   steps: z.array(z.string()).default([]),
+  image: z.string().nullable().optional(), // YouTube thumbnail URL or an uploaded data URL
   createdAt: z.number(),
   updatedAt: z.number(),
 });

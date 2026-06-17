@@ -6,7 +6,7 @@ export const recipes: Recipe[] = RecipeArray.parse(data);
 export const recipeById = new Map(recipes.map((r) => [r.id, r]));
 export const categories = Array.from(new Set(recipes.map((r) => r.category)));
 
-/** Resolve a bundled image path against the deploy base (D26 routing/base). */
-export const imageUrl = (src: string) => import.meta.env.BASE_URL + src;
+/** Resolve a bundled image path against the deploy base (D26); pass through absolute/data URLs (custom recipes). */
+export const imageUrl = (src: string) => (/^(https?:|data:)/.test(src) ? src : import.meta.env.BASE_URL + src);
 
 export type { Recipe };

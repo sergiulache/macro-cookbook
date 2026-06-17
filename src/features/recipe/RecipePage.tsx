@@ -133,14 +133,21 @@ export function RecipePage() {
             <div key={g.name} id={groupAnchor(g.name)} className="scroll-mt-20">
               {g.name !== "Ingredients" && <h3 className="text-[13px] font-600 uppercase tracking-wide text-mute">{g.name}</h3>}
               <ul className="mt-1.5 divide-y divide-hairline">
-                {g.ingredients.map((ing, i) => (
-                  <li key={i} className="flex items-baseline justify-between gap-4 py-1.5 text-[15px]">
-                    <span className="text-ink">{ing.item}{ing.note ? <span className="text-mute"> ({ing.note})</span> : null}</span>
-                    {ing.amount != null && (
-                      <span className="shrink-0 font-mono text-[13px] text-body tabular-nums">{fmt(ing.amount * factor)}{ing.unit ?? ""}</span>
-                    )}
-                  </li>
-                ))}
+                {g.ingredients.map((ing, i) => {
+                  const opt = ing.optional || /optional/i.test(ing.note ?? "");
+                  return (
+                    <li key={i} className={`flex items-baseline justify-between gap-4 py-1.5 text-[15px] ${opt ? "opacity-55" : ""}`}>
+                      <span className="text-ink">
+                        {ing.item}
+                        {opt && <span className="ml-1.5 align-middle rounded-full border border-hairline-strong px-1.5 text-[10px] font-600 uppercase tracking-wide text-mute">optional</span>}
+                        {ing.note && !/optional/i.test(ing.note) ? <span className="text-mute"> ({ing.note})</span> : null}
+                      </span>
+                      {ing.amount != null && (
+                        <span className="shrink-0 font-mono text-[13px] text-body tabular-nums">{fmt(ing.amount * factor)}{ing.unit ?? ""}</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

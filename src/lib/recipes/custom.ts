@@ -61,7 +61,7 @@ export function perServingMacros(lines: CustomLine[], servings: number): Macros 
  * shopping - D31). Image/video/times are null; tips/references empty.
  */
 export function customToRecipe(c: CustomRecipe): Recipe {
-  const ingredients = c.lines.map((l) => ({ amount: l.grams, unit: "g", item: l.name }));
+  const ingredients = c.lines.map((l) => ({ amount: l.grams, unit: "g", item: l.name, optional: l.optional }));
   const steps = c.steps
     .map((t) => t.trim())
     .filter(Boolean)
@@ -74,7 +74,7 @@ export function customToRecipe(c: CustomRecipe): Recipe {
     macros: perServingMacros(c.lines, c.servings),
     ingredientGroups: [{ name: "Ingredients", ingredients }],
     steps,
-    image: null,
+    image: c.image ? { src: c.image, srcset: c.image, width: 0, height: 0, blurDataURL: "" } : null,
     videoUrl: null,
     prepTimeMin: null,
     cookTimeMin: null,

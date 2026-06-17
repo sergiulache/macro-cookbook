@@ -8,6 +8,7 @@ export const AiIngredient = z.object({
   protein: z.number().nonnegative(),
   fat: z.number().nonnegative(),
   carbs: z.number().nonnegative(),
+  optional: z.boolean().optional(),
 });
 
 export const AiRecipeDraft = z.object({
@@ -38,6 +39,7 @@ export const IMPORT_RESPONSE_SCHEMA = {
           protein: { type: "number" },
           fat: { type: "number" },
           carbs: { type: "number" },
+          optional: { type: "boolean" },
         },
         required: ["name", "grams", "calories", "protein", "fat", "carbs"],
       },

@@ -10,6 +10,23 @@ import type { CustomLine, CustomRecipe } from "../../lib/schema/custom";
 import { AiImportPanel, type AppliedDraft } from "./AiImportPanel";
 
 const round1 = (n: number) => Math.round(n * 10) / 10;
+
+/** Downscale + JPEG-compress an uploaded image to a small data URL (no Firebase Storage needed). */
+async function fileToDataUrl(file: File, max = 900, quality = 0.72): Promise<string> {
+  const img = await new Promise<HTMLImageElement>((res, rej) => {
+    const i = new Image();
+    i.onload = () => res(i);
+    i.onerror = rej;
+    i.src = URL.createObjectURL(file);
+  });
+  const scale = Math.min(1, max / Math.max(img.width, img.height));
+  const w = Math.round(img.width * scale), h = Math.round(img.height * scale);
+  const canvas = document.createElement("canvas");
+  canvas.width = w; canvas.height = h;
+  canvas.getContext("2d")!.drawImage(img, 0, 0, w, h);
+  URL.revokeObjectURL(img.src);
+  return canvas.toDataURL("image/jpeg", quality);
+}
 const BOOK_CAT: Record<string, string> = { meat: "Meat & Seafood", fruit: "Fruit", vegetable: "Vegetable", seasoning: "Seasoning", pantry: "Pantry" };
 const catLabel = (e: IngredientDBEntry) => (e.source === "book" ? BOOK_CAT[e.category] ?? e.category : e.category);
 
@@ -63,6 +80,7 @@ export function BuilderPage() {
   const [servings, setServings] = useState(1);
   const [lines, setLines] = useState<CustomLine[]>([]);
   const [stepsText, setStepsText] = useState("");
+  const [image, setImage] = useState<string | null>(null);
   const [q, setQ] = useState("");
   const [focused, setFocused] = useState(false);
   const [active, setActive] = useState(0);
@@ -86,7 +104,7 @@ export function BuilderPage() {
   useEffect(() => {
     if (editId && existing && !loaded) {
       setTitle(existing.title); setServings(existing.servings); setLines(existing.lines);
-      setStepsText(existing.steps.join("\n"));
+      setStepsText(existing.steps.join("\n")); setImage(existing.image ?? null);
       idRef.current = existing.id; setLoaded(true);
     }
   }, [editId, existing, loaded]);
@@ -111,6 +129,7 @@ export function BuilderPage() {
   };
   const setGrams = (i: number, grams: number) => setLines((ls) => ls.map((l, j) => (j === i ? { ...l, grams: Math.max(0, grams) } : l)));
   const removeLine = (i: number) => setLines((ls) => ls.filter((_, j) => j !== i));
+  const toggleOptional = (i: number) => setLines((ls) => ls.map((l, j) => (j === i ? { ...l, optional: !l.optional } : l)));
 
   const canAddManual = mName.trim().length > 0 && (Number(mCal) > 0 || Number(mPro) > 0);
   const addManual = () => {
@@ -141,12 +160,13 @@ export function BuilderPage() {
     const rec: CustomRecipe = {
       id: idRef.current, ownerUid: user.uid, title: title.trim(), category: "Custom", servings, lines,
       steps: stepsText.split("\n").map((s) => s.trim()).filter(Boolean),
+      image: image ?? null,
       createdAt: existing?.createdAt ?? now, updatedAt: now,
     };
     try { await saveCustom(rec); nav(`/r/${rec.id}`); } finally { setSaving(false); }
   };
   const onDelete = async () => { if (editId && confirm("Delete this custom recipe?")) { await removeCustom(editId); nav("/"); } };
-  const applyDraft = (a: AppliedDraft) => { setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps); };
+  const applyDraft = (a: AppliedDraft) => { setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps); if (a.image) setImage(a.image); };
 
   if (editId && !ownsIt && loaded) {
     return <div className="mx-auto max-w-[720px] px-5 py-24 text-center text-body">You can only edit your own custom recipes. <Link to={`/r/${editId}`} className="underline">View it</Link></div>;
@@ -176,6 +196,24 @@ export function BuilderPage() {
             <button onClick={() => setServings((s) => s + 1)} className="h-8 w-8 rounded-full text-ink hover:bg-canvas">+</button>
           </div>
         </label>
+      </div>
+
+      {/* photo (YouTube thumbnail on import, or upload your own; no storage - small data URL) */}
+      <div className="mt-4">
+        {image ? (
+          <div className="relative w-full max-w-[300px]">
+            <img src={image} alt="" className="aspect-[16/10] w-full rounded-xl border border-hairline object-cover" />
+            <div className="absolute right-2 top-2 flex gap-1">
+              <label className="cursor-pointer rounded-full bg-canvas/90 px-2 py-0.5 text-[12px] font-500 backdrop-blur hover:bg-canvas">Replace<input type="file" accept="image/*" className="hidden" onChange={async (e) => { const f = e.target.files?.[0]; if (f) setImage(await fileToDataUrl(f)); }} /></label>
+              <button onClick={() => setImage(null)} className="rounded-full bg-canvas/90 px-2 py-0.5 text-[12px] font-500 backdrop-blur hover:bg-canvas">Remove</button>
+            </div>
+          </div>
+        ) : (
+          <label className="inline-flex h-9 cursor-pointer items-center rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-charcoal hover:border-ink">
+            Add photo<input type="file" accept="image/*" className="hidden" onChange={async (e) => { const f = e.target.files?.[0]; if (f) setImage(await fileToDataUrl(f)); }} />
+          </label>
+        )}
+        <p className="mt-1 text-[12px] text-mute">Optional. Auto-filled from a YouTube video on import, or upload your own.</p>
       </div>
 
       <div className="mt-6 grid grid-cols-5 gap-2 rounded-2xl border border-hairline p-5 text-center">
@@ -271,8 +309,9 @@ export function BuilderPage() {
                   return (
                     <motion.li key={l.ingredientId + i} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, height: 0 }} className="flex items-center gap-3 py-2.5">
                       <span className="flex min-w-0 flex-1 items-center gap-2">
-                        <span className={`truncate text-[15px] ${l.grams === 0 ? "text-mute" : "text-ink"}`}>{l.name}</span>
+                        <span className={`truncate text-[15px] ${l.grams === 0 || l.optional ? "text-mute" : "text-ink"}`}>{l.name}</span>
                         <SourceTag source={l.source} />
+                        <button onClick={() => toggleOptional(i)} title="Mark optional" className={`shrink-0 rounded-full border px-1.5 text-[10px] font-600 uppercase tracking-wide ${l.optional ? "border-ink bg-ink text-canvas" : "border-hairline-strong text-mute hover:border-ink"}`}>opt</button>
                       </span>
                       <span className="hidden w-28 shrink-0 text-right font-mono text-[12px] text-mute tabular-nums sm:block">{Math.round(m.calories)}cal · {round1(m.protein)}gP</span>
                       <div className="flex items-center rounded-full bg-surface-soft">
