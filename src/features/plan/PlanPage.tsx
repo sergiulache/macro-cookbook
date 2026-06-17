@@ -10,6 +10,8 @@ export function PlanPage() {
   const dates = weekDates(base);
   const { entries, remove, setServings } = useWeekPlan(weekKey);
   const today = new Date().toDateString();
+  const dd = (d: Date) => `${String(d.getDate()).padStart(2, "0")}.${String(d.getMonth() + 1).padStart(2, "0")}`;
+  const range = `${dd(dates[0])} - ${dd(dates[6])}`;
 
   return (
     <div className="mx-auto max-w-[900px] px-5 pb-24">
@@ -20,7 +22,7 @@ export function PlanPage() {
 
       <div className="mb-6 flex items-center gap-3">
         <button onClick={() => setBase((b) => shiftWeek(b, -1))} className="h-8 w-8 rounded-full border border-hairline-strong hover:border-ink">‹</button>
-        <span className="text-[14px] font-500 tabular-nums">{weekKey}</span>
+        <span className="text-[14px] font-500 tabular-nums">{range}</span>
         <button onClick={() => setBase((b) => shiftWeek(b, 1))} className="h-8 w-8 rounded-full border border-hairline-strong hover:border-ink">›</button>
         <button onClick={() => setBase(new Date())} className="text-[13px] text-body hover:text-ink">This week</button>
       </div>

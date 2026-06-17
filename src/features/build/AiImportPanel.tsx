@@ -12,10 +12,12 @@ const SOURCE_TYPES: { v: Source["type"]; label: string; placeholder: string }[] 
   { v: "notes", label: "My notes", placeholder: "e.g. I only have Greek yogurt · make it 4 servings · less salt" },
 ];
 
+interface Row { id: string; type: Source["type"]; content: string }
+
 export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void }) {
   const { systemPrompt, setSystemPrompt, resetSystemPrompt, isDefault, tokens, addUsage } = useAISettings();
   const [open, setOpen] = useState(false);
-  const [sources, setSources] = useState<Source[]>([{ type: "text", content: "" }]);
+  const [sources, setSources] = useState<Row[]>([{ id: crypto.randomUUID(), type: "text", content: "" }]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastTokens, setLastTokens] = useState<number | null>(null);
@@ -25,14 +27,14 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
 
   const setType = (i: number, t: Source["type"]) => setSources((s) => s.map((x, j) => (j === i ? { ...x, type: t } : x)));
   const setContent = (i: number, c: string) => setSources((s) => s.map((x, j) => (j === i ? { ...x, content: c } : x)));
-  const addSource = () => setSources((s) => [...s, { type: "text", content: "" }]);
+  const addSource = () => setSources((s) => [...s, { id: crypto.randomUUID(), type: "text", content: "" }]);
   const removeSource = (i: number) => setSources((s) => (s.length > 1 ? s.filter((_, j) => j !== i) : s));
   const hasContent = sources.some((s) => s.content.trim());
 
   const generate = async () => {
     setBusy(true); setError(null); setOk(false);
     try {
-      const { draft, usage } = await importRecipe(sources, systemPrompt);
+      const { draft, usage } = await importRecipe(sources.map(({ type, content }) => ({ type, content })), systemPrompt);
       onApply({ title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n") });
       addUsage(usage);
       setLastTokens(usage.totalTokenCount ?? null);
@@ -57,25 +59,29 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
         {open && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
             <div className="space-y-3 border-t border-hairline px-5 py-4">
-              {sources.map((s, i) => {
-                const meta = SOURCE_TYPES.find((t) => t.v === s.type)!;
-                return (
-                  <div key={i} className="flex items-start gap-2">
-                    <select value={s.type} onChange={(e) => setType(i, e.target.value as Source["type"])}
-                      className="h-9 shrink-0 rounded-lg border border-hairline bg-canvas px-2 text-[13px] font-500 text-charcoal outline-none hover:border-ink">
-                      {SOURCE_TYPES.map((t) => <option key={t.v} value={t.v}>{t.label}</option>)}
-                    </select>
-                    {s.type === "youtube" ? (
-                      <input value={s.content} onChange={(e) => setContent(i, e.target.value)} placeholder={meta.placeholder}
-                        className="h-9 flex-1 rounded-lg bg-surface-soft px-3 text-[14px] outline-none placeholder:text-mute" />
-                    ) : (
-                      <textarea value={s.content} onChange={(e) => setContent(i, e.target.value)} placeholder={meta.placeholder} rows={s.type === "notes" ? 2 : 4}
-                        className="flex-1 resize-y rounded-lg bg-surface-soft p-3 text-[14px] leading-relaxed outline-none placeholder:text-mute" />
-                    )}
-                    <button onClick={() => removeSource(i)} disabled={sources.length === 1} className="mt-1 text-mute hover:text-ink disabled:opacity-30" aria-label="Remove source">✕</button>
-                  </div>
-                );
-              })}
+              <motion.div layout className="space-y-3">
+                <AnimatePresence initial={false}>
+                  {sources.map((s, i) => {
+                    const meta = SOURCE_TYPES.find((t) => t.v === s.type)!;
+                    return (
+                      <motion.div key={s.id} layout initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, height: 0, marginTop: 0 }} transition={{ duration: 0.18 }} className="flex items-start gap-2">
+                        <select value={s.type} onChange={(e) => setType(i, e.target.value as Source["type"])}
+                          className="h-9 shrink-0 rounded-lg border border-hairline bg-canvas px-2 text-[13px] font-500 text-charcoal outline-none hover:border-ink">
+                          {SOURCE_TYPES.map((t) => <option key={t.v} value={t.v}>{t.label}</option>)}
+                        </select>
+                        {s.type === "youtube" ? (
+                          <input value={s.content} onChange={(e) => setContent(i, e.target.value)} placeholder={meta.placeholder}
+                            className="h-9 flex-1 rounded-lg bg-surface-soft px-3 text-[14px] outline-none placeholder:text-mute" />
+                        ) : (
+                          <textarea value={s.content} onChange={(e) => setContent(i, e.target.value)} placeholder={meta.placeholder} rows={s.type === "notes" ? 2 : 4}
+                            className="flex-1 resize-y rounded-lg bg-surface-soft p-3 text-[14px] leading-relaxed outline-none placeholder:text-mute" />
+                        )}
+                        <button onClick={() => removeSource(i)} disabled={sources.length === 1} className="mt-1 text-mute hover:text-ink disabled:opacity-30" aria-label="Remove source">✕</button>
+                      </motion.div>
+                    );
+                  })}
+                </AnimatePresence>
+              </motion.div>
 
               <button onClick={addSource} className="text-[13px] text-body hover:text-ink">+ Add another source</button>
 
@@ -100,12 +106,15 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
               </div>
 
               {/* loud error */}
-              {error && (
-                <div className="flex items-start gap-2 rounded-xl border-2 border-ink bg-surface-soft px-4 py-3">
-                  <span className="text-[15px]">⚠</span>
-                  <span className="text-[14px] font-600 text-ink">{error}</span>
-                </div>
-              )}
+              <AnimatePresence>
+                {error && (
+                  <motion.div initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                    className="flex items-start gap-2 rounded-xl border-2 border-ink bg-surface-soft px-4 py-3">
+                    <span className="text-[15px]">⚠</span>
+                    <span className="text-[14px] font-600 text-ink">{error}</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               <div className="flex flex-wrap items-center gap-3">
                 <button onClick={generate} disabled={busy || !hasContent}

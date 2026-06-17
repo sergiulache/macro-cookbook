@@ -24,32 +24,37 @@ function friendly(code: string, fallback: string): string {
   return fallback || "AI request failed. Try again.";
 }
 
-/** Run the recipe importer: sources + system prompt -> validated draft + token usage. */
-export async function importRecipe(sources: Source[], systemPrompt: string): Promise<{ draft: AiRecipeDraft; usage: AiUsage }> {
-  const clean = sources.filter((s) => s.content.trim());
-  if (!clean.length) throw new AiError("invalid-argument", "Add at least one source (text, a YouTube link, or notes).");
-
-  let res: HttpsCallableResult<AiResponse>;
+/** Low-level call to the proxy; maps Firebase callable errors to a friendly AiError. */
+export async function callAi(req: AiRequest): Promise<AiResponse> {
   try {
-    res = await aiGenerate({
-      sources: clean,
-      systemPrompt,
-      schema: IMPORT_RESPONSE_SCHEMA,
-      task: "Build ONE structured recipe from the following source(s).",
-    });
+    const res: HttpsCallableResult<AiResponse> = await aiGenerate(req);
+    return res.data;
   } catch (e) {
     const raw = (e as { code?: string; message?: string }) ?? {};
     const code = (raw.code ?? "internal").replace(/^functions\//, "");
     throw new AiError(code, friendly(code, raw.message ?? ""));
   }
+}
+
+/** Run the recipe importer: sources + system prompt -> validated draft + token usage. */
+export async function importRecipe(sources: Source[], systemPrompt: string): Promise<{ draft: AiRecipeDraft; usage: AiUsage }> {
+  const clean = sources.filter((s) => s.content.trim());
+  if (!clean.length) throw new AiError("invalid-argument", "Add at least one source (text, a YouTube link, or notes).");
+
+  const data = await callAi({
+    sources: clean,
+    systemPrompt,
+    schema: IMPORT_RESPONSE_SCHEMA,
+    task: "Build ONE structured recipe from the following source(s).",
+  });
 
   let json: unknown;
-  try { json = JSON.parse(res.data.text); }
+  try { json = JSON.parse(data.text); }
   catch { throw new AiError("parse", "The AI response was not valid. Try again, or simplify the input."); }
 
   const parsed = AiRecipeDraft.safeParse(json);
   if (!parsed.success) throw new AiError("schema", "The AI could not build a complete recipe from that. Add more detail or another source.");
-  return { draft: parsed.data, usage: res.data.usage ?? {} };
+  return { draft: parsed.data, usage: data.usage ?? {} };
 }
 
 /** Convert a validated draft into builder lines (snapshot macros, source "ai"). */

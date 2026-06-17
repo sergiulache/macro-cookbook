@@ -4,7 +4,11 @@ import type { PlanEntry } from "../data/useWeekPlan";
 export interface ShopItem {
   id: string; item: string; unit: string | null; amount: number | null;
   category: string; checked: boolean; manual?: boolean;
+  approx?: boolean; // AI-tidied quantity is an approximation/conversion
 }
+
+/** Default grocery section order; editable per household (joint), drives list ordering. */
+export const DEFAULT_SECTIONS = ["Produce", "Bakery", "Dairy & Eggs", "Meat", "Frozen", "Pantry", "Drinks", "Household", "Other"];
 
 // Basic store categories (D13). A clean seam for later AI aisle-ordering (D14).
 const CATEGORY_RULES: [RegExp, string][] = [
