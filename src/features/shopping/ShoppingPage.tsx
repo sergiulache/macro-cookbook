@@ -116,7 +116,12 @@ export function ShoppingPage() {
                       <button onClick={() => toggle(i.id)} className="flex w-full items-center gap-3 border-b border-hairline py-2.5 text-left">
                         <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${i.checked ? "border-ink bg-ink text-canvas" : "border-hairline-strong"}`}>{i.checked ? "✓" : ""}</span>
                         <span className={`flex-1 text-[15px] ${i.checked ? "text-mute line-through" : "text-ink"}`}>{lang === "ro" ? (i.name_ro || i.item) : i.item}</span>
-                        {i.amount != null && <span className="font-mono text-[13px] text-body tabular-nums">{i.approx ? "~" : ""}{i.amount}{i.unit ? " " + i.unit : ""}</span>}
+                        {i.amount != null && (
+                          <span className="flex shrink-0 items-center gap-1.5 font-mono text-[13px] text-body tabular-nums">
+                            {i.approx ? "~" : ""}{i.amount}{i.unit ? " " + i.unit : ""}
+                            {i.estimated && <span title="Quantity estimated by AI (recipe gave no number)" className="rounded-full border border-hairline-strong px-1 text-[9px] font-600 uppercase tracking-wide text-mute">est</span>}
+                          </span>
+                        )}
                       </button>
                     </motion.li>
                   ))}

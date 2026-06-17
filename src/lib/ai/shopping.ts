@@ -9,6 +9,7 @@ const TidyItem = z.object({
   amount: z.number().nullable().optional(),
   unit: z.string().nullable().optional(),
   approx: z.boolean().optional(),
+  estimated: z.boolean().optional(),
   section: z.string().min(1),
 });
 const TidyResult = z.object({ items: z.array(TidyItem).min(1) });
@@ -26,6 +27,7 @@ const TIDY_SCHEMA = {
           amount: { type: "number" },
           unit: { type: "string" },
           approx: { type: "boolean" },
+          estimated: { type: "boolean" },
           section: { type: "string" },
         },
         required: ["name", "name_ro", "section"],
@@ -44,7 +46,11 @@ const TIDY_SCHEMA = {
 export async function tidyShoppingList(items: ShopItem[], sections: string[]): Promise<{ items: ShopItem[]; usage: AiUsage }> {
   if (!items.length) throw new AiError("invalid-argument", "Nothing to tidy yet.");
   const lines = items
-    .map((i) => `${i.amount != null ? i.amount : ""} ${i.unit ?? ""} ${i.item}`.replace(/\s+/g, " ").trim())
+    .map((i) => {
+      if (i.amount != null) return `${i.amount} ${i.unit ?? ""} ${i.item}`.replace(/\s+/g, " ").trim();
+      if (i.servingsFor) return `${i.item} (no quantity given; needed for ${i.servingsFor} servings)`;
+      return i.item;
+    })
     .join("\n");
 
   const data = await callAi({
@@ -72,6 +78,7 @@ export async function tidyShoppingList(items: ShopItem[], sections: string[]): P
     category: t.section,
     checked: false,
     approx: t.approx ?? false,
+    estimated: t.estimated ?? false,
   }));
   return { items: tidied, usage: data.usage ?? {} };
 }
