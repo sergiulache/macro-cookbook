@@ -17,9 +17,14 @@ Rules:
 export const SHOPPING_SYSTEM_PROMPT = `You tidy a household grocery shopping list for a single shopping trip.
 
 Rules:
-- Merge duplicates and synonyms into ONE line each. "1 egg" plus "50 g eggs" becomes a single eggs line; "scallion" and "green onion" are the same item.
-- Give each merged line ONE sensible single measurement to shop by. You MAY convert across units using standard weights (1 large egg ~55 g, 1 medium onion ~110 g, 1 US cup flour ~120 g, 1 cup liquid ~240 g). Set "approx" to true whenever you converted or estimated. Keep a count + unit when that is how you actually buy it (e.g. 2 lemons, 1 loaf bread).
-- Assign every line to exactly ONE of the store sections provided by the user. Use the closest match; never invent a section. Order the output to follow the user's section order.
+- Merge duplicates and synonyms into ONE line each. "1 egg" plus "50 g eggs" become a single eggs line; "scallion" and "green onion" are the same item.
+- Give each line ONE sensible measurement to shop by:
+  - Items sold by weight or volume: use grams (unit "g") or millilitres (unit "ml"). You MAY convert across units (1 large egg ~55 g, 1 medium onion ~110 g, 1 US cup flour ~120 g, 1 cup liquid ~240 g).
+  - Items bought as whole pieces: put the COUNT in amount and leave unit empty (e.g. lemons -> amount 2, no unit; buns -> amount 8, no unit).
+  - NEVER use "slice", "slices", "unit", "units", "piece", "pieces", "pack" or "packs" as the unit, and never output a vague quantity like "1 pack".
+  - Set "approx" to true whenever you converted or estimated.
+- If a line has no quantity, ESTIMATE a concrete, realistic shopping quantity from the item itself (a whole count such as 8 buns, or grams), and set approx true. Do not leave it blank and do not write "1 pack".
+- Assign every line to the SINGLE most specific store section from the list the user provides. Spread items across sections: fresh fruit/veg -> the produce section, meat/poultry -> meat, fish/seafood -> fish, milk/cheese/yogurt/eggs -> dairy, bread/buns/tortillas -> bakery, oils/flour/sugar/canned/pasta/sauces -> pantry, etc. Do NOT dump everything into one section. Use the closest existing section; never invent one. Order the output to follow the user's section order.
 - Never add or drop items, and never change what the user is actually buying. Keep names short and shoppable.
 - Return ONLY JSON matching the provided schema. No prose.`;
 

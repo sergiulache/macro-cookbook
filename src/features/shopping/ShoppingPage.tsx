@@ -17,7 +17,7 @@ export function ShoppingPage() {
   const [manual, setManual] = useState("");
   const [tidying, setTidying] = useState(false);
   const [aiErr, setAiErr] = useState<string | null>(null);
-  const [lastTok, setLastTok] = useState<number | null>(null);
+  const [lastUsage, setLastUsage] = useState<{ i: number; o: number } | null>(null);
   const [storeOpen, setStoreOpen] = useState(false);
   const [sectionsDraft, setSectionsDraft] = useState("");
 
@@ -35,7 +35,7 @@ export function ShoppingPage() {
       const { items: tidied, usage } = await tidyShoppingList(items, sections);
       applyTidy(tidied);
       addUsage(usage);
-      setLastTok(usage.totalTokenCount ?? null);
+      setLastUsage({ i: usage.promptTokenCount ?? 0, o: usage.candidatesTokenCount ?? 0 });
     } catch (e) {
       setAiErr(e instanceof AiError ? e.message : "Tidy failed. Try again.");
     } finally {
@@ -106,7 +106,7 @@ export function ShoppingPage() {
                       <button onClick={() => toggle(i.id)} className="flex w-full items-center gap-3 border-b border-hairline py-2.5 text-left">
                         <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${i.checked ? "border-ink bg-ink text-canvas" : "border-hairline-strong"}`}>{i.checked ? "✓" : ""}</span>
                         <span className={`flex-1 text-[15px] ${i.checked ? "text-mute line-through" : "text-ink"}`}>{i.item}</span>
-                        {i.amount != null && <span className="font-mono text-[13px] text-body tabular-nums">{i.approx ? "~" : ""}{i.amount}{i.unit ?? ""}</span>}
+                        {i.amount != null && <span className="font-mono text-[13px] text-body tabular-nums">{i.approx ? "~" : ""}{i.amount}{i.unit ? " " + i.unit : ""}</span>}
                       </button>
                     </motion.li>
                   ))}
@@ -127,7 +127,7 @@ export function ShoppingPage() {
             <button onClick={() => setAllChecked(!allChecked)} className="h-10 rounded-full px-3 text-[13px] text-mute hover:text-ink">{allChecked ? "Deselect all" : "Select all"}</button>
             <button onClick={clearChecked} className="h-10 rounded-full px-3 text-[13px] text-mute hover:text-ink">Clear ✓</button>
           </div>
-          {lastTok != null && <p className="text-right text-[11px] text-mute tabular-nums">tidy used {lastTok.toLocaleString()} tokens</p>}
+          {lastUsage && <p className="text-right text-[11px] text-mute tabular-nums">tidy: {lastUsage.i.toLocaleString()} in / {lastUsage.o.toLocaleString()} out tokens</p>}
         </div>
       )}
     </div>

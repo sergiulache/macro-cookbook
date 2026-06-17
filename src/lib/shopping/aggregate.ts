@@ -8,7 +8,7 @@ export interface ShopItem {
 }
 
 /** Default grocery section order; editable per household (joint), drives list ordering. */
-export const DEFAULT_SECTIONS = ["Produce", "Bakery", "Dairy & Eggs", "Meat", "Frozen", "Pantry", "Drinks", "Household", "Other"];
+export const DEFAULT_SECTIONS = ["Produce", "Bakery", "Dairy & Eggs", "Meat", "Fish", "Frozen", "Pantry", "Spices & Sauces", "Snacks & Sweets", "Drinks", "Household", "Other"];
 
 // Basic store categories (D13). A clean seam for later AI aisle-ordering (D14).
 const CATEGORY_RULES: [RegExp, string][] = [
