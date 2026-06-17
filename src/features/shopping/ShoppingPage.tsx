@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChefHat, ChevronDown } from "lucide-react";
+import { ChevronDown, Info } from "lucide-react";
 import { useShoppingList } from "../../lib/data/useShoppingList";
 import { useWeekPlan, isoWeekKey, weekKeyRange } from "../../lib/data/useWeekPlan";
 import { aggregate } from "../../lib/shopping/aggregate";
@@ -32,7 +32,10 @@ export function ShoppingPage() {
   const [lang, setLang] = useState<"en" | "ro">(() => (typeof localStorage !== "undefined" && localStorage.getItem("mc.shop.lang") === "ro" ? "ro" : "en"));
   useEffect(() => { try { localStorage.setItem("mc.shop.lang", lang); } catch { /* ignore */ } }, [lang]);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [shown, setShown] = useState<Set<string>>(new Set());
+  const [shown, setShown] = useState<Set<string>>(() => {
+    try { return new Set(JSON.parse(localStorage.getItem("mc.shop.expanded") || "[]")); } catch { return new Set(); }
+  });
+  useEffect(() => { try { localStorage.setItem("mc.shop.expanded", JSON.stringify([...shown])); } catch { /* ignore */ } }, [shown]);
   const toggleShown = (id: string) => setShown((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
 
   const onGenerate = () => {
@@ -162,7 +165,7 @@ export function ShoppingPage() {
                         </button>
                         {i.recipes && i.recipes.length > 0 && (
                           <button onClick={() => toggleShown(i.id)} title="Which recipes use this" className={`shrink-0 px-2 ${shown.has(i.id) ? "text-ink" : "text-mute hover:text-ink"}`}>
-                            <ChefHat size={15} strokeWidth={2} />
+                            <Info size={15} strokeWidth={2} />
                           </button>
                         )}
                       </div>
