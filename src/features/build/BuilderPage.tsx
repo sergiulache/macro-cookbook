@@ -196,12 +196,15 @@ export function BuilderPage() {
 
       {!editId && <AiImportPanel onApply={applyDraft} />}
 
-      <div className="mt-6 flex flex-wrap items-end gap-4">
-        <label className="flex-1">
-          <span className="text-[13px] font-500 text-body">Name</span>
-          <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="My high-protein bowl"
-            className="mt-1 h-11 w-full rounded-xl bg-surface-soft px-4 text-[16px] outline-none placeholder:text-mute" />
-        </label>
+      {/* name gets its own full-width row */}
+      <label className="mt-6 block">
+        <span className="text-[13px] font-500 text-body">Name</span>
+        <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="My high-protein bowl"
+          className="mt-1 h-11 w-full rounded-xl bg-surface-soft px-4 text-[16px] outline-none placeholder:text-mute" />
+      </label>
+
+      {/* servings · category · prep · cook on a separate wrapping row */}
+      <div className="mt-4 flex flex-wrap items-end gap-3">
         <label>
           <span className="text-[13px] font-500 text-body">Servings</span>
           <div className="mt-1 flex h-11 items-center gap-1 rounded-xl bg-surface-soft px-2">
@@ -210,19 +213,19 @@ export function BuilderPage() {
             <button onClick={() => setServings((s) => s + 1)} className="h-8 w-8 rounded-full text-ink hover:bg-canvas">+</button>
           </div>
         </label>
-        <label>
+        <label className="min-w-[150px] flex-1">
           <span className="text-[13px] font-500 text-body">Category</span>
-          <select value={category} onChange={(e) => setCategory(e.target.value)} className="mt-1 h-11 rounded-xl bg-surface-soft px-3 text-[15px] outline-none">
+          <select value={category} onChange={(e) => setCategory(e.target.value)} className="mt-1 h-11 w-full rounded-xl bg-surface-soft px-3 text-[15px] outline-none">
             {[...new Set(["Custom", ...categories, category])].map((c) => <option key={c} value={c}>{c}</option>)}
           </select>
         </label>
         <label>
           <span className="text-[13px] font-500 text-body">Prep min</span>
-          <input type="number" min={0} value={prepTime} onChange={(e) => setPrepTime(e.target.value)} className="mt-1 h-11 w-[70px] rounded-xl bg-surface-soft px-3 text-[15px] tabular-nums outline-none" />
+          <input type="number" min={0} value={prepTime} onChange={(e) => setPrepTime(e.target.value)} className="mt-1 h-11 w-[84px] rounded-xl bg-surface-soft px-3 text-[15px] tabular-nums outline-none" />
         </label>
         <label>
           <span className="text-[13px] font-500 text-body">Cook min</span>
-          <input type="number" min={0} value={cookTime} onChange={(e) => setCookTime(e.target.value)} className="mt-1 h-11 w-[70px] rounded-xl bg-surface-soft px-3 text-[15px] tabular-nums outline-none" />
+          <input type="number" min={0} value={cookTime} onChange={(e) => setCookTime(e.target.value)} className="mt-1 h-11 w-[84px] rounded-xl bg-surface-soft px-3 text-[15px] tabular-nums outline-none" />
         </label>
       </div>
 
