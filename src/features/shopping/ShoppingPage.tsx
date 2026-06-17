@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChefHat, ChevronDown } from "lucide-react";
 import { useShoppingList } from "../../lib/data/useShoppingList";
 import { useWeekPlan, isoWeekKey, weekKeyRange } from "../../lib/data/useWeekPlan";
 import { aggregate } from "../../lib/shopping/aggregate";
@@ -11,7 +13,12 @@ import { timeAgo } from "../../lib/timeAgo";
 
 export function ShoppingPage() {
   const weekKey = isoWeekKey(new Date());
-  const { byId } = useRecipeIndex();
+  const { byId, all } = useRecipeIndex();
+  const titleToId = useMemo(() => {
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+    return new Map(all.map((r) => [norm(r.title), r.id]));
+  }, [all]);
+  const recipeId = (title: string) => titleToId.get(title.toLowerCase().replace(/[^a-z0-9]/g, ""));
   const { entries } = useWeekPlan(weekKey);
   const { items, weekKey: listWeek, sections, sectionsUpdatedAt, sectionsUpdatedByName, toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections,
     listId, listName, archive, createList, switchList, renameList, deleteList } = useShoppingList();
@@ -62,7 +69,7 @@ export function ShoppingPage() {
           <div className="relative">
             <button onClick={() => setMenuOpen((v) => !v)} className="flex items-center gap-1.5 font-display text-[30px] font-700 tracking-tight">
               <span className="truncate max-w-[260px]">{listName}</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" className="mt-1 shrink-0 text-mute"><path d="m6 9 6 6 6-6" /></svg>
+              <ChevronDown size={18} className="mt-1 shrink-0 text-mute" />
             </button>
             {menuOpen && (
               <>
@@ -155,13 +162,28 @@ export function ShoppingPage() {
                         </button>
                         {i.recipes && i.recipes.length > 0 && (
                           <button onClick={() => toggleShown(i.id)} title="Which recipes use this" className={`shrink-0 px-2 ${shown.has(i.id) ? "text-ink" : "text-mute hover:text-ink"}`}>
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" /></svg>
+                            <ChefHat size={15} strokeWidth={2} />
                           </button>
                         )}
                       </div>
-                      {shown.has(i.id) && i.recipes && i.recipes.length > 0 && (
-                        <p className="pb-2 pl-8 text-[12px] text-mute">In: {i.recipes.join(", ")}</p>
-                      )}
+                      <AnimatePresence initial={false}>
+                        {shown.has(i.id) && i.recipes && i.recipes.length > 0 && (
+                          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2, ease: "easeOut" }} className="overflow-hidden">
+                            <p className="pb-2 pl-8 text-[12px] text-mute">
+                              In{" "}
+                              {i.recipes.map((name, k) => {
+                                const rid = recipeId(name);
+                                return (
+                                  <span key={k}>
+                                    {k > 0 ? ", " : ""}
+                                    {rid ? <Link to={`/r/${rid}`} className="text-body underline decoration-mute underline-offset-2 hover:text-ink">{name}</Link> : name}
+                                  </span>
+                                );
+                              })}
+                            </p>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </motion.li>
                   ))}
                 </AnimatePresence>
