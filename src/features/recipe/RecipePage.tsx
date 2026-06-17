@@ -64,6 +64,15 @@ export function RecipePage() {
           <p className="text-[13px] font-500 uppercase tracking-wide text-mute">{recipe.category}</p>
           <h1 className="mt-1 font-display text-[32px] font-700 leading-tight tracking-tight">{recipe.title}</h1>
           {custom && <p className="mt-1 text-[13px] text-mute">Custom recipe by {nameFor(custom.ownerUid)}</p>}
+          {custom && hasRomanian(custom) && (
+            <div className="mt-2 inline-flex items-center gap-2">
+              <span className="text-[12px] font-500 uppercase tracking-wide text-mute">Language</span>
+              <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
+                <button onClick={() => setLang("en")} className={`h-7 rounded-full px-3 ${lang === "en" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>EN</button>
+                <button onClick={() => setLang("ro")} className={`h-7 rounded-full px-3 ${lang === "ro" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>RO</button>
+              </div>
+            </div>
+          )}
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-body">
             {recipe.prepTimeMin != null && <span>Prep {recipe.prepTimeMin}m</span>}
             {recipe.cookTimeMin != null && <span>Cook {recipe.cookTimeMin}m</span>}
@@ -72,12 +81,6 @@ export function RecipePage() {
           {partnerHas(recipe.id) && <p className="mt-1.5 text-[13px] text-mute">♥ Loved by {partnerName}</p>}
         </div>
         <div className="flex items-center gap-2">
-          {custom && hasRomanian(custom) && (
-            <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
-              <button onClick={() => setLang("en")} className={`h-7 rounded-full px-2.5 ${lang === "en" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>EN</button>
-              <button onClick={() => setLang("ro")} className={`h-7 rounded-full px-2.5 ${lang === "ro" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>RO</button>
-            </div>
-          )}
           <div className="rounded-full border border-hairline-strong"><FavoriteButton id={recipe.id} /></div>
           <AddToPlan recipeId={recipe.id} servings={servings} />
           {recipe.steps.length > 0 && (

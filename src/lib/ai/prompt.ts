@@ -21,8 +21,8 @@ Rules:
 - Merge duplicates and synonyms into ONE line each. "1 egg" plus "50 g eggs" become a single eggs line; "scallion" and "green onion" are the same item.
 - Give each line ONE sensible measurement to shop by:
   - Items sold by weight or volume: use grams (unit "g") or millilitres (unit "ml"). You MAY convert across units (1 large egg ~55 g, 1 medium onion ~110 g, 1 US cup flour ~120 g, 1 cup liquid ~240 g).
-  - Items bought as whole pieces: put the COUNT in amount and leave unit empty (e.g. lemons -> amount 2, no unit; buns -> amount 8, no unit).
-  - NEVER use "slice", "slices", "unit", "units", "piece", "pieces", "pack" or "packs" as the unit, and never output a vague quantity like "1 pack".
+  - Items bought as whole pieces: put the COUNT in amount and add the natural unit noun when it helps (e.g. garlic -> 2 cloves; bread -> 1 loaf; buns -> 8 buns; eggs -> 6 eggs; canned beans -> 1 can). Plain countables can use "units" (e.g. onion -> 8 units) or no unit at all.
+  - Pick a SENSIBLE unit only: never an absurd one (do not measure an onion, cheese or meat in "slices"), and never output a vague quantity like "1 pack" or "1 packs".
   - Set "approx" to true whenever you converted or estimated.
 - If a line has no quantity, ESTIMATE a concrete, realistic shopping quantity from the item itself (a whole count such as 8 buns, or grams), and set approx true. Do not leave it blank and do not write "1 pack".
 - Assign every line to the SINGLE most specific store section from the list the user provides. Spread items across sections: fresh fruit/veg -> the produce section, meat/poultry -> meat, fish/seafood -> fish, milk/cheese/yogurt/eggs -> dairy, bread/buns/tortillas -> bakery, oils/flour/sugar/canned/pasta/sauces -> pantry, etc. Do NOT dump everything into one section. Use the closest existing section; never invent one. Order the output to follow the user's section order.
