@@ -7,6 +7,7 @@ import { categories } from "../../lib/recipes/loadRecipes";
 import { Globe, X } from "lucide-react";
 import { searchAll, loadUsda, usdaReady, ingredientLabel } from "../../lib/recipes/ingredientSearch";
 import { lineMacros, totalMacros, perServingMacros } from "../../lib/recipes/custom";
+import { searchImage } from "../../lib/ai/ai";
 import type { IngredientDBEntry, IngredientSource } from "../../lib/schema/ingredient";
 import type { CustomLine, CustomRecipe } from "../../lib/schema/custom";
 import { AiImportPanel, type AppliedDraft } from "./AiImportPanel";
@@ -84,6 +85,7 @@ export function BuilderPage() {
   const [category, setCategory] = useState("Custom");
   const [prepTime, setPrepTime] = useState("");
   const [cookTime, setCookTime] = useState("");
+  const [imgBusy, setImgBusy] = useState(false);
   const [q, setQ] = useState("");
   const [focused, setFocused] = useState(false);
   const [active, setActive] = useState(0);
@@ -174,6 +176,11 @@ export function BuilderPage() {
     try { await saveCustom(rec); nav(`/r/${rec.id}`); } finally { setSaving(false); }
   };
   const onDelete = async () => { if (editId && confirm("Delete this custom recipe?")) { await removeCustom(editId); nav("/"); } };
+  const findPhoto = async () => {
+    if (!title.trim()) return;
+    setImgBusy(true);
+    try { const url = await searchImage(title.trim()); if (url) setImage(url); } finally { setImgBusy(false); }
+  };
   const applyDraft = (a: AppliedDraft) => {
     setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps);
     if (a.image) setImage(a.image);
@@ -240,11 +247,16 @@ export function BuilderPage() {
             </div>
           </div>
         ) : (
-          <label className="inline-flex h-9 cursor-pointer items-center rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-charcoal hover:border-ink">
-            Add photo<input type="file" accept="image/*" className="hidden" onChange={async (e) => { const f = e.target.files?.[0]; if (f) setImage(await fileToDataUrl(f)); }} />
-          </label>
+          <div className="flex flex-wrap items-center gap-2">
+            <label className="inline-flex h-9 cursor-pointer items-center rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-charcoal hover:border-ink">
+              Add photo<input type="file" accept="image/*" className="hidden" onChange={async (e) => { const f = e.target.files?.[0]; if (f) setImage(await fileToDataUrl(f)); }} />
+            </label>
+            <button onClick={findPhoto} disabled={imgBusy || !title.trim()} className="inline-flex h-9 items-center rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-charcoal hover:border-ink disabled:opacity-30">
+              {imgBusy ? "Searching…" : "Find a photo"}
+            </button>
+          </div>
         )}
-        <p className="mt-1 text-[12px] text-mute">Optional. Auto-filled from a YouTube video on import, or upload your own.</p>
+        <p className="mt-1 text-[12px] text-mute">Optional. Auto-filled from a YouTube video or an image search on import; or add/find one yourself.</p>
       </div>
 
       <div className="mt-6 grid grid-cols-5 gap-2 rounded-2xl border border-hairline p-5 text-center">

@@ -44,13 +44,34 @@ async function fetchYouTube(url) {
   }
 }
 
+/** Best-effort food photo for a recipe via Openverse (free, no key, CC-licensed). */
+async function searchImage(query) {
+  try {
+    const r = await fetch(
+      `https://api.openverse.org/v1/images/?q=${encodeURIComponent(query)}&page_size=8&mature=false&aspect_ratio=wide,square`,
+      { headers: { "user-agent": "macro-cookbook/1.0 (recipe app)" } },
+    );
+    if (!r.ok) return null;
+    const j = await r.json();
+    const results = j.results || [];
+    const pick = results.find((x) => x.url && (x.width || 0) >= 500) || results[0];
+    return pick && pick.url ? pick.url : null;
+  } catch {
+    return null;
+  }
+}
+
 export const aiGenerate = onCall(
   { secrets: [GEMINI_KEY], region: "europe-west1", timeoutSeconds: 120, memory: "256MiB" },
   async (request) => {
     if (!request.auth || !MEMBERS.has(request.auth.uid)) {
       throw new HttpsError("permission-denied", "Sign in with a member account to use AI.");
     }
-    const { systemPrompt, sources = [], schema, task = "" } = request.data ?? {};
+    const data = request.data ?? {};
+    if (data.imageQuery) {
+      return { imageUrl: await searchImage(String(data.imageQuery)) };
+    }
+    const { systemPrompt, sources = [], schema, task = "" } = data;
     if (!Array.isArray(sources) || sources.length === 0) {
       throw new HttpsError("invalid-argument", "No sources provided.");
     }

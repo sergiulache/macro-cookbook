@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Sparkles, AlertTriangle, X } from "lucide-react";
 import { useAISettings } from "../../lib/data/useAISettings";
 import { timeAgo } from "../../lib/timeAgo";
-import { importRecipe, draftToLines, AiError, type Source } from "../../lib/ai/ai";
+import { importRecipe, draftToLines, searchImage, AiError, type Source } from "../../lib/ai/ai";
 import type { CustomLine } from "../../lib/schema/custom";
 
 export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string; image?: string | null; category?: string; prepTimeMin?: number | null; cookTimeMin?: number | null }
@@ -43,9 +43,10 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
     try {
       const { draft, usage } = await importRecipe(sources.map(({ type, content }) => ({ type, content })), systemPrompt);
       const ytSrc = sources.find((s) => s.type === "youtube" && s.content.trim());
+      const image = ytSrc ? ytThumb(ytSrc.content) : await searchImage(draft.title).catch(() => null);
       onApply({
         title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n"),
-        image: ytSrc ? ytThumb(ytSrc.content) : null,
+        image,
         category: draft.category, prepTimeMin: draft.prepTimeMin ?? null, cookTimeMin: draft.cookTimeMin ?? null,
       });
       addUsage(usage);
