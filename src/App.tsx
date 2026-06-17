@@ -13,7 +13,8 @@ import { RecipeIndexProvider } from "./lib/recipes/RecipeIndex";
 /** Reset scroll to top on every route change (so a recipe opens at its top). */
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => window.scrollTo(0, 0), [pathname]);
+  // browse ("/") restores its own saved scroll position; reset everywhere else
+  useEffect(() => { if (pathname !== "/") window.scrollTo(0, 0); }, [pathname]);
   return null;
 }
 

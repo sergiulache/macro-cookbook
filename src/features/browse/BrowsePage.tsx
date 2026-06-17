@@ -1,8 +1,9 @@
 import Fuse from "fuse.js";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
+import { loadBrowseState, patchBrowseState } from "../../lib/browseState";
 import { deriveTags, ALL_TAGS, totalTimeMin } from "../../lib/recipes/tags";
 import { RecipeCard } from "../../components/RecipeCard";
 import { useFavorites } from "../../lib/data/useFavorites";
@@ -31,12 +32,13 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
 }
 
 export function BrowsePage() {
-  const [q, setQ] = useState("");
-  const [cats, setCats] = useState<Set<string>>(new Set());
-  const [tags, setTags] = useState<Set<string>>(new Set());
-  const [sort, setSort] = useState<Sort>("featured");
-  const [favView, setFavView] = useState<"off" | "mine" | "partner">("off");
-  const [page, setPage] = useState(1);
+  const saved = useMemo(loadBrowseState, []);
+  const [q, setQ] = useState(saved.q ?? "");
+  const [cats, setCats] = useState<Set<string>>(new Set(saved.cats ?? []));
+  const [tags, setTags] = useState<Set<string>>(new Set(saved.tags ?? []));
+  const [sort, setSort] = useState<Sort>((saved.sort as Sort) ?? "featured");
+  const [favView, setFavView] = useState<"off" | "mine" | "partner">((saved.favView as "off" | "mine" | "partner") ?? "off");
+  const [page, setPage] = useState(saved.page ?? 1);
   const PER_PAGE = 24;
   const { favorites, partnerFavorites, partnerName } = useFavorites();
   const { all } = useRecipeIndex();
@@ -73,10 +75,29 @@ export function BrowsePage() {
     return list;
   }, [q, cats, tags, sort, favView, favorites, partnerFavorites, all, fuse, tagsOf]);
 
-  // reset to first page whenever the result set changes
-  useEffect(() => setPage(1), [q, cats, tags, sort, favView, favorites, partnerFavorites]);
+  // reset to first page on a user-driven filter change, but NOT on mount (so a
+  // restored page survives) or when favorites load in asynchronously
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (!mounted.current) { mounted.current = true; return; }
+    setPage(1);
+  }, [q, cats, tags, sort, favView]);
+
   const pageCount = Math.max(1, Math.ceil(results.length / PER_PAGE));
-  const pageItems = results.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const curPage = Math.min(page, pageCount);
+  const pageItems = results.slice((curPage - 1) * PER_PAGE, curPage * PER_PAGE);
+
+  // persist filters/search/sort/page; restore scroll on mount and save it on leave
+  useEffect(() => {
+    patchBrowseState({ q, cats: [...cats], tags: [...tags], sort, favView, page: curPage });
+  }, [q, cats, tags, sort, favView, curPage]);
+  useEffect(() => {
+    const y = saved.scrollY ?? 0;
+    if (y) requestAnimationFrame(() => window.scrollTo(0, y));
+    const onLeave = () => patchBrowseState({ scrollY: window.scrollY });
+    window.addEventListener("pagehide", onLeave);
+    return () => { window.removeEventListener("pagehide", onLeave); patchBrowseState({ scrollY: window.scrollY }); };
+  }, []);
 
   const toggle = (set: Set<string>, v: string, fn: (s: Set<string>) => void) => {
     const n = new Set(set);
@@ -145,14 +166,14 @@ export function BrowsePage() {
       {pageCount > 1 && (
         <div className="mt-12 flex items-center justify-center gap-2">
           <button
-            onClick={() => { setPage((p) => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            disabled={page === 1}
+            onClick={() => { setPage(Math.max(1, curPage - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            disabled={curPage === 1}
             className="h-9 rounded-full border border-hairline-strong px-4 text-[13px] font-500 disabled:opacity-30 enabled:hover:border-ink"
           >Prev</button>
-          <span className="px-2 text-[13px] text-body">Page {page} of {pageCount}</span>
+          <span className="px-2 text-[13px] text-body">Page {curPage} of {pageCount}</span>
           <button
-            onClick={() => { setPage((p) => Math.min(pageCount, p + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            disabled={page === pageCount}
+            onClick={() => { setPage(Math.min(pageCount, curPage + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            disabled={curPage === pageCount}
             className="h-9 rounded-full border border-hairline-strong px-4 text-[13px] font-500 disabled:opacity-30 enabled:hover:border-ink"
           >Next</button>
         </div>
