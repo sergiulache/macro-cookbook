@@ -24,6 +24,17 @@ interface IndexValue {
 
 const Ctx = createContext<IndexValue | null>(null);
 
+/** Firestore rejects `undefined` field values; strip them recursively before writing. */
+function stripUndefined<T>(v: T): T {
+  if (Array.isArray(v)) return v.map(stripUndefined) as unknown as T;
+  if (v && typeof v === "object") {
+    const out: Record<string, unknown> = {};
+    for (const [k, val] of Object.entries(v)) if (val !== undefined) out[k] = stripUndefined(val);
+    return out as T;
+  }
+  return v;
+}
+
 export function RecipeIndexProvider({ children }: { children: ReactNode }) {
   const { user } = useAuth();
   // custom docs keyed by owner uid, each a list
@@ -55,7 +66,7 @@ export function RecipeIndexProvider({ children }: { children: ReactNode }) {
     const saveCustom = async (r: CustomRecipe) => {
       if (!user) throw new Error("not signed in");
       const { id, ownerUid: _o, ...rest } = r;
-      await setDoc(doc(db, "users", user.uid, "customRecipes", id), { ...rest, ownerUid: user.uid }, { merge: true });
+      await setDoc(doc(db, "users", user.uid, "customRecipes", id), stripUndefined({ ...rest, ownerUid: user.uid }), { merge: true });
     };
     const removeCustom = async (id: string) => {
       if (!user) throw new Error("not signed in");

@@ -64,7 +64,7 @@ export function draftToLines(draft: AiRecipeDraft): CustomLine[] {
     ingredientId: `ai-${crypto.randomUUID()}`,
     name: i.name,
     source: "ai" as const,
-    optional: i.optional,
+    ...(i.optional ? { optional: true } : {}),
     grams: i.grams,
     per: { amount: Math.max(i.grams, 1), unit: "g" },
     macros: { calories: i.calories, fat: i.fat, carbs: i.carbs, netCarbs: null, protein: i.protein },
