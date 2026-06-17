@@ -9,7 +9,8 @@ export interface Source { type: "text" | "youtube" | "notes"; content: string }
 interface AiRequest { sources: Source[]; systemPrompt: string; schema?: unknown; task?: string; includeVideo?: boolean }
 interface AiResponse { text: string; usage: AiUsage | null }
 
-const aiGenerate = httpsCallable<AiRequest, AiResponse>(functions, "aiGenerate");
+// video imports can take 30-40s on the model, so allow up to 2 minutes
+const aiGenerate = httpsCallable<AiRequest, AiResponse>(functions, "aiGenerate", { timeout: 120000 });
 
 /** Typed error so the UI can show rate-limits and parse failures distinctly + loudly. */
 export class AiError extends Error {

@@ -145,7 +145,7 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
               <div className="flex flex-wrap items-center gap-3">
                 <button onClick={generate} disabled={busy || !hasContent}
                   className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-[14px] font-500 text-canvas hover:bg-ink-deep disabled:opacity-30">
-                  {busy ? "Reading sources…" : "Generate recipe"}
+                  {busy ? (sources.some((s) => s.type === "youtube" && s.content.trim()) ? "Watching the video… (~30s)" : "Reading sources…") : "Generate recipe"}
                 </button>
                 {ok && !busy && <span className="text-[13px] text-body">Imported below ✓ review and save.</span>}
                 {/* subtle token meter */}

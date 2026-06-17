@@ -50,7 +50,7 @@ export const aiGenerate = onCall(
     if (!request.auth || !MEMBERS.has(request.auth.uid)) {
       throw new HttpsError("permission-denied", "Sign in with a member account to use AI.");
     }
-    const { systemPrompt, sources = [], schema, task = "", includeVideo = false } = request.data ?? {};
+    const { systemPrompt, sources = [], schema, task = "" } = request.data ?? {};
     if (!Array.isArray(sources) || sources.length === 0) {
       throw new HttpsError("invalid-argument", "No sources provided.");
     }
@@ -62,9 +62,11 @@ export const aiGenerate = onCall(
       if (s.type === "youtube") {
         const yt = await fetchYouTube(s.content);
         textBlock += yt && (yt.description || yt.title)
-          ? `\n\n[YouTube video: ${yt.title ?? ""}]\nDescription:\n${yt.description ?? "(no description)"}\n`
+          ? `\n\n[YouTube video: ${yt.title ?? ""}]\nDescription (may be only credits/promo - the recipe is often only in the video itself):\n${yt.description ?? "(no description)"}\n`
           : `\n\n[YouTube link, description unavailable]: ${s.content}\n`;
-        if (includeVideo) parts.push({ fileData: { fileUri: s.content } });
+        // always send the actual video so the model can read on-screen ingredients/steps,
+        // not just the description (which frequently has no recipe)
+        parts.push({ fileData: { fileUri: s.content } });
       } else if (s.type === "notes") {
         textBlock += `\n\n[Cook's notes / preferences]\n${s.content}\n`;
       } else {
