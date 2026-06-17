@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useAuth } from "../auth/auth";
+import { nameFor } from "./people";
 import { DEFAULT_SECTIONS, type ShopItem } from "../shopping/aggregate";
 
 /** Joint shopping list (D15 Joint, D30 stable snapshot): one shared doc, live-synced. */
@@ -10,6 +11,8 @@ export function useShoppingList() {
   const [items, setItems] = useState<ShopItem[]>([]);
   const [weekKey, setWeekKey] = useState<string | null>(null);
   const [sections, setSectionsState] = useState<string[]>(DEFAULT_SECTIONS);
+  const [sectionsUpdatedAt, setSectionsAt] = useState(0);
+  const [sectionsUpdatedBy, setSectionsBy] = useState("");
 
   useEffect(() => {
     if (!user) return;
@@ -19,6 +22,8 @@ export function useShoppingList() {
       setWeekKey((d?.weekKey as string) ?? null);
       const s = d?.sections as string[] | undefined;
       setSectionsState(s && s.length ? s : DEFAULT_SECTIONS);
+      setSectionsAt((d?.sectionsUpdatedAt as number) ?? 0);
+      setSectionsBy((d?.sectionsUpdatedBy as string) ?? "");
     });
   }, [user]);
 
@@ -43,8 +48,11 @@ export function useShoppingList() {
   };
   const setSections = (next: string[]) => {
     setSectionsState(next);
-    return setDoc(doc(db, "joint", "shoppingList"), { sections: next }, { merge: true });
+    return setDoc(doc(db, "joint", "shoppingList"), { sections: next, sectionsUpdatedAt: Date.now(), sectionsUpdatedBy: user?.uid ?? "" }, { merge: true });
   };
 
-  return { items, weekKey, sections, toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections };
+  return {
+    items, weekKey, sections, sectionsUpdatedAt, sectionsUpdatedByName: sectionsUpdatedBy ? nameFor(sectionsUpdatedBy) : "",
+    toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections,
+  };
 }

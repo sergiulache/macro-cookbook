@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAISettings } from "../../lib/data/useAISettings";
+import { timeAgo } from "../../lib/timeAgo";
 import { importRecipe, draftToLines, AiError, type Source } from "../../lib/ai/ai";
 import type { CustomLine } from "../../lib/schema/custom";
 
@@ -15,7 +16,7 @@ const SOURCE_TYPES: { v: Source["type"]; label: string; placeholder: string }[] 
 interface Row { id: string; type: Source["type"]; content: string }
 
 export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void }) {
-  const { systemPrompt, setSystemPrompt, resetSystemPrompt, isDefault, tokens, addUsage } = useAISettings();
+  const { systemPrompt, setSystemPrompt, resetSystemPrompt, isDefault, updatedAt, updatedByName, history, restoreVersion, tokens, addUsage } = useAISettings();
   const [open, setOpen] = useState(false);
   const [sources, setSources] = useState<Row[]>([{ id: crypto.randomUUID(), type: "text", content: "" }]);
   const [busy, setBusy] = useState(false);
@@ -96,13 +97,29 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
                 <AnimatePresence>
                   {promptOpen && (
                     <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-                      <p className="mt-2 text-[12px] text-mute">Your standing instructions to the model. Saved to your account and used on every import.</p>
+                      <p className="mt-2 text-[12px] text-mute">
+                        Shared instructions used on every import - both of you see and edit these.
+                        {updatedAt > 0 && <> Updated {timeAgo(updatedAt)}{updatedByName ? ` by ${updatedByName}` : ""}.</>}
+                      </p>
                       <textarea value={promptDraft} onChange={(e) => setPromptDraft(e.target.value)} rows={8}
                         className="mt-2 w-full resize-y rounded-lg border border-hairline bg-surface-soft p-3 text-[13px] leading-relaxed outline-none focus:border-ink" />
                       <div className="mt-2 flex items-center gap-2">
                         <button onClick={() => { setSystemPrompt(promptDraft); setPromptOpen(false); }} className="h-8 rounded-full bg-ink px-4 text-[12px] font-500 text-canvas hover:bg-ink-deep">Save instructions</button>
                         <button onClick={() => { resetSystemPrompt(); setPromptOpen(false); }} className="h-8 rounded-full px-3 text-[12px] text-mute hover:text-ink">Reset to default</button>
                       </div>
+                      {history.length > 0 && (
+                        <div className="mt-3 border-t border-hairline pt-2">
+                          <p className="text-[11px] font-600 uppercase tracking-wide text-mute">Previous versions</p>
+                          <ul className="mt-1 space-y-1">
+                            {history.map((v, i) => (
+                              <li key={i} className="flex items-center gap-2">
+                                <span className="min-w-0 flex-1 truncate text-[12px] text-body">{timeAgo(v.at) || "earlier"} · {v.prompt.replace(/\s+/g, " ").slice(0, 60)}…</span>
+                                <button onClick={() => { restoreVersion(v.prompt); setPromptDraft(v.prompt); }} className="shrink-0 text-[12px] text-ink underline">Restore</button>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>

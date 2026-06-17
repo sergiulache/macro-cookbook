@@ -7,12 +7,13 @@ import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { useAISettings } from "../../lib/data/useAISettings";
 import { tidyShoppingList } from "../../lib/ai/shopping";
 import { AiError } from "../../lib/ai/ai";
+import { timeAgo } from "../../lib/timeAgo";
 
 export function ShoppingPage() {
   const weekKey = isoWeekKey(new Date());
   const { byId } = useRecipeIndex();
   const { entries } = useWeekPlan(weekKey);
-  const { items, weekKey: listWeek, sections, toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections } = useShoppingList();
+  const { items, weekKey: listWeek, sections, sectionsUpdatedAt, sectionsUpdatedByName, toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections } = useShoppingList();
   const { addUsage } = useAISettings();
   const [manual, setManual] = useState("");
   const [tidying, setTidying] = useState(false);
@@ -74,7 +75,10 @@ export function ShoppingPage() {
         <AnimatePresence>
           {storeOpen && (
             <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-              <p className="mt-2 text-[12px] text-mute">One section per line, in the order you walk your store. The list and the AI tidy follow this order.</p>
+              <p className="mt-2 text-[12px] text-mute">
+                One section per line, in the order you walk your store - shared between you, used by the list and the AI tidy.
+                {sectionsUpdatedAt > 0 && <> Updated {timeAgo(sectionsUpdatedAt)}{sectionsUpdatedByName ? ` by ${sectionsUpdatedByName}` : ""}.</>}
+              </p>
               <textarea value={sectionsDraft} onChange={(e) => setSectionsDraft(e.target.value)} rows={6}
                 className="mt-2 w-full resize-y rounded-xl border border-hairline bg-surface-soft p-3 text-[14px] leading-relaxed outline-none focus:border-ink" />
               <button onClick={() => { setSections(sectionsDraft.split("\n").map((s) => s.trim()).filter(Boolean)); setStoreOpen(false); }}
