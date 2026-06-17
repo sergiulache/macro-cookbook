@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { imageUrl } from "../../lib/recipes/loadRecipes";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
-import { isCustomId, customToRecipe, hasRomanian } from "../../lib/recipes/custom";
+import { isCustomId } from "../../lib/recipes/custom";
 import { useAuth } from "../../lib/auth/auth";
 import { nameFor } from "../../lib/data/people";
 import { AnimatedNumber } from "../../components/AnimatedNumber";
@@ -22,9 +22,8 @@ export function RecipePage() {
   const { byId, customById } = useRecipeIndex();
   const { user } = useAuth();
   const { partnerHas, partnerName } = useFavorites();
+  const recipe = id ? byId.get(id) : undefined;
   const custom = id ? customById.get(id) : undefined;
-  const [lang, setLang] = useState<"en" | "ro">("en");
-  const recipe = custom && lang === "ro" ? customToRecipe(custom, "ro") : id ? byId.get(id) : undefined;
   const [servings, setServings] = useState(recipe?.servings ?? 1);
   useEffect(() => { if (recipe) setServings(recipe.servings); }, [recipe?.id]);
 
@@ -64,15 +63,6 @@ export function RecipePage() {
           <p className="text-[13px] font-500 uppercase tracking-wide text-mute">{recipe.category}</p>
           <h1 className="mt-1 font-display text-[32px] font-700 leading-tight tracking-tight">{recipe.title}</h1>
           {custom && <p className="mt-1 text-[13px] text-mute">Custom recipe by {nameFor(custom.ownerUid)}</p>}
-          {custom && hasRomanian(custom) && (
-            <div className="mt-2 inline-flex items-center gap-2">
-              <span className="text-[12px] font-500 uppercase tracking-wide text-mute">Language</span>
-              <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
-                <button onClick={() => setLang("en")} className={`h-7 rounded-full px-3 ${lang === "en" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>EN</button>
-                <button onClick={() => setLang("ro")} className={`h-7 rounded-full px-3 ${lang === "ro" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>RO</button>
-              </div>
-            </div>
-          )}
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-body">
             {recipe.prepTimeMin != null && <span>Prep {recipe.prepTimeMin}m</span>}
             {recipe.cookTimeMin != null && <span>Cook {recipe.cookTimeMin}m</span>}

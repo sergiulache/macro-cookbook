@@ -60,17 +60,15 @@ export function perServingMacros(lines: CustomLine[], servings: number): Macros 
  * exactly like a book recipe everywhere (browse, detail, scaler, planner,
  * shopping - D31). Image/video/times are null; tips/references empty.
  */
-export function customToRecipe(c: CustomRecipe, lang: "en" | "ro" = "en"): Recipe {
-  const ro = lang === "ro";
-  const ingredients = c.lines.map((l) => ({ amount: l.grams, unit: "g", item: (ro && l.name_ro) || l.name }));
-  const stepSrc = ro && c.steps_ro?.length ? c.steps_ro : c.steps;
-  const steps = stepSrc
+export function customToRecipe(c: CustomRecipe): Recipe {
+  const ingredients = c.lines.map((l) => ({ amount: l.grams, unit: "g", item: l.name }));
+  const steps = c.steps
     .map((t) => t.trim())
     .filter(Boolean)
     .map((text, i) => ({ n: i + 1, text }));
   return {
     id: c.id,
-    title: (ro && c.title_ro) || c.title,
+    title: c.title,
     category: c.category || "Custom",
     servings: c.servings,
     macros: perServingMacros(c.lines, c.servings),
@@ -87,5 +85,3 @@ export function customToRecipe(c: CustomRecipe, lang: "en" | "ro" = "en"): Recip
 }
 
 export const isCustomId = (id: string) => id.startsWith("c-");
-/** A custom recipe has a switchable Romanian version when the AI produced one. */
-export const hasRomanian = (c: CustomRecipe) => !!(c.title_ro || c.steps_ro?.length || c.lines.some((l) => l.name_ro));

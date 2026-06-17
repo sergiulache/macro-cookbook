@@ -62,7 +62,6 @@ export function draftToLines(draft: AiRecipeDraft): CustomLine[] {
   return draft.ingredients.map((i) => ({
     ingredientId: `ai-${crypto.randomUUID()}`,
     name: i.name,
-    name_ro: i.name_ro || i.name,
     source: "ai" as const,
     grams: i.grams,
     per: { amount: Math.max(i.grams, 1), unit: "g" },

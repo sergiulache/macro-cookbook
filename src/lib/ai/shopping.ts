@@ -5,6 +5,7 @@ import type { ShopItem } from "../shopping/aggregate";
 
 const TidyItem = z.object({
   name: z.string().min(1),
+  name_ro: z.string().optional(),
   amount: z.number().nullable().optional(),
   unit: z.string().nullable().optional(),
   approx: z.boolean().optional(),
@@ -21,12 +22,13 @@ const TIDY_SCHEMA = {
         type: "object",
         properties: {
           name: { type: "string" },
+          name_ro: { type: "string" },
           amount: { type: "number" },
           unit: { type: "string" },
           approx: { type: "boolean" },
           section: { type: "string" },
         },
-        required: ["name", "section"],
+        required: ["name", "name_ro", "section"],
       },
     },
   },
@@ -64,6 +66,7 @@ export async function tidyShoppingList(items: ShopItem[], sections: string[]): P
   const tidied: ShopItem[] = parsed.data.items.map((t) => ({
     id: "ai-" + crypto.randomUUID().slice(0, 8),
     item: t.name,
+    name_ro: t.name_ro || t.name,
     amount: t.amount ?? null,
     unit: t.unit ?? null,
     category: t.section,

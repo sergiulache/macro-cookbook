@@ -60,11 +60,9 @@ export function BuilderPage() {
 
   const idRef = useRef<string>(editId ?? `c-${crypto.randomUUID()}`);
   const [title, setTitle] = useState("");
-  const [titleRo, setTitleRo] = useState("");
   const [servings, setServings] = useState(1);
   const [lines, setLines] = useState<CustomLine[]>([]);
   const [stepsText, setStepsText] = useState("");
-  const [stepsRoText, setStepsRoText] = useState("");
   const [q, setQ] = useState("");
   const [focused, setFocused] = useState(false);
   const [active, setActive] = useState(0);
@@ -88,7 +86,7 @@ export function BuilderPage() {
   useEffect(() => {
     if (editId && existing && !loaded) {
       setTitle(existing.title); setServings(existing.servings); setLines(existing.lines);
-      setStepsText(existing.steps.join("\n")); setTitleRo(existing.title_ro ?? ""); setStepsRoText((existing.steps_ro ?? []).join("\n"));
+      setStepsText(existing.steps.join("\n"));
       idRef.current = existing.id; setLoaded(true);
     }
   }, [editId, existing, loaded]);
@@ -143,14 +141,12 @@ export function BuilderPage() {
     const rec: CustomRecipe = {
       id: idRef.current, ownerUid: user.uid, title: title.trim(), category: "Custom", servings, lines,
       steps: stepsText.split("\n").map((s) => s.trim()).filter(Boolean),
-      title_ro: titleRo.trim() || undefined,
-      steps_ro: stepsRoText.split("\n").map((s) => s.trim()).filter(Boolean),
       createdAt: existing?.createdAt ?? now, updatedAt: now,
     };
     try { await saveCustom(rec); nav(`/r/${rec.id}`); } finally { setSaving(false); }
   };
   const onDelete = async () => { if (editId && confirm("Delete this custom recipe?")) { await removeCustom(editId); nav("/"); } };
-  const applyDraft = (a: AppliedDraft) => { setTitle(a.title); setTitleRo(a.titleRo); setServings(a.servings); setLines(a.lines); setStepsText(a.steps); setStepsRoText(a.stepsRo); };
+  const applyDraft = (a: AppliedDraft) => { setTitle(a.title); setServings(a.servings); setLines(a.lines); setStepsText(a.steps); };
 
   if (editId && !ownsIt && loaded) {
     return <div className="mx-auto max-w-[720px] px-5 py-24 text-center text-body">You can only edit your own custom recipes. <Link to={`/r/${editId}`} className="underline">View it</Link></div>;

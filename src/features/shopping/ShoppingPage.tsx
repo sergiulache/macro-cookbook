@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useShoppingList } from "../../lib/data/useShoppingList";
 import { useWeekPlan, isoWeekKey } from "../../lib/data/useWeekPlan";
@@ -21,6 +21,8 @@ export function ShoppingPage() {
   const [lastUsage, setLastUsage] = useState<{ i: number; o: number } | null>(null);
   const [storeOpen, setStoreOpen] = useState(false);
   const [sectionsDraft, setSectionsDraft] = useState("");
+  const [lang, setLang] = useState<"en" | "ro">(() => (typeof localStorage !== "undefined" && localStorage.getItem("mc.shop.lang") === "ro" ? "ro" : "en"));
+  useEffect(() => { try { localStorage.setItem("mc.shop.lang", lang); } catch { /* ignore */ } }, [lang]);
 
   const onGenerate = () => {
     const fresh = aggregate(entries, byId);
@@ -57,6 +59,10 @@ export function ShoppingPage() {
           {listWeek && <p className="mt-1 text-[13px] text-mute">From plan {listWeek} · {remaining} left</p>}
         </div>
         <div className="flex items-center gap-2">
+          <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
+            <button onClick={() => setLang("en")} className={`h-8 rounded-full px-3 ${lang === "en" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>EN</button>
+            <button onClick={() => setLang("ro")} className={`h-8 rounded-full px-3 ${lang === "ro" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>RO</button>
+          </div>
           <button onClick={onTidy} disabled={tidying || !items.length}
             className="inline-flex h-9 items-center rounded-full border border-hairline-strong px-4 text-[13px] font-500 text-ink hover:border-ink disabled:opacity-30">
             {tidying ? "Tidying…" : "✦ Tidy with AI"}
@@ -109,7 +115,7 @@ export function ShoppingPage() {
                     <motion.li key={i.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                       <button onClick={() => toggle(i.id)} className="flex w-full items-center gap-3 border-b border-hairline py-2.5 text-left">
                         <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${i.checked ? "border-ink bg-ink text-canvas" : "border-hairline-strong"}`}>{i.checked ? "✓" : ""}</span>
-                        <span className={`flex-1 text-[15px] ${i.checked ? "text-mute line-through" : "text-ink"}`}>{i.item}</span>
+                        <span className={`flex-1 text-[15px] ${i.checked ? "text-mute line-through" : "text-ink"}`}>{lang === "ro" ? (i.name_ro || i.item) : i.item}</span>
                         {i.amount != null && <span className="font-mono text-[13px] text-body tabular-nums">{i.approx ? "~" : ""}{i.amount}{i.unit ? " " + i.unit : ""}</span>}
                       </button>
                     </motion.li>

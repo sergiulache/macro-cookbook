@@ -5,6 +5,7 @@ export interface ShopItem {
   id: string; item: string; unit: string | null; amount: number | null;
   category: string; checked: boolean; manual?: boolean;
   approx?: boolean; // AI-tidied quantity is an approximation/conversion
+  name_ro?: string; // Romanian-localized name (from AI tidy); falls back to item
 }
 
 /** Default grocery section order; editable per household (joint), drives list ordering. */

@@ -10,7 +10,7 @@ Rules:
 - Output every ingredient quantity in GRAMS. Convert volumes and counts using standard kitchen weights (1 large egg ~50 g, 1 US cup flour ~120 g, 1 cup water ~240 g, 1 tbsp oil ~14 g, 1 medium onion ~110 g). When a quantity is vague, estimate a sensible real-world amount. Never invent ingredients that are not implied by the sources.
 - For EACH ingredient, give its macro contribution FOR THE EXACT GRAMS YOU LISTED (not per 100 g): calories, protein, fat, carbs, using reliable standard food-composition values and adjusting for the stated state (raw, cooked, drained, dried). Be numerically realistic and consistent; these numbers feed real shopping and tracking. Do not zero out macros unless the food truly has none.
 - Title: short and human ("Key Lime Pie", "Chicken Tinga Tacos"), never a full sentence. Servings: the recipe's yield as a whole number (use 1 only if truly unknowable). Steps: concise imperative directions, one action per step.
-- Produce TWO languages. The English fields (title, name, steps) are clear English. The Romanian fields (title_ro, name_ro, steps_ro) are a natural Romanian translation - not word-for-word - and MUST use correct Romanian diacritics (ă, â, î, ș, ț) everywhere. LOCALIZE American ingredients to the Romanian product or variant a shopper in Romania would actually buy: e.g. graham crackers -> biscuiți digestivi; heavy cream -> smântână pentru frișcă (32% grăsime); all-purpose flour -> făină albă tip 000; cilantro -> coriandru (frunze); scallions -> ceapă verde; sour cream -> smântână; cornstarch -> amidon de porumb; baking soda -> bicarbonat de sodiu; powdered sugar -> zahăr pudră; zucchini -> dovlecel. Keep quantities/macros identical across languages. steps_ro must have the same number of steps as steps.
+- Title and steps are clear English; translate faithfully from the source language.
 - Set "confidence" to "low" when the sources lacked quantities or macros and you had to estimate heavily, "medium" when partially specified, "high" when the sources were explicit.
 - Return ONLY JSON matching the provided schema. No prose, no markdown.`;
 
@@ -19,6 +19,7 @@ export const SHOPPING_SYSTEM_PROMPT = `You tidy a household grocery shopping lis
 
 Rules:
 - Merge duplicates and synonyms into ONE line each. "1 egg" plus "50 g eggs" become a single eggs line; "scallion" and "green onion" are the same item.
+- For each line give BOTH an English name (name) and a Romanian name (name_ro) written with correct Romanian diacritics (ă, â, î, ș, ț), localized to what a shopper in Romania actually buys: e.g. graham crackers -> biscuiți digestivi; heavy cream -> smântână pentru frișcă; all-purpose flour -> făină albă tip 000; cilantro -> coriandru; scallions -> ceapă verde; chicken breast -> piept de pui; ground beef -> carne tocată de vită; cheddar -> cheddar.
 - Give each line ONE sensible measurement to shop by:
   - Items sold by weight or volume: use grams (unit "g") or millilitres (unit "ml"). You MAY convert across units (1 large egg ~55 g, 1 medium onion ~110 g, 1 US cup flour ~120 g, 1 cup liquid ~240 g).
   - Items bought as whole pieces: put the COUNT in amount and add the natural unit noun when it helps (e.g. garlic -> 2 cloves; bread -> 1 loaf; buns -> 8 buns; eggs -> 6 eggs; canned beans -> 1 can). Plain countables can use "units" (e.g. onion -> 8 units) or no unit at all.

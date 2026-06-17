@@ -5,7 +5,7 @@ import { timeAgo } from "../../lib/timeAgo";
 import { importRecipe, draftToLines, AiError, type Source } from "../../lib/ai/ai";
 import type { CustomLine } from "../../lib/schema/custom";
 
-export interface AppliedDraft { title: string; titleRo: string; servings: number; lines: CustomLine[]; steps: string; stepsRo: string }
+export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string }
 
 const SOURCE_TYPES: { v: Source["type"]; label: string; placeholder: string }[] = [
   { v: "text", label: "Paste text", placeholder: "Paste a recipe in any language…" },
@@ -36,10 +36,7 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
     setBusy(true); setError(null); setOk(false);
     try {
       const { draft, usage } = await importRecipe(sources.map(({ type, content }) => ({ type, content })), systemPrompt);
-      onApply({
-        title: draft.title, titleRo: draft.title_ro ?? draft.title, servings: draft.servings,
-        lines: draftToLines(draft), steps: draft.steps.join("\n"), stepsRo: (draft.steps_ro ?? []).join("\n"),
-      });
+      onApply({ title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n") });
       addUsage(usage);
       setLastTokens(usage.totalTokenCount ?? null);
       setOk(true);
