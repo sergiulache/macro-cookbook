@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { imageUrl } from "../../lib/recipes/loadRecipes";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
-import { isCustomId } from "../../lib/recipes/custom";
+import { isCustomId, customToRecipe, hasRomanian } from "../../lib/recipes/custom";
 import { useAuth } from "../../lib/auth/auth";
 import { nameFor } from "../../lib/data/people";
 import { AnimatedNumber } from "../../components/AnimatedNumber";
@@ -22,8 +22,9 @@ export function RecipePage() {
   const { byId, customById } = useRecipeIndex();
   const { user } = useAuth();
   const { partnerHas, partnerName } = useFavorites();
-  const recipe = id ? byId.get(id) : undefined;
   const custom = id ? customById.get(id) : undefined;
+  const [lang, setLang] = useState<"en" | "ro">("en");
+  const recipe = custom && lang === "ro" ? customToRecipe(custom, "ro") : id ? byId.get(id) : undefined;
   const [servings, setServings] = useState(recipe?.servings ?? 1);
   useEffect(() => { if (recipe) setServings(recipe.servings); }, [recipe?.id]);
 
@@ -71,6 +72,12 @@ export function RecipePage() {
           {partnerHas(recipe.id) && <p className="mt-1.5 text-[13px] text-mute">♥ Loved by {partnerName}</p>}
         </div>
         <div className="flex items-center gap-2">
+          {custom && hasRomanian(custom) && (
+            <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
+              <button onClick={() => setLang("en")} className={`h-7 rounded-full px-2.5 ${lang === "en" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>EN</button>
+              <button onClick={() => setLang("ro")} className={`h-7 rounded-full px-2.5 ${lang === "ro" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>RO</button>
+            </div>
+          )}
           <div className="rounded-full border border-hairline-strong"><FavoriteButton id={recipe.id} /></div>
           <AddToPlan recipeId={recipe.id} servings={servings} />
           {recipe.steps.length > 0 && (

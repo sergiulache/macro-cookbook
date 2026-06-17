@@ -47,7 +47,7 @@ export function RecipeIndexProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<IndexValue>(() => {
     const custom = MEMBER_UIDS.flatMap((uid) => byOwner[uid] ?? []);
-    const customRecipes = custom.map(customToRecipe);
+    const customRecipes = custom.map((c) => customToRecipe(c));
     const byId = new Map(recipeById);
     for (const r of customRecipes) byId.set(r.id, r);
     const customById = new Map(custom.map((c) => [c.id, c]));

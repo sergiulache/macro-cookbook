@@ -15,6 +15,7 @@ import { IngredientSource } from "./ingredient";
 export const CustomLine = z.object({
   ingredientId: z.string().min(1),
   name: z.string().min(1),
+  name_ro: z.string().optional(), // Romanian-localized name (AI imports); falls back to name
   source: IngredientSource.default("book"),
   grams: z.number().nonnegative(),
   per: z.object({ amount: z.number().positive(), unit: z.string().min(1) }).optional(),
@@ -30,6 +31,8 @@ export const CustomRecipe = z.object({
   servings: z.number().positive(),
   lines: z.array(CustomLine),
   steps: z.array(z.string()).default([]),
+  title_ro: z.string().optional(), // bilingual AI imports carry a Romanian version + a toggle
+  steps_ro: z.array(z.string()).default([]),
   createdAt: z.number(),
   updatedAt: z.number(),
 });
