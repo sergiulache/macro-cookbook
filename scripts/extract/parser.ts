@@ -115,7 +115,8 @@ export function splitHeaderWords(name: string): string {
 }
 const isGroupHeader = (text: string) => {
   const n = norm(text);
-  return /^[A-Z][A-Z0-9 ]*$/.test(n) && n.length <= 28 && !["INGREDIENTS", "DIRECTIONS", "MACROS"].includes(n);
+  // allow hyphen/slash so letter-spaced headers like "MIX-INS" and "MIX-IN / TOPPING" are recognized
+  return /^[A-Z][A-Z0-9 /-]*$/.test(n) && n.length <= 28 && !["INGREDIENTS", "DIRECTIONS", "MACROS"].includes(n);
 };
 
 function parseMacros(page: PageData): Macros {

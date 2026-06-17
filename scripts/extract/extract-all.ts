@@ -15,6 +15,17 @@ import { DATA_OUT, OUT_DIR } from "./config.js";
 
 interface ScanPage { n: number; isContent: boolean; category: string; corrupt?: boolean; }
 const scan: ScanPage[] = JSON.parse(readFileSync(`${OUT_DIR}/scan.json`, "utf8"));
+// SKIP_IMAGES=1 reuses the already-optimized hero images from the previous
+// recipes.json (keyed by id) instead of re-rendering them, so a data-only
+// re-extraction does not churn the 136 committed webp files.
+const SKIP_IMAGES = process.env.SKIP_IMAGES === "1";
+let prevImg = new Map<string, Recipe["image"]>();
+if (SKIP_IMAGES) {
+  try {
+    const prev: Recipe[] = JSON.parse(readFileSync(`${DATA_OUT}/recipes.json`, "utf8"));
+    prevImg = new Map(prev.map((r) => [r.id, r.image]));
+  } catch { /* no prior file */ }
+}
 const corruptSet = new Set(scan.filter((p) => p.corrupt).map((p) => p.n));
 const contentPages = scan.filter((p) => p.isContent && p.category !== "Recipe Page Breakdown").map((p) => p.n);
 
@@ -54,9 +65,13 @@ for (const c of contentPages) {
 
   // optimize hero from the photo page (content-1); fall back to content page
   let image = null;
-  for (const pn of [c - 1, c]) {
-    if (corruptSet.has(pn)) continue;
-    try { image = await optimizeHero(renderPage(pn), id); break; } catch {}
+  if (SKIP_IMAGES) {
+    image = prevImg.get(id) ?? null;
+  } else {
+    for (const pn of [c - 1, c]) {
+      if (corruptSet.has(pn)) continue;
+      try { image = await optimizeHero(renderPage(pn), id); break; } catch {}
+    }
   }
   if (!image) flags.push("no-image");
 
