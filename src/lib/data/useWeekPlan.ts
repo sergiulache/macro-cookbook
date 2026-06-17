@@ -14,6 +14,20 @@ export function isoWeekKey(d: Date): string {
   const week = 1 + Math.round(((t.getTime() - firstThu.getTime()) / 86400000 - 3 + ((firstThu.getUTCDay() + 6) % 7)) / 7);
   return `${t.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
 }
+/** Format an ISO week key ("2026-W25") as a "DD.MM - DD.MM" Monday-Sunday range. */
+export function weekKeyRange(weekKey: string): string {
+  const m = /^(\d{4})-W(\d{2})$/.exec(weekKey);
+  if (!m) return weekKey;
+  const year = Number(m[1]), week = Number(m[2]);
+  const jan4 = new Date(Date.UTC(year, 0, 4));
+  const monday = new Date(jan4);
+  monday.setUTCDate(jan4.getUTCDate() - ((jan4.getUTCDay() + 6) % 7) + (week - 1) * 7);
+  const sunday = new Date(monday);
+  sunday.setUTCDate(monday.getUTCDate() + 6);
+  const dd = (d: Date) => `${String(d.getUTCDate()).padStart(2, "0")}.${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+  return `${dd(monday)} - ${dd(sunday)}`;
+}
+
 /** Monday-anchored dates for the week containing `d`. */
 export function weekDates(d: Date): Date[] {
   const monday = new Date(d);

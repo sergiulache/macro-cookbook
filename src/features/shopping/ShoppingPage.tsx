@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useShoppingList } from "../../lib/data/useShoppingList";
-import { useWeekPlan, isoWeekKey } from "../../lib/data/useWeekPlan";
+import { useWeekPlan, isoWeekKey, weekKeyRange } from "../../lib/data/useWeekPlan";
 import { aggregate } from "../../lib/shopping/aggregate";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
 import { useAISettings } from "../../lib/data/useAISettings";
@@ -85,7 +85,7 @@ export function ShoppingPage() {
               </>
             )}
           </div>
-          {listWeek && <p className="mt-1 text-[13px] text-mute">From plan {listWeek} · {remaining} left</p>}
+          {listWeek && <p className="mt-1 text-[13px] text-mute">From plan {weekKeyRange(listWeek)} · {remaining} left</p>}
         </div>
         <div className="flex items-center gap-2">
           <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
