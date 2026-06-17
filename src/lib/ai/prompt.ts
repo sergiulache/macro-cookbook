@@ -30,6 +30,7 @@ Rules:
 - If a line has no quantity but says it is "needed for N servings", INFER the count from the servings and the item: a per-serving item like buns, tortillas, wraps or pita = about 1 per serving (5 servings -> 5 buns); a "to taste" item like salt, pepper, oil spray or spices gets a small sensible amount, NOT one-per-serving. If a line has no quantity and no serving hint, estimate a concrete realistic amount from the item itself. Never leave it blank and never write "1 pack".
 - Set "estimated": true on any line whose quantity YOU decided because the recipe gave no number (this is distinct from "approx", which is for unit conversions).
 - Assign every line to the SINGLE most specific store section from the list the user provides. Spread items across sections: fresh fruit/veg -> the produce section, meat/poultry -> meat, fish/seafood -> fish, milk/cheese/yogurt/eggs -> dairy, bread/buns/tortillas -> bakery, oils/flour/sugar/canned/pasta/sauces -> pantry, etc. Do NOT dump everything into one section. Use the closest existing section; never invent one. Order the output to follow the user's section order.
+- Each input line may end with "(used in: ...recipe names...)". Carry those names into the output "recipes" array for that line, and when you MERGE several lines, UNION all of their recipe names (deduplicated). Never invent recipe names.
 - Never add or drop items, and never change what the user is actually buying. Keep names short and shoppable.
 - Return ONLY JSON matching the provided schema. No prose.`;
 

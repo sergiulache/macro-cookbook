@@ -8,6 +8,7 @@ export interface ShopItem {
   estimated?: boolean; // the model decided the count (recipe gave no quantity)
   servingsFor?: number; // for no-quantity items: how many servings they are needed for
   name_ro?: string; // Romanian-localized name (from AI tidy); falls back to item
+  recipes?: string[]; // which planned recipe(s) use this ingredient (survives the AI tidy)
 }
 
 /** Default grocery section order; editable per household (joint), drives list ordering. */
@@ -55,26 +56,27 @@ export function aggregate(entries: PlanEntry[], byId: Map<string, Recipe>): Shop
   const map = new Map<string, ShopItem>();
   // `servings` = the planned portions this line is for, so the AI can infer a
   // count for no-quantity items (e.g. "buns" for 5 servings -> 5 buns).
-  const addLine = (ing: Ingredient, factor: number, servings: number) => {
+  const addLine = (ing: Ingredient, factor: number, servings: number, recipeTitle: string) => {
     const key = `${ing.item.toLowerCase().trim()}|${ing.unit ?? ""}`;
     const scaled = ing.amount != null ? ing.amount * factor : null;
     const ex = map.get(key);
     if (ex) {
       if (ex.amount != null && scaled != null) ex.amount += scaled;
       if (scaled == null) ex.servingsFor = (ex.servingsFor ?? 0) + Math.round(servings);
+      if (recipeTitle && !ex.recipes!.includes(recipeTitle)) ex.recipes!.push(recipeTitle);
     } else {
-      map.set(key, { id: key.replace(/\W+/g, "-").slice(0, 60), item: ing.item, unit: ing.unit, amount: scaled, category: categorize(ing.item), checked: false, ...(scaled == null ? { servingsFor: Math.round(servings) } : {}) });
+      map.set(key, { id: key.replace(/\W+/g, "-").slice(0, 60), item: ing.item, unit: ing.unit, amount: scaled, category: categorize(ing.item), checked: false, recipes: recipeTitle ? [recipeTitle] : [], ...(scaled == null ? { servingsFor: Math.round(servings) } : {}) });
     }
   };
-  const expand = (r: Recipe, factor: number, servings: number, seen: Set<string>, depth: number) => {
+  const expand = (r: Recipe, factor: number, servings: number, recipeTitle: string, seen: Set<string>, depth: number) => {
     for (const g of r.ingredientGroups) {
       for (const ing of g.ingredients) {
         const sub = depth < 5 ? matchSubRecipe(ing, titleMap, seen) : null;
         if (sub && ing.amount != null) {
           const totalG = recipeTotalGrams(sub);
-          if (totalG > 0) { expand(sub, factor * (ing.amount / totalG), servings, new Set([...seen, sub.id]), depth + 1); continue; }
+          if (totalG > 0) { expand(sub, factor * (ing.amount / totalG), servings, recipeTitle, new Set([...seen, sub.id]), depth + 1); continue; }
         }
-        addLine(ing, factor, servings);
+        addLine(ing, factor, servings, recipeTitle);
       }
     }
   };
@@ -82,7 +84,7 @@ export function aggregate(entries: PlanEntry[], byId: Map<string, Recipe>): Shop
   for (const e of entries) {
     const r = byId.get(e.recipeId);
     if (!r) continue;
-    expand(r, e.servings / r.servings, e.servings, new Set([r.id]), 0);
+    expand(r, e.servings / r.servings, e.servings, r.title, new Set([r.id]), 0);
   }
   return [...map.values()]
     .map((i) => ({ ...i, amount: i.amount != null ? Math.round(i.amount * 10) / 10 : null }))

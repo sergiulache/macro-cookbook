@@ -13,7 +13,8 @@ export function ShoppingPage() {
   const weekKey = isoWeekKey(new Date());
   const { byId } = useRecipeIndex();
   const { entries } = useWeekPlan(weekKey);
-  const { items, weekKey: listWeek, sections, sectionsUpdatedAt, sectionsUpdatedByName, toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections } = useShoppingList();
+  const { items, weekKey: listWeek, sections, sectionsUpdatedAt, sectionsUpdatedByName, toggle, setAllChecked, addManual, clearChecked, generate, applyTidy, setSections,
+    listId, listName, archive, createList, switchList, renameList, deleteList } = useShoppingList();
   const { addUsage } = useAISettings();
   const [manual, setManual] = useState("");
   const [tidying, setTidying] = useState(false);
@@ -23,6 +24,9 @@ export function ShoppingPage() {
   const [sectionsDraft, setSectionsDraft] = useState("");
   const [lang, setLang] = useState<"en" | "ro">(() => (typeof localStorage !== "undefined" && localStorage.getItem("mc.shop.lang") === "ro" ? "ro" : "en"));
   useEffect(() => { try { localStorage.setItem("mc.shop.lang", lang); } catch { /* ignore */ } }, [lang]);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [shown, setShown] = useState<Set<string>>(new Set());
+  const toggleShown = (id: string) => setShown((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
 
   const onGenerate = () => {
     const fresh = aggregate(entries, byId);
@@ -55,7 +59,32 @@ export function ShoppingPage() {
     <div className="mx-auto max-w-[720px] px-5 pb-24">
       <header className="flex flex-wrap items-center justify-between gap-3 pt-10 pb-4">
         <div>
-          <h1 className="font-display text-[30px] font-700 tracking-tight">Shopping List</h1>
+          <div className="relative">
+            <button onClick={() => setMenuOpen((v) => !v)} className="flex items-center gap-1.5 font-display text-[30px] font-700 tracking-tight">
+              <span className="truncate max-w-[260px]">{listName}</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" className="mt-1 shrink-0 text-mute"><path d="m6 9 6 6 6-6" /></svg>
+            </button>
+            {menuOpen && (
+              <>
+                <div className="fixed inset-0 z-10" onClick={() => setMenuOpen(false)} />
+                <div className="absolute left-0 z-20 mt-1 w-72 rounded-xl border border-hairline bg-canvas py-1 shadow-sm">
+                  {[{ id: listId, name: listName, active: true }, ...archive.map((l) => ({ id: l.id, name: l.name, active: false }))].map((l) => (
+                    <div key={l.id} className="flex items-center gap-1 px-2 py-0.5">
+                      <button onClick={() => { if (!l.active) switchList(l.id); setMenuOpen(false); }} className="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 py-1.5 text-left text-[14px] hover:bg-surface-soft">
+                        <span className="w-3 shrink-0 text-ink">{l.active ? "✓" : ""}</span>
+                        <span className="truncate">{l.name}</span>
+                      </button>
+                      <button onClick={() => { const n = prompt("Rename list", l.name); if (n != null && n.trim()) renameList(l.id, n); }} title="Rename" className="shrink-0 px-1.5 text-[13px] text-mute hover:text-ink">✎</button>
+                      {!l.active && <button onClick={() => { if (confirm(`Delete “${l.name}”?`)) deleteList(l.id); }} title="Delete" className="shrink-0 px-1.5 text-[13px] text-mute hover:text-ink">✕</button>}
+                    </div>
+                  ))}
+                  <div className="mt-1 border-t border-hairline px-2 pt-1">
+                    <button onClick={() => { const n = prompt("New list name", "Shopping list"); if (n != null) { createList(n || "New list"); setMenuOpen(false); } }} className="w-full rounded-lg px-2 py-1.5 text-left text-[14px] font-500 text-ink hover:bg-surface-soft">+ New list</button>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
           {listWeek && <p className="mt-1 text-[13px] text-mute">From plan {listWeek} · {remaining} left</p>}
         </div>
         <div className="flex items-center gap-2">
@@ -112,17 +141,27 @@ export function ShoppingPage() {
               <ul className="mt-1.5">
                 <AnimatePresence>
                   {items.filter((i) => i.category === cat).map((i) => (
-                    <motion.li key={i.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                      <button onClick={() => toggle(i.id)} className="flex w-full items-center gap-3 border-b border-hairline py-2.5 text-left">
-                        <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${i.checked ? "border-ink bg-ink text-canvas" : "border-hairline-strong"}`}>{i.checked ? "✓" : ""}</span>
-                        <span className={`flex-1 text-[15px] ${i.checked ? "text-mute line-through" : "text-ink"}`}>{lang === "ro" ? (i.name_ro || i.item) : i.item}</span>
-                        {i.amount != null && (
-                          <span className="flex shrink-0 items-center gap-1.5 font-mono text-[13px] text-body tabular-nums">
-                            {i.approx ? "~" : ""}{i.amount}{i.unit ? " " + i.unit : ""}
-                            {i.estimated && <span title="Quantity estimated by AI (recipe gave no number)" className="rounded-full border border-hairline-strong px-1 text-[9px] font-600 uppercase tracking-wide text-mute">est</span>}
-                          </span>
+                    <motion.li key={i.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="border-b border-hairline">
+                      <div className="flex items-center">
+                        <button onClick={() => toggle(i.id)} className="flex min-w-0 flex-1 items-center gap-3 py-2.5 text-left">
+                          <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${i.checked ? "border-ink bg-ink text-canvas" : "border-hairline-strong"}`}>{i.checked ? "✓" : ""}</span>
+                          <span className={`flex-1 truncate text-[15px] ${i.checked ? "text-mute line-through" : "text-ink"}`}>{lang === "ro" ? (i.name_ro || i.item) : i.item}</span>
+                          {i.amount != null && (
+                            <span className="flex shrink-0 items-center gap-1.5 font-mono text-[13px] text-body tabular-nums">
+                              {i.approx ? "~" : ""}{i.amount}{i.unit ? " " + i.unit : ""}
+                              {i.estimated && <span title="Quantity estimated by AI (recipe gave no number)" className="rounded-full border border-hairline-strong px-1 text-[9px] font-600 uppercase tracking-wide text-mute">est</span>}
+                            </span>
+                          )}
+                        </button>
+                        {i.recipes && i.recipes.length > 0 && (
+                          <button onClick={() => toggleShown(i.id)} title="Which recipes use this" className={`shrink-0 px-2 ${shown.has(i.id) ? "text-ink" : "text-mute hover:text-ink"}`}>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" /></svg>
+                          </button>
                         )}
-                      </button>
+                      </div>
+                      {shown.has(i.id) && i.recipes && i.recipes.length > 0 && (
+                        <p className="pb-2 pl-8 text-[12px] text-mute">In: {i.recipes.join(", ")}</p>
+                      )}
                     </motion.li>
                   ))}
                 </AnimatePresence>

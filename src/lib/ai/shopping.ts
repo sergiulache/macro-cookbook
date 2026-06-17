@@ -10,6 +10,7 @@ const TidyItem = z.object({
   unit: z.string().nullable().optional(),
   approx: z.boolean().optional(),
   estimated: z.boolean().optional(),
+  recipes: z.array(z.string()).optional(),
   section: z.string().min(1),
 });
 const TidyResult = z.object({ items: z.array(TidyItem).min(1) });
@@ -28,6 +29,7 @@ const TIDY_SCHEMA = {
           unit: { type: "string" },
           approx: { type: "boolean" },
           estimated: { type: "boolean" },
+          recipes: { type: "array", items: { type: "string" } },
           section: { type: "string" },
         },
         required: ["name", "name_ro", "section"],
@@ -47,9 +49,10 @@ export async function tidyShoppingList(items: ShopItem[], sections: string[]): P
   if (!items.length) throw new AiError("invalid-argument", "Nothing to tidy yet.");
   const lines = items
     .map((i) => {
-      if (i.amount != null) return `${i.amount} ${i.unit ?? ""} ${i.item}`.replace(/\s+/g, " ").trim();
-      if (i.servingsFor) return `${i.item} (no quantity given; needed for ${i.servingsFor} servings)`;
-      return i.item;
+      const where = i.recipes?.length ? ` (used in: ${i.recipes.join("; ")})` : "";
+      if (i.amount != null) return `${`${i.amount} ${i.unit ?? ""} ${i.item}`.replace(/\s+/g, " ").trim()}${where}`;
+      if (i.servingsFor) return `${i.item} (no quantity given; needed for ${i.servingsFor} servings)${where}`;
+      return `${i.item}${where}`;
     })
     .join("\n");
 
@@ -79,6 +82,7 @@ export async function tidyShoppingList(items: ShopItem[], sections: string[]): P
     checked: false,
     approx: t.approx ?? false,
     estimated: t.estimated ?? false,
+    recipes: t.recipes ?? [],
   }));
   return { items: tidied, usage: data.usage ?? {} };
 }
