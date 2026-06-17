@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Play } from "lucide-react";
-import { imageUrl } from "../../lib/recipes/loadRecipes";
+import { imageUrl, categories } from "../../lib/recipes/loadRecipes";
 import { useRecipeIndex } from "../../lib/recipes/RecipeIndex";
-import { isCustomId } from "../../lib/recipes/custom";
+import { isCustomId, customToRecipe, hasRomanian } from "../../lib/recipes/custom";
 import { useAuth } from "../../lib/auth/auth";
 import { nameFor } from "../../lib/data/people";
 import { timeAgo } from "../../lib/timeAgo";
@@ -21,11 +21,12 @@ const fmt = (n: number) => (n >= 10 ? Math.round(n) : Math.round(n * 10) / 10);
 
 export function RecipePage() {
   const { id } = useParams();
-  const { byId, customById } = useRecipeIndex();
+  const { byId, customById, saveCustom } = useRecipeIndex();
   const { user } = useAuth();
   const { partnerHas, partnerName } = useFavorites();
-  const recipe = id ? byId.get(id) : undefined;
   const custom = id ? customById.get(id) : undefined;
+  const [lang, setLang] = useState<"en" | "ro">("en");
+  const recipe = custom && lang === "ro" ? customToRecipe(custom, "ro") : id ? byId.get(id) : undefined;
   const [servings, setServings] = useState(recipe?.servings ?? 1);
   useEffect(() => { if (recipe) setServings(recipe.servings); }, [recipe?.id]);
 
@@ -62,7 +63,14 @@ export function RecipePage() {
 
       <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
         <div>
-          <p className="text-[13px] font-500 uppercase tracking-wide text-mute">{recipe.category}</p>
+          {custom && ownsCustom ? (
+            <select value={custom.category || "Custom"} onChange={(e) => saveCustom({ ...custom, category: e.target.value, updatedAt: Date.now() })}
+              className="-ml-0.5 cursor-pointer rounded-md bg-transparent text-[13px] font-500 uppercase tracking-wide text-mute outline-none hover:text-ink">
+              {[...new Set(["Custom", ...categories, custom.category])].map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
+          ) : (
+            <p className="text-[13px] font-500 uppercase tracking-wide text-mute">{recipe.category}</p>
+          )}
           <h1 className="mt-1 font-display text-[32px] font-700 leading-tight tracking-tight">{recipe.title}</h1>
           {custom && (
             <p className="mt-1 text-[13px] text-mute">
@@ -70,6 +78,15 @@ export function RecipePage() {
               {custom.createdAt ? ` · added ${timeAgo(custom.createdAt)}` : ""}
               {custom.updatedAt && custom.updatedAt - (custom.createdAt ?? 0) > 60000 ? ` · updated ${timeAgo(custom.updatedAt)}` : ""}
             </p>
+          )}
+          {custom && hasRomanian(custom) && (
+            <div className="mt-2 inline-flex items-center gap-2">
+              <span className="text-[12px] font-500 uppercase tracking-wide text-mute">Language</span>
+              <div className="flex items-center rounded-full border border-hairline-strong p-0.5 text-[12px] font-600">
+                <button onClick={() => setLang("en")} className={`h-7 rounded-full px-3 ${lang === "en" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>EN</button>
+                <button onClick={() => setLang("ro")} className={`h-7 rounded-full px-3 ${lang === "ro" ? "bg-ink text-canvas" : "text-charcoal hover:text-ink"}`}>RO</button>
+              </div>
+            </div>
           )}
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-body">
             {recipe.prepTimeMin != null && <span>Prep {recipe.prepTimeMin}m</span>}

@@ -85,6 +85,8 @@ export function BuilderPage() {
   const [category, setCategory] = useState("Custom");
   const [prepTime, setPrepTime] = useState("");
   const [cookTime, setCookTime] = useState("");
+  const [titleRo, setTitleRo] = useState("");
+  const [stepsRoText, setStepsRoText] = useState("");
   const [imgBusy, setImgBusy] = useState(false);
   const [q, setQ] = useState("");
   const [focused, setFocused] = useState(false);
@@ -113,6 +115,7 @@ export function BuilderPage() {
       setCategory(existing.category || "Custom");
       setPrepTime(existing.prepTimeMin != null ? String(existing.prepTimeMin) : "");
       setCookTime(existing.cookTimeMin != null ? String(existing.cookTimeMin) : "");
+      setTitleRo(existing.title_ro ?? ""); setStepsRoText((existing.steps_ro ?? []).join("\n"));
       idRef.current = existing.id; setLoaded(true);
     }
   }, [editId, existing, loaded]);
@@ -169,6 +172,8 @@ export function BuilderPage() {
       id: idRef.current, ownerUid: user.uid, title: title.trim(), category: category || "Custom", servings, lines,
       prepTimeMin: prepTime ? Number(prepTime) : null,
       cookTimeMin: cookTime ? Number(cookTime) : null,
+      title_ro: titleRo.trim() || undefined,
+      steps_ro: stepsRoText.split("\n").map((s) => s.trim()).filter(Boolean),
       steps: stepsText.split("\n").map((s) => s.trim()).filter(Boolean),
       image: image ?? null,
       createdAt: existing?.createdAt ?? now, updatedAt: now,
@@ -187,6 +192,7 @@ export function BuilderPage() {
     if (a.category) setCategory(a.category);
     setPrepTime(a.prepTimeMin != null ? String(a.prepTimeMin) : "");
     setCookTime(a.cookTimeMin != null ? String(a.cookTimeMin) : "");
+    setTitleRo(a.titleRo ?? ""); setStepsRoText(a.stepsRo ?? "");
   };
 
   if (editId && !ownsIt && loaded) {

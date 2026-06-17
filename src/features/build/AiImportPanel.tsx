@@ -6,7 +6,7 @@ import { timeAgo } from "../../lib/timeAgo";
 import { importRecipe, draftToLines, searchImage, AiError, type Source } from "../../lib/ai/ai";
 import type { CustomLine } from "../../lib/schema/custom";
 
-export interface AppliedDraft { title: string; servings: number; lines: CustomLine[]; steps: string; image?: string | null; category?: string; prepTimeMin?: number | null; cookTimeMin?: number | null }
+export interface AppliedDraft { title: string; titleRo: string; servings: number; lines: CustomLine[]; steps: string; stepsRo: string; image?: string | null; category?: string; prepTimeMin?: number | null; cookTimeMin?: number | null }
 
 const ytThumb = (url: string): string | null => {
   const m = url.match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/);
@@ -45,7 +45,8 @@ export function AiImportPanel({ onApply }: { onApply: (a: AppliedDraft) => void 
       const ytSrc = sources.find((s) => s.type === "youtube" && s.content.trim());
       const image = ytSrc ? ytThumb(ytSrc.content) : await searchImage(draft.title).catch(() => null);
       onApply({
-        title: draft.title, servings: draft.servings, lines: draftToLines(draft), steps: draft.steps.join("\n"),
+        title: draft.title, titleRo: draft.title_ro ?? draft.title, servings: draft.servings,
+        lines: draftToLines(draft), steps: draft.steps.join("\n"), stepsRo: (draft.steps_ro ?? []).join("\n"),
         image,
         category: draft.category, prepTimeMin: draft.prepTimeMin ?? null, cookTimeMin: draft.cookTimeMin ?? null,
       });

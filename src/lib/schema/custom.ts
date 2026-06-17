@@ -15,6 +15,7 @@ import { IngredientSource } from "./ingredient";
 export const CustomLine = z.object({
   ingredientId: z.string().min(1),
   name: z.string().min(1),
+  name_ro: z.string().optional(),
   source: IngredientSource.default("book"),
   optional: z.boolean().optional(),
   grams: z.number().nonnegative(),
@@ -31,6 +32,8 @@ export const CustomRecipe = z.object({
   servings: z.number().positive(),
   prepTimeMin: z.number().nullable().optional(),
   cookTimeMin: z.number().nullable().optional(),
+  title_ro: z.string().optional(),
+  steps_ro: z.array(z.string()).default([]),
   lines: z.array(CustomLine),
   steps: z.array(z.string()).default([]),
   image: z.string().nullable().optional(), // YouTube thumbnail URL or an uploaded data URL
