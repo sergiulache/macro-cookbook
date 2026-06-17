@@ -62,10 +62,11 @@ export const aiGenerate = onCall(
       if (s.type === "youtube") {
         const yt = await fetchYouTube(s.content);
         textBlock += yt && (yt.description || yt.title)
-          ? `\n\n[YouTube video: ${yt.title ?? ""}]\nDescription (may be only credits/promo - the recipe is often only in the video itself):\n${yt.description ?? "(no description)"}\n`
-          : `\n\n[YouTube link, description unavailable]: ${s.content}\n`;
-        // always send the actual video so the model can read on-screen ingredients/steps,
-        // not just the description (which frequently has no recipe)
+          ? `\n\n[YouTube video: ${yt.title ?? ""}] - extract the recipe from the VIDEO itself, using BOTH the spoken narration and the on-screen visuals/text; the description below is often only credits or promo.\nDescription:\n${yt.description ?? "(no description)"}\n`
+          : `\n\n[YouTube link, description unavailable]: ${s.content} - extract the recipe from the video's spoken narration and on-screen visuals.\n`;
+        // Always send the actual video. gemini-3.1-flash-lite processes BOTH the audio
+        // (spoken narration) and the visual frames, so it captures recipes that are only
+        // spoken or only shown - not just whatever is in the text description.
         parts.push({ fileData: { fileUri: s.content } });
       } else if (s.type === "notes") {
         textBlock += `\n\n[Cook's notes / preferences]\n${s.content}\n`;
